@@ -60,9 +60,9 @@ void Model::add(const std::string &file_path) {
 
     const int number = songs_.size() + 1;
     songs_.emplace_back(number, filename, new_file_path);
-    song_name_.push_back(filename);
+    song_names_.push_back(filename);
 
-    emit songsUpdated(song_name_);
+    emit songsUpdated(song_names_);
     emit userFeedback("✅ Song added successfully!", true);
 }
 
@@ -125,13 +125,13 @@ void Model::loadMusic() {
     const std::string path = music_path_;
     if (!std::filesystem::exists(path)) return;
 
-    song_name_ = filter(path);
+    song_names_ = filter(path);
     songs_.clear();
 
-    for (int i = 0; i < song_name_.size(); ++i) {
-        std::string full_path = path + "/" + song_name_[i];
+    for (int i = 0; i < song_names_.size(); ++i) {
+        std::string full_path = path + "/" + song_names_[i];
         const int number = i + 1;
-        songs_.emplace_back(number, song_name_[i], full_path);
+        songs_.emplace_back(number, song_names_[i], full_path);
     }
 
     updatePlaylist();
@@ -203,9 +203,9 @@ std::vector<Song> Model::search(const std::string& query) const {
 }
 
 void Model::updatePlaylist() {
-    song_name_.clear();
+    song_names_.clear();
     for (const Song &song : songs_) {
-        song_name_.push_back(song.getName());
+        song_names_.push_back(song.getName());
     }
-    emit songsUpdated(song_name_);
+    emit songsUpdated(song_names_);
 }

@@ -7,7 +7,7 @@
 class Model final : public QObject {
     Q_OBJECT
 private:
-    std::vector<std::string> song_name_;
+    std::vector<std::string> song_names_;
     std::vector<Song> songs_;
     std::vector<std::string> ads_;
     std::string base_path_;
