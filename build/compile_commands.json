@@ -1,0 +1,248 @@
+[
+{
+  "directory": "/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build",
+  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_MULTIMEDIA_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB -isystem /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/NewMusicPlayer_autogen/include -isystem /opt/homebrew/lib/QtCore.framework/Headers -iframework /opt/homebrew/lib -isystem /opt/homebrew/share/qt/mkspecs/macx-clang -isystem /opt/homebrew/include -isystem /opt/homebrew/lib/QtGui.framework/Headers -isystem /opt/homebrew/lib/QtWidgets.framework/Headers -isystem /opt/homebrew/lib/QtMultimedia.framework/Headers -isystem /opt/homebrew/lib/QtNetwork.framework/Headers -std=gnu++2b -arch arm64 -o CMakeFiles/NewMusicPlayer.dir/NewMusicPlayer_autogen/mocs_compilation.cpp.o -c /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/NewMusicPlayer_autogen/mocs_compilation.cpp",
+  "file": "/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/NewMusicPlayer_autogen/mocs_compilation.cpp",
+  "output": "CMakeFiles/NewMusicPlayer.dir/NewMusicPlayer_autogen/mocs_compilation.cpp.o"
+},
+{
+  "directory": "/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build",
+  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_MULTIMEDIA_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB -isystem /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/NewMusicPlayer_autogen/include -isystem /opt/homebrew/lib/QtCore.framework/Headers -iframework /opt/homebrew/lib -isystem /opt/homebrew/share/qt/mkspecs/macx-clang -isystem /opt/homebrew/include -isystem /opt/homebrew/lib/QtGui.framework/Headers -isystem /opt/homebrew/lib/QtWidgets.framework/Headers -isystem /opt/homebrew/lib/QtMultimedia.framework/Headers -isystem /opt/homebrew/lib/QtNetwork.framework/Headers -std=gnu++2b -arch arm64 -o CMakeFiles/NewMusicPlayer.dir/main.cpp.o -c /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/main.cpp",
+  "file": "/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/main.cpp",
+  "output": "CMakeFiles/NewMusicPlayer.dir/main.cpp.o"
+},
+{
+  "directory": "/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build",
+  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_MULTIMEDIA_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB -isystem /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/NewMusicPlayer_autogen/include -isystem /opt/homebrew/lib/QtCore.framework/Headers -iframework /opt/homebrew/lib -isystem /opt/homebrew/share/qt/mkspecs/macx-clang -isystem /opt/homebrew/include -isystem /opt/homebrew/lib/QtGui.framework/Headers -isystem /opt/homebrew/lib/QtWidgets.framework/Headers -isystem /opt/homebrew/lib/QtMultimedia.framework/Headers -isystem /opt/homebrew/lib/QtNetwork.framework/Headers -std=gnu++2b -arch arm64 -o CMakeFiles/NewMusicPlayer.dir/model/Song.cpp.o -c /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/Song.cpp",
+  "file": "/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/Song.cpp",
+  "output": "CMakeFiles/NewMusicPlayer.dir/model/Song.cpp.o"
+},
+{
+  "directory": "/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build",
+  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_MULTIMEDIA_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB -isystem /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/NewMusicPlayer_autogen/include -isystem /opt/homebrew/lib/QtCore.framework/Headers -iframework /opt/homebrew/lib -isystem /opt/homebrew/share/qt/mkspecs/macx-clang -isystem /opt/homebrew/include -isystem /opt/homebrew/lib/QtGui.framework/Headers -isystem /opt/homebrew/lib/QtWidgets.framework/Headers -isystem /opt/homebrew/lib/QtMultimedia.framework/Headers -isystem /opt/homebrew/lib/QtNetwork.framework/Headers -std=gnu++2b -arch arm64 -o CMakeFiles/NewMusicPlayer.dir/model/ShellSort.cpp.o -c /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/ShellSort.cpp",
+  "file": "/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/ShellSort.cpp",
+  "output": "CMakeFiles/NewMusicPlayer.dir/model/ShellSort.cpp.o"
+},
+{
+  "directory": "/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build",
+  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_MULTIMEDIA_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB -isystem /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/NewMusicPlayer_autogen/include -isystem /opt/homebrew/lib/QtCore.framework/Headers -iframework /opt/homebrew/lib -isystem /opt/homebrew/share/qt/mkspecs/macx-clang -isystem /opt/homebrew/include -isystem /opt/homebrew/lib/QtGui.framework/Headers -isystem /opt/homebrew/lib/QtWidgets.framework/Headers -isystem /opt/homebrew/lib/QtMultimedia.framework/Headers -isystem /opt/homebrew/lib/QtNetwork.framework/Headers -std=gnu++2b -arch arm64 -o CMakeFiles/NewMusicPlayer.dir/model/QuickSort.cpp.o -c /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/QuickSort.cpp",
+  "file": "/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/QuickSort.cpp",
+  "output": "CMakeFiles/NewMusicPlayer.dir/model/QuickSort.cpp.o"
+},
+{
+  "directory": "/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build",
+  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_MULTIMEDIA_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB -isystem /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/NewMusicPlayer_autogen/include -isystem /opt/homebrew/lib/QtCore.framework/Headers -iframework /opt/homebrew/lib -isystem /opt/homebrew/share/qt/mkspecs/macx-clang -isystem /opt/homebrew/include -isystem /opt/homebrew/lib/QtGui.framework/Headers -isystem /opt/homebrew/lib/QtWidgets.framework/Headers -isystem /opt/homebrew/lib/QtMultimedia.framework/Headers -isystem /opt/homebrew/lib/QtNetwork.framework/Headers -std=gnu++2b -arch arm64 -o CMakeFiles/NewMusicPlayer.dir/model/Playlist.cpp.o -c /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/Playlist.cpp",
+  "file": "/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/Playlist.cpp",
+  "output": "CMakeFiles/NewMusicPlayer.dir/model/Playlist.cpp.o"
+},
+{
+  "directory": "/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build",
+  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_MULTIMEDIA_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB -isystem /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/NewMusicPlayer_autogen/include -isystem /opt/homebrew/lib/QtCore.framework/Headers -iframework /opt/homebrew/lib -isystem /opt/homebrew/share/qt/mkspecs/macx-clang -isystem /opt/homebrew/include -isystem /opt/homebrew/lib/QtGui.framework/Headers -isystem /opt/homebrew/lib/QtWidgets.framework/Headers -isystem /opt/homebrew/lib/QtMultimedia.framework/Headers -isystem /opt/homebrew/lib/QtNetwork.framework/Headers -std=gnu++2b -arch arm64 -o CMakeFiles/NewMusicPlayer.dir/model/Advertisement.cpp.o -c /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/Advertisement.cpp",
+  "file": "/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/Advertisement.cpp",
+  "output": "CMakeFiles/NewMusicPlayer.dir/model/Advertisement.cpp.o"
+},
+{
+  "directory": "/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build",
+  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_MULTIMEDIA_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB -isystem /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/NewMusicPlayer_autogen/include -isystem /opt/homebrew/lib/QtCore.framework/Headers -iframework /opt/homebrew/lib -isystem /opt/homebrew/share/qt/mkspecs/macx-clang -isystem /opt/homebrew/include -isystem /opt/homebrew/lib/QtGui.framework/Headers -isystem /opt/homebrew/lib/QtWidgets.framework/Headers -isystem /opt/homebrew/lib/QtMultimedia.framework/Headers -isystem /opt/homebrew/lib/QtNetwork.framework/Headers -std=gnu++2b -arch arm64 -o CMakeFiles/NewMusicPlayer.dir/model/MusicLibrary.cpp.o -c /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/MusicLibrary.cpp",
+  "file": "/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/MusicLibrary.cpp",
+  "output": "CMakeFiles/NewMusicPlayer.dir/model/MusicLibrary.cpp.o"
+},
+{
+  "directory": "/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build",
+  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_MULTIMEDIA_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB -isystem /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/NewMusicPlayer_autogen/include -isystem /opt/homebrew/lib/QtCore.framework/Headers -iframework /opt/homebrew/lib -isystem /opt/homebrew/share/qt/mkspecs/macx-clang -isystem /opt/homebrew/include -isystem /opt/homebrew/lib/QtGui.framework/Headers -isystem /opt/homebrew/lib/QtWidgets.framework/Headers -isystem /opt/homebrew/lib/QtMultimedia.framework/Headers -isystem /opt/homebrew/lib/QtNetwork.framework/Headers -std=gnu++2b -arch arm64 -o CMakeFiles/NewMusicPlayer.dir/model/Channel.cpp.o -c /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/Channel.cpp",
+  "file": "/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/Channel.cpp",
+  "output": "CMakeFiles/NewMusicPlayer.dir/model/Channel.cpp.o"
+},
+{
+  "directory": "/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build",
+  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_MULTIMEDIA_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB -isystem /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/NewMusicPlayer_autogen/include -isystem /opt/homebrew/lib/QtCore.framework/Headers -iframework /opt/homebrew/lib -isystem /opt/homebrew/share/qt/mkspecs/macx-clang -isystem /opt/homebrew/include -isystem /opt/homebrew/lib/QtGui.framework/Headers -isystem /opt/homebrew/lib/QtWidgets.framework/Headers -isystem /opt/homebrew/lib/QtMultimedia.framework/Headers -isystem /opt/homebrew/lib/QtNetwork.framework/Headers -std=gnu++2b -arch arm64 -o CMakeFiles/NewMusicPlayer.dir/model/Model.cpp.o -c /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/Model.cpp",
+  "file": "/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/Model.cpp",
+  "output": "CMakeFiles/NewMusicPlayer.dir/model/Model.cpp.o"
+},
+{
+  "directory": "/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build",
+  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_MULTIMEDIA_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB -isystem /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/NewMusicPlayer_autogen/include -isystem /opt/homebrew/lib/QtCore.framework/Headers -iframework /opt/homebrew/lib -isystem /opt/homebrew/share/qt/mkspecs/macx-clang -isystem /opt/homebrew/include -isystem /opt/homebrew/lib/QtGui.framework/Headers -isystem /opt/homebrew/lib/QtWidgets.framework/Headers -isystem /opt/homebrew/lib/QtMultimedia.framework/Headers -isystem /opt/homebrew/lib/QtNetwork.framework/Headers -std=gnu++2b -arch arm64 -o CMakeFiles/NewMusicPlayer.dir/controller/PlaylistRenderer.cpp.o -c /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/controller/PlaylistRenderer.cpp",
+  "file": "/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/controller/PlaylistRenderer.cpp",
+  "output": "CMakeFiles/NewMusicPlayer.dir/controller/PlaylistRenderer.cpp.o"
+},
+{
+  "directory": "/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build",
+  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_MULTIMEDIA_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB -isystem /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/NewMusicPlayer_autogen/include -isystem /opt/homebrew/lib/QtCore.framework/Headers -iframework /opt/homebrew/lib -isystem /opt/homebrew/share/qt/mkspecs/macx-clang -isystem /opt/homebrew/include -isystem /opt/homebrew/lib/QtGui.framework/Headers -isystem /opt/homebrew/lib/QtWidgets.framework/Headers -isystem /opt/homebrew/lib/QtMultimedia.framework/Headers -isystem /opt/homebrew/lib/QtNetwork.framework/Headers -std=gnu++2b -arch arm64 -o CMakeFiles/NewMusicPlayer.dir/controller/Controller.cpp.o -c /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/controller/Controller.cpp",
+  "file": "/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/controller/Controller.cpp",
+  "output": "CMakeFiles/NewMusicPlayer.dir/controller/Controller.cpp.o"
+},
+{
+  "directory": "/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build",
+  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_MULTIMEDIA_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB -isystem /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/NewMusicPlayer_autogen/include -isystem /opt/homebrew/lib/QtCore.framework/Headers -iframework /opt/homebrew/lib -isystem /opt/homebrew/share/qt/mkspecs/macx-clang -isystem /opt/homebrew/include -isystem /opt/homebrew/lib/QtGui.framework/Headers -isystem /opt/homebrew/lib/QtWidgets.framework/Headers -isystem /opt/homebrew/lib/QtMultimedia.framework/Headers -isystem /opt/homebrew/lib/QtNetwork.framework/Headers -std=gnu++2b -arch arm64 -o CMakeFiles/NewMusicPlayer.dir/adapters/qt/QtPlaybackPanel.cpp.o -c /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/adapters/qt/QtPlaybackPanel.cpp",
+  "file": "/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/adapters/qt/QtPlaybackPanel.cpp",
+  "output": "CMakeFiles/NewMusicPlayer.dir/adapters/qt/QtPlaybackPanel.cpp.o"
+},
+{
+  "directory": "/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build",
+  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_MULTIMEDIA_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB -isystem /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/NewMusicPlayer_autogen/include -isystem /opt/homebrew/lib/QtCore.framework/Headers -iframework /opt/homebrew/lib -isystem /opt/homebrew/share/qt/mkspecs/macx-clang -isystem /opt/homebrew/include -isystem /opt/homebrew/lib/QtGui.framework/Headers -isystem /opt/homebrew/lib/QtWidgets.framework/Headers -isystem /opt/homebrew/lib/QtMultimedia.framework/Headers -isystem /opt/homebrew/lib/QtNetwork.framework/Headers -std=gnu++2b -arch arm64 -o CMakeFiles/NewMusicPlayer.dir/adapters/qt/QtVolumePanel.cpp.o -c /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/adapters/qt/QtVolumePanel.cpp",
+  "file": "/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/adapters/qt/QtVolumePanel.cpp",
+  "output": "CMakeFiles/NewMusicPlayer.dir/adapters/qt/QtVolumePanel.cpp.o"
+},
+{
+  "directory": "/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build",
+  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_MULTIMEDIA_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB -isystem /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/NewMusicPlayer_autogen/include -isystem /opt/homebrew/lib/QtCore.framework/Headers -iframework /opt/homebrew/lib -isystem /opt/homebrew/share/qt/mkspecs/macx-clang -isystem /opt/homebrew/include -isystem /opt/homebrew/lib/QtGui.framework/Headers -isystem /opt/homebrew/lib/QtWidgets.framework/Headers -isystem /opt/homebrew/lib/QtMultimedia.framework/Headers -isystem /opt/homebrew/lib/QtNetwork.framework/Headers -std=gnu++2b -arch arm64 -o CMakeFiles/NewMusicPlayer.dir/adapters/qt/QtToolbar.cpp.o -c /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/adapters/qt/QtToolbar.cpp",
+  "file": "/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/adapters/qt/QtToolbar.cpp",
+  "output": "CMakeFiles/NewMusicPlayer.dir/adapters/qt/QtToolbar.cpp.o"
+},
+{
+  "directory": "/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build",
+  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_MULTIMEDIA_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB -isystem /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/NewMusicPlayer_autogen/include -isystem /opt/homebrew/lib/QtCore.framework/Headers -iframework /opt/homebrew/lib -isystem /opt/homebrew/share/qt/mkspecs/macx-clang -isystem /opt/homebrew/include -isystem /opt/homebrew/lib/QtGui.framework/Headers -isystem /opt/homebrew/lib/QtWidgets.framework/Headers -isystem /opt/homebrew/lib/QtMultimedia.framework/Headers -isystem /opt/homebrew/lib/QtNetwork.framework/Headers -std=gnu++2b -arch arm64 -o CMakeFiles/NewMusicPlayer.dir/adapters/qt/QtViewFactory.cpp.o -c /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/adapters/qt/QtViewFactory.cpp",
+  "file": "/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/adapters/qt/QtViewFactory.cpp",
+  "output": "CMakeFiles/NewMusicPlayer.dir/adapters/qt/QtViewFactory.cpp.o"
+},
+{
+  "directory": "/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build",
+  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_MULTIMEDIA_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB -isystem /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/NewMusicPlayer_autogen/include -isystem /opt/homebrew/lib/QtCore.framework/Headers -iframework /opt/homebrew/lib -isystem /opt/homebrew/share/qt/mkspecs/macx-clang -isystem /opt/homebrew/include -isystem /opt/homebrew/lib/QtGui.framework/Headers -isystem /opt/homebrew/lib/QtWidgets.framework/Headers -isystem /opt/homebrew/lib/QtMultimedia.framework/Headers -isystem /opt/homebrew/lib/QtNetwork.framework/Headers -std=gnu++2b -arch arm64 -o CMakeFiles/NewMusicPlayer.dir/adapters/qt/QtView.cpp.o -c /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/adapters/qt/QtView.cpp",
+  "file": "/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/adapters/qt/QtView.cpp",
+  "output": "CMakeFiles/NewMusicPlayer.dir/adapters/qt/QtView.cpp.o"
+},
+{
+  "directory": "/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build",
+  "command": "/usr/bin/c++  -isystem /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/NewMusicPlayerTests_autogen/include -isystem /opt/homebrew/include -std=gnu++2b -arch arm64 -o CMakeFiles/NewMusicPlayerTests.dir/NewMusicPlayerTests_autogen/mocs_compilation.cpp.o -c /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/NewMusicPlayerTests_autogen/mocs_compilation.cpp",
+  "file": "/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/NewMusicPlayerTests_autogen/mocs_compilation.cpp",
+  "output": "CMakeFiles/NewMusicPlayerTests.dir/NewMusicPlayerTests_autogen/mocs_compilation.cpp.o"
+},
+{
+  "directory": "/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build",
+  "command": "/usr/bin/c++  -isystem /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/NewMusicPlayerTests_autogen/include -isystem /opt/homebrew/include -std=gnu++2b -arch arm64 -o CMakeFiles/NewMusicPlayerTests.dir/test/MockPlaybackListener.cpp.o -c /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/MockPlaybackListener.cpp",
+  "file": "/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/MockPlaybackListener.cpp",
+  "output": "CMakeFiles/NewMusicPlayerTests.dir/test/MockPlaybackListener.cpp.o"
+},
+{
+  "directory": "/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build",
+  "command": "/usr/bin/c++  -isystem /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/NewMusicPlayerTests_autogen/include -isystem /opt/homebrew/include -std=gnu++2b -arch arm64 -o CMakeFiles/NewMusicPlayerTests.dir/test/TestPlaylistVisitor.cpp.o -c /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/TestPlaylistVisitor.cpp",
+  "file": "/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/TestPlaylistVisitor.cpp",
+  "output": "CMakeFiles/NewMusicPlayerTests.dir/test/TestPlaylistVisitor.cpp.o"
+},
+{
+  "directory": "/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build",
+  "command": "/usr/bin/c++  -isystem /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/NewMusicPlayerTests_autogen/include -isystem /opt/homebrew/include -std=gnu++2b -arch arm64 -o CMakeFiles/NewMusicPlayerTests.dir/test/model/SongTest.cpp.o -c /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/model/SongTest.cpp",
+  "file": "/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/model/SongTest.cpp",
+  "output": "CMakeFiles/NewMusicPlayerTests.dir/test/model/SongTest.cpp.o"
+},
+{
+  "directory": "/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build",
+  "command": "/usr/bin/c++  -isystem /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/NewMusicPlayerTests_autogen/include -isystem /opt/homebrew/include -std=gnu++2b -arch arm64 -o CMakeFiles/NewMusicPlayerTests.dir/test/model/PlaylistTest.cpp.o -c /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/model/PlaylistTest.cpp",
+  "file": "/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/model/PlaylistTest.cpp",
+  "output": "CMakeFiles/NewMusicPlayerTests.dir/test/model/PlaylistTest.cpp.o"
+},
+{
+  "directory": "/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build",
+  "command": "/usr/bin/c++  -isystem /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/NewMusicPlayerTests_autogen/include -isystem /opt/homebrew/include -std=gnu++2b -arch arm64 -o CMakeFiles/NewMusicPlayerTests.dir/test/model/AdvertisementTest.cpp.o -c /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/model/AdvertisementTest.cpp",
+  "file": "/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/model/AdvertisementTest.cpp",
+  "output": "CMakeFiles/NewMusicPlayerTests.dir/test/model/AdvertisementTest.cpp.o"
+},
+{
+  "directory": "/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build",
+  "command": "/usr/bin/c++  -isystem /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/NewMusicPlayerTests_autogen/include -isystem /opt/homebrew/include -std=gnu++2b -arch arm64 -o CMakeFiles/NewMusicPlayerTests.dir/test/model/MusicLibraryTest.cpp.o -c /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/model/MusicLibraryTest.cpp",
+  "file": "/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/model/MusicLibraryTest.cpp",
+  "output": "CMakeFiles/NewMusicPlayerTests.dir/test/model/MusicLibraryTest.cpp.o"
+},
+{
+  "directory": "/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build",
+  "command": "/usr/bin/c++  -isystem /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/NewMusicPlayerTests_autogen/include -isystem /opt/homebrew/include -std=gnu++2b -arch arm64 -o CMakeFiles/NewMusicPlayerTests.dir/test/model/SortingTest.cpp.o -c /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/model/SortingTest.cpp",
+  "file": "/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/model/SortingTest.cpp",
+  "output": "CMakeFiles/NewMusicPlayerTests.dir/test/model/SortingTest.cpp.o"
+},
+{
+  "directory": "/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build",
+  "command": "/usr/bin/c++  -isystem /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/NewMusicPlayerTests_autogen/include -isystem /opt/homebrew/include -std=gnu++2b -arch arm64 -o CMakeFiles/NewMusicPlayerTests.dir/test/model/ModelTest.cpp.o -c /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/model/ModelTest.cpp",
+  "file": "/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/model/ModelTest.cpp",
+  "output": "CMakeFiles/NewMusicPlayerTests.dir/test/model/ModelTest.cpp.o"
+},
+{
+  "directory": "/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build",
+  "command": "/usr/bin/c++  -isystem /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/NewMusicPlayerTests_autogen/include -isystem /opt/homebrew/include -std=gnu++2b -arch arm64 -o CMakeFiles/NewMusicPlayerTests.dir/test/RegressionTest.cpp.o -c /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/RegressionTest.cpp",
+  "file": "/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/RegressionTest.cpp",
+  "output": "CMakeFiles/NewMusicPlayerTests.dir/test/RegressionTest.cpp.o"
+},
+{
+  "directory": "/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build",
+  "command": "/usr/bin/c++  -isystem /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/NewMusicPlayerTests_autogen/include -isystem /opt/homebrew/include -std=gnu++2b -arch arm64 -o CMakeFiles/NewMusicPlayerTests.dir/test/controller/PlaySongUseCaseTest.cpp.o -c /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/controller/PlaySongUseCaseTest.cpp",
+  "file": "/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/controller/PlaySongUseCaseTest.cpp",
+  "output": "CMakeFiles/NewMusicPlayerTests.dir/test/controller/PlaySongUseCaseTest.cpp.o"
+},
+{
+  "directory": "/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build",
+  "command": "/usr/bin/c++  -isystem /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/NewMusicPlayerTests_autogen/include -isystem /opt/homebrew/include -std=gnu++2b -arch arm64 -o CMakeFiles/NewMusicPlayerTests.dir/test/controller/SortPlaylistUseCaseTest.cpp.o -c /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/controller/SortPlaylistUseCaseTest.cpp",
+  "file": "/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/controller/SortPlaylistUseCaseTest.cpp",
+  "output": "CMakeFiles/NewMusicPlayerTests.dir/test/controller/SortPlaylistUseCaseTest.cpp.o"
+},
+{
+  "directory": "/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build",
+  "command": "/usr/bin/c++  -isystem /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/NewMusicPlayerTests_autogen/include -isystem /opt/homebrew/include -std=gnu++2b -arch arm64 -o CMakeFiles/NewMusicPlayerTests.dir/test/controller/SearchSongUseCaseTest.cpp.o -c /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/controller/SearchSongUseCaseTest.cpp",
+  "file": "/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/controller/SearchSongUseCaseTest.cpp",
+  "output": "CMakeFiles/NewMusicPlayerTests.dir/test/controller/SearchSongUseCaseTest.cpp.o"
+},
+{
+  "directory": "/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build",
+  "command": "/usr/bin/c++  -isystem /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/NewMusicPlayerTests_autogen/include -isystem /opt/homebrew/include -std=gnu++2b -arch arm64 -o CMakeFiles/NewMusicPlayerTests.dir/test/controller/AddSongUseCaseTest.cpp.o -c /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/controller/AddSongUseCaseTest.cpp",
+  "file": "/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/controller/AddSongUseCaseTest.cpp",
+  "output": "CMakeFiles/NewMusicPlayerTests.dir/test/controller/AddSongUseCaseTest.cpp.o"
+},
+{
+  "directory": "/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build",
+  "command": "/usr/bin/c++  -isystem /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/NewMusicPlayerTests_autogen/include -isystem /opt/homebrew/include -std=gnu++2b -arch arm64 -o CMakeFiles/NewMusicPlayerTests.dir/test/controller/RemoveSongUseCaseTest.cpp.o -c /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/controller/RemoveSongUseCaseTest.cpp",
+  "file": "/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/controller/RemoveSongUseCaseTest.cpp",
+  "output": "CMakeFiles/NewMusicPlayerTests.dir/test/controller/RemoveSongUseCaseTest.cpp.o"
+},
+{
+  "directory": "/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build",
+  "command": "/usr/bin/c++  -isystem /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/NewMusicPlayerTests_autogen/include -isystem /opt/homebrew/include -std=gnu++2b -arch arm64 -o CMakeFiles/NewMusicPlayerTests.dir/test/controller/NavigatePlaylistUseCaseTest.cpp.o -c /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/controller/NavigatePlaylistUseCaseTest.cpp",
+  "file": "/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/controller/NavigatePlaylistUseCaseTest.cpp",
+  "output": "CMakeFiles/NewMusicPlayerTests.dir/test/controller/NavigatePlaylistUseCaseTest.cpp.o"
+},
+{
+  "directory": "/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build",
+  "command": "/usr/bin/c++  -isystem /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/NewMusicPlayerTests_autogen/include -isystem /opt/homebrew/include -std=gnu++2b -arch arm64 -o CMakeFiles/NewMusicPlayerTests.dir/model/Song.cpp.o -c /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/Song.cpp",
+  "file": "/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/Song.cpp",
+  "output": "CMakeFiles/NewMusicPlayerTests.dir/model/Song.cpp.o"
+},
+{
+  "directory": "/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build",
+  "command": "/usr/bin/c++  -isystem /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/NewMusicPlayerTests_autogen/include -isystem /opt/homebrew/include -std=gnu++2b -arch arm64 -o CMakeFiles/NewMusicPlayerTests.dir/model/ShellSort.cpp.o -c /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/ShellSort.cpp",
+  "file": "/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/ShellSort.cpp",
+  "output": "CMakeFiles/NewMusicPlayerTests.dir/model/ShellSort.cpp.o"
+},
+{
+  "directory": "/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build",
+  "command": "/usr/bin/c++  -isystem /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/NewMusicPlayerTests_autogen/include -isystem /opt/homebrew/include -std=gnu++2b -arch arm64 -o CMakeFiles/NewMusicPlayerTests.dir/model/QuickSort.cpp.o -c /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/QuickSort.cpp",
+  "file": "/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/QuickSort.cpp",
+  "output": "CMakeFiles/NewMusicPlayerTests.dir/model/QuickSort.cpp.o"
+},
+{
+  "directory": "/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build",
+  "command": "/usr/bin/c++  -isystem /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/NewMusicPlayerTests_autogen/include -isystem /opt/homebrew/include -std=gnu++2b -arch arm64 -o CMakeFiles/NewMusicPlayerTests.dir/model/Playlist.cpp.o -c /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/Playlist.cpp",
+  "file": "/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/Playlist.cpp",
+  "output": "CMakeFiles/NewMusicPlayerTests.dir/model/Playlist.cpp.o"
+},
+{
+  "directory": "/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build",
+  "command": "/usr/bin/c++  -isystem /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/NewMusicPlayerTests_autogen/include -isystem /opt/homebrew/include -std=gnu++2b -arch arm64 -o CMakeFiles/NewMusicPlayerTests.dir/model/Advertisement.cpp.o -c /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/Advertisement.cpp",
+  "file": "/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/Advertisement.cpp",
+  "output": "CMakeFiles/NewMusicPlayerTests.dir/model/Advertisement.cpp.o"
+},
+{
+  "directory": "/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build",
+  "command": "/usr/bin/c++  -isystem /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/NewMusicPlayerTests_autogen/include -isystem /opt/homebrew/include -std=gnu++2b -arch arm64 -o CMakeFiles/NewMusicPlayerTests.dir/model/MusicLibrary.cpp.o -c /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/MusicLibrary.cpp",
+  "file": "/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/MusicLibrary.cpp",
+  "output": "CMakeFiles/NewMusicPlayerTests.dir/model/MusicLibrary.cpp.o"
+},
+{
+  "directory": "/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build",
+  "command": "/usr/bin/c++  -isystem /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/NewMusicPlayerTests_autogen/include -isystem /opt/homebrew/include -std=gnu++2b -arch arm64 -o CMakeFiles/NewMusicPlayerTests.dir/model/Channel.cpp.o -c /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/Channel.cpp",
+  "file": "/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/Channel.cpp",
+  "output": "CMakeFiles/NewMusicPlayerTests.dir/model/Channel.cpp.o"
+},
+{
+  "directory": "/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build",
+  "command": "/usr/bin/c++  -isystem /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/NewMusicPlayerTests_autogen/include -isystem /opt/homebrew/include -std=gnu++2b -arch arm64 -o CMakeFiles/NewMusicPlayerTests.dir/model/Model.cpp.o -c /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/Model.cpp",
+  "file": "/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/Model.cpp",
+  "output": "CMakeFiles/NewMusicPlayerTests.dir/model/Model.cpp.o"
+}
+]

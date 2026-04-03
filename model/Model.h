@@ -1,54 +1,43 @@
 #ifndef MODEL_H
 #define MODEL_H
-#include <QObject>
-#include <QStringList>
-#include "SongSorting.h"
 
-class Model final : public QObject {
-    Q_OBJECT
+#include "Playlist.h"
+#include "Advertisement.h"
+#include "MusicLibrary.h"
+#include "Channel.h"
+#include "IPlaybackListener.h"
+#include "IPlaylistVisitor.h"
+
+class Model {
 private:
-    std::vector<std::string> song_names_;
-    std::vector<Song> songs_;
-    std::vector<std::string> ads_;
-    std::string base_path_;
-    std::string resources_path_;
-    std::string ads_path_;
-    std::string music_path_;
-    bool playing_ad_ = false;
-    SongSorting sorting;
+    MusicLibrary music_library_;
+    Playlist playlist_;
+    Advertisement advertisement_;
+    IPlaybackListener* listener_ = nullptr;
+    Channel* channel_ = nullptr;
+    bool repeat_song_ = false;
 
 public:
-    explicit Model(QObject *parent = nullptr);
+    Model(const std::string& musicPath, const std::string& adsPath);
 
-    void shuffle();
-    void sortByName();
-    void sortByNumber();
-    std::vector<std::string> getSongs() const;
-    std::string getIndex(int index) const;
-    int getId(const std::string &id) const;
-    bool isPlayingAd() const;
-    std::string getFilePath(int index) const;
-    void setPlayingAd(bool state);
-    void add(const std::string &file_path);
-    void remove(const std::string &file_path);
-    void drop(const std::vector<std::string> &urls);
-    std::vector<Song> search(const std::string& query) const;
-    std::string getRandomAd() const;
-
-signals:
-    void songsUpdated(const std::vector<std::string> &songs);
-    void adsUpdated(const std::vector<std::string> &ads);
-    void disableButtons();
-    void userFeedback(const QString &message, bool success);
+    void add(IPlaybackListener& listener);
+    void play(int index);
+    void advance();
+    void retreat();
+    void end();
+    void skip();
+    void repeat();
+    void insert(const std::string& filePath);
+    void remove(int index);
+    void sort(bool byName);
+    void accept(IPlaylistVisitor& visitor) const;
+    void search(const std::string& query, IPlaylistVisitor& visitor) const;
 
 private:
-    void loadMusic();
-    void loadAds();
-    void updatePlaylist();
-    void save(const std::string &file_path) const;
-    static bool isExtension(const std::string &file_name);
-    std::vector<Song>::iterator find(const std::string &file_path);
-    static std::vector<std::string> filter(const std::string &directory);
+    bool validate(const std::string& filePath) const;
+    void broadcast() const;
+    void refresh() const;
+    void resume() const;
 };
 
 #endif //MODEL_H

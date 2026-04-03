@@ -1,13 +1,18 @@
 #include <QApplication>
+#include <filesystem>
 #include "model/Model.h"
-#include "view/View.h"
+#include "adapters/qt/QtView.h"
 #include "controller/Controller.h"
 
 int main(int argc, char *argv[]) {
     QApplication app(argc, argv);
-    Model model;
-    View view;
-    const Controller controller(&model, &view);
+
+    const std::string base = std::filesystem::current_path().string();
+    Model model(base + "/resources/music", base + "/resources/announcements");
+
+    QtView view;
+    Controller controller(model, view);
+
     view.show();
     return app.exec();
 }

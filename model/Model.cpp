@@ -1,211 +1,128 @@
 #include "Model.h"
+#include "ShellSort.h"
+#include "QuickSort.h"
 #include <filesystem>
-#include <random>
 
-Model::Model(QObject *parent) : QObject(parent) {
-    base_path_ = std::filesystem::current_path().string();
-    resources_path_ = base_path_ + "/resources";
-    music_path_ = resources_path_ + "/music";
-    ads_path_ = resources_path_ + "/announcements";
-    loadMusic();
-    loadAds();
-}
+Model::Model(const std::string& musicPath, const std::string& adsPath)
+    : music_library_(musicPath), playlist_(music_library_), advertisement_(adsPath) {
 
-std::vector<std::string> Model::getSongs() const {
-    std::vector<std::string> names;
-    for (const Song& song : songs_) {
-        names.push_back(song.getName());
+    for (const Song& song : music_library_.load()) {
+        playlist_.add(song);
     }
-    return names;
+    playlist_.shuffle();
+    advertisement_.load();
 }
 
-int Model::getId(const std::string &id) const {
-    for (int i = 0; i < songs_.size(); ++i) {
-        if (songs_[i].getId() == id) return i;
+void Model::add(IPlaybackListener& listener) {
+    listener_ = &listener;
+    channel_ = new Channel(listener);
+}
+
+void Model::play(const int index) {
+    playlist_.select(index, *listener_);
+
+    if (Advertisement::schedule()) {
+        listener_->onEnabled(false);
+        advertisement_.interrupt(*listener_);
+    } else {
+        broadcast();
     }
-    return -1;
 }
 
-std::string Model::getIndex(const int index) const {
-    if (index >= 0 && index < songs_.size()) {
-        return songs_.at(index).getId();
+void Model::advance() {
+    if (playlist_.hasNext()) {
+        playlist_.advance(*listener_);
+        broadcast();
     }
-    return {};
 }
 
-bool Model::isPlayingAd() const {
-    return playing_ad_;
+void Model::retreat() {
+    playlist_.retreat(*listener_);
+    broadcast();
 }
 
-void Model::setPlayingAd(const bool state) {
-    playing_ad_ = state;
-}
-
-void Model::add(const std::string &file_path) {
-    if (file_path.empty() || !isExtension(file_path)) {
-        emit userFeedback("❌ Unsupported file type.", false);
+void Model::end() {
+    if (advertisement_.conclude()) {
+        resume();
         return;
     }
 
-    const std::filesystem::path path(file_path);
-    const std::string filename = path.filename().string();
-    std::string new_file_path = music_path_ + "/" + filename;
-
-    if (find(new_file_path) != songs_.end()) {
-        emit userFeedback("⚠️ This song already exists.", false);
+    if (repeat_song_) {
+        broadcast();
         return;
     }
 
-    save(file_path);
-
-    const int number = songs_.size() + 1;
-    songs_.emplace_back(number, filename, new_file_path);
-    song_names_.push_back(filename);
-
-    emit songsUpdated(song_names_);
-    emit userFeedback("✅ Song added successfully!", true);
+    advance();
 }
 
-void Model::remove(const std::string &file_path) {
-    if (file_path.empty()) {
-        emit userFeedback("⚠️ Invalid file path.", false);
-        return;
-    }
-
-    if (const auto song = find(file_path); song != songs_.end()) {
-        songs_.erase(song);
-        std::filesystem::remove(file_path);
-        updatePlaylist();
-    }else {
-        emit userFeedback("❌ Song not found.", false);
+void Model::skip() {
+    if (advertisement_.conclude()) {
+        resume();
     }
 }
 
-std::string Model::getFilePath(const int index) const {
-    if (index < 0 || index >= songs_.size()) return {};
-    return songs_[index].getFilePath();
+void Model::broadcast() const {
+    playlist_.play(*channel_);
 }
 
-void Model::drop(const std::vector<std::string> &urls) {
-    for (int i = 0; i < urls.size(); ++i) {
-        const std::string &file_path = urls[i];
-        if (isExtension(file_path)) {
-            add(file_path);
-        } else {
-            emit userFeedback("❌ Unsupported file type.", false);
-            return;
-        }
-    }
+void Model::refresh() const {
+    listener_->onChanged();
 }
 
-void Model::sortByNumber() {
-    sorting.shellSort(songs_);
-    updatePlaylist();
+void Model::resume() const {
+    listener_->onReveal(false);
+    listener_->onEnabled(true);
+    broadcast();
 }
 
-void Model::sortByName() {
-    sorting.quickSort(songs_, 0, songs_.size() - 1);
-    updatePlaylist();
+void Model::repeat() {
+    repeat_song_ = !repeat_song_;
+    listener_->onFeedback(repeat_song_ ? "Repeat enabled" : "Repeat disabled", true);
 }
 
-void Model::shuffle() {
-    static std::random_device rd;
-    static std::mt19937 generator(rd());
-    std::ranges::shuffle(songs_, generator);
+void Model::insert(const std::string& filePath) {
+    if (!validate(filePath)) return;
+
+    playlist_.add(music_library_.import(filePath));
+    refresh();
+    listener_->onFeedback("Song added successfully!", true);
 }
 
-std::string Model::getRandomAd() const {
-    if (ads_.empty()) return {};
-    std::mt19937 randomEngine(std::random_device{}());
-    std::uniform_int_distribution<> distribution(0, ads_.size() - 1);
-    return ads_.at(distribution(randomEngine));
-}
-
-void Model::loadMusic() {
-    const std::string path = music_path_;
-    if (!std::filesystem::exists(path)) return;
-
-    song_names_ = filter(path);
-    songs_.clear();
-
-    for (int i = 0; i < song_names_.size(); ++i) {
-        std::string full_path = path + "/" + song_names_[i];
-        const int number = i + 1;
-        songs_.emplace_back(number, song_names_[i], full_path);
+bool Model::validate(const std::string& filePath) const {
+    if (filePath.empty() || !MusicLibrary::isSupported(filePath)) {
+        listener_->onFeedback("Unsupported file type.", false);
+        return false;
     }
 
-    updatePlaylist();
-    shuffle();
-}
-
-void Model::loadAds() {
-    const std::string path = ads_path_;
-    if (!std::filesystem::exists(path)) return;
-
-    ads_ = filter(path);
-    for (int i = 0; i < ads_.size(); ++i) {
-        ads_[i] = path + "/" + ads_[i];
-    }
-    emit adsUpdated(ads_);
-}
-
-std::vector<std::string> Model::filter(const std::string &directory) {
-    const std::filesystem::path direction(directory);
-    const std::vector<std::string> filters = { ".mp3", ".wav" };
-    std::vector<std::string> result;
-
-    if (!std::filesystem::exists(direction) || !std::filesystem::is_directory(direction)) {
-        return result;
+    const std::filesystem::path source(filePath);
+    if (music_library_.contains(source.filename().string())) {
+        listener_->onFeedback("This song already exists.", false);
+        return false;
     }
 
-    for (const auto &entry : std::filesystem::directory_iterator(direction)) {
-        if (entry.is_regular_file()) {
-            const std::string ext = entry.path().extension().string();
-            if (std::ranges::find(filters, ext) != filters.end()) {
-                result.push_back(entry.path().filename().string());
-            }
-        }
+    return true;
+}
+
+void Model::remove(const int index) {
+    playlist_.remove(index);
+    refresh();
+}
+
+void Model::sort(const bool byName) {
+    if (byName) {
+        QuickSort byTitle;
+        playlist_.sort(byTitle);
+    } else {
+        ShellSort byNumber;
+        playlist_.sort(byNumber);
     }
-
-    return result;
+    refresh();
 }
 
-bool Model::isExtension(const std::string &file_name) {
-    const std::filesystem::path path(file_name);
-    const std::string extension = path.extension().string();
-    return extension == ".mp3" || extension == ".wav";
+void Model::accept(IPlaylistVisitor& visitor) const {
+    playlist_.accept(visitor);
 }
 
-std::vector<Song>::iterator Model::find(const std::string &file_path) {
-    return std::ranges::find_if(songs_, [&](const Song &song) {
-        return song.getFilePath() == file_path;
-    });
-}
-
-void Model::save(const std::string &file_path) const {
-    const std::filesystem::path source_path(file_path);
-    const std::string destination = music_path_;
-    const std::filesystem::path destination_path = std::filesystem::path(destination) / source_path.filename();
-
-    if (!std::filesystem::exists(destination_path)) {
-        std::filesystem::copy_file(source_path, destination_path);
-    }
-}
-
-std::vector<Song> Model::search(const std::string& query) const {
-    std::vector<Song> result;
-    for (const Song& song : songs_) {
-        if (Song::match(song, query)) {
-            result.push_back(song);
-        }
-    }
-    return result;
-}
-
-void Model::updatePlaylist() {
-    song_names_.clear();
-    for (const Song &song : songs_) {
-        song_names_.push_back(song.getName());
-    }
-    emit songsUpdated(song_names_);
+void Model::search(const std::string& query, IPlaylistVisitor& visitor) const {
+    playlist_.search(query, visitor);
 }

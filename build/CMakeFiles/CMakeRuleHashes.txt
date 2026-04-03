@@ -1,0 +1,6 @@
+# Hashes of file build rules.
+658648ba02682456739132597886bc97 CMakeFiles/CopyResources
+2c50586c848cab02e566e4a6e9fe4a9c CMakeFiles/NewMusicPlayerTests_autogen
+2c50586c848cab02e566e4a6e9fe4a9c CMakeFiles/NewMusicPlayer_autogen
+81c7495f83a7fe9dd8678f9bbfea09b0 NewMusicPlayerTests_autogen/timestamp
+600424a1834d869c528b4d71271875f9 NewMusicPlayer_autogen/timestamp

@@ -1,26 +1,23 @@
 #ifndef SONG_H
 #define SONG_H
+
+#include "IPlaylistVisitor.h"
 #include <string>
 
 class Song {
 private:
-    int number_;
-    std::string id_;
     std::string name_;
     std::string path_;
 
-    static std::string trim(const std::string &string);
+    static std::string trim(const std::string& string);
 
 public:
-    Song(int number, const std::string &name, const std::string &path);
+    Song(const std::string& name, const std::string& path);
 
-    int getNumber() const;
-    std::string getId() const;
-    std::string getName() const;
-    std::string getFilePath() const;
-    static std::string extractName(const std::string &name);
-    static int extractNumber(const std::string &name);
-    static bool match(const Song& song, const std::string& query);
+    void accept(IPlaylistVisitor& visitor) const;
+    bool match(const std::string& query) const;
+    static std::string parse(const std::string& name);
+    static int order(const std::string& name);
 };
 
 #endif //SONG_H
