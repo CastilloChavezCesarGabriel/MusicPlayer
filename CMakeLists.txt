@@ -81,6 +81,10 @@ add_executable(NewMusicPlayerTests
         test/MockPlaybackListener.h
         test/TestPlaylistVisitor.cpp
         test/TestPlaylistVisitor.h
+        test/ModelTestFixture.cpp
+        test/ModelTestFixture.h
+        test/DirectoryTestFixture.cpp
+        test/DirectoryTestFixture.h
         test/model/SongTest.cpp
         test/model/PlaylistTest.cpp
         test/model/AdvertisementTest.cpp

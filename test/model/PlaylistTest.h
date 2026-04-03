@@ -4,25 +4,21 @@
 #include <gtest/gtest.h>
 #include "../../model/Playlist.h"
 #include "../../model/MusicLibrary.h"
-#include "../../model/ShellSort.h"
-#include "../../model/QuickSort.h"
-#include "../../model/IPlaybackListener.h"
 #include "../TestPlaylistVisitor.h"
 #include "../MockPlaybackListener.h"
-#include <filesystem>
 #include <string>
 
 class PlaylistTest : public ::testing::Test {
 protected:
-    std::string testDir;
-    MusicLibrary* library;
-    Playlist* playlist;
-    TestPlaylistVisitor visitor;
-    MockPlaybackListener listener;
+    std::string test_directory_;
+    MusicLibrary*library_ = nullptr;
+    Playlist*playlist_ = nullptr;
+    TestPlaylistVisitor visitor_;
+    MockPlaybackListener listener_;
 
     void SetUp() override;
     void TearDown() override;
-    void populate(int count);
+    void populate(int count) const;
 };
 
 #endif

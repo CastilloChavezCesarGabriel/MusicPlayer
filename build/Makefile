@@ -680,6 +680,30 @@ model/Song.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/NewMusicPlayerTests.dir/build.make CMakeFiles/NewMusicPlayerTests.dir/model/Song.cpp.s
 .PHONY : model/Song.cpp.s
 
+test/DirectoryTestFixture.o: test/DirectoryTestFixture.cpp.o
+.PHONY : test/DirectoryTestFixture.o
+
+# target to build an object file
+test/DirectoryTestFixture.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NewMusicPlayerTests.dir/build.make CMakeFiles/NewMusicPlayerTests.dir/test/DirectoryTestFixture.cpp.o
+.PHONY : test/DirectoryTestFixture.cpp.o
+
+test/DirectoryTestFixture.i: test/DirectoryTestFixture.cpp.i
+.PHONY : test/DirectoryTestFixture.i
+
+# target to preprocess a source file
+test/DirectoryTestFixture.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NewMusicPlayerTests.dir/build.make CMakeFiles/NewMusicPlayerTests.dir/test/DirectoryTestFixture.cpp.i
+.PHONY : test/DirectoryTestFixture.cpp.i
+
+test/DirectoryTestFixture.s: test/DirectoryTestFixture.cpp.s
+.PHONY : test/DirectoryTestFixture.s
+
+# target to generate assembly for a file
+test/DirectoryTestFixture.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NewMusicPlayerTests.dir/build.make CMakeFiles/NewMusicPlayerTests.dir/test/DirectoryTestFixture.cpp.s
+.PHONY : test/DirectoryTestFixture.cpp.s
+
 test/MockPlaybackListener.o: test/MockPlaybackListener.cpp.o
 .PHONY : test/MockPlaybackListener.o
 
@@ -703,6 +727,30 @@ test/MockPlaybackListener.s: test/MockPlaybackListener.cpp.s
 test/MockPlaybackListener.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/NewMusicPlayerTests.dir/build.make CMakeFiles/NewMusicPlayerTests.dir/test/MockPlaybackListener.cpp.s
 .PHONY : test/MockPlaybackListener.cpp.s
+
+test/ModelTestFixture.o: test/ModelTestFixture.cpp.o
+.PHONY : test/ModelTestFixture.o
+
+# target to build an object file
+test/ModelTestFixture.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NewMusicPlayerTests.dir/build.make CMakeFiles/NewMusicPlayerTests.dir/test/ModelTestFixture.cpp.o
+.PHONY : test/ModelTestFixture.cpp.o
+
+test/ModelTestFixture.i: test/ModelTestFixture.cpp.i
+.PHONY : test/ModelTestFixture.i
+
+# target to preprocess a source file
+test/ModelTestFixture.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NewMusicPlayerTests.dir/build.make CMakeFiles/NewMusicPlayerTests.dir/test/ModelTestFixture.cpp.i
+.PHONY : test/ModelTestFixture.cpp.i
+
+test/ModelTestFixture.s: test/ModelTestFixture.cpp.s
+.PHONY : test/ModelTestFixture.s
+
+# target to generate assembly for a file
+test/ModelTestFixture.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NewMusicPlayerTests.dir/build.make CMakeFiles/NewMusicPlayerTests.dir/test/ModelTestFixture.cpp.s
+.PHONY : test/ModelTestFixture.cpp.s
 
 test/RegressionTest.o: test/RegressionTest.cpp.o
 .PHONY : test/RegressionTest.o
@@ -751,150 +799,6 @@ test/TestPlaylistVisitor.s: test/TestPlaylistVisitor.cpp.s
 test/TestPlaylistVisitor.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/NewMusicPlayerTests.dir/build.make CMakeFiles/NewMusicPlayerTests.dir/test/TestPlaylistVisitor.cpp.s
 .PHONY : test/TestPlaylistVisitor.cpp.s
-
-test/controller/AddSongUseCaseTest.o: test/controller/AddSongUseCaseTest.cpp.o
-.PHONY : test/controller/AddSongUseCaseTest.o
-
-# target to build an object file
-test/controller/AddSongUseCaseTest.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/NewMusicPlayerTests.dir/build.make CMakeFiles/NewMusicPlayerTests.dir/test/controller/AddSongUseCaseTest.cpp.o
-.PHONY : test/controller/AddSongUseCaseTest.cpp.o
-
-test/controller/AddSongUseCaseTest.i: test/controller/AddSongUseCaseTest.cpp.i
-.PHONY : test/controller/AddSongUseCaseTest.i
-
-# target to preprocess a source file
-test/controller/AddSongUseCaseTest.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/NewMusicPlayerTests.dir/build.make CMakeFiles/NewMusicPlayerTests.dir/test/controller/AddSongUseCaseTest.cpp.i
-.PHONY : test/controller/AddSongUseCaseTest.cpp.i
-
-test/controller/AddSongUseCaseTest.s: test/controller/AddSongUseCaseTest.cpp.s
-.PHONY : test/controller/AddSongUseCaseTest.s
-
-# target to generate assembly for a file
-test/controller/AddSongUseCaseTest.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/NewMusicPlayerTests.dir/build.make CMakeFiles/NewMusicPlayerTests.dir/test/controller/AddSongUseCaseTest.cpp.s
-.PHONY : test/controller/AddSongUseCaseTest.cpp.s
-
-test/controller/NavigatePlaylistUseCaseTest.o: test/controller/NavigatePlaylistUseCaseTest.cpp.o
-.PHONY : test/controller/NavigatePlaylistUseCaseTest.o
-
-# target to build an object file
-test/controller/NavigatePlaylistUseCaseTest.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/NewMusicPlayerTests.dir/build.make CMakeFiles/NewMusicPlayerTests.dir/test/controller/NavigatePlaylistUseCaseTest.cpp.o
-.PHONY : test/controller/NavigatePlaylistUseCaseTest.cpp.o
-
-test/controller/NavigatePlaylistUseCaseTest.i: test/controller/NavigatePlaylistUseCaseTest.cpp.i
-.PHONY : test/controller/NavigatePlaylistUseCaseTest.i
-
-# target to preprocess a source file
-test/controller/NavigatePlaylistUseCaseTest.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/NewMusicPlayerTests.dir/build.make CMakeFiles/NewMusicPlayerTests.dir/test/controller/NavigatePlaylistUseCaseTest.cpp.i
-.PHONY : test/controller/NavigatePlaylistUseCaseTest.cpp.i
-
-test/controller/NavigatePlaylistUseCaseTest.s: test/controller/NavigatePlaylistUseCaseTest.cpp.s
-.PHONY : test/controller/NavigatePlaylistUseCaseTest.s
-
-# target to generate assembly for a file
-test/controller/NavigatePlaylistUseCaseTest.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/NewMusicPlayerTests.dir/build.make CMakeFiles/NewMusicPlayerTests.dir/test/controller/NavigatePlaylistUseCaseTest.cpp.s
-.PHONY : test/controller/NavigatePlaylistUseCaseTest.cpp.s
-
-test/controller/PlaySongUseCaseTest.o: test/controller/PlaySongUseCaseTest.cpp.o
-.PHONY : test/controller/PlaySongUseCaseTest.o
-
-# target to build an object file
-test/controller/PlaySongUseCaseTest.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/NewMusicPlayerTests.dir/build.make CMakeFiles/NewMusicPlayerTests.dir/test/controller/PlaySongUseCaseTest.cpp.o
-.PHONY : test/controller/PlaySongUseCaseTest.cpp.o
-
-test/controller/PlaySongUseCaseTest.i: test/controller/PlaySongUseCaseTest.cpp.i
-.PHONY : test/controller/PlaySongUseCaseTest.i
-
-# target to preprocess a source file
-test/controller/PlaySongUseCaseTest.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/NewMusicPlayerTests.dir/build.make CMakeFiles/NewMusicPlayerTests.dir/test/controller/PlaySongUseCaseTest.cpp.i
-.PHONY : test/controller/PlaySongUseCaseTest.cpp.i
-
-test/controller/PlaySongUseCaseTest.s: test/controller/PlaySongUseCaseTest.cpp.s
-.PHONY : test/controller/PlaySongUseCaseTest.s
-
-# target to generate assembly for a file
-test/controller/PlaySongUseCaseTest.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/NewMusicPlayerTests.dir/build.make CMakeFiles/NewMusicPlayerTests.dir/test/controller/PlaySongUseCaseTest.cpp.s
-.PHONY : test/controller/PlaySongUseCaseTest.cpp.s
-
-test/controller/RemoveSongUseCaseTest.o: test/controller/RemoveSongUseCaseTest.cpp.o
-.PHONY : test/controller/RemoveSongUseCaseTest.o
-
-# target to build an object file
-test/controller/RemoveSongUseCaseTest.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/NewMusicPlayerTests.dir/build.make CMakeFiles/NewMusicPlayerTests.dir/test/controller/RemoveSongUseCaseTest.cpp.o
-.PHONY : test/controller/RemoveSongUseCaseTest.cpp.o
-
-test/controller/RemoveSongUseCaseTest.i: test/controller/RemoveSongUseCaseTest.cpp.i
-.PHONY : test/controller/RemoveSongUseCaseTest.i
-
-# target to preprocess a source file
-test/controller/RemoveSongUseCaseTest.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/NewMusicPlayerTests.dir/build.make CMakeFiles/NewMusicPlayerTests.dir/test/controller/RemoveSongUseCaseTest.cpp.i
-.PHONY : test/controller/RemoveSongUseCaseTest.cpp.i
-
-test/controller/RemoveSongUseCaseTest.s: test/controller/RemoveSongUseCaseTest.cpp.s
-.PHONY : test/controller/RemoveSongUseCaseTest.s
-
-# target to generate assembly for a file
-test/controller/RemoveSongUseCaseTest.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/NewMusicPlayerTests.dir/build.make CMakeFiles/NewMusicPlayerTests.dir/test/controller/RemoveSongUseCaseTest.cpp.s
-.PHONY : test/controller/RemoveSongUseCaseTest.cpp.s
-
-test/controller/SearchSongUseCaseTest.o: test/controller/SearchSongUseCaseTest.cpp.o
-.PHONY : test/controller/SearchSongUseCaseTest.o
-
-# target to build an object file
-test/controller/SearchSongUseCaseTest.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/NewMusicPlayerTests.dir/build.make CMakeFiles/NewMusicPlayerTests.dir/test/controller/SearchSongUseCaseTest.cpp.o
-.PHONY : test/controller/SearchSongUseCaseTest.cpp.o
-
-test/controller/SearchSongUseCaseTest.i: test/controller/SearchSongUseCaseTest.cpp.i
-.PHONY : test/controller/SearchSongUseCaseTest.i
-
-# target to preprocess a source file
-test/controller/SearchSongUseCaseTest.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/NewMusicPlayerTests.dir/build.make CMakeFiles/NewMusicPlayerTests.dir/test/controller/SearchSongUseCaseTest.cpp.i
-.PHONY : test/controller/SearchSongUseCaseTest.cpp.i
-
-test/controller/SearchSongUseCaseTest.s: test/controller/SearchSongUseCaseTest.cpp.s
-.PHONY : test/controller/SearchSongUseCaseTest.s
-
-# target to generate assembly for a file
-test/controller/SearchSongUseCaseTest.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/NewMusicPlayerTests.dir/build.make CMakeFiles/NewMusicPlayerTests.dir/test/controller/SearchSongUseCaseTest.cpp.s
-.PHONY : test/controller/SearchSongUseCaseTest.cpp.s
-
-test/controller/SortPlaylistUseCaseTest.o: test/controller/SortPlaylistUseCaseTest.cpp.o
-.PHONY : test/controller/SortPlaylistUseCaseTest.o
-
-# target to build an object file
-test/controller/SortPlaylistUseCaseTest.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/NewMusicPlayerTests.dir/build.make CMakeFiles/NewMusicPlayerTests.dir/test/controller/SortPlaylistUseCaseTest.cpp.o
-.PHONY : test/controller/SortPlaylistUseCaseTest.cpp.o
-
-test/controller/SortPlaylistUseCaseTest.i: test/controller/SortPlaylistUseCaseTest.cpp.i
-.PHONY : test/controller/SortPlaylistUseCaseTest.i
-
-# target to preprocess a source file
-test/controller/SortPlaylistUseCaseTest.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/NewMusicPlayerTests.dir/build.make CMakeFiles/NewMusicPlayerTests.dir/test/controller/SortPlaylistUseCaseTest.cpp.i
-.PHONY : test/controller/SortPlaylistUseCaseTest.cpp.i
-
-test/controller/SortPlaylistUseCaseTest.s: test/controller/SortPlaylistUseCaseTest.cpp.s
-.PHONY : test/controller/SortPlaylistUseCaseTest.s
-
-# target to generate assembly for a file
-test/controller/SortPlaylistUseCaseTest.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/NewMusicPlayerTests.dir/build.make CMakeFiles/NewMusicPlayerTests.dir/test/controller/SortPlaylistUseCaseTest.cpp.s
-.PHONY : test/controller/SortPlaylistUseCaseTest.cpp.s
 
 test/model/AdvertisementTest.o: test/model/AdvertisementTest.cpp.o
 .PHONY : test/model/AdvertisementTest.o
@@ -1040,6 +944,150 @@ test/model/SortingTest.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/NewMusicPlayerTests.dir/build.make CMakeFiles/NewMusicPlayerTests.dir/test/model/SortingTest.cpp.s
 .PHONY : test/model/SortingTest.cpp.s
 
+test/use_cases/AddSongUseCaseTest.o: test/use_cases/AddSongUseCaseTest.cpp.o
+.PHONY : test/use_cases/AddSongUseCaseTest.o
+
+# target to build an object file
+test/use_cases/AddSongUseCaseTest.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NewMusicPlayerTests.dir/build.make CMakeFiles/NewMusicPlayerTests.dir/test/use_cases/AddSongUseCaseTest.cpp.o
+.PHONY : test/use_cases/AddSongUseCaseTest.cpp.o
+
+test/use_cases/AddSongUseCaseTest.i: test/use_cases/AddSongUseCaseTest.cpp.i
+.PHONY : test/use_cases/AddSongUseCaseTest.i
+
+# target to preprocess a source file
+test/use_cases/AddSongUseCaseTest.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NewMusicPlayerTests.dir/build.make CMakeFiles/NewMusicPlayerTests.dir/test/use_cases/AddSongUseCaseTest.cpp.i
+.PHONY : test/use_cases/AddSongUseCaseTest.cpp.i
+
+test/use_cases/AddSongUseCaseTest.s: test/use_cases/AddSongUseCaseTest.cpp.s
+.PHONY : test/use_cases/AddSongUseCaseTest.s
+
+# target to generate assembly for a file
+test/use_cases/AddSongUseCaseTest.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NewMusicPlayerTests.dir/build.make CMakeFiles/NewMusicPlayerTests.dir/test/use_cases/AddSongUseCaseTest.cpp.s
+.PHONY : test/use_cases/AddSongUseCaseTest.cpp.s
+
+test/use_cases/NavigatePlaylistUseCaseTest.o: test/use_cases/NavigatePlaylistUseCaseTest.cpp.o
+.PHONY : test/use_cases/NavigatePlaylistUseCaseTest.o
+
+# target to build an object file
+test/use_cases/NavigatePlaylistUseCaseTest.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NewMusicPlayerTests.dir/build.make CMakeFiles/NewMusicPlayerTests.dir/test/use_cases/NavigatePlaylistUseCaseTest.cpp.o
+.PHONY : test/use_cases/NavigatePlaylistUseCaseTest.cpp.o
+
+test/use_cases/NavigatePlaylistUseCaseTest.i: test/use_cases/NavigatePlaylistUseCaseTest.cpp.i
+.PHONY : test/use_cases/NavigatePlaylistUseCaseTest.i
+
+# target to preprocess a source file
+test/use_cases/NavigatePlaylistUseCaseTest.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NewMusicPlayerTests.dir/build.make CMakeFiles/NewMusicPlayerTests.dir/test/use_cases/NavigatePlaylistUseCaseTest.cpp.i
+.PHONY : test/use_cases/NavigatePlaylistUseCaseTest.cpp.i
+
+test/use_cases/NavigatePlaylistUseCaseTest.s: test/use_cases/NavigatePlaylistUseCaseTest.cpp.s
+.PHONY : test/use_cases/NavigatePlaylistUseCaseTest.s
+
+# target to generate assembly for a file
+test/use_cases/NavigatePlaylistUseCaseTest.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NewMusicPlayerTests.dir/build.make CMakeFiles/NewMusicPlayerTests.dir/test/use_cases/NavigatePlaylistUseCaseTest.cpp.s
+.PHONY : test/use_cases/NavigatePlaylistUseCaseTest.cpp.s
+
+test/use_cases/PlaySongUseCaseTest.o: test/use_cases/PlaySongUseCaseTest.cpp.o
+.PHONY : test/use_cases/PlaySongUseCaseTest.o
+
+# target to build an object file
+test/use_cases/PlaySongUseCaseTest.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NewMusicPlayerTests.dir/build.make CMakeFiles/NewMusicPlayerTests.dir/test/use_cases/PlaySongUseCaseTest.cpp.o
+.PHONY : test/use_cases/PlaySongUseCaseTest.cpp.o
+
+test/use_cases/PlaySongUseCaseTest.i: test/use_cases/PlaySongUseCaseTest.cpp.i
+.PHONY : test/use_cases/PlaySongUseCaseTest.i
+
+# target to preprocess a source file
+test/use_cases/PlaySongUseCaseTest.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NewMusicPlayerTests.dir/build.make CMakeFiles/NewMusicPlayerTests.dir/test/use_cases/PlaySongUseCaseTest.cpp.i
+.PHONY : test/use_cases/PlaySongUseCaseTest.cpp.i
+
+test/use_cases/PlaySongUseCaseTest.s: test/use_cases/PlaySongUseCaseTest.cpp.s
+.PHONY : test/use_cases/PlaySongUseCaseTest.s
+
+# target to generate assembly for a file
+test/use_cases/PlaySongUseCaseTest.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NewMusicPlayerTests.dir/build.make CMakeFiles/NewMusicPlayerTests.dir/test/use_cases/PlaySongUseCaseTest.cpp.s
+.PHONY : test/use_cases/PlaySongUseCaseTest.cpp.s
+
+test/use_cases/RemoveSongUseCaseTest.o: test/use_cases/RemoveSongUseCaseTest.cpp.o
+.PHONY : test/use_cases/RemoveSongUseCaseTest.o
+
+# target to build an object file
+test/use_cases/RemoveSongUseCaseTest.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NewMusicPlayerTests.dir/build.make CMakeFiles/NewMusicPlayerTests.dir/test/use_cases/RemoveSongUseCaseTest.cpp.o
+.PHONY : test/use_cases/RemoveSongUseCaseTest.cpp.o
+
+test/use_cases/RemoveSongUseCaseTest.i: test/use_cases/RemoveSongUseCaseTest.cpp.i
+.PHONY : test/use_cases/RemoveSongUseCaseTest.i
+
+# target to preprocess a source file
+test/use_cases/RemoveSongUseCaseTest.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NewMusicPlayerTests.dir/build.make CMakeFiles/NewMusicPlayerTests.dir/test/use_cases/RemoveSongUseCaseTest.cpp.i
+.PHONY : test/use_cases/RemoveSongUseCaseTest.cpp.i
+
+test/use_cases/RemoveSongUseCaseTest.s: test/use_cases/RemoveSongUseCaseTest.cpp.s
+.PHONY : test/use_cases/RemoveSongUseCaseTest.s
+
+# target to generate assembly for a file
+test/use_cases/RemoveSongUseCaseTest.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NewMusicPlayerTests.dir/build.make CMakeFiles/NewMusicPlayerTests.dir/test/use_cases/RemoveSongUseCaseTest.cpp.s
+.PHONY : test/use_cases/RemoveSongUseCaseTest.cpp.s
+
+test/use_cases/SearchSongUseCaseTest.o: test/use_cases/SearchSongUseCaseTest.cpp.o
+.PHONY : test/use_cases/SearchSongUseCaseTest.o
+
+# target to build an object file
+test/use_cases/SearchSongUseCaseTest.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NewMusicPlayerTests.dir/build.make CMakeFiles/NewMusicPlayerTests.dir/test/use_cases/SearchSongUseCaseTest.cpp.o
+.PHONY : test/use_cases/SearchSongUseCaseTest.cpp.o
+
+test/use_cases/SearchSongUseCaseTest.i: test/use_cases/SearchSongUseCaseTest.cpp.i
+.PHONY : test/use_cases/SearchSongUseCaseTest.i
+
+# target to preprocess a source file
+test/use_cases/SearchSongUseCaseTest.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NewMusicPlayerTests.dir/build.make CMakeFiles/NewMusicPlayerTests.dir/test/use_cases/SearchSongUseCaseTest.cpp.i
+.PHONY : test/use_cases/SearchSongUseCaseTest.cpp.i
+
+test/use_cases/SearchSongUseCaseTest.s: test/use_cases/SearchSongUseCaseTest.cpp.s
+.PHONY : test/use_cases/SearchSongUseCaseTest.s
+
+# target to generate assembly for a file
+test/use_cases/SearchSongUseCaseTest.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NewMusicPlayerTests.dir/build.make CMakeFiles/NewMusicPlayerTests.dir/test/use_cases/SearchSongUseCaseTest.cpp.s
+.PHONY : test/use_cases/SearchSongUseCaseTest.cpp.s
+
+test/use_cases/SortPlaylistUseCaseTest.o: test/use_cases/SortPlaylistUseCaseTest.cpp.o
+.PHONY : test/use_cases/SortPlaylistUseCaseTest.o
+
+# target to build an object file
+test/use_cases/SortPlaylistUseCaseTest.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NewMusicPlayerTests.dir/build.make CMakeFiles/NewMusicPlayerTests.dir/test/use_cases/SortPlaylistUseCaseTest.cpp.o
+.PHONY : test/use_cases/SortPlaylistUseCaseTest.cpp.o
+
+test/use_cases/SortPlaylistUseCaseTest.i: test/use_cases/SortPlaylistUseCaseTest.cpp.i
+.PHONY : test/use_cases/SortPlaylistUseCaseTest.i
+
+# target to preprocess a source file
+test/use_cases/SortPlaylistUseCaseTest.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NewMusicPlayerTests.dir/build.make CMakeFiles/NewMusicPlayerTests.dir/test/use_cases/SortPlaylistUseCaseTest.cpp.i
+.PHONY : test/use_cases/SortPlaylistUseCaseTest.cpp.i
+
+test/use_cases/SortPlaylistUseCaseTest.s: test/use_cases/SortPlaylistUseCaseTest.cpp.s
+.PHONY : test/use_cases/SortPlaylistUseCaseTest.s
+
+# target to generate assembly for a file
+test/use_cases/SortPlaylistUseCaseTest.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NewMusicPlayerTests.dir/build.make CMakeFiles/NewMusicPlayerTests.dir/test/use_cases/SortPlaylistUseCaseTest.cpp.s
+.PHONY : test/use_cases/SortPlaylistUseCaseTest.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -1111,33 +1159,21 @@ help:
 	@echo "... model/Song.o"
 	@echo "... model/Song.i"
 	@echo "... model/Song.s"
+	@echo "... test/DirectoryTestFixture.o"
+	@echo "... test/DirectoryTestFixture.i"
+	@echo "... test/DirectoryTestFixture.s"
 	@echo "... test/MockPlaybackListener.o"
 	@echo "... test/MockPlaybackListener.i"
 	@echo "... test/MockPlaybackListener.s"
+	@echo "... test/ModelTestFixture.o"
+	@echo "... test/ModelTestFixture.i"
+	@echo "... test/ModelTestFixture.s"
 	@echo "... test/RegressionTest.o"
 	@echo "... test/RegressionTest.i"
 	@echo "... test/RegressionTest.s"
 	@echo "... test/TestPlaylistVisitor.o"
 	@echo "... test/TestPlaylistVisitor.i"
 	@echo "... test/TestPlaylistVisitor.s"
-	@echo "... test/controller/AddSongUseCaseTest.o"
-	@echo "... test/controller/AddSongUseCaseTest.i"
-	@echo "... test/controller/AddSongUseCaseTest.s"
-	@echo "... test/controller/NavigatePlaylistUseCaseTest.o"
-	@echo "... test/controller/NavigatePlaylistUseCaseTest.i"
-	@echo "... test/controller/NavigatePlaylistUseCaseTest.s"
-	@echo "... test/controller/PlaySongUseCaseTest.o"
-	@echo "... test/controller/PlaySongUseCaseTest.i"
-	@echo "... test/controller/PlaySongUseCaseTest.s"
-	@echo "... test/controller/RemoveSongUseCaseTest.o"
-	@echo "... test/controller/RemoveSongUseCaseTest.i"
-	@echo "... test/controller/RemoveSongUseCaseTest.s"
-	@echo "... test/controller/SearchSongUseCaseTest.o"
-	@echo "... test/controller/SearchSongUseCaseTest.i"
-	@echo "... test/controller/SearchSongUseCaseTest.s"
-	@echo "... test/controller/SortPlaylistUseCaseTest.o"
-	@echo "... test/controller/SortPlaylistUseCaseTest.i"
-	@echo "... test/controller/SortPlaylistUseCaseTest.s"
 	@echo "... test/model/AdvertisementTest.o"
 	@echo "... test/model/AdvertisementTest.i"
 	@echo "... test/model/AdvertisementTest.s"
@@ -1156,6 +1192,24 @@ help:
 	@echo "... test/model/SortingTest.o"
 	@echo "... test/model/SortingTest.i"
 	@echo "... test/model/SortingTest.s"
+	@echo "... test/use_cases/AddSongUseCaseTest.o"
+	@echo "... test/use_cases/AddSongUseCaseTest.i"
+	@echo "... test/use_cases/AddSongUseCaseTest.s"
+	@echo "... test/use_cases/NavigatePlaylistUseCaseTest.o"
+	@echo "... test/use_cases/NavigatePlaylistUseCaseTest.i"
+	@echo "... test/use_cases/NavigatePlaylistUseCaseTest.s"
+	@echo "... test/use_cases/PlaySongUseCaseTest.o"
+	@echo "... test/use_cases/PlaySongUseCaseTest.i"
+	@echo "... test/use_cases/PlaySongUseCaseTest.s"
+	@echo "... test/use_cases/RemoveSongUseCaseTest.o"
+	@echo "... test/use_cases/RemoveSongUseCaseTest.i"
+	@echo "... test/use_cases/RemoveSongUseCaseTest.s"
+	@echo "... test/use_cases/SearchSongUseCaseTest.o"
+	@echo "... test/use_cases/SearchSongUseCaseTest.i"
+	@echo "... test/use_cases/SearchSongUseCaseTest.s"
+	@echo "... test/use_cases/SortPlaylistUseCaseTest.o"
+	@echo "... test/use_cases/SortPlaylistUseCaseTest.i"
+	@echo "... test/use_cases/SortPlaylistUseCaseTest.s"
 .PHONY : help
 
 

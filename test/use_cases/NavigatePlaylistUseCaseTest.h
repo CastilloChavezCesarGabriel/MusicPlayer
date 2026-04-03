@@ -1,21 +1,11 @@
 #ifndef NAVIGATE_PLAYLIST_USE_CASE_TEST_H
 #define NAVIGATE_PLAYLIST_USE_CASE_TEST_H
 
-#include <gtest/gtest.h>
-#include "../../model/Model.h"
-#include "../MockPlaybackListener.h"
-#include <string>
+#include "../ModelTestFixture.h"
 
-class NavigatePlaylistUseCaseTest : public ::testing::Test {
+class NavigatePlaylistUseCaseTest : public ModelTestFixture {
 protected:
-    std::string baseDir;
-    std::string musicDir;
-    std::string adsDir;
-    MockPlaybackListener listener;
-
-    void SetUp() override;
-    void TearDown() override;
-    void createSong(const std::string& name) const;
+    std::string identify() const override;
 };
 
 #endif //NAVIGATE_PLAYLIST_USE_CASE_TEST_H

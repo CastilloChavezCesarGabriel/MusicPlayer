@@ -1,97 +1,89 @@
 #include "AdvertisementTest.h"
+#include "../../model/Advertisement.h"
 #include <fstream>
 
-void AdvertisementTest::SetUp() {
-    testDir = std::filesystem::temp_directory_path().string() + "/ad_test";
-    std::filesystem::create_directories(testDir);
-}
-
-void AdvertisementTest::TearDown() {
-    std::filesystem::remove_all(testDir);
-}
-
-void AdvertisementTest::createAdFile(const std::string& name) {
-    std::ofstream(testDir + "/" + name).close();
+std::string AdvertisementTest::identify() const {
+    return "ad_test";
 }
 
 TEST_F(AdvertisementTest, LoadFindsAudioFiles) {
-    createAdFile("ad1.mp3");
-    createAdFile("ad2.wav");
-    Advertisement ad(testDir);
+    createFile("ad1.mp3");
+    createFile("ad2.wav");
+    Advertisement ad(test_directory_);
     ad.load();
-    EXPECT_TRUE(ad.interrupt(listener));
+    EXPECT_TRUE(ad.interrupt(listener_));
 }
 
 TEST_F(AdvertisementTest, LoadIgnoresNonAudioFiles) {
-    createAdFile("readme.txt");
-    createAdFile("image.png");
-    Advertisement ad(testDir);
+    createFile("readme.txt");
+    createFile("image.png");
+    Advertisement ad(test_directory_);
     ad.load();
-    EXPECT_FALSE(ad.interrupt(listener));
+    EXPECT_FALSE(ad.interrupt(listener_));
 }
 
 TEST_F(AdvertisementTest, LoadEmptyDirectory) {
-    Advertisement ad(testDir);
+    Advertisement ad(test_directory_);
     ad.load();
-    EXPECT_FALSE(ad.interrupt(listener));
+    EXPECT_FALSE(ad.interrupt(listener_));
 }
 
 TEST_F(AdvertisementTest, LoadNonExistentDirectory) {
     Advertisement ad("/nonexistent/path");
     ad.load();
-    EXPECT_FALSE(ad.interrupt(listener));
+    EXPECT_FALSE(ad.interrupt(listener_));
 }
 
 TEST_F(AdvertisementTest, InterruptStartsPlayback) {
-    createAdFile("ad.mp3");
-    Advertisement ad(testDir);
+    createFile("ad.mp3");
+    Advertisement ad(test_directory_);
     ad.load();
-    ad.interrupt(listener);
-    EXPECT_TRUE(listener.wasStarted());
+    ad.interrupt(listener_);
+    EXPECT_TRUE(listener_.wasStarted());
 }
 
 TEST_F(AdvertisementTest, InterruptReturnsTrueWhenAdsExist) {
-    createAdFile("ad.mp3");
-    Advertisement ad(testDir);
+    createFile("ad.mp3");
+    Advertisement ad(test_directory_);
     ad.load();
-    EXPECT_TRUE(ad.interrupt(listener));
+    EXPECT_TRUE(ad.interrupt(listener_));
 }
 
 TEST_F(AdvertisementTest, InterruptReturnsFalseWhenNoAds) {
-    Advertisement ad(testDir);
+    Advertisement ad(test_directory_);
     ad.load();
-    EXPECT_FALSE(ad.interrupt(listener));
+    EXPECT_FALSE(ad.interrupt(listener_));
 }
 
 TEST_F(AdvertisementTest, ConcludeReturnsTrueAfterInterrupt) {
-    createAdFile("ad.mp3");
-    Advertisement ad(testDir);
+    createFile("ad.mp3");
+    Advertisement ad(test_directory_);
     ad.load();
-    ad.interrupt(listener);
+    ad.interrupt(listener_);
     EXPECT_TRUE(ad.conclude());
 }
 
 TEST_F(AdvertisementTest, ConcludeReturnsFalseWithoutInterrupt) {
-    Advertisement ad(testDir);
+    Advertisement ad(test_directory_);
     EXPECT_FALSE(ad.conclude());
 }
 
 TEST_F(AdvertisementTest, ConcludeReturnsFalseOnSecondCall) {
-    createAdFile("ad.mp3");
-    Advertisement ad(testDir);
+    createFile("ad.mp3");
+    Advertisement ad(test_directory_);
     ad.load();
-    ad.interrupt(listener);
+    ad.interrupt(listener_);
     ad.conclude();
     EXPECT_FALSE(ad.conclude());
 }
 
 TEST_F(AdvertisementTest, InterruptAfterConcludeWorks) {
-    createAdFile("ad.mp3");
-    Advertisement ad(testDir);
+    createFile("ad.mp3");
+    Advertisement ad(test_directory_);
     ad.load();
-    ad.interrupt(listener);
+    ad.interrupt(listener_);
     ad.conclude();
-    EXPECT_TRUE(ad.interrupt(listener));
+    EXPECT_TRUE(ad.interrupt(listener_));
 }
 
 TEST_F(AdvertisementTest, ScheduleReturnsBool) {
@@ -109,57 +101,57 @@ TEST_F(AdvertisementTest, ScheduleProducesVariation) {
 }
 
 TEST_F(AdvertisementTest, LoadMixedFiles) {
-    createAdFile("ad1.mp3");
-    createAdFile("readme.txt");
-    createAdFile("ad2.wav");
-    createAdFile("image.jpg");
-    Advertisement ad(testDir);
+    createFile("ad1.mp3");
+    createFile("readme.txt");
+    createFile("ad2.wav");
+    createFile("image.jpg");
+    Advertisement ad(test_directory_);
     ad.load();
-    EXPECT_TRUE(ad.interrupt(listener));
+    EXPECT_TRUE(ad.interrupt(listener_));
 }
 
 TEST_F(AdvertisementTest, InterruptPlaysFromLoadedAds) {
-    createAdFile("only_ad.mp3");
-    Advertisement ad(testDir);
+    createFile("only_ad.mp3");
+    Advertisement ad(test_directory_);
     ad.load();
-    ad.interrupt(listener);
-    EXPECT_TRUE(listener.wasStarted());
+    ad.interrupt(listener_);
+    EXPECT_TRUE(listener_.wasStarted());
 }
 
 TEST_F(AdvertisementTest, MultipleInterruptsAllStart) {
-    createAdFile("ad.mp3");
-    Advertisement ad(testDir);
+    createFile("ad.mp3");
+    Advertisement ad(test_directory_);
     ad.load();
-    ad.interrupt(listener);
+    ad.interrupt(listener_);
     ad.conclude();
-    ad.interrupt(listener);
-    EXPECT_TRUE(listener.wasStarted());
+    ad.interrupt(listener_);
+    EXPECT_TRUE(listener_.wasStarted());
 }
 
 TEST_F(AdvertisementTest, ConcludeWithoutLoadReturnsFalse) {
-    Advertisement ad(testDir);
+    Advertisement ad(test_directory_);
     EXPECT_FALSE(ad.conclude());
 }
 
 TEST_F(AdvertisementTest, LoadMultipleMp3Files) {
     for (int i = 0; i < 8; i++) {
-        createAdFile("ad" + std::to_string(i) + ".mp3");
+        createFile("ad" + std::to_string(i) + ".mp3");
     }
-    Advertisement ad(testDir);
+    Advertisement ad(test_directory_);
     ad.load();
-    EXPECT_TRUE(ad.interrupt(listener));
+    EXPECT_TRUE(ad.interrupt(listener_));
 }
 
 TEST_F(AdvertisementTest, InterruptDoesNotStartWhenEmpty) {
-    Advertisement ad(testDir);
+    Advertisement ad(test_directory_);
     ad.load();
-    ad.interrupt(listener);
-    EXPECT_FALSE(listener.wasStarted());
+    ad.interrupt(listener_);
+    EXPECT_FALSE(listener_.wasStarted());
 }
 
 TEST_F(AdvertisementTest, LoadWavFiles) {
-    createAdFile("sound.wav");
-    Advertisement ad(testDir);
+    createFile("sound.wav");
+    Advertisement ad(test_directory_);
     ad.load();
-    EXPECT_TRUE(ad.interrupt(listener));
+    EXPECT_TRUE(ad.interrupt(listener_));
 }

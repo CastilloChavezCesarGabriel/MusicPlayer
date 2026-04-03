@@ -22,24 +22,16 @@ NewMusicPlayerTests_autogen/timestamp: \
 	/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/Song.cpp \
 	/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/Song.h \
 	/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/SortingAlgorithm.h \
+	/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/DirectoryTestFixture.cpp \
+	/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/DirectoryTestFixture.h \
 	/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/MockPlaybackListener.cpp \
 	/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/MockPlaybackListener.h \
+	/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/ModelTestFixture.cpp \
+	/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/ModelTestFixture.h \
 	/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/RegressionTest.cpp \
 	/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/RegressionTest.h \
 	/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/TestPlaylistVisitor.cpp \
 	/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/TestPlaylistVisitor.h \
-	/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/controller/AddSongUseCaseTest.cpp \
-	/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/controller/AddSongUseCaseTest.h \
-	/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/controller/NavigatePlaylistUseCaseTest.cpp \
-	/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/controller/NavigatePlaylistUseCaseTest.h \
-	/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/controller/PlaySongUseCaseTest.cpp \
-	/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/controller/PlaySongUseCaseTest.h \
-	/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/controller/RemoveSongUseCaseTest.cpp \
-	/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/controller/RemoveSongUseCaseTest.h \
-	/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/controller/SearchSongUseCaseTest.cpp \
-	/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/controller/SearchSongUseCaseTest.h \
-	/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/controller/SortPlaylistUseCaseTest.cpp \
-	/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/controller/SortPlaylistUseCaseTest.h \
 	/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/model/AdvertisementTest.cpp \
 	/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/model/AdvertisementTest.h \
 	/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/model/ModelTest.cpp \
@@ -52,6 +44,18 @@ NewMusicPlayerTests_autogen/timestamp: \
 	/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/model/SongTest.h \
 	/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/model/SortingTest.cpp \
 	/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/model/SortingTest.h \
+	/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/use_cases/AddSongUseCaseTest.cpp \
+	/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/use_cases/AddSongUseCaseTest.h \
+	/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/use_cases/NavigatePlaylistUseCaseTest.cpp \
+	/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/use_cases/NavigatePlaylistUseCaseTest.h \
+	/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/use_cases/PlaySongUseCaseTest.cpp \
+	/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/use_cases/PlaySongUseCaseTest.h \
+	/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/use_cases/RemoveSongUseCaseTest.cpp \
+	/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/use_cases/RemoveSongUseCaseTest.h \
+	/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/use_cases/SearchSongUseCaseTest.cpp \
+	/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/use_cases/SearchSongUseCaseTest.h \
+	/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/use_cases/SortPlaylistUseCaseTest.cpp \
+	/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/use_cases/SortPlaylistUseCaseTest.h \
 	/opt/homebrew/lib/cmake/GTest/GTestConfig.cmake \
 	/opt/homebrew/lib/cmake/GTest/GTestConfigVersion.cmake \
 	/opt/homebrew/lib/cmake/GTest/GTestTargets-release.cmake \

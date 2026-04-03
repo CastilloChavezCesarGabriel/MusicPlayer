@@ -1,6 +1,7 @@
 CMakeFiles/NewMusicPlayerTests.dir/test/model/ModelTest.cpp.o: \
   /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/model/ModelTest.cpp \
   /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/model/ModelTest.h \
+  /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/model/../ModelTestFixture.h \
   /opt/homebrew/include/gtest/gtest.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/cstddef \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__config \

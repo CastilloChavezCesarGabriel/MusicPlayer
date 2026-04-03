@@ -114,10 +114,38 @@ CMakeFiles/NewMusicPlayerTests.dir/test/TestPlaylistVisitor.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/NewMusicPlayerTests.dir/test/TestPlaylistVisitor.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/TestPlaylistVisitor.cpp -o CMakeFiles/NewMusicPlayerTests.dir/test/TestPlaylistVisitor.cpp.s
 
+CMakeFiles/NewMusicPlayerTests.dir/test/ModelTestFixture.cpp.o: CMakeFiles/NewMusicPlayerTests.dir/flags.make
+CMakeFiles/NewMusicPlayerTests.dir/test/ModelTestFixture.cpp.o: /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/ModelTestFixture.cpp
+CMakeFiles/NewMusicPlayerTests.dir/test/ModelTestFixture.cpp.o: CMakeFiles/NewMusicPlayerTests.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/NewMusicPlayerTests.dir/test/ModelTestFixture.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/NewMusicPlayerTests.dir/test/ModelTestFixture.cpp.o -MF CMakeFiles/NewMusicPlayerTests.dir/test/ModelTestFixture.cpp.o.d -o CMakeFiles/NewMusicPlayerTests.dir/test/ModelTestFixture.cpp.o -c /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/ModelTestFixture.cpp
+
+CMakeFiles/NewMusicPlayerTests.dir/test/ModelTestFixture.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/NewMusicPlayerTests.dir/test/ModelTestFixture.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/ModelTestFixture.cpp > CMakeFiles/NewMusicPlayerTests.dir/test/ModelTestFixture.cpp.i
+
+CMakeFiles/NewMusicPlayerTests.dir/test/ModelTestFixture.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/NewMusicPlayerTests.dir/test/ModelTestFixture.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/ModelTestFixture.cpp -o CMakeFiles/NewMusicPlayerTests.dir/test/ModelTestFixture.cpp.s
+
+CMakeFiles/NewMusicPlayerTests.dir/test/DirectoryTestFixture.cpp.o: CMakeFiles/NewMusicPlayerTests.dir/flags.make
+CMakeFiles/NewMusicPlayerTests.dir/test/DirectoryTestFixture.cpp.o: /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/DirectoryTestFixture.cpp
+CMakeFiles/NewMusicPlayerTests.dir/test/DirectoryTestFixture.cpp.o: CMakeFiles/NewMusicPlayerTests.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/NewMusicPlayerTests.dir/test/DirectoryTestFixture.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/NewMusicPlayerTests.dir/test/DirectoryTestFixture.cpp.o -MF CMakeFiles/NewMusicPlayerTests.dir/test/DirectoryTestFixture.cpp.o.d -o CMakeFiles/NewMusicPlayerTests.dir/test/DirectoryTestFixture.cpp.o -c /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/DirectoryTestFixture.cpp
+
+CMakeFiles/NewMusicPlayerTests.dir/test/DirectoryTestFixture.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/NewMusicPlayerTests.dir/test/DirectoryTestFixture.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/DirectoryTestFixture.cpp > CMakeFiles/NewMusicPlayerTests.dir/test/DirectoryTestFixture.cpp.i
+
+CMakeFiles/NewMusicPlayerTests.dir/test/DirectoryTestFixture.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/NewMusicPlayerTests.dir/test/DirectoryTestFixture.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/DirectoryTestFixture.cpp -o CMakeFiles/NewMusicPlayerTests.dir/test/DirectoryTestFixture.cpp.s
+
 CMakeFiles/NewMusicPlayerTests.dir/test/model/SongTest.cpp.o: CMakeFiles/NewMusicPlayerTests.dir/flags.make
 CMakeFiles/NewMusicPlayerTests.dir/test/model/SongTest.cpp.o: /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/model/SongTest.cpp
 CMakeFiles/NewMusicPlayerTests.dir/test/model/SongTest.cpp.o: CMakeFiles/NewMusicPlayerTests.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/NewMusicPlayerTests.dir/test/model/SongTest.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/NewMusicPlayerTests.dir/test/model/SongTest.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/NewMusicPlayerTests.dir/test/model/SongTest.cpp.o -MF CMakeFiles/NewMusicPlayerTests.dir/test/model/SongTest.cpp.o.d -o CMakeFiles/NewMusicPlayerTests.dir/test/model/SongTest.cpp.o -c /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/model/SongTest.cpp
 
 CMakeFiles/NewMusicPlayerTests.dir/test/model/SongTest.cpp.i: cmake_force
@@ -131,7 +159,7 @@ CMakeFiles/NewMusicPlayerTests.dir/test/model/SongTest.cpp.s: cmake_force
 CMakeFiles/NewMusicPlayerTests.dir/test/model/PlaylistTest.cpp.o: CMakeFiles/NewMusicPlayerTests.dir/flags.make
 CMakeFiles/NewMusicPlayerTests.dir/test/model/PlaylistTest.cpp.o: /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/model/PlaylistTest.cpp
 CMakeFiles/NewMusicPlayerTests.dir/test/model/PlaylistTest.cpp.o: CMakeFiles/NewMusicPlayerTests.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/NewMusicPlayerTests.dir/test/model/PlaylistTest.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/NewMusicPlayerTests.dir/test/model/PlaylistTest.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/NewMusicPlayerTests.dir/test/model/PlaylistTest.cpp.o -MF CMakeFiles/NewMusicPlayerTests.dir/test/model/PlaylistTest.cpp.o.d -o CMakeFiles/NewMusicPlayerTests.dir/test/model/PlaylistTest.cpp.o -c /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/model/PlaylistTest.cpp
 
 CMakeFiles/NewMusicPlayerTests.dir/test/model/PlaylistTest.cpp.i: cmake_force
@@ -145,7 +173,7 @@ CMakeFiles/NewMusicPlayerTests.dir/test/model/PlaylistTest.cpp.s: cmake_force
 CMakeFiles/NewMusicPlayerTests.dir/test/model/AdvertisementTest.cpp.o: CMakeFiles/NewMusicPlayerTests.dir/flags.make
 CMakeFiles/NewMusicPlayerTests.dir/test/model/AdvertisementTest.cpp.o: /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/model/AdvertisementTest.cpp
 CMakeFiles/NewMusicPlayerTests.dir/test/model/AdvertisementTest.cpp.o: CMakeFiles/NewMusicPlayerTests.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/NewMusicPlayerTests.dir/test/model/AdvertisementTest.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/NewMusicPlayerTests.dir/test/model/AdvertisementTest.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/NewMusicPlayerTests.dir/test/model/AdvertisementTest.cpp.o -MF CMakeFiles/NewMusicPlayerTests.dir/test/model/AdvertisementTest.cpp.o.d -o CMakeFiles/NewMusicPlayerTests.dir/test/model/AdvertisementTest.cpp.o -c /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/model/AdvertisementTest.cpp
 
 CMakeFiles/NewMusicPlayerTests.dir/test/model/AdvertisementTest.cpp.i: cmake_force
@@ -159,7 +187,7 @@ CMakeFiles/NewMusicPlayerTests.dir/test/model/AdvertisementTest.cpp.s: cmake_for
 CMakeFiles/NewMusicPlayerTests.dir/test/model/MusicLibraryTest.cpp.o: CMakeFiles/NewMusicPlayerTests.dir/flags.make
 CMakeFiles/NewMusicPlayerTests.dir/test/model/MusicLibraryTest.cpp.o: /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/model/MusicLibraryTest.cpp
 CMakeFiles/NewMusicPlayerTests.dir/test/model/MusicLibraryTest.cpp.o: CMakeFiles/NewMusicPlayerTests.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/NewMusicPlayerTests.dir/test/model/MusicLibraryTest.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/NewMusicPlayerTests.dir/test/model/MusicLibraryTest.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/NewMusicPlayerTests.dir/test/model/MusicLibraryTest.cpp.o -MF CMakeFiles/NewMusicPlayerTests.dir/test/model/MusicLibraryTest.cpp.o.d -o CMakeFiles/NewMusicPlayerTests.dir/test/model/MusicLibraryTest.cpp.o -c /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/model/MusicLibraryTest.cpp
 
 CMakeFiles/NewMusicPlayerTests.dir/test/model/MusicLibraryTest.cpp.i: cmake_force
@@ -173,7 +201,7 @@ CMakeFiles/NewMusicPlayerTests.dir/test/model/MusicLibraryTest.cpp.s: cmake_forc
 CMakeFiles/NewMusicPlayerTests.dir/test/model/SortingTest.cpp.o: CMakeFiles/NewMusicPlayerTests.dir/flags.make
 CMakeFiles/NewMusicPlayerTests.dir/test/model/SortingTest.cpp.o: /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/model/SortingTest.cpp
 CMakeFiles/NewMusicPlayerTests.dir/test/model/SortingTest.cpp.o: CMakeFiles/NewMusicPlayerTests.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/NewMusicPlayerTests.dir/test/model/SortingTest.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/NewMusicPlayerTests.dir/test/model/SortingTest.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/NewMusicPlayerTests.dir/test/model/SortingTest.cpp.o -MF CMakeFiles/NewMusicPlayerTests.dir/test/model/SortingTest.cpp.o.d -o CMakeFiles/NewMusicPlayerTests.dir/test/model/SortingTest.cpp.o -c /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/model/SortingTest.cpp
 
 CMakeFiles/NewMusicPlayerTests.dir/test/model/SortingTest.cpp.i: cmake_force
@@ -187,7 +215,7 @@ CMakeFiles/NewMusicPlayerTests.dir/test/model/SortingTest.cpp.s: cmake_force
 CMakeFiles/NewMusicPlayerTests.dir/test/model/ModelTest.cpp.o: CMakeFiles/NewMusicPlayerTests.dir/flags.make
 CMakeFiles/NewMusicPlayerTests.dir/test/model/ModelTest.cpp.o: /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/model/ModelTest.cpp
 CMakeFiles/NewMusicPlayerTests.dir/test/model/ModelTest.cpp.o: CMakeFiles/NewMusicPlayerTests.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/NewMusicPlayerTests.dir/test/model/ModelTest.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/NewMusicPlayerTests.dir/test/model/ModelTest.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/NewMusicPlayerTests.dir/test/model/ModelTest.cpp.o -MF CMakeFiles/NewMusicPlayerTests.dir/test/model/ModelTest.cpp.o.d -o CMakeFiles/NewMusicPlayerTests.dir/test/model/ModelTest.cpp.o -c /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/model/ModelTest.cpp
 
 CMakeFiles/NewMusicPlayerTests.dir/test/model/ModelTest.cpp.i: cmake_force
@@ -201,7 +229,7 @@ CMakeFiles/NewMusicPlayerTests.dir/test/model/ModelTest.cpp.s: cmake_force
 CMakeFiles/NewMusicPlayerTests.dir/test/RegressionTest.cpp.o: CMakeFiles/NewMusicPlayerTests.dir/flags.make
 CMakeFiles/NewMusicPlayerTests.dir/test/RegressionTest.cpp.o: /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/RegressionTest.cpp
 CMakeFiles/NewMusicPlayerTests.dir/test/RegressionTest.cpp.o: CMakeFiles/NewMusicPlayerTests.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/NewMusicPlayerTests.dir/test/RegressionTest.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/NewMusicPlayerTests.dir/test/RegressionTest.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/NewMusicPlayerTests.dir/test/RegressionTest.cpp.o -MF CMakeFiles/NewMusicPlayerTests.dir/test/RegressionTest.cpp.o.d -o CMakeFiles/NewMusicPlayerTests.dir/test/RegressionTest.cpp.o -c /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/RegressionTest.cpp
 
 CMakeFiles/NewMusicPlayerTests.dir/test/RegressionTest.cpp.i: cmake_force
@@ -212,94 +240,94 @@ CMakeFiles/NewMusicPlayerTests.dir/test/RegressionTest.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/NewMusicPlayerTests.dir/test/RegressionTest.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/RegressionTest.cpp -o CMakeFiles/NewMusicPlayerTests.dir/test/RegressionTest.cpp.s
 
-CMakeFiles/NewMusicPlayerTests.dir/test/controller/PlaySongUseCaseTest.cpp.o: CMakeFiles/NewMusicPlayerTests.dir/flags.make
-CMakeFiles/NewMusicPlayerTests.dir/test/controller/PlaySongUseCaseTest.cpp.o: /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/controller/PlaySongUseCaseTest.cpp
-CMakeFiles/NewMusicPlayerTests.dir/test/controller/PlaySongUseCaseTest.cpp.o: CMakeFiles/NewMusicPlayerTests.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/NewMusicPlayerTests.dir/test/controller/PlaySongUseCaseTest.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/NewMusicPlayerTests.dir/test/controller/PlaySongUseCaseTest.cpp.o -MF CMakeFiles/NewMusicPlayerTests.dir/test/controller/PlaySongUseCaseTest.cpp.o.d -o CMakeFiles/NewMusicPlayerTests.dir/test/controller/PlaySongUseCaseTest.cpp.o -c /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/controller/PlaySongUseCaseTest.cpp
+CMakeFiles/NewMusicPlayerTests.dir/test/use_cases/PlaySongUseCaseTest.cpp.o: CMakeFiles/NewMusicPlayerTests.dir/flags.make
+CMakeFiles/NewMusicPlayerTests.dir/test/use_cases/PlaySongUseCaseTest.cpp.o: /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/use_cases/PlaySongUseCaseTest.cpp
+CMakeFiles/NewMusicPlayerTests.dir/test/use_cases/PlaySongUseCaseTest.cpp.o: CMakeFiles/NewMusicPlayerTests.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/NewMusicPlayerTests.dir/test/use_cases/PlaySongUseCaseTest.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/NewMusicPlayerTests.dir/test/use_cases/PlaySongUseCaseTest.cpp.o -MF CMakeFiles/NewMusicPlayerTests.dir/test/use_cases/PlaySongUseCaseTest.cpp.o.d -o CMakeFiles/NewMusicPlayerTests.dir/test/use_cases/PlaySongUseCaseTest.cpp.o -c /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/use_cases/PlaySongUseCaseTest.cpp
 
-CMakeFiles/NewMusicPlayerTests.dir/test/controller/PlaySongUseCaseTest.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/NewMusicPlayerTests.dir/test/controller/PlaySongUseCaseTest.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/controller/PlaySongUseCaseTest.cpp > CMakeFiles/NewMusicPlayerTests.dir/test/controller/PlaySongUseCaseTest.cpp.i
+CMakeFiles/NewMusicPlayerTests.dir/test/use_cases/PlaySongUseCaseTest.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/NewMusicPlayerTests.dir/test/use_cases/PlaySongUseCaseTest.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/use_cases/PlaySongUseCaseTest.cpp > CMakeFiles/NewMusicPlayerTests.dir/test/use_cases/PlaySongUseCaseTest.cpp.i
 
-CMakeFiles/NewMusicPlayerTests.dir/test/controller/PlaySongUseCaseTest.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/NewMusicPlayerTests.dir/test/controller/PlaySongUseCaseTest.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/controller/PlaySongUseCaseTest.cpp -o CMakeFiles/NewMusicPlayerTests.dir/test/controller/PlaySongUseCaseTest.cpp.s
+CMakeFiles/NewMusicPlayerTests.dir/test/use_cases/PlaySongUseCaseTest.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/NewMusicPlayerTests.dir/test/use_cases/PlaySongUseCaseTest.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/use_cases/PlaySongUseCaseTest.cpp -o CMakeFiles/NewMusicPlayerTests.dir/test/use_cases/PlaySongUseCaseTest.cpp.s
 
-CMakeFiles/NewMusicPlayerTests.dir/test/controller/SortPlaylistUseCaseTest.cpp.o: CMakeFiles/NewMusicPlayerTests.dir/flags.make
-CMakeFiles/NewMusicPlayerTests.dir/test/controller/SortPlaylistUseCaseTest.cpp.o: /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/controller/SortPlaylistUseCaseTest.cpp
-CMakeFiles/NewMusicPlayerTests.dir/test/controller/SortPlaylistUseCaseTest.cpp.o: CMakeFiles/NewMusicPlayerTests.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/NewMusicPlayerTests.dir/test/controller/SortPlaylistUseCaseTest.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/NewMusicPlayerTests.dir/test/controller/SortPlaylistUseCaseTest.cpp.o -MF CMakeFiles/NewMusicPlayerTests.dir/test/controller/SortPlaylistUseCaseTest.cpp.o.d -o CMakeFiles/NewMusicPlayerTests.dir/test/controller/SortPlaylistUseCaseTest.cpp.o -c /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/controller/SortPlaylistUseCaseTest.cpp
+CMakeFiles/NewMusicPlayerTests.dir/test/use_cases/SortPlaylistUseCaseTest.cpp.o: CMakeFiles/NewMusicPlayerTests.dir/flags.make
+CMakeFiles/NewMusicPlayerTests.dir/test/use_cases/SortPlaylistUseCaseTest.cpp.o: /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/use_cases/SortPlaylistUseCaseTest.cpp
+CMakeFiles/NewMusicPlayerTests.dir/test/use_cases/SortPlaylistUseCaseTest.cpp.o: CMakeFiles/NewMusicPlayerTests.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/NewMusicPlayerTests.dir/test/use_cases/SortPlaylistUseCaseTest.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/NewMusicPlayerTests.dir/test/use_cases/SortPlaylistUseCaseTest.cpp.o -MF CMakeFiles/NewMusicPlayerTests.dir/test/use_cases/SortPlaylistUseCaseTest.cpp.o.d -o CMakeFiles/NewMusicPlayerTests.dir/test/use_cases/SortPlaylistUseCaseTest.cpp.o -c /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/use_cases/SortPlaylistUseCaseTest.cpp
 
-CMakeFiles/NewMusicPlayerTests.dir/test/controller/SortPlaylistUseCaseTest.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/NewMusicPlayerTests.dir/test/controller/SortPlaylistUseCaseTest.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/controller/SortPlaylistUseCaseTest.cpp > CMakeFiles/NewMusicPlayerTests.dir/test/controller/SortPlaylistUseCaseTest.cpp.i
+CMakeFiles/NewMusicPlayerTests.dir/test/use_cases/SortPlaylistUseCaseTest.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/NewMusicPlayerTests.dir/test/use_cases/SortPlaylistUseCaseTest.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/use_cases/SortPlaylistUseCaseTest.cpp > CMakeFiles/NewMusicPlayerTests.dir/test/use_cases/SortPlaylistUseCaseTest.cpp.i
 
-CMakeFiles/NewMusicPlayerTests.dir/test/controller/SortPlaylistUseCaseTest.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/NewMusicPlayerTests.dir/test/controller/SortPlaylistUseCaseTest.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/controller/SortPlaylistUseCaseTest.cpp -o CMakeFiles/NewMusicPlayerTests.dir/test/controller/SortPlaylistUseCaseTest.cpp.s
+CMakeFiles/NewMusicPlayerTests.dir/test/use_cases/SortPlaylistUseCaseTest.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/NewMusicPlayerTests.dir/test/use_cases/SortPlaylistUseCaseTest.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/use_cases/SortPlaylistUseCaseTest.cpp -o CMakeFiles/NewMusicPlayerTests.dir/test/use_cases/SortPlaylistUseCaseTest.cpp.s
 
-CMakeFiles/NewMusicPlayerTests.dir/test/controller/SearchSongUseCaseTest.cpp.o: CMakeFiles/NewMusicPlayerTests.dir/flags.make
-CMakeFiles/NewMusicPlayerTests.dir/test/controller/SearchSongUseCaseTest.cpp.o: /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/controller/SearchSongUseCaseTest.cpp
-CMakeFiles/NewMusicPlayerTests.dir/test/controller/SearchSongUseCaseTest.cpp.o: CMakeFiles/NewMusicPlayerTests.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/NewMusicPlayerTests.dir/test/controller/SearchSongUseCaseTest.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/NewMusicPlayerTests.dir/test/controller/SearchSongUseCaseTest.cpp.o -MF CMakeFiles/NewMusicPlayerTests.dir/test/controller/SearchSongUseCaseTest.cpp.o.d -o CMakeFiles/NewMusicPlayerTests.dir/test/controller/SearchSongUseCaseTest.cpp.o -c /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/controller/SearchSongUseCaseTest.cpp
+CMakeFiles/NewMusicPlayerTests.dir/test/use_cases/SearchSongUseCaseTest.cpp.o: CMakeFiles/NewMusicPlayerTests.dir/flags.make
+CMakeFiles/NewMusicPlayerTests.dir/test/use_cases/SearchSongUseCaseTest.cpp.o: /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/use_cases/SearchSongUseCaseTest.cpp
+CMakeFiles/NewMusicPlayerTests.dir/test/use_cases/SearchSongUseCaseTest.cpp.o: CMakeFiles/NewMusicPlayerTests.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/NewMusicPlayerTests.dir/test/use_cases/SearchSongUseCaseTest.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/NewMusicPlayerTests.dir/test/use_cases/SearchSongUseCaseTest.cpp.o -MF CMakeFiles/NewMusicPlayerTests.dir/test/use_cases/SearchSongUseCaseTest.cpp.o.d -o CMakeFiles/NewMusicPlayerTests.dir/test/use_cases/SearchSongUseCaseTest.cpp.o -c /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/use_cases/SearchSongUseCaseTest.cpp
 
-CMakeFiles/NewMusicPlayerTests.dir/test/controller/SearchSongUseCaseTest.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/NewMusicPlayerTests.dir/test/controller/SearchSongUseCaseTest.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/controller/SearchSongUseCaseTest.cpp > CMakeFiles/NewMusicPlayerTests.dir/test/controller/SearchSongUseCaseTest.cpp.i
+CMakeFiles/NewMusicPlayerTests.dir/test/use_cases/SearchSongUseCaseTest.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/NewMusicPlayerTests.dir/test/use_cases/SearchSongUseCaseTest.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/use_cases/SearchSongUseCaseTest.cpp > CMakeFiles/NewMusicPlayerTests.dir/test/use_cases/SearchSongUseCaseTest.cpp.i
 
-CMakeFiles/NewMusicPlayerTests.dir/test/controller/SearchSongUseCaseTest.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/NewMusicPlayerTests.dir/test/controller/SearchSongUseCaseTest.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/controller/SearchSongUseCaseTest.cpp -o CMakeFiles/NewMusicPlayerTests.dir/test/controller/SearchSongUseCaseTest.cpp.s
+CMakeFiles/NewMusicPlayerTests.dir/test/use_cases/SearchSongUseCaseTest.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/NewMusicPlayerTests.dir/test/use_cases/SearchSongUseCaseTest.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/use_cases/SearchSongUseCaseTest.cpp -o CMakeFiles/NewMusicPlayerTests.dir/test/use_cases/SearchSongUseCaseTest.cpp.s
 
-CMakeFiles/NewMusicPlayerTests.dir/test/controller/AddSongUseCaseTest.cpp.o: CMakeFiles/NewMusicPlayerTests.dir/flags.make
-CMakeFiles/NewMusicPlayerTests.dir/test/controller/AddSongUseCaseTest.cpp.o: /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/controller/AddSongUseCaseTest.cpp
-CMakeFiles/NewMusicPlayerTests.dir/test/controller/AddSongUseCaseTest.cpp.o: CMakeFiles/NewMusicPlayerTests.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/NewMusicPlayerTests.dir/test/controller/AddSongUseCaseTest.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/NewMusicPlayerTests.dir/test/controller/AddSongUseCaseTest.cpp.o -MF CMakeFiles/NewMusicPlayerTests.dir/test/controller/AddSongUseCaseTest.cpp.o.d -o CMakeFiles/NewMusicPlayerTests.dir/test/controller/AddSongUseCaseTest.cpp.o -c /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/controller/AddSongUseCaseTest.cpp
+CMakeFiles/NewMusicPlayerTests.dir/test/use_cases/AddSongUseCaseTest.cpp.o: CMakeFiles/NewMusicPlayerTests.dir/flags.make
+CMakeFiles/NewMusicPlayerTests.dir/test/use_cases/AddSongUseCaseTest.cpp.o: /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/use_cases/AddSongUseCaseTest.cpp
+CMakeFiles/NewMusicPlayerTests.dir/test/use_cases/AddSongUseCaseTest.cpp.o: CMakeFiles/NewMusicPlayerTests.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/NewMusicPlayerTests.dir/test/use_cases/AddSongUseCaseTest.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/NewMusicPlayerTests.dir/test/use_cases/AddSongUseCaseTest.cpp.o -MF CMakeFiles/NewMusicPlayerTests.dir/test/use_cases/AddSongUseCaseTest.cpp.o.d -o CMakeFiles/NewMusicPlayerTests.dir/test/use_cases/AddSongUseCaseTest.cpp.o -c /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/use_cases/AddSongUseCaseTest.cpp
 
-CMakeFiles/NewMusicPlayerTests.dir/test/controller/AddSongUseCaseTest.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/NewMusicPlayerTests.dir/test/controller/AddSongUseCaseTest.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/controller/AddSongUseCaseTest.cpp > CMakeFiles/NewMusicPlayerTests.dir/test/controller/AddSongUseCaseTest.cpp.i
+CMakeFiles/NewMusicPlayerTests.dir/test/use_cases/AddSongUseCaseTest.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/NewMusicPlayerTests.dir/test/use_cases/AddSongUseCaseTest.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/use_cases/AddSongUseCaseTest.cpp > CMakeFiles/NewMusicPlayerTests.dir/test/use_cases/AddSongUseCaseTest.cpp.i
 
-CMakeFiles/NewMusicPlayerTests.dir/test/controller/AddSongUseCaseTest.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/NewMusicPlayerTests.dir/test/controller/AddSongUseCaseTest.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/controller/AddSongUseCaseTest.cpp -o CMakeFiles/NewMusicPlayerTests.dir/test/controller/AddSongUseCaseTest.cpp.s
+CMakeFiles/NewMusicPlayerTests.dir/test/use_cases/AddSongUseCaseTest.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/NewMusicPlayerTests.dir/test/use_cases/AddSongUseCaseTest.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/use_cases/AddSongUseCaseTest.cpp -o CMakeFiles/NewMusicPlayerTests.dir/test/use_cases/AddSongUseCaseTest.cpp.s
 
-CMakeFiles/NewMusicPlayerTests.dir/test/controller/RemoveSongUseCaseTest.cpp.o: CMakeFiles/NewMusicPlayerTests.dir/flags.make
-CMakeFiles/NewMusicPlayerTests.dir/test/controller/RemoveSongUseCaseTest.cpp.o: /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/controller/RemoveSongUseCaseTest.cpp
-CMakeFiles/NewMusicPlayerTests.dir/test/controller/RemoveSongUseCaseTest.cpp.o: CMakeFiles/NewMusicPlayerTests.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/NewMusicPlayerTests.dir/test/controller/RemoveSongUseCaseTest.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/NewMusicPlayerTests.dir/test/controller/RemoveSongUseCaseTest.cpp.o -MF CMakeFiles/NewMusicPlayerTests.dir/test/controller/RemoveSongUseCaseTest.cpp.o.d -o CMakeFiles/NewMusicPlayerTests.dir/test/controller/RemoveSongUseCaseTest.cpp.o -c /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/controller/RemoveSongUseCaseTest.cpp
+CMakeFiles/NewMusicPlayerTests.dir/test/use_cases/RemoveSongUseCaseTest.cpp.o: CMakeFiles/NewMusicPlayerTests.dir/flags.make
+CMakeFiles/NewMusicPlayerTests.dir/test/use_cases/RemoveSongUseCaseTest.cpp.o: /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/use_cases/RemoveSongUseCaseTest.cpp
+CMakeFiles/NewMusicPlayerTests.dir/test/use_cases/RemoveSongUseCaseTest.cpp.o: CMakeFiles/NewMusicPlayerTests.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/NewMusicPlayerTests.dir/test/use_cases/RemoveSongUseCaseTest.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/NewMusicPlayerTests.dir/test/use_cases/RemoveSongUseCaseTest.cpp.o -MF CMakeFiles/NewMusicPlayerTests.dir/test/use_cases/RemoveSongUseCaseTest.cpp.o.d -o CMakeFiles/NewMusicPlayerTests.dir/test/use_cases/RemoveSongUseCaseTest.cpp.o -c /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/use_cases/RemoveSongUseCaseTest.cpp
 
-CMakeFiles/NewMusicPlayerTests.dir/test/controller/RemoveSongUseCaseTest.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/NewMusicPlayerTests.dir/test/controller/RemoveSongUseCaseTest.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/controller/RemoveSongUseCaseTest.cpp > CMakeFiles/NewMusicPlayerTests.dir/test/controller/RemoveSongUseCaseTest.cpp.i
+CMakeFiles/NewMusicPlayerTests.dir/test/use_cases/RemoveSongUseCaseTest.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/NewMusicPlayerTests.dir/test/use_cases/RemoveSongUseCaseTest.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/use_cases/RemoveSongUseCaseTest.cpp > CMakeFiles/NewMusicPlayerTests.dir/test/use_cases/RemoveSongUseCaseTest.cpp.i
 
-CMakeFiles/NewMusicPlayerTests.dir/test/controller/RemoveSongUseCaseTest.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/NewMusicPlayerTests.dir/test/controller/RemoveSongUseCaseTest.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/controller/RemoveSongUseCaseTest.cpp -o CMakeFiles/NewMusicPlayerTests.dir/test/controller/RemoveSongUseCaseTest.cpp.s
+CMakeFiles/NewMusicPlayerTests.dir/test/use_cases/RemoveSongUseCaseTest.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/NewMusicPlayerTests.dir/test/use_cases/RemoveSongUseCaseTest.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/use_cases/RemoveSongUseCaseTest.cpp -o CMakeFiles/NewMusicPlayerTests.dir/test/use_cases/RemoveSongUseCaseTest.cpp.s
 
-CMakeFiles/NewMusicPlayerTests.dir/test/controller/NavigatePlaylistUseCaseTest.cpp.o: CMakeFiles/NewMusicPlayerTests.dir/flags.make
-CMakeFiles/NewMusicPlayerTests.dir/test/controller/NavigatePlaylistUseCaseTest.cpp.o: /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/controller/NavigatePlaylistUseCaseTest.cpp
-CMakeFiles/NewMusicPlayerTests.dir/test/controller/NavigatePlaylistUseCaseTest.cpp.o: CMakeFiles/NewMusicPlayerTests.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/NewMusicPlayerTests.dir/test/controller/NavigatePlaylistUseCaseTest.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/NewMusicPlayerTests.dir/test/controller/NavigatePlaylistUseCaseTest.cpp.o -MF CMakeFiles/NewMusicPlayerTests.dir/test/controller/NavigatePlaylistUseCaseTest.cpp.o.d -o CMakeFiles/NewMusicPlayerTests.dir/test/controller/NavigatePlaylistUseCaseTest.cpp.o -c /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/controller/NavigatePlaylistUseCaseTest.cpp
+CMakeFiles/NewMusicPlayerTests.dir/test/use_cases/NavigatePlaylistUseCaseTest.cpp.o: CMakeFiles/NewMusicPlayerTests.dir/flags.make
+CMakeFiles/NewMusicPlayerTests.dir/test/use_cases/NavigatePlaylistUseCaseTest.cpp.o: /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/use_cases/NavigatePlaylistUseCaseTest.cpp
+CMakeFiles/NewMusicPlayerTests.dir/test/use_cases/NavigatePlaylistUseCaseTest.cpp.o: CMakeFiles/NewMusicPlayerTests.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/NewMusicPlayerTests.dir/test/use_cases/NavigatePlaylistUseCaseTest.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/NewMusicPlayerTests.dir/test/use_cases/NavigatePlaylistUseCaseTest.cpp.o -MF CMakeFiles/NewMusicPlayerTests.dir/test/use_cases/NavigatePlaylistUseCaseTest.cpp.o.d -o CMakeFiles/NewMusicPlayerTests.dir/test/use_cases/NavigatePlaylistUseCaseTest.cpp.o -c /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/use_cases/NavigatePlaylistUseCaseTest.cpp
 
-CMakeFiles/NewMusicPlayerTests.dir/test/controller/NavigatePlaylistUseCaseTest.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/NewMusicPlayerTests.dir/test/controller/NavigatePlaylistUseCaseTest.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/controller/NavigatePlaylistUseCaseTest.cpp > CMakeFiles/NewMusicPlayerTests.dir/test/controller/NavigatePlaylistUseCaseTest.cpp.i
+CMakeFiles/NewMusicPlayerTests.dir/test/use_cases/NavigatePlaylistUseCaseTest.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/NewMusicPlayerTests.dir/test/use_cases/NavigatePlaylistUseCaseTest.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/use_cases/NavigatePlaylistUseCaseTest.cpp > CMakeFiles/NewMusicPlayerTests.dir/test/use_cases/NavigatePlaylistUseCaseTest.cpp.i
 
-CMakeFiles/NewMusicPlayerTests.dir/test/controller/NavigatePlaylistUseCaseTest.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/NewMusicPlayerTests.dir/test/controller/NavigatePlaylistUseCaseTest.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/controller/NavigatePlaylistUseCaseTest.cpp -o CMakeFiles/NewMusicPlayerTests.dir/test/controller/NavigatePlaylistUseCaseTest.cpp.s
+CMakeFiles/NewMusicPlayerTests.dir/test/use_cases/NavigatePlaylistUseCaseTest.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/NewMusicPlayerTests.dir/test/use_cases/NavigatePlaylistUseCaseTest.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/use_cases/NavigatePlaylistUseCaseTest.cpp -o CMakeFiles/NewMusicPlayerTests.dir/test/use_cases/NavigatePlaylistUseCaseTest.cpp.s
 
 CMakeFiles/NewMusicPlayerTests.dir/model/Song.cpp.o: CMakeFiles/NewMusicPlayerTests.dir/flags.make
 CMakeFiles/NewMusicPlayerTests.dir/model/Song.cpp.o: /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/Song.cpp
 CMakeFiles/NewMusicPlayerTests.dir/model/Song.cpp.o: CMakeFiles/NewMusicPlayerTests.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/NewMusicPlayerTests.dir/model/Song.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/NewMusicPlayerTests.dir/model/Song.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/NewMusicPlayerTests.dir/model/Song.cpp.o -MF CMakeFiles/NewMusicPlayerTests.dir/model/Song.cpp.o.d -o CMakeFiles/NewMusicPlayerTests.dir/model/Song.cpp.o -c /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/Song.cpp
 
 CMakeFiles/NewMusicPlayerTests.dir/model/Song.cpp.i: cmake_force
@@ -313,7 +341,7 @@ CMakeFiles/NewMusicPlayerTests.dir/model/Song.cpp.s: cmake_force
 CMakeFiles/NewMusicPlayerTests.dir/model/ShellSort.cpp.o: CMakeFiles/NewMusicPlayerTests.dir/flags.make
 CMakeFiles/NewMusicPlayerTests.dir/model/ShellSort.cpp.o: /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/ShellSort.cpp
 CMakeFiles/NewMusicPlayerTests.dir/model/ShellSort.cpp.o: CMakeFiles/NewMusicPlayerTests.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/NewMusicPlayerTests.dir/model/ShellSort.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/NewMusicPlayerTests.dir/model/ShellSort.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/NewMusicPlayerTests.dir/model/ShellSort.cpp.o -MF CMakeFiles/NewMusicPlayerTests.dir/model/ShellSort.cpp.o.d -o CMakeFiles/NewMusicPlayerTests.dir/model/ShellSort.cpp.o -c /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/ShellSort.cpp
 
 CMakeFiles/NewMusicPlayerTests.dir/model/ShellSort.cpp.i: cmake_force
@@ -327,7 +355,7 @@ CMakeFiles/NewMusicPlayerTests.dir/model/ShellSort.cpp.s: cmake_force
 CMakeFiles/NewMusicPlayerTests.dir/model/QuickSort.cpp.o: CMakeFiles/NewMusicPlayerTests.dir/flags.make
 CMakeFiles/NewMusicPlayerTests.dir/model/QuickSort.cpp.o: /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/QuickSort.cpp
 CMakeFiles/NewMusicPlayerTests.dir/model/QuickSort.cpp.o: CMakeFiles/NewMusicPlayerTests.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/NewMusicPlayerTests.dir/model/QuickSort.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/NewMusicPlayerTests.dir/model/QuickSort.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/NewMusicPlayerTests.dir/model/QuickSort.cpp.o -MF CMakeFiles/NewMusicPlayerTests.dir/model/QuickSort.cpp.o.d -o CMakeFiles/NewMusicPlayerTests.dir/model/QuickSort.cpp.o -c /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/QuickSort.cpp
 
 CMakeFiles/NewMusicPlayerTests.dir/model/QuickSort.cpp.i: cmake_force
@@ -341,7 +369,7 @@ CMakeFiles/NewMusicPlayerTests.dir/model/QuickSort.cpp.s: cmake_force
 CMakeFiles/NewMusicPlayerTests.dir/model/Playlist.cpp.o: CMakeFiles/NewMusicPlayerTests.dir/flags.make
 CMakeFiles/NewMusicPlayerTests.dir/model/Playlist.cpp.o: /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/Playlist.cpp
 CMakeFiles/NewMusicPlayerTests.dir/model/Playlist.cpp.o: CMakeFiles/NewMusicPlayerTests.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/NewMusicPlayerTests.dir/model/Playlist.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/NewMusicPlayerTests.dir/model/Playlist.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/NewMusicPlayerTests.dir/model/Playlist.cpp.o -MF CMakeFiles/NewMusicPlayerTests.dir/model/Playlist.cpp.o.d -o CMakeFiles/NewMusicPlayerTests.dir/model/Playlist.cpp.o -c /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/Playlist.cpp
 
 CMakeFiles/NewMusicPlayerTests.dir/model/Playlist.cpp.i: cmake_force
@@ -355,7 +383,7 @@ CMakeFiles/NewMusicPlayerTests.dir/model/Playlist.cpp.s: cmake_force
 CMakeFiles/NewMusicPlayerTests.dir/model/Advertisement.cpp.o: CMakeFiles/NewMusicPlayerTests.dir/flags.make
 CMakeFiles/NewMusicPlayerTests.dir/model/Advertisement.cpp.o: /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/Advertisement.cpp
 CMakeFiles/NewMusicPlayerTests.dir/model/Advertisement.cpp.o: CMakeFiles/NewMusicPlayerTests.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/NewMusicPlayerTests.dir/model/Advertisement.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/NewMusicPlayerTests.dir/model/Advertisement.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/NewMusicPlayerTests.dir/model/Advertisement.cpp.o -MF CMakeFiles/NewMusicPlayerTests.dir/model/Advertisement.cpp.o.d -o CMakeFiles/NewMusicPlayerTests.dir/model/Advertisement.cpp.o -c /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/Advertisement.cpp
 
 CMakeFiles/NewMusicPlayerTests.dir/model/Advertisement.cpp.i: cmake_force
@@ -369,7 +397,7 @@ CMakeFiles/NewMusicPlayerTests.dir/model/Advertisement.cpp.s: cmake_force
 CMakeFiles/NewMusicPlayerTests.dir/model/MusicLibrary.cpp.o: CMakeFiles/NewMusicPlayerTests.dir/flags.make
 CMakeFiles/NewMusicPlayerTests.dir/model/MusicLibrary.cpp.o: /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/MusicLibrary.cpp
 CMakeFiles/NewMusicPlayerTests.dir/model/MusicLibrary.cpp.o: CMakeFiles/NewMusicPlayerTests.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/NewMusicPlayerTests.dir/model/MusicLibrary.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object CMakeFiles/NewMusicPlayerTests.dir/model/MusicLibrary.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/NewMusicPlayerTests.dir/model/MusicLibrary.cpp.o -MF CMakeFiles/NewMusicPlayerTests.dir/model/MusicLibrary.cpp.o.d -o CMakeFiles/NewMusicPlayerTests.dir/model/MusicLibrary.cpp.o -c /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/MusicLibrary.cpp
 
 CMakeFiles/NewMusicPlayerTests.dir/model/MusicLibrary.cpp.i: cmake_force
@@ -383,7 +411,7 @@ CMakeFiles/NewMusicPlayerTests.dir/model/MusicLibrary.cpp.s: cmake_force
 CMakeFiles/NewMusicPlayerTests.dir/model/Channel.cpp.o: CMakeFiles/NewMusicPlayerTests.dir/flags.make
 CMakeFiles/NewMusicPlayerTests.dir/model/Channel.cpp.o: /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/Channel.cpp
 CMakeFiles/NewMusicPlayerTests.dir/model/Channel.cpp.o: CMakeFiles/NewMusicPlayerTests.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/NewMusicPlayerTests.dir/model/Channel.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object CMakeFiles/NewMusicPlayerTests.dir/model/Channel.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/NewMusicPlayerTests.dir/model/Channel.cpp.o -MF CMakeFiles/NewMusicPlayerTests.dir/model/Channel.cpp.o.d -o CMakeFiles/NewMusicPlayerTests.dir/model/Channel.cpp.o -c /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/Channel.cpp
 
 CMakeFiles/NewMusicPlayerTests.dir/model/Channel.cpp.i: cmake_force
@@ -397,7 +425,7 @@ CMakeFiles/NewMusicPlayerTests.dir/model/Channel.cpp.s: cmake_force
 CMakeFiles/NewMusicPlayerTests.dir/model/Model.cpp.o: CMakeFiles/NewMusicPlayerTests.dir/flags.make
 CMakeFiles/NewMusicPlayerTests.dir/model/Model.cpp.o: /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/Model.cpp
 CMakeFiles/NewMusicPlayerTests.dir/model/Model.cpp.o: CMakeFiles/NewMusicPlayerTests.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object CMakeFiles/NewMusicPlayerTests.dir/model/Model.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object CMakeFiles/NewMusicPlayerTests.dir/model/Model.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/NewMusicPlayerTests.dir/model/Model.cpp.o -MF CMakeFiles/NewMusicPlayerTests.dir/model/Model.cpp.o.d -o CMakeFiles/NewMusicPlayerTests.dir/model/Model.cpp.o -c /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/Model.cpp
 
 CMakeFiles/NewMusicPlayerTests.dir/model/Model.cpp.i: cmake_force
@@ -413,6 +441,8 @@ NewMusicPlayerTests_OBJECTS = \
 "CMakeFiles/NewMusicPlayerTests.dir/NewMusicPlayerTests_autogen/mocs_compilation.cpp.o" \
 "CMakeFiles/NewMusicPlayerTests.dir/test/MockPlaybackListener.cpp.o" \
 "CMakeFiles/NewMusicPlayerTests.dir/test/TestPlaylistVisitor.cpp.o" \
+"CMakeFiles/NewMusicPlayerTests.dir/test/ModelTestFixture.cpp.o" \
+"CMakeFiles/NewMusicPlayerTests.dir/test/DirectoryTestFixture.cpp.o" \
 "CMakeFiles/NewMusicPlayerTests.dir/test/model/SongTest.cpp.o" \
 "CMakeFiles/NewMusicPlayerTests.dir/test/model/PlaylistTest.cpp.o" \
 "CMakeFiles/NewMusicPlayerTests.dir/test/model/AdvertisementTest.cpp.o" \
@@ -420,12 +450,12 @@ NewMusicPlayerTests_OBJECTS = \
 "CMakeFiles/NewMusicPlayerTests.dir/test/model/SortingTest.cpp.o" \
 "CMakeFiles/NewMusicPlayerTests.dir/test/model/ModelTest.cpp.o" \
 "CMakeFiles/NewMusicPlayerTests.dir/test/RegressionTest.cpp.o" \
-"CMakeFiles/NewMusicPlayerTests.dir/test/controller/PlaySongUseCaseTest.cpp.o" \
-"CMakeFiles/NewMusicPlayerTests.dir/test/controller/SortPlaylistUseCaseTest.cpp.o" \
-"CMakeFiles/NewMusicPlayerTests.dir/test/controller/SearchSongUseCaseTest.cpp.o" \
-"CMakeFiles/NewMusicPlayerTests.dir/test/controller/AddSongUseCaseTest.cpp.o" \
-"CMakeFiles/NewMusicPlayerTests.dir/test/controller/RemoveSongUseCaseTest.cpp.o" \
-"CMakeFiles/NewMusicPlayerTests.dir/test/controller/NavigatePlaylistUseCaseTest.cpp.o" \
+"CMakeFiles/NewMusicPlayerTests.dir/test/use_cases/PlaySongUseCaseTest.cpp.o" \
+"CMakeFiles/NewMusicPlayerTests.dir/test/use_cases/SortPlaylistUseCaseTest.cpp.o" \
+"CMakeFiles/NewMusicPlayerTests.dir/test/use_cases/SearchSongUseCaseTest.cpp.o" \
+"CMakeFiles/NewMusicPlayerTests.dir/test/use_cases/AddSongUseCaseTest.cpp.o" \
+"CMakeFiles/NewMusicPlayerTests.dir/test/use_cases/RemoveSongUseCaseTest.cpp.o" \
+"CMakeFiles/NewMusicPlayerTests.dir/test/use_cases/NavigatePlaylistUseCaseTest.cpp.o" \
 "CMakeFiles/NewMusicPlayerTests.dir/model/Song.cpp.o" \
 "CMakeFiles/NewMusicPlayerTests.dir/model/ShellSort.cpp.o" \
 "CMakeFiles/NewMusicPlayerTests.dir/model/QuickSort.cpp.o" \
@@ -441,6 +471,8 @@ NewMusicPlayerTests_EXTERNAL_OBJECTS =
 NewMusicPlayerTests: CMakeFiles/NewMusicPlayerTests.dir/NewMusicPlayerTests_autogen/mocs_compilation.cpp.o
 NewMusicPlayerTests: CMakeFiles/NewMusicPlayerTests.dir/test/MockPlaybackListener.cpp.o
 NewMusicPlayerTests: CMakeFiles/NewMusicPlayerTests.dir/test/TestPlaylistVisitor.cpp.o
+NewMusicPlayerTests: CMakeFiles/NewMusicPlayerTests.dir/test/ModelTestFixture.cpp.o
+NewMusicPlayerTests: CMakeFiles/NewMusicPlayerTests.dir/test/DirectoryTestFixture.cpp.o
 NewMusicPlayerTests: CMakeFiles/NewMusicPlayerTests.dir/test/model/SongTest.cpp.o
 NewMusicPlayerTests: CMakeFiles/NewMusicPlayerTests.dir/test/model/PlaylistTest.cpp.o
 NewMusicPlayerTests: CMakeFiles/NewMusicPlayerTests.dir/test/model/AdvertisementTest.cpp.o
@@ -448,12 +480,12 @@ NewMusicPlayerTests: CMakeFiles/NewMusicPlayerTests.dir/test/model/MusicLibraryT
 NewMusicPlayerTests: CMakeFiles/NewMusicPlayerTests.dir/test/model/SortingTest.cpp.o
 NewMusicPlayerTests: CMakeFiles/NewMusicPlayerTests.dir/test/model/ModelTest.cpp.o
 NewMusicPlayerTests: CMakeFiles/NewMusicPlayerTests.dir/test/RegressionTest.cpp.o
-NewMusicPlayerTests: CMakeFiles/NewMusicPlayerTests.dir/test/controller/PlaySongUseCaseTest.cpp.o
-NewMusicPlayerTests: CMakeFiles/NewMusicPlayerTests.dir/test/controller/SortPlaylistUseCaseTest.cpp.o
-NewMusicPlayerTests: CMakeFiles/NewMusicPlayerTests.dir/test/controller/SearchSongUseCaseTest.cpp.o
-NewMusicPlayerTests: CMakeFiles/NewMusicPlayerTests.dir/test/controller/AddSongUseCaseTest.cpp.o
-NewMusicPlayerTests: CMakeFiles/NewMusicPlayerTests.dir/test/controller/RemoveSongUseCaseTest.cpp.o
-NewMusicPlayerTests: CMakeFiles/NewMusicPlayerTests.dir/test/controller/NavigatePlaylistUseCaseTest.cpp.o
+NewMusicPlayerTests: CMakeFiles/NewMusicPlayerTests.dir/test/use_cases/PlaySongUseCaseTest.cpp.o
+NewMusicPlayerTests: CMakeFiles/NewMusicPlayerTests.dir/test/use_cases/SortPlaylistUseCaseTest.cpp.o
+NewMusicPlayerTests: CMakeFiles/NewMusicPlayerTests.dir/test/use_cases/SearchSongUseCaseTest.cpp.o
+NewMusicPlayerTests: CMakeFiles/NewMusicPlayerTests.dir/test/use_cases/AddSongUseCaseTest.cpp.o
+NewMusicPlayerTests: CMakeFiles/NewMusicPlayerTests.dir/test/use_cases/RemoveSongUseCaseTest.cpp.o
+NewMusicPlayerTests: CMakeFiles/NewMusicPlayerTests.dir/test/use_cases/NavigatePlaylistUseCaseTest.cpp.o
 NewMusicPlayerTests: CMakeFiles/NewMusicPlayerTests.dir/model/Song.cpp.o
 NewMusicPlayerTests: CMakeFiles/NewMusicPlayerTests.dir/model/ShellSort.cpp.o
 NewMusicPlayerTests: CMakeFiles/NewMusicPlayerTests.dir/model/QuickSort.cpp.o
@@ -466,7 +498,7 @@ NewMusicPlayerTests: CMakeFiles/NewMusicPlayerTests.dir/build.make
 NewMusicPlayerTests: /opt/homebrew/lib/libgtest_main.a
 NewMusicPlayerTests: /opt/homebrew/lib/libgtest.a
 NewMusicPlayerTests: CMakeFiles/NewMusicPlayerTests.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Linking CXX executable NewMusicPlayerTests"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Linking CXX executable NewMusicPlayerTests"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/NewMusicPlayerTests.dir/link.txt --verbose=$(VERBOSE)
 	/opt/homebrew/bin/cmake -D TEST_TARGET=NewMusicPlayerTests -D TEST_EXECUTABLE=/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/NewMusicPlayerTests -D TEST_EXECUTOR= -D TEST_WORKING_DIR=/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build -D TEST_EXTRA_ARGS= -D TEST_PROPERTIES= -D TEST_PREFIX= -D TEST_SUFFIX= -D TEST_FILTER= -D NO_PRETTY_TYPES=FALSE -D NO_PRETTY_VALUES=FALSE -D TEST_LIST=NewMusicPlayerTests_TESTS -D CTEST_FILE=/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/NewMusicPlayerTests[1]_tests.cmake -D TEST_DISCOVERY_TIMEOUT=5 -D TEST_DISCOVERY_EXTRA_ARGS= -D TEST_XML_OUTPUT_DIR= -P /opt/homebrew/share/cmake/Modules/GoogleTestAddTests.cmake
 

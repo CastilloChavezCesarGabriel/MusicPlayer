@@ -1,11 +1,11 @@
 #include "SortingTest.h"
 
-void ShellSortTest::assertOrder(std::vector<Song>& songs, const std::vector<std::string>& expected) {
+void ShellSortTest::verify(std::vector<Song>& songs, const std::vector<std::string>& expected) {
     for (int i = 0; i < expected.size(); i++) {
-        songs[i].accept(visitor);
+        songs[i].accept(visitor_);
     }
     for (int i = 0; i < expected.size(); i++) {
-        EXPECT_TRUE(visitor.hasNameAt(i, expected[i]));
+        EXPECT_TRUE(visitor_.hasNameAt(i, expected[i]));
     }
 }
 
@@ -15,9 +15,9 @@ TEST_F(ShellSortTest, SortByNumberAscending) {
         Song("(1) A.mp3", "/a"),
         Song("(2) B.mp3", "/b")
     };
-    sorter.sort(songs);
-    songs[0].accept(visitor);
-    EXPECT_TRUE(visitor.hasNameAt(0, "(1) A.mp3"));
+    sorter_.sort(songs);
+    songs[0].accept(visitor_);
+    EXPECT_TRUE(visitor_.hasNameAt(0, "(1) A.mp3"));
 }
 
 TEST_F(ShellSortTest, SortAlreadySorted) {
@@ -26,9 +26,9 @@ TEST_F(ShellSortTest, SortAlreadySorted) {
         Song("(2) B.mp3", "/b"),
         Song("(3) C.mp3", "/c")
     };
-    sorter.sort(songs);
-    songs[0].accept(visitor);
-    EXPECT_TRUE(visitor.hasNameAt(0, "(1) A.mp3"));
+    sorter_.sort(songs);
+    songs[0].accept(visitor_);
+    EXPECT_TRUE(visitor_.hasNameAt(0, "(1) A.mp3"));
 }
 
 TEST_F(ShellSortTest, SortReversed) {
@@ -39,21 +39,21 @@ TEST_F(ShellSortTest, SortReversed) {
         Song("(2) B.mp3", "/b"),
         Song("(1) A.mp3", "/a")
     };
-    sorter.sort(songs);
-    songs[0].accept(visitor);
-    EXPECT_TRUE(visitor.hasNameAt(0, "(1) A.mp3"));
+    sorter_.sort(songs);
+    songs[0].accept(visitor_);
+    EXPECT_TRUE(visitor_.hasNameAt(0, "(1) A.mp3"));
 }
 
 TEST_F(ShellSortTest, SortSingleElement) {
     std::vector<Song> songs = { Song("(1) A.mp3", "/a") };
-    sorter.sort(songs);
-    songs[0].accept(visitor);
-    EXPECT_TRUE(visitor.hasNameAt(0, "(1) A.mp3"));
+    sorter_.sort(songs);
+    songs[0].accept(visitor_);
+    EXPECT_TRUE(visitor_.hasNameAt(0, "(1) A.mp3"));
 }
 
 TEST_F(ShellSortTest, SortEmptyVector) {
     std::vector<Song> songs;
-    sorter.sort(songs);
+    sorter_.sort(songs);
     EXPECT_TRUE(songs.empty());
 }
 
@@ -63,9 +63,9 @@ TEST_F(ShellSortTest, SortDuplicateNumbers) {
         Song("(1) A.mp3", "/a"),
         Song("(2) C.mp3", "/c")
     };
-    sorter.sort(songs);
-    songs[0].accept(visitor);
-    EXPECT_TRUE(visitor.hasNameAt(0, "(1) A.mp3"));
+    sorter_.sort(songs);
+    songs[0].accept(visitor_);
+    EXPECT_TRUE(visitor_.hasNameAt(0, "(1) A.mp3"));
 }
 
 TEST_F(ShellSortTest, SortSongsWithoutNumbers) {
@@ -73,7 +73,7 @@ TEST_F(ShellSortTest, SortSongsWithoutNumbers) {
         Song("B.mp3", "/b"),
         Song("A.mp3", "/a")
     };
-    sorter.sort(songs);
+    sorter_.sort(songs);
     EXPECT_EQ(2, songs.size());
 }
 
@@ -82,9 +82,9 @@ TEST_F(ShellSortTest, SortLargeCollection) {
     for (int i = 100; i > 0; i--) {
         songs.emplace_back("(" + std::to_string(i) + ") Song.mp3", "/s");
     }
-    sorter.sort(songs);
-    songs[0].accept(visitor);
-    EXPECT_TRUE(visitor.hasNameAt(0, "(1) Song.mp3"));
+    sorter_.sort(songs);
+    songs[0].accept(visitor_);
+    EXPECT_TRUE(visitor_.hasNameAt(0, "(1) Song.mp3"));
 }
 
 TEST_F(ShellSortTest, SortPreservesAllElements) {
@@ -93,7 +93,7 @@ TEST_F(ShellSortTest, SortPreservesAllElements) {
         Song("(1) A.mp3", "/a"),
         Song("(2) B.mp3", "/b")
     };
-    sorter.sort(songs);
+    sorter_.sort(songs);
     EXPECT_EQ(3, songs.size());
 }
 
@@ -102,9 +102,9 @@ TEST_F(ShellSortTest, SortTwoElements) {
         Song("(2) B.mp3", "/b"),
         Song("(1) A.mp3", "/a")
     };
-    sorter.sort(songs);
-    songs[0].accept(visitor);
-    EXPECT_TRUE(visitor.hasNameAt(0, "(1) A.mp3"));
+    sorter_.sort(songs);
+    songs[0].accept(visitor_);
+    EXPECT_TRUE(visitor_.hasNameAt(0, "(1) A.mp3"));
 }
 
 TEST_F(QuickSortTest, SortByNameAlphabetical) {
@@ -113,9 +113,9 @@ TEST_F(QuickSortTest, SortByNameAlphabetical) {
         Song("A.mp3", "/a"),
         Song("B.mp3", "/b")
     };
-    sorter.sort(songs);
-    songs[0].accept(visitor);
-    EXPECT_TRUE(visitor.hasNameAt(0, "A.mp3"));
+    sorter_.sort(songs);
+    songs[0].accept(visitor_);
+    EXPECT_TRUE(visitor_.hasNameAt(0, "A.mp3"));
 }
 
 TEST_F(QuickSortTest, SortAlreadySorted) {
@@ -124,9 +124,9 @@ TEST_F(QuickSortTest, SortAlreadySorted) {
         Song("B.mp3", "/b"),
         Song("C.mp3", "/c")
     };
-    sorter.sort(songs);
-    songs[0].accept(visitor);
-    EXPECT_TRUE(visitor.hasNameAt(0, "A.mp3"));
+    sorter_.sort(songs);
+    songs[0].accept(visitor_);
+    EXPECT_TRUE(visitor_.hasNameAt(0, "A.mp3"));
 }
 
 TEST_F(QuickSortTest, SortReversed) {
@@ -137,21 +137,21 @@ TEST_F(QuickSortTest, SortReversed) {
         Song("B.mp3", "/b"),
         Song("A.mp3", "/a")
     };
-    sorter.sort(songs);
-    songs[0].accept(visitor);
-    EXPECT_TRUE(visitor.hasNameAt(0, "A.mp3"));
+    sorter_.sort(songs);
+    songs[0].accept(visitor_);
+    EXPECT_TRUE(visitor_.hasNameAt(0, "A.mp3"));
 }
 
 TEST_F(QuickSortTest, SortSingleElement) {
     std::vector<Song> songs = { Song("A.mp3", "/a") };
-    sorter.sort(songs);
-    songs[0].accept(visitor);
-    EXPECT_TRUE(visitor.hasNameAt(0, "A.mp3"));
+    sorter_.sort(songs);
+    songs[0].accept(visitor_);
+    EXPECT_TRUE(visitor_.hasNameAt(0, "A.mp3"));
 }
 
 TEST_F(QuickSortTest, SortEmptyVector) {
     std::vector<Song> songs;
-    sorter.sort(songs);
+    sorter_.sort(songs);
     EXPECT_TRUE(songs.empty());
 }
 
@@ -161,9 +161,9 @@ TEST_F(QuickSortTest, SortDuplicateNames) {
         Song("A.mp3", "/a"),
         Song("B.mp3", "/b2")
     };
-    sorter.sort(songs);
-    songs[0].accept(visitor);
-    EXPECT_TRUE(visitor.hasNameAt(0, "A.mp3"));
+    sorter_.sort(songs);
+    songs[0].accept(visitor_);
+    EXPECT_TRUE(visitor_.hasNameAt(0, "A.mp3"));
 }
 
 TEST_F(QuickSortTest, SortLargeCollection) {
@@ -171,7 +171,7 @@ TEST_F(QuickSortTest, SortLargeCollection) {
     for (int i = 100; i > 0; i--) {
         songs.emplace_back(std::to_string(i) + ".mp3", "/s");
     }
-    sorter.sort(songs);
+    sorter_.sort(songs);
     EXPECT_EQ(100, songs.size());
 }
 
@@ -181,7 +181,7 @@ TEST_F(QuickSortTest, SortPreservesAllElements) {
         Song("A.mp3", "/a"),
         Song("B.mp3", "/b")
     };
-    sorter.sort(songs);
+    sorter_.sort(songs);
     EXPECT_EQ(3, songs.size());
 }
 
@@ -190,9 +190,9 @@ TEST_F(QuickSortTest, SortTwoElements) {
         Song("B.mp3", "/b"),
         Song("A.mp3", "/a")
     };
-    sorter.sort(songs);
-    songs[0].accept(visitor);
-    EXPECT_TRUE(visitor.hasNameAt(0, "A.mp3"));
+    sorter_.sort(songs);
+    songs[0].accept(visitor_);
+    EXPECT_TRUE(visitor_.hasNameAt(0, "A.mp3"));
 }
 
 TEST_F(QuickSortTest, SortNumberedSongsByTitle) {
@@ -201,7 +201,7 @@ TEST_F(QuickSortTest, SortNumberedSongsByTitle) {
         Song("(1) Cherry.mp3", "/c"),
         Song("(3) Apple.mp3", "/a")
     };
-    sorter.sort(songs);
-    songs[0].accept(visitor);
-    EXPECT_TRUE(visitor.hasNameAt(0, "(3) Apple.mp3"));
+    sorter_.sort(songs);
+    songs[0].accept(visitor_);
+    EXPECT_TRUE(visitor_.hasNameAt(0, "(3) Apple.mp3"));
 }

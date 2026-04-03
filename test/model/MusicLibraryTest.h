@@ -1,19 +1,11 @@
 #ifndef MUSICLIBRARYTEST_H
 #define MUSICLIBRARYTEST_H
 
-#include <gtest/gtest.h>
-#include "../../model/MusicLibrary.h"
-#include "../TestPlaylistVisitor.h"
-#include <filesystem>
-#include <string>
+#include "../DirectoryTestFixture.h"
 
-class MusicLibraryTest : public ::testing::Test {
+class MusicLibraryTest : public DirectoryTestFixture {
 protected:
-    std::string testDir;
-
-    void SetUp() override;
-    void TearDown() override;
-    void createFile(const std::string& name);
+    std::string identify() const override;
 };
 
 #endif

@@ -1,27 +1,11 @@
 #ifndef REGRESSIONTEST_H
 #define REGRESSIONTEST_H
 
-#include <gtest/gtest.h>
-#include "../model/Song.h"
-#include "../model/Playlist.h"
-#include "../model/MusicLibrary.h"
-#include "../model/Model.h"
-#include "../model/ShellSort.h"
-#include "../model/QuickSort.h"
-#include "MockPlaybackListener.h"
-#include "TestPlaylistVisitor.h"
-#include <filesystem>
-#include <string>
+#include "ModelTestFixture.h"
 
-class RegressionTest : public ::testing::Test {
+class RegressionTest : public ModelTestFixture {
 protected:
-    std::string baseDir;
-    std::string musicDir;
-    std::string adsDir;
-
-    void SetUp() override;
-    void TearDown() override;
-    void createSong(const std::string& name) const;
+    std::string identify() const override;
 };
 
 #endif

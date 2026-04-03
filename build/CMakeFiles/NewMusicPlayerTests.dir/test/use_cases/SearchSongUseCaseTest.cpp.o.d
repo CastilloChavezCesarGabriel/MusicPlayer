@@ -1,6 +1,7 @@
-CMakeFiles/NewMusicPlayerTests.dir/test/controller/SortPlaylistUseCaseTest.cpp.o: \
-  /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/controller/SortPlaylistUseCaseTest.cpp \
-  /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/controller/SortPlaylistUseCaseTest.h \
+CMakeFiles/NewMusicPlayerTests.dir/test/use_cases/SearchSongUseCaseTest.cpp.o: \
+  /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/use_cases/SearchSongUseCaseTest.cpp \
+  /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/use_cases/SearchSongUseCaseTest.h \
+  /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/use_cases/../ModelTestFixture.h \
   /opt/homebrew/include/gtest/gtest.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/cstddef \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__config \
@@ -871,17 +872,17 @@ CMakeFiles/NewMusicPlayerTests.dir/test/controller/SortPlaylistUseCaseTest.cpp.o
   /opt/homebrew/include/gtest/gtest-typed-test.h \
   /opt/homebrew/include/gtest/gtest_pred_impl.h \
   /opt/homebrew/include/gtest/gtest_prod.h \
-  /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/controller/../../model/Model.h \
-  /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/controller/../../model/Playlist.h \
-  /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/controller/../../model/Song.h \
-  /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/controller/../../model/IPlaylistVisitor.h \
-  /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/controller/../../model/MusicLibrary.h \
-  /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/controller/../../model/SortingAlgorithm.h \
-  /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/controller/../../model/IPlaybackListener.h \
-  /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/controller/../../model/Advertisement.h \
-  /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/controller/../../model/Channel.h \
-  /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/controller/../MockPlaybackListener.h \
-  /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/controller/../TestPlaylistVisitor.h \
+  /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/use_cases/../../model/Model.h \
+  /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/use_cases/../../model/Playlist.h \
+  /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/use_cases/../../model/Song.h \
+  /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/use_cases/../../model/IPlaylistVisitor.h \
+  /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/use_cases/../../model/MusicLibrary.h \
+  /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/use_cases/../../model/SortingAlgorithm.h \
+  /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/use_cases/../../model/IPlaybackListener.h \
+  /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/use_cases/../../model/Advertisement.h \
+  /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/use_cases/../../model/Channel.h \
+  /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/use_cases/../MockPlaybackListener.h \
+  /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/use_cases/../TestPlaylistVisitor.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/filesystem \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/copy_options.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/directory_entry.h \

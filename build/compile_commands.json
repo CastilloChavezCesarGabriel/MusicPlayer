@@ -121,6 +121,18 @@
 },
 {
   "directory": "/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build",
+  "command": "/usr/bin/c++  -isystem /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/NewMusicPlayerTests_autogen/include -isystem /opt/homebrew/include -std=gnu++2b -arch arm64 -o CMakeFiles/NewMusicPlayerTests.dir/test/ModelTestFixture.cpp.o -c /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/ModelTestFixture.cpp",
+  "file": "/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/ModelTestFixture.cpp",
+  "output": "CMakeFiles/NewMusicPlayerTests.dir/test/ModelTestFixture.cpp.o"
+},
+{
+  "directory": "/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build",
+  "command": "/usr/bin/c++  -isystem /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/NewMusicPlayerTests_autogen/include -isystem /opt/homebrew/include -std=gnu++2b -arch arm64 -o CMakeFiles/NewMusicPlayerTests.dir/test/DirectoryTestFixture.cpp.o -c /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/DirectoryTestFixture.cpp",
+  "file": "/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/DirectoryTestFixture.cpp",
+  "output": "CMakeFiles/NewMusicPlayerTests.dir/test/DirectoryTestFixture.cpp.o"
+},
+{
+  "directory": "/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build",
   "command": "/usr/bin/c++  -isystem /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/NewMusicPlayerTests_autogen/include -isystem /opt/homebrew/include -std=gnu++2b -arch arm64 -o CMakeFiles/NewMusicPlayerTests.dir/test/model/SongTest.cpp.o -c /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/model/SongTest.cpp",
   "file": "/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/model/SongTest.cpp",
   "output": "CMakeFiles/NewMusicPlayerTests.dir/test/model/SongTest.cpp.o"
@@ -163,39 +175,39 @@
 },
 {
   "directory": "/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build",
-  "command": "/usr/bin/c++  -isystem /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/NewMusicPlayerTests_autogen/include -isystem /opt/homebrew/include -std=gnu++2b -arch arm64 -o CMakeFiles/NewMusicPlayerTests.dir/test/controller/PlaySongUseCaseTest.cpp.o -c /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/controller/PlaySongUseCaseTest.cpp",
-  "file": "/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/controller/PlaySongUseCaseTest.cpp",
-  "output": "CMakeFiles/NewMusicPlayerTests.dir/test/controller/PlaySongUseCaseTest.cpp.o"
+  "command": "/usr/bin/c++  -isystem /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/NewMusicPlayerTests_autogen/include -isystem /opt/homebrew/include -std=gnu++2b -arch arm64 -o CMakeFiles/NewMusicPlayerTests.dir/test/use_cases/PlaySongUseCaseTest.cpp.o -c /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/use_cases/PlaySongUseCaseTest.cpp",
+  "file": "/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/use_cases/PlaySongUseCaseTest.cpp",
+  "output": "CMakeFiles/NewMusicPlayerTests.dir/test/use_cases/PlaySongUseCaseTest.cpp.o"
 },
 {
   "directory": "/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build",
-  "command": "/usr/bin/c++  -isystem /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/NewMusicPlayerTests_autogen/include -isystem /opt/homebrew/include -std=gnu++2b -arch arm64 -o CMakeFiles/NewMusicPlayerTests.dir/test/controller/SortPlaylistUseCaseTest.cpp.o -c /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/controller/SortPlaylistUseCaseTest.cpp",
-  "file": "/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/controller/SortPlaylistUseCaseTest.cpp",
-  "output": "CMakeFiles/NewMusicPlayerTests.dir/test/controller/SortPlaylistUseCaseTest.cpp.o"
+  "command": "/usr/bin/c++  -isystem /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/NewMusicPlayerTests_autogen/include -isystem /opt/homebrew/include -std=gnu++2b -arch arm64 -o CMakeFiles/NewMusicPlayerTests.dir/test/use_cases/SortPlaylistUseCaseTest.cpp.o -c /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/use_cases/SortPlaylistUseCaseTest.cpp",
+  "file": "/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/use_cases/SortPlaylistUseCaseTest.cpp",
+  "output": "CMakeFiles/NewMusicPlayerTests.dir/test/use_cases/SortPlaylistUseCaseTest.cpp.o"
 },
 {
   "directory": "/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build",
-  "command": "/usr/bin/c++  -isystem /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/NewMusicPlayerTests_autogen/include -isystem /opt/homebrew/include -std=gnu++2b -arch arm64 -o CMakeFiles/NewMusicPlayerTests.dir/test/controller/SearchSongUseCaseTest.cpp.o -c /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/controller/SearchSongUseCaseTest.cpp",
-  "file": "/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/controller/SearchSongUseCaseTest.cpp",
-  "output": "CMakeFiles/NewMusicPlayerTests.dir/test/controller/SearchSongUseCaseTest.cpp.o"
+  "command": "/usr/bin/c++  -isystem /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/NewMusicPlayerTests_autogen/include -isystem /opt/homebrew/include -std=gnu++2b -arch arm64 -o CMakeFiles/NewMusicPlayerTests.dir/test/use_cases/SearchSongUseCaseTest.cpp.o -c /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/use_cases/SearchSongUseCaseTest.cpp",
+  "file": "/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/use_cases/SearchSongUseCaseTest.cpp",
+  "output": "CMakeFiles/NewMusicPlayerTests.dir/test/use_cases/SearchSongUseCaseTest.cpp.o"
 },
 {
   "directory": "/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build",
-  "command": "/usr/bin/c++  -isystem /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/NewMusicPlayerTests_autogen/include -isystem /opt/homebrew/include -std=gnu++2b -arch arm64 -o CMakeFiles/NewMusicPlayerTests.dir/test/controller/AddSongUseCaseTest.cpp.o -c /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/controller/AddSongUseCaseTest.cpp",
-  "file": "/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/controller/AddSongUseCaseTest.cpp",
-  "output": "CMakeFiles/NewMusicPlayerTests.dir/test/controller/AddSongUseCaseTest.cpp.o"
+  "command": "/usr/bin/c++  -isystem /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/NewMusicPlayerTests_autogen/include -isystem /opt/homebrew/include -std=gnu++2b -arch arm64 -o CMakeFiles/NewMusicPlayerTests.dir/test/use_cases/AddSongUseCaseTest.cpp.o -c /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/use_cases/AddSongUseCaseTest.cpp",
+  "file": "/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/use_cases/AddSongUseCaseTest.cpp",
+  "output": "CMakeFiles/NewMusicPlayerTests.dir/test/use_cases/AddSongUseCaseTest.cpp.o"
 },
 {
   "directory": "/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build",
-  "command": "/usr/bin/c++  -isystem /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/NewMusicPlayerTests_autogen/include -isystem /opt/homebrew/include -std=gnu++2b -arch arm64 -o CMakeFiles/NewMusicPlayerTests.dir/test/controller/RemoveSongUseCaseTest.cpp.o -c /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/controller/RemoveSongUseCaseTest.cpp",
-  "file": "/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/controller/RemoveSongUseCaseTest.cpp",
-  "output": "CMakeFiles/NewMusicPlayerTests.dir/test/controller/RemoveSongUseCaseTest.cpp.o"
+  "command": "/usr/bin/c++  -isystem /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/NewMusicPlayerTests_autogen/include -isystem /opt/homebrew/include -std=gnu++2b -arch arm64 -o CMakeFiles/NewMusicPlayerTests.dir/test/use_cases/RemoveSongUseCaseTest.cpp.o -c /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/use_cases/RemoveSongUseCaseTest.cpp",
+  "file": "/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/use_cases/RemoveSongUseCaseTest.cpp",
+  "output": "CMakeFiles/NewMusicPlayerTests.dir/test/use_cases/RemoveSongUseCaseTest.cpp.o"
 },
 {
   "directory": "/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build",
-  "command": "/usr/bin/c++  -isystem /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/NewMusicPlayerTests_autogen/include -isystem /opt/homebrew/include -std=gnu++2b -arch arm64 -o CMakeFiles/NewMusicPlayerTests.dir/test/controller/NavigatePlaylistUseCaseTest.cpp.o -c /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/controller/NavigatePlaylistUseCaseTest.cpp",
-  "file": "/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/controller/NavigatePlaylistUseCaseTest.cpp",
-  "output": "CMakeFiles/NewMusicPlayerTests.dir/test/controller/NavigatePlaylistUseCaseTest.cpp.o"
+  "command": "/usr/bin/c++  -isystem /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/NewMusicPlayerTests_autogen/include -isystem /opt/homebrew/include -std=gnu++2b -arch arm64 -o CMakeFiles/NewMusicPlayerTests.dir/test/use_cases/NavigatePlaylistUseCaseTest.cpp.o -c /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/use_cases/NavigatePlaylistUseCaseTest.cpp",
+  "file": "/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/use_cases/NavigatePlaylistUseCaseTest.cpp",
+  "output": "CMakeFiles/NewMusicPlayerTests.dir/test/use_cases/NavigatePlaylistUseCaseTest.cpp.o"
 },
 {
   "directory": "/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build",

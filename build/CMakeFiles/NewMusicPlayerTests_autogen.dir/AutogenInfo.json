@@ -699,9 +699,21 @@
 			null
 		],
 		[
+			"/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/DirectoryTestFixture.h",
+			"MU",
+			"7HEK2XT3N7/moc_DirectoryTestFixture.cpp",
+			null
+		],
+		[
 			"/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/MockPlaybackListener.h",
 			"MU",
 			"7HEK2XT3N7/moc_MockPlaybackListener.cpp",
+			null
+		],
+		[
+			"/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/ModelTestFixture.h",
+			"MU",
+			"7HEK2XT3N7/moc_ModelTestFixture.cpp",
 			null
 		],
 		[
@@ -714,42 +726,6 @@
 			"/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/TestPlaylistVisitor.h",
 			"MU",
 			"7HEK2XT3N7/moc_TestPlaylistVisitor.cpp",
-			null
-		],
-		[
-			"/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/controller/AddSongUseCaseTest.h",
-			"MU",
-			"AOX5OXOTOM/moc_AddSongUseCaseTest.cpp",
-			null
-		],
-		[
-			"/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/controller/NavigatePlaylistUseCaseTest.h",
-			"MU",
-			"AOX5OXOTOM/moc_NavigatePlaylistUseCaseTest.cpp",
-			null
-		],
-		[
-			"/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/controller/PlaySongUseCaseTest.h",
-			"MU",
-			"AOX5OXOTOM/moc_PlaySongUseCaseTest.cpp",
-			null
-		],
-		[
-			"/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/controller/RemoveSongUseCaseTest.h",
-			"MU",
-			"AOX5OXOTOM/moc_RemoveSongUseCaseTest.cpp",
-			null
-		],
-		[
-			"/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/controller/SearchSongUseCaseTest.h",
-			"MU",
-			"AOX5OXOTOM/moc_SearchSongUseCaseTest.cpp",
-			null
-		],
-		[
-			"/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/controller/SortPlaylistUseCaseTest.h",
-			"MU",
-			"AOX5OXOTOM/moc_SortPlaylistUseCaseTest.cpp",
 			null
 		],
 		[
@@ -786,6 +762,42 @@
 			"/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/model/SortingTest.h",
 			"MU",
 			"DKGVVHHNBP/moc_SortingTest.cpp",
+			null
+		],
+		[
+			"/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/use_cases/AddSongUseCaseTest.h",
+			"MU",
+			"MZNYYZ7AJF/moc_AddSongUseCaseTest.cpp",
+			null
+		],
+		[
+			"/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/use_cases/NavigatePlaylistUseCaseTest.h",
+			"MU",
+			"MZNYYZ7AJF/moc_NavigatePlaylistUseCaseTest.cpp",
+			null
+		],
+		[
+			"/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/use_cases/PlaySongUseCaseTest.h",
+			"MU",
+			"MZNYYZ7AJF/moc_PlaySongUseCaseTest.cpp",
+			null
+		],
+		[
+			"/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/use_cases/RemoveSongUseCaseTest.h",
+			"MU",
+			"MZNYYZ7AJF/moc_RemoveSongUseCaseTest.cpp",
+			null
+		],
+		[
+			"/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/use_cases/SearchSongUseCaseTest.h",
+			"MU",
+			"MZNYYZ7AJF/moc_SearchSongUseCaseTest.cpp",
+			null
+		],
+		[
+			"/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/use_cases/SortPlaylistUseCaseTest.h",
+			"MU",
+			"MZNYYZ7AJF/moc_SortPlaylistUseCaseTest.cpp",
 			null
 		]
 	],
@@ -885,7 +897,17 @@
 			null
 		],
 		[
+			"/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/DirectoryTestFixture.cpp",
+			"MU",
+			null
+		],
+		[
 			"/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/MockPlaybackListener.cpp",
+			"MU",
+			null
+		],
+		[
+			"/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/ModelTestFixture.cpp",
 			"MU",
 			null
 		],
@@ -896,36 +918,6 @@
 		],
 		[
 			"/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/TestPlaylistVisitor.cpp",
-			"MU",
-			null
-		],
-		[
-			"/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/controller/AddSongUseCaseTest.cpp",
-			"MU",
-			null
-		],
-		[
-			"/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/controller/NavigatePlaylistUseCaseTest.cpp",
-			"MU",
-			null
-		],
-		[
-			"/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/controller/PlaySongUseCaseTest.cpp",
-			"MU",
-			null
-		],
-		[
-			"/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/controller/RemoveSongUseCaseTest.cpp",
-			"MU",
-			null
-		],
-		[
-			"/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/controller/SearchSongUseCaseTest.cpp",
-			"MU",
-			null
-		],
-		[
-			"/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/controller/SortPlaylistUseCaseTest.cpp",
 			"MU",
 			null
 		],
@@ -956,6 +948,36 @@
 		],
 		[
 			"/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/model/SortingTest.cpp",
+			"MU",
+			null
+		],
+		[
+			"/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/use_cases/AddSongUseCaseTest.cpp",
+			"MU",
+			null
+		],
+		[
+			"/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/use_cases/NavigatePlaylistUseCaseTest.cpp",
+			"MU",
+			null
+		],
+		[
+			"/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/use_cases/PlaySongUseCaseTest.cpp",
+			"MU",
+			null
+		],
+		[
+			"/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/use_cases/RemoveSongUseCaseTest.cpp",
+			"MU",
+			null
+		],
+		[
+			"/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/use_cases/SearchSongUseCaseTest.cpp",
+			"MU",
+			null
+		],
+		[
+			"/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/use_cases/SortPlaylistUseCaseTest.cpp",
 			"MU",
 			null
 		]

@@ -11,16 +11,16 @@
 
 class ShellSortTest : public ::testing::Test {
 protected:
-    ShellSort sorter;
-    TestPlaylistVisitor visitor;
+    ShellSort sorter_;
+    TestPlaylistVisitor visitor_;
 
-    void assertOrder(std::vector<Song>& songs, const std::vector<std::string>& expected);
+    void verify(std::vector<Song>& songs, const std::vector<std::string>& expected);
 };
 
 class QuickSortTest : public ::testing::Test {
 protected:
-    QuickSort sorter;
-    TestPlaylistVisitor visitor;
+    QuickSort sorter_;
+    TestPlaylistVisitor visitor_;
 };
 
 #endif

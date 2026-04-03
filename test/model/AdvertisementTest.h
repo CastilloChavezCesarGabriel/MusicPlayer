@@ -1,20 +1,14 @@
 #ifndef ADVERTISEMENTTEST_H
 #define ADVERTISEMENTTEST_H
 
-#include <gtest/gtest.h>
-#include "../../model/Advertisement.h"
+#include "../DirectoryTestFixture.h"
 #include "../MockPlaybackListener.h"
-#include <filesystem>
-#include <string>
 
-class AdvertisementTest : public ::testing::Test {
+class AdvertisementTest : public DirectoryTestFixture {
 protected:
-    std::string testDir;
-    MockPlaybackListener listener;
+    MockPlaybackListener listener_;
 
-    void SetUp() override;
-    void TearDown() override;
-    void createAdFile(const std::string& name);
+    std::string identify() const override;
 };
 
 #endif

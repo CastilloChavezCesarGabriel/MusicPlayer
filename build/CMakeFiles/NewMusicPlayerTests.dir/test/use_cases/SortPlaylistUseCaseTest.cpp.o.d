@@ -1,7 +1,7 @@
-CMakeFiles/NewMusicPlayerTests.dir/test/RegressionTest.cpp.o: \
-  /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/RegressionTest.cpp \
-  /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/RegressionTest.h \
-  /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/ModelTestFixture.h \
+CMakeFiles/NewMusicPlayerTests.dir/test/use_cases/SortPlaylistUseCaseTest.cpp.o: \
+  /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/use_cases/SortPlaylistUseCaseTest.cpp \
+  /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/use_cases/SortPlaylistUseCaseTest.h \
+  /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/use_cases/../ModelTestFixture.h \
   /opt/homebrew/include/gtest/gtest.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/cstddef \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__config \
@@ -872,19 +872,17 @@ CMakeFiles/NewMusicPlayerTests.dir/test/RegressionTest.cpp.o: \
   /opt/homebrew/include/gtest/gtest-typed-test.h \
   /opt/homebrew/include/gtest/gtest_pred_impl.h \
   /opt/homebrew/include/gtest/gtest_prod.h \
-  /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/../model/Model.h \
-  /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/../model/Playlist.h \
-  /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/../model/Song.h \
-  /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/../model/IPlaylistVisitor.h \
-  /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/../model/MusicLibrary.h \
-  /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/../model/SortingAlgorithm.h \
-  /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/../model/IPlaybackListener.h \
-  /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/../model/Advertisement.h \
-  /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/../model/Channel.h \
-  /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/MockPlaybackListener.h \
-  /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/TestPlaylistVisitor.h \
-  /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/../model/ShellSort.h \
-  /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/../model/QuickSort.h \
+  /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/use_cases/../../model/Model.h \
+  /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/use_cases/../../model/Playlist.h \
+  /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/use_cases/../../model/Song.h \
+  /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/use_cases/../../model/IPlaylistVisitor.h \
+  /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/use_cases/../../model/MusicLibrary.h \
+  /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/use_cases/../../model/SortingAlgorithm.h \
+  /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/use_cases/../../model/IPlaybackListener.h \
+  /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/use_cases/../../model/Advertisement.h \
+  /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/use_cases/../../model/Channel.h \
+  /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/use_cases/../MockPlaybackListener.h \
+  /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/use_cases/../TestPlaylistVisitor.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/filesystem \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/copy_options.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/directory_entry.h \

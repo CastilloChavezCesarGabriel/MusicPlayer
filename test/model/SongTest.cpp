@@ -1,15 +1,16 @@
 #include "SongTest.h"
+#include "../../model/Song.h"
 
 TEST_F(SongTest, AcceptPassesNameToVisitor) {
     Song song("(1) First Song.mp3", "/music/(1) First Song.mp3");
-    song.accept(visitor);
-    EXPECT_TRUE(visitor.hasName("(1) First Song.mp3"));
+    song.accept(visitor_);
+    EXPECT_TRUE(visitor_.hasName("(1) First Song.mp3"));
 }
 
 TEST_F(SongTest, AcceptPassesPathToVisitor) {
     Song song("song.mp3", "/music/song.mp3");
-    song.accept(visitor);
-    EXPECT_TRUE(visitor.hasPath("/music/song.mp3"));
+    song.accept(visitor_);
+    EXPECT_TRUE(visitor_.hasPath("/music/song.mp3"));
 }
 
 TEST_F(SongTest, MatchFindsSubstring) {
@@ -93,18 +94,18 @@ TEST_F(SongTest, OrderHandlesNumberWithoutParens) {
 TEST_F(SongTest, AcceptMultipleSongsToSameVisitor) {
     Song first("A.mp3", "/a");
     Song second("B.mp3", "/b");
-    first.accept(visitor);
-    second.accept(visitor);
-    EXPECT_TRUE(visitor.hasSongs(2));
+    first.accept(visitor_);
+    second.accept(visitor_);
+    EXPECT_TRUE(visitor_.hasSongs(2));
 }
 
 TEST_F(SongTest, AcceptPreservesOrderInVisitor) {
     Song first("A.mp3", "/a");
     Song second("B.mp3", "/b");
-    first.accept(visitor);
-    second.accept(visitor);
-    EXPECT_TRUE(visitor.hasNameAt(0, "A.mp3"));
-    EXPECT_TRUE(visitor.hasNameAt(1, "B.mp3"));
+    first.accept(visitor_);
+    second.accept(visitor_);
+    EXPECT_TRUE(visitor_.hasNameAt(0, "A.mp3"));
+    EXPECT_TRUE(visitor_.hasNameAt(1, "B.mp3"));
 }
 
 TEST_F(SongTest, MatchWithSpecialCharacters) {
@@ -114,14 +115,14 @@ TEST_F(SongTest, MatchWithSpecialCharacters) {
 
 TEST_F(SongTest, ConstructionWithEmptyName) {
     Song song("", "/music/empty");
-    song.accept(visitor);
-    EXPECT_TRUE(visitor.hasName(""));
+    song.accept(visitor_);
+    EXPECT_TRUE(visitor_.hasName(""));
 }
 
 TEST_F(SongTest, ConstructionWithEmptyPath) {
     Song song("song.mp3", "");
-    song.accept(visitor);
-    EXPECT_TRUE(visitor.hasPath(""));
+    song.accept(visitor_);
+    EXPECT_TRUE(visitor_.hasPath(""));
 }
 
 TEST_F(SongTest, OrderReturnsZeroForEmptyString) {
