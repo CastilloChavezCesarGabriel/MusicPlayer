@@ -10,8 +10,7 @@ private:
     QPushButton* add_button_;
     QPushButton* remove_button_;
     QPushButton* skip_button_;
-    QPushButton* sort_by_number_button;
-    QPushButton* sort_by_name_button;
+    QPushButton* shuffle_button_;
 
     void setup();
     void wire();
@@ -25,8 +24,7 @@ signals:
     void addClicked();
     void removeClicked();
     void skipClicked();
-    void sortByNumberClicked();
-    void sortByNameClicked();
+    void shuffleClicked();
 };
 
 #endif //QT_TOOLBAR_H

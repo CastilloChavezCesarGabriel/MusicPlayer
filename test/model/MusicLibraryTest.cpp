@@ -120,7 +120,8 @@ TEST_F(MusicLibraryTest, ImportCopiesFile) {
     std::filesystem::create_directories(srcDir);
     std::ofstream(srcDir + "/new.mp3") << "data";
 
-    const MusicLibrary lib(test_directory_);
+    MusicLibrary lib(test_directory_);
+    lib.import(srcDir + "/new.mp3");
     EXPECT_TRUE(lib.contains("new.mp3"));
 }
 

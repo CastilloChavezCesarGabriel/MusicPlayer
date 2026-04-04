@@ -21,14 +21,34 @@ void Playlist::remove(const int index) {
 }
 
 void Playlist::sort(SortingAlgorithm& criteria) {
+    if (!hasSelected()) {
+        criteria.sort(songs_);
+        return;
+    }
+
+    Song current = songs_[current_song_];
     criteria.sort(songs_);
+
+    for (int i = 0; i < songs_.size(); i++) {
+        if (songs_[i].isEqualTo(current)) {
+            current_song_ = i;
+            return;
+        }
+    }
+    current_song_ = -1;
 }
 
 void Playlist::shuffle() {
     static std::random_device rd;
     static std::mt19937 generator(rd());
-    std::ranges::shuffle(songs_, generator);
-    current_song_ = -1;
+
+    if (hasSelected()) {
+        std::swap(songs_[0], songs_[current_song_]);
+        std::shuffle(songs_.begin() + 1, songs_.end(), generator);
+        current_song_ = 0;
+    } else {
+        std::ranges::shuffle(songs_, generator);
+    }
 }
 
 void Playlist::clear() {
@@ -75,7 +95,7 @@ void Playlist::accept(IPlaylistVisitor& visitor) const {
 
 void Playlist::search(const std::string& query, IPlaylistVisitor& visitor) const {
     for (const Song& song : songs_) {
-        if (song.match(query)) {
+        if (song.matches(query)) {
             song.accept(visitor);
         }
     }

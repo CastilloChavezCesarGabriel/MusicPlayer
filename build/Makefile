@@ -272,6 +272,30 @@ NewMusicPlayer_autogen/mocs_compilation.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/NewMusicPlayer.dir/build.make CMakeFiles/NewMusicPlayer.dir/NewMusicPlayer_autogen/mocs_compilation.cpp.s
 .PHONY : NewMusicPlayer_autogen/mocs_compilation.cpp.s
 
+adapters/qt/QtAudioEngine.o: adapters/qt/QtAudioEngine.cpp.o
+.PHONY : adapters/qt/QtAudioEngine.o
+
+# target to build an object file
+adapters/qt/QtAudioEngine.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NewMusicPlayer.dir/build.make CMakeFiles/NewMusicPlayer.dir/adapters/qt/QtAudioEngine.cpp.o
+.PHONY : adapters/qt/QtAudioEngine.cpp.o
+
+adapters/qt/QtAudioEngine.i: adapters/qt/QtAudioEngine.cpp.i
+.PHONY : adapters/qt/QtAudioEngine.i
+
+# target to preprocess a source file
+adapters/qt/QtAudioEngine.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NewMusicPlayer.dir/build.make CMakeFiles/NewMusicPlayer.dir/adapters/qt/QtAudioEngine.cpp.i
+.PHONY : adapters/qt/QtAudioEngine.cpp.i
+
+adapters/qt/QtAudioEngine.s: adapters/qt/QtAudioEngine.cpp.s
+.PHONY : adapters/qt/QtAudioEngine.s
+
+# target to generate assembly for a file
+adapters/qt/QtAudioEngine.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NewMusicPlayer.dir/build.make CMakeFiles/NewMusicPlayer.dir/adapters/qt/QtAudioEngine.cpp.s
+.PHONY : adapters/qt/QtAudioEngine.cpp.s
+
 adapters/qt/QtPlaybackPanel.o: adapters/qt/QtPlaybackPanel.cpp.o
 .PHONY : adapters/qt/QtPlaybackPanel.o
 
@@ -295,6 +319,102 @@ adapters/qt/QtPlaybackPanel.s: adapters/qt/QtPlaybackPanel.cpp.s
 adapters/qt/QtPlaybackPanel.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/NewMusicPlayer.dir/build.make CMakeFiles/NewMusicPlayer.dir/adapters/qt/QtPlaybackPanel.cpp.s
 .PHONY : adapters/qt/QtPlaybackPanel.cpp.s
+
+adapters/qt/QtPlaylistDisplay.o: adapters/qt/QtPlaylistDisplay.cpp.o
+.PHONY : adapters/qt/QtPlaylistDisplay.o
+
+# target to build an object file
+adapters/qt/QtPlaylistDisplay.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NewMusicPlayer.dir/build.make CMakeFiles/NewMusicPlayer.dir/adapters/qt/QtPlaylistDisplay.cpp.o
+.PHONY : adapters/qt/QtPlaylistDisplay.cpp.o
+
+adapters/qt/QtPlaylistDisplay.i: adapters/qt/QtPlaylistDisplay.cpp.i
+.PHONY : adapters/qt/QtPlaylistDisplay.i
+
+# target to preprocess a source file
+adapters/qt/QtPlaylistDisplay.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NewMusicPlayer.dir/build.make CMakeFiles/NewMusicPlayer.dir/adapters/qt/QtPlaylistDisplay.cpp.i
+.PHONY : adapters/qt/QtPlaylistDisplay.cpp.i
+
+adapters/qt/QtPlaylistDisplay.s: adapters/qt/QtPlaylistDisplay.cpp.s
+.PHONY : adapters/qt/QtPlaylistDisplay.s
+
+# target to generate assembly for a file
+adapters/qt/QtPlaylistDisplay.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NewMusicPlayer.dir/build.make CMakeFiles/NewMusicPlayer.dir/adapters/qt/QtPlaylistDisplay.cpp.s
+.PHONY : adapters/qt/QtPlaylistDisplay.cpp.s
+
+adapters/qt/QtProgressPanel.o: adapters/qt/QtProgressPanel.cpp.o
+.PHONY : adapters/qt/QtProgressPanel.o
+
+# target to build an object file
+adapters/qt/QtProgressPanel.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NewMusicPlayer.dir/build.make CMakeFiles/NewMusicPlayer.dir/adapters/qt/QtProgressPanel.cpp.o
+.PHONY : adapters/qt/QtProgressPanel.cpp.o
+
+adapters/qt/QtProgressPanel.i: adapters/qt/QtProgressPanel.cpp.i
+.PHONY : adapters/qt/QtProgressPanel.i
+
+# target to preprocess a source file
+adapters/qt/QtProgressPanel.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NewMusicPlayer.dir/build.make CMakeFiles/NewMusicPlayer.dir/adapters/qt/QtProgressPanel.cpp.i
+.PHONY : adapters/qt/QtProgressPanel.cpp.i
+
+adapters/qt/QtProgressPanel.s: adapters/qt/QtProgressPanel.cpp.s
+.PHONY : adapters/qt/QtProgressPanel.s
+
+# target to generate assembly for a file
+adapters/qt/QtProgressPanel.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NewMusicPlayer.dir/build.make CMakeFiles/NewMusicPlayer.dir/adapters/qt/QtProgressPanel.cpp.s
+.PHONY : adapters/qt/QtProgressPanel.cpp.s
+
+adapters/qt/QtSortHeader.o: adapters/qt/QtSortHeader.cpp.o
+.PHONY : adapters/qt/QtSortHeader.o
+
+# target to build an object file
+adapters/qt/QtSortHeader.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NewMusicPlayer.dir/build.make CMakeFiles/NewMusicPlayer.dir/adapters/qt/QtSortHeader.cpp.o
+.PHONY : adapters/qt/QtSortHeader.cpp.o
+
+adapters/qt/QtSortHeader.i: adapters/qt/QtSortHeader.cpp.i
+.PHONY : adapters/qt/QtSortHeader.i
+
+# target to preprocess a source file
+adapters/qt/QtSortHeader.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NewMusicPlayer.dir/build.make CMakeFiles/NewMusicPlayer.dir/adapters/qt/QtSortHeader.cpp.i
+.PHONY : adapters/qt/QtSortHeader.cpp.i
+
+adapters/qt/QtSortHeader.s: adapters/qt/QtSortHeader.cpp.s
+.PHONY : adapters/qt/QtSortHeader.s
+
+# target to generate assembly for a file
+adapters/qt/QtSortHeader.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NewMusicPlayer.dir/build.make CMakeFiles/NewMusicPlayer.dir/adapters/qt/QtSortHeader.cpp.s
+.PHONY : adapters/qt/QtSortHeader.cpp.s
+
+adapters/qt/QtStyler.o: adapters/qt/QtStyler.cpp.o
+.PHONY : adapters/qt/QtStyler.o
+
+# target to build an object file
+adapters/qt/QtStyler.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NewMusicPlayer.dir/build.make CMakeFiles/NewMusicPlayer.dir/adapters/qt/QtStyler.cpp.o
+.PHONY : adapters/qt/QtStyler.cpp.o
+
+adapters/qt/QtStyler.i: adapters/qt/QtStyler.cpp.i
+.PHONY : adapters/qt/QtStyler.i
+
+# target to preprocess a source file
+adapters/qt/QtStyler.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NewMusicPlayer.dir/build.make CMakeFiles/NewMusicPlayer.dir/adapters/qt/QtStyler.cpp.i
+.PHONY : adapters/qt/QtStyler.cpp.i
+
+adapters/qt/QtStyler.s: adapters/qt/QtStyler.cpp.s
+.PHONY : adapters/qt/QtStyler.s
+
+# target to generate assembly for a file
+adapters/qt/QtStyler.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NewMusicPlayer.dir/build.make CMakeFiles/NewMusicPlayer.dir/adapters/qt/QtStyler.cpp.s
+.PHONY : adapters/qt/QtStyler.cpp.s
 
 adapters/qt/QtToolbar.o: adapters/qt/QtToolbar.cpp.o
 .PHONY : adapters/qt/QtToolbar.o
@@ -571,6 +691,33 @@ model/MusicLibrary.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/NewMusicPlayer.dir/build.make CMakeFiles/NewMusicPlayer.dir/model/MusicLibrary.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/NewMusicPlayerTests.dir/build.make CMakeFiles/NewMusicPlayerTests.dir/model/MusicLibrary.cpp.s
 .PHONY : model/MusicLibrary.cpp.s
+
+model/PlaybackNotifier.o: model/PlaybackNotifier.cpp.o
+.PHONY : model/PlaybackNotifier.o
+
+# target to build an object file
+model/PlaybackNotifier.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NewMusicPlayer.dir/build.make CMakeFiles/NewMusicPlayer.dir/model/PlaybackNotifier.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NewMusicPlayerTests.dir/build.make CMakeFiles/NewMusicPlayerTests.dir/model/PlaybackNotifier.cpp.o
+.PHONY : model/PlaybackNotifier.cpp.o
+
+model/PlaybackNotifier.i: model/PlaybackNotifier.cpp.i
+.PHONY : model/PlaybackNotifier.i
+
+# target to preprocess a source file
+model/PlaybackNotifier.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NewMusicPlayer.dir/build.make CMakeFiles/NewMusicPlayer.dir/model/PlaybackNotifier.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NewMusicPlayerTests.dir/build.make CMakeFiles/NewMusicPlayerTests.dir/model/PlaybackNotifier.cpp.i
+.PHONY : model/PlaybackNotifier.cpp.i
+
+model/PlaybackNotifier.s: model/PlaybackNotifier.cpp.s
+.PHONY : model/PlaybackNotifier.s
+
+# target to generate assembly for a file
+model/PlaybackNotifier.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NewMusicPlayer.dir/build.make CMakeFiles/NewMusicPlayer.dir/model/PlaybackNotifier.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NewMusicPlayerTests.dir/build.make CMakeFiles/NewMusicPlayerTests.dir/model/PlaybackNotifier.cpp.s
+.PHONY : model/PlaybackNotifier.cpp.s
 
 model/Playlist.o: model/Playlist.cpp.o
 .PHONY : model/Playlist.o
@@ -1111,9 +1258,24 @@ help:
 	@echo "... NewMusicPlayer_autogen/mocs_compilation.o"
 	@echo "... NewMusicPlayer_autogen/mocs_compilation.i"
 	@echo "... NewMusicPlayer_autogen/mocs_compilation.s"
+	@echo "... adapters/qt/QtAudioEngine.o"
+	@echo "... adapters/qt/QtAudioEngine.i"
+	@echo "... adapters/qt/QtAudioEngine.s"
 	@echo "... adapters/qt/QtPlaybackPanel.o"
 	@echo "... adapters/qt/QtPlaybackPanel.i"
 	@echo "... adapters/qt/QtPlaybackPanel.s"
+	@echo "... adapters/qt/QtPlaylistDisplay.o"
+	@echo "... adapters/qt/QtPlaylistDisplay.i"
+	@echo "... adapters/qt/QtPlaylistDisplay.s"
+	@echo "... adapters/qt/QtProgressPanel.o"
+	@echo "... adapters/qt/QtProgressPanel.i"
+	@echo "... adapters/qt/QtProgressPanel.s"
+	@echo "... adapters/qt/QtSortHeader.o"
+	@echo "... adapters/qt/QtSortHeader.i"
+	@echo "... adapters/qt/QtSortHeader.s"
+	@echo "... adapters/qt/QtStyler.o"
+	@echo "... adapters/qt/QtStyler.i"
+	@echo "... adapters/qt/QtStyler.s"
 	@echo "... adapters/qt/QtToolbar.o"
 	@echo "... adapters/qt/QtToolbar.i"
 	@echo "... adapters/qt/QtToolbar.s"
@@ -1147,6 +1309,9 @@ help:
 	@echo "... model/MusicLibrary.o"
 	@echo "... model/MusicLibrary.i"
 	@echo "... model/MusicLibrary.s"
+	@echo "... model/PlaybackNotifier.o"
+	@echo "... model/PlaybackNotifier.i"
+	@echo "... model/PlaybackNotifier.s"
 	@echo "... model/Playlist.o"
 	@echo "... model/Playlist.i"
 	@echo "... model/Playlist.s"

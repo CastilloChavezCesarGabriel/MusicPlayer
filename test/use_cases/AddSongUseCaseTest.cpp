@@ -17,48 +17,48 @@ std::string AddSongUseCaseTest::prepare(const std::string& name) const {
 }
 
 TEST_F(AddSongUseCaseTest, AddValidMp3GivesSuccessFeedback) {
-    Model model(music_directory_, ads_directory_);
-    model.add(listener_);
+    Model model(base_directory_);
+    model.subscribe(listener_);
     std::string path = prepare("song.mp3");
     model.insert(path);
     EXPECT_TRUE(listener_.wasFeedback("Song added successfully!"));
 }
 
 TEST_F(AddSongUseCaseTest, AddValidWavGivesSuccessFeedback) {
-    Model model(music_directory_, ads_directory_);
-    model.add(listener_);
+    Model model(base_directory_);
+    model.subscribe(listener_);
     std::string path = prepare("song.wav");
     model.insert(path);
     EXPECT_TRUE(listener_.wasFeedback("Song added successfully!"));
 }
 
 TEST_F(AddSongUseCaseTest, AddUnsupportedTypeGivesFeedback) {
-    Model model(music_directory_, ads_directory_);
-    model.add(listener_);
+    Model model(base_directory_);
+    model.subscribe(listener_);
     std::string path = prepare("song.txt");
     model.insert(path);
     EXPECT_TRUE(listener_.wasFeedback("Unsupported file type."));
 }
 
 TEST_F(AddSongUseCaseTest, AddEmptyPathGivesFeedback) {
-    Model model(music_directory_, ads_directory_);
-    model.add(listener_);
+    Model model(base_directory_);
+    model.subscribe(listener_);
     model.insert("");
     EXPECT_TRUE(listener_.wasFeedback("Unsupported file type."));
 }
 
 TEST_F(AddSongUseCaseTest, AddDuplicateGivesFeedback) {
     createSong("song.mp3");
-    Model model(music_directory_, ads_directory_);
-    model.add(listener_);
+    Model model(base_directory_);
+    model.subscribe(listener_);
     std::string path = prepare("song.mp3");
     model.insert(path);
     EXPECT_TRUE(listener_.wasFeedback("This song already exists."));
 }
 
 TEST_F(AddSongUseCaseTest, AddIncreasesPlaylistSize) {
-    Model model(music_directory_, ads_directory_);
-    model.add(listener_);
+    Model model(base_directory_);
+    model.subscribe(listener_);
     std::string path = prepare("song.mp3");
     model.insert(path);
     TestPlaylistVisitor visitor;
@@ -67,16 +67,16 @@ TEST_F(AddSongUseCaseTest, AddIncreasesPlaylistSize) {
 }
 
 TEST_F(AddSongUseCaseTest, AddNotifiesChanged) {
-    Model model(music_directory_, ads_directory_);
-    model.add(listener_);
+    Model model(base_directory_);
+    model.subscribe(listener_);
     std::string path = prepare("song.mp3");
     model.insert(path);
     EXPECT_TRUE(listener_.wasChanged());
 }
 
 TEST_F(AddSongUseCaseTest, AddSongAppearsInPlaylist) {
-    Model model(music_directory_, ads_directory_);
-    model.add(listener_);
+    Model model(base_directory_);
+    model.subscribe(listener_);
     std::string path = prepare("my_track.mp3");
     model.insert(path);
     TestPlaylistVisitor visitor;
@@ -85,8 +85,8 @@ TEST_F(AddSongUseCaseTest, AddSongAppearsInPlaylist) {
 }
 
 TEST_F(AddSongUseCaseTest, AddMultipleSongs) {
-    Model model(music_directory_, ads_directory_);
-    model.add(listener_);
+    Model model(base_directory_);
+    model.subscribe(listener_);
     std::string p1 = prepare("a.mp3");
     model.insert(p1);
     std::string p2 = prepare("b.mp3");
@@ -97,8 +97,8 @@ TEST_F(AddSongUseCaseTest, AddMultipleSongs) {
 }
 
 TEST_F(AddSongUseCaseTest, AddMultipleSongsNotifiesMultipleTimes) {
-    Model model(music_directory_, ads_directory_);
-    model.add(listener_);
+    Model model(base_directory_);
+    model.subscribe(listener_);
     std::string p1 = prepare("a.mp3");
     model.insert(p1);
     std::string p2 = prepare("b.mp3");
@@ -108,8 +108,8 @@ TEST_F(AddSongUseCaseTest, AddMultipleSongsNotifiesMultipleTimes) {
 
 TEST_F(AddSongUseCaseTest, AddAfterRemove) {
     createSong("existing.mp3");
-    Model model(music_directory_, ads_directory_);
-    model.add(listener_);
+    Model model(base_directory_);
+    model.subscribe(listener_);
     model.remove(0);
     std::string path = prepare("new.mp3");
     model.insert(path);
@@ -120,8 +120,8 @@ TEST_F(AddSongUseCaseTest, AddAfterRemove) {
 
 TEST_F(AddSongUseCaseTest, AddThenSort) {
     createSong("c.mp3");
-    Model model(music_directory_, ads_directory_);
-    model.add(listener_);
+    Model model(base_directory_);
+    model.subscribe(listener_);
     std::string path = prepare("a.mp3");
     model.insert(path);
     model.sort(true);
@@ -131,8 +131,8 @@ TEST_F(AddSongUseCaseTest, AddThenSort) {
 }
 
 TEST_F(AddSongUseCaseTest, AddThenSearch) {
-    Model model(music_directory_, ads_directory_);
-    model.add(listener_);
+    Model model(base_directory_);
+    model.subscribe(listener_);
     std::string path = prepare("unique.mp3");
     model.insert(path);
     TestPlaylistVisitor visitor;
@@ -141,8 +141,8 @@ TEST_F(AddSongUseCaseTest, AddThenSearch) {
 }
 
 TEST_F(AddSongUseCaseTest, AddThenPlayNewSong) {
-    Model model(music_directory_, ads_directory_);
-    model.add(listener_);
+    Model model(base_directory_);
+    model.subscribe(listener_);
     std::string path = prepare("song.mp3");
     model.insert(path);
     model.play(0);
@@ -150,40 +150,40 @@ TEST_F(AddSongUseCaseTest, AddThenPlayNewSong) {
 }
 
 TEST_F(AddSongUseCaseTest, AddDoesNotStartPlayback) {
-    Model model(music_directory_, ads_directory_);
-    model.add(listener_);
+    Model model(base_directory_);
+    model.subscribe(listener_);
     std::string path = prepare("song.mp3");
     model.insert(path);
     EXPECT_FALSE(listener_.wasStarted());
 }
 
 TEST_F(AddSongUseCaseTest, AddDoesNotSelect) {
-    Model model(music_directory_, ads_directory_);
-    model.add(listener_);
+    Model model(base_directory_);
+    model.subscribe(listener_);
     std::string path = prepare("song.mp3");
     model.insert(path);
     EXPECT_FALSE(listener_.wasSelected());
 }
 
 TEST_F(AddSongUseCaseTest, AddOggGivesFeedback) {
-    Model model(music_directory_, ads_directory_);
-    model.add(listener_);
+    Model model(base_directory_);
+    model.subscribe(listener_);
     std::string path = prepare("song.ogg");
     model.insert(path);
     EXPECT_TRUE(listener_.wasFeedback("Unsupported file type."));
 }
 
 TEST_F(AddSongUseCaseTest, AddFlacGivesFeedback) {
-    Model model(music_directory_, ads_directory_);
-    model.add(listener_);
+    Model model(base_directory_);
+    model.subscribe(listener_);
     std::string path = prepare("song.flac");
     model.insert(path);
     EXPECT_TRUE(listener_.wasFeedback("Unsupported file type."));
 }
 
 TEST_F(AddSongUseCaseTest, AddUnsupportedDoesNotIncreasePlaylist) {
-    Model model(music_directory_, ads_directory_);
-    model.add(listener_);
+    Model model(base_directory_);
+    model.subscribe(listener_);
     std::string path = prepare("song.txt");
     model.insert(path);
     TestPlaylistVisitor visitor;
@@ -192,8 +192,8 @@ TEST_F(AddSongUseCaseTest, AddUnsupportedDoesNotIncreasePlaylist) {
 }
 
 TEST_F(AddSongUseCaseTest, AddUnsupportedDoesNotNotifyChanged) {
-    Model model(music_directory_, ads_directory_);
-    model.add(listener_);
+    Model model(base_directory_);
+    model.subscribe(listener_);
     std::string path = prepare("song.txt");
     model.insert(path);
     EXPECT_FALSE(listener_.wasChanged());
@@ -201,8 +201,8 @@ TEST_F(AddSongUseCaseTest, AddUnsupportedDoesNotNotifyChanged) {
 
 TEST_F(AddSongUseCaseTest, AddDuplicateDoesNotIncreasePlaylist) {
     createSong("song.mp3");
-    Model model(music_directory_, ads_directory_);
-    model.add(listener_);
+    Model model(base_directory_);
+    model.subscribe(listener_);
     std::string path = prepare("song.mp3");
     model.insert(path);
     TestPlaylistVisitor visitor;
@@ -212,8 +212,8 @@ TEST_F(AddSongUseCaseTest, AddDuplicateDoesNotIncreasePlaylist) {
 
 TEST_F(AddSongUseCaseTest, AddDuplicateDoesNotNotifyChanged) {
     createSong("song.mp3");
-    Model model(music_directory_, ads_directory_);
-    model.add(listener_);
+    Model model(base_directory_);
+    model.subscribe(listener_);
     std::string path = prepare("song.mp3");
     model.insert(path);
     EXPECT_FALSE(listener_.wasChanged());
@@ -221,8 +221,8 @@ TEST_F(AddSongUseCaseTest, AddDuplicateDoesNotNotifyChanged) {
 
 TEST_F(AddSongUseCaseTest, AddToExistingPlaylist) {
     createSong("existing.mp3");
-    Model model(music_directory_, ads_directory_);
-    model.add(listener_);
+    Model model(base_directory_);
+    model.subscribe(listener_);
     std::string path = prepare("new.mp3");
     model.insert(path);
     TestPlaylistVisitor visitor;
@@ -232,8 +232,8 @@ TEST_F(AddSongUseCaseTest, AddToExistingPlaylist) {
 
 TEST_F(AddSongUseCaseTest, AddPreservesExistingSongs) {
     createSong("existing.mp3");
-    Model model(music_directory_, ads_directory_);
-    model.add(listener_);
+    Model model(base_directory_);
+    model.subscribe(listener_);
     std::string path = prepare("new.mp3");
     model.insert(path);
     TestPlaylistVisitor visitor;
@@ -243,8 +243,8 @@ TEST_F(AddSongUseCaseTest, AddPreservesExistingSongs) {
 }
 
 TEST_F(AddSongUseCaseTest, AddEmptyPathDoesNotIncreasePlaylist) {
-    Model model(music_directory_, ads_directory_);
-    model.add(listener_);
+    Model model(base_directory_);
+    model.subscribe(listener_);
     model.insert("");
     TestPlaylistVisitor visitor;
     model.accept(visitor);
@@ -252,8 +252,8 @@ TEST_F(AddSongUseCaseTest, AddEmptyPathDoesNotIncreasePlaylist) {
 }
 
 TEST_F(AddSongUseCaseTest, AddThreeSongsSequentially) {
-    Model model(music_directory_, ads_directory_);
-    model.add(listener_);
+    Model model(base_directory_);
+    model.subscribe(listener_);
     model.insert(prepare("a.mp3"));
     model.insert(prepare("b.mp3"));
     model.insert(prepare("c.mp3"));
@@ -263,8 +263,8 @@ TEST_F(AddSongUseCaseTest, AddThreeSongsSequentially) {
 }
 
 TEST_F(AddSongUseCaseTest, AddThenRemoveThenAdd) {
-    Model model(music_directory_, ads_directory_);
-    model.add(listener_);
+    Model model(base_directory_);
+    model.subscribe(listener_);
     model.insert(prepare("a.mp3"));
     model.remove(0);
     model.insert(prepare("b.mp3"));
@@ -275,8 +275,8 @@ TEST_F(AddSongUseCaseTest, AddThenRemoveThenAdd) {
 }
 
 TEST_F(AddSongUseCaseTest, AddWavIncreasesPlaylist) {
-    Model model(music_directory_, ads_directory_);
-    model.add(listener_);
+    Model model(base_directory_);
+    model.subscribe(listener_);
     model.insert(prepare("track.wav"));
     TestPlaylistVisitor visitor;
     model.accept(visitor);
@@ -284,8 +284,8 @@ TEST_F(AddSongUseCaseTest, AddWavIncreasesPlaylist) {
 }
 
 TEST_F(AddSongUseCaseTest, AddThenSortThenSearch) {
-    Model model(music_directory_, ads_directory_);
-    model.add(listener_);
+    Model model(base_directory_);
+    model.subscribe(listener_);
     model.insert(prepare("zebra.mp3"));
     model.insert(prepare("alpha.mp3"));
     model.sort(true);
@@ -295,8 +295,8 @@ TEST_F(AddSongUseCaseTest, AddThenSortThenSearch) {
 }
 
 TEST_F(AddSongUseCaseTest, AddDoesNotCrashOnEmptyPlaylist) {
-    Model model(music_directory_, ads_directory_);
-    model.add(listener_);
+    Model model(base_directory_);
+    model.subscribe(listener_);
     std::string path = prepare("song.mp3");
     EXPECT_NO_THROW(model.insert(path));
 }

@@ -881,6 +881,7 @@ CMakeFiles/NewMusicPlayerTests.dir/test/RegressionTest.cpp.o: \
   /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/../model/IPlaybackListener.h \
   /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/../model/Advertisement.h \
   /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/../model/Channel.h \
+  /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/../model/PlaybackNotifier.h \
   /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/MockPlaybackListener.h \
   /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/TestPlaylistVisitor.h \
   /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/../model/ShellSort.h \

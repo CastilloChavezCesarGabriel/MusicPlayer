@@ -15,32 +15,32 @@ TEST_F(SongTest, AcceptPassesPathToVisitor) {
 
 TEST_F(SongTest, MatchFindsSubstring) {
     Song song("Beautiful Now.mp3", "/music/Beautiful Now.mp3");
-    EXPECT_TRUE(song.match("Beautiful"));
+    EXPECT_TRUE(song.matches("Beautiful"));
 }
 
 TEST_F(SongTest, MatchFindsExactName) {
     Song song("Hello.wav", "/music/Hello.wav");
-    EXPECT_TRUE(song.match("Hello.wav"));
+    EXPECT_TRUE(song.matches("Hello.wav"));
 }
 
 TEST_F(SongTest, MatchReturnsFalseForMismatch) {
     Song song("Hello.wav", "/music/Hello.wav");
-    EXPECT_FALSE(song.match("Goodbye"));
+    EXPECT_FALSE(song.matches("Goodbye"));
 }
 
 TEST_F(SongTest, MatchIsCaseSensitive) {
     Song song("Hello.wav", "/music/Hello.wav");
-    EXPECT_FALSE(song.match("hello"));
+    EXPECT_FALSE(song.matches("hello"));
 }
 
 TEST_F(SongTest, MatchFindsPartialName) {
     Song song("Counting Stars.mp3", "/music/Counting Stars.mp3");
-    EXPECT_TRUE(song.match("Stars"));
+    EXPECT_TRUE(song.matches("Stars"));
 }
 
 TEST_F(SongTest, MatchEmptyQueryMatchesAll) {
     Song song("anything.mp3", "/music/anything.mp3");
-    EXPECT_TRUE(song.match(""));
+    EXPECT_TRUE(song.matches(""));
 }
 
 TEST_F(SongTest, ParseExtractsNameFromNumberedFormat) {
@@ -110,7 +110,7 @@ TEST_F(SongTest, AcceptPreservesOrderInVisitor) {
 
 TEST_F(SongTest, MatchWithSpecialCharacters) {
     Song song("I'm good (Blue).mp3", "/music/I'm good (Blue).mp3");
-    EXPECT_TRUE(song.match("(Blue)"));
+    EXPECT_TRUE(song.matches("(Blue)"));
 }
 
 TEST_F(SongTest, ConstructionWithEmptyName) {

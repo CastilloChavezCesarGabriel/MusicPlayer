@@ -1,6 +1,5 @@
 #include "MusicLibrary.h"
 #include <filesystem>
-#include <algorithm>
 
 MusicLibrary::MusicLibrary(const std::string& musicPath)
     : music_path_(musicPath) {

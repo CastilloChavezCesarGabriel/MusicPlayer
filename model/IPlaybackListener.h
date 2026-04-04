@@ -10,6 +10,9 @@ public:
     virtual void onSelected(int index) = 0;
     virtual void onEnabled(bool state) = 0;
     virtual void onReveal(bool visible) = 0;
+    virtual void onSchedule(int delay) = 0;
+    virtual void onCancel() = 0;
+    virtual void onRepeatChanged(int mode) = 0;
     virtual void onFeedback(const std::string& message, bool success) = 0;
 };
 

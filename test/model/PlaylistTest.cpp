@@ -134,11 +134,11 @@ TEST_F(PlaylistTest, ShuffleDoesNotChangeCount) {
     EXPECT_TRUE(visitor_.hasSongs(10));
 }
 
-TEST_F(PlaylistTest, ShuffleResetsSelection) {
+TEST_F(PlaylistTest, ShufflePreservesSelection) {
     populate(5);
     playlist_->select(2, listener_);
     playlist_->shuffle();
-    EXPECT_FALSE(playlist_->hasSelected());
+    EXPECT_TRUE(playlist_->hasSelected());
 }
 
 TEST_F(PlaylistTest, ClearRemovesAllSongs) {

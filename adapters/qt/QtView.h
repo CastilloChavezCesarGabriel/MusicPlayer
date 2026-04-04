@@ -3,30 +3,23 @@
 
 #include "../../view/IPlayerView.h"
 #include "QtPlaybackPanel.h"
-#include "QtVolumePanel.h"
 #include "QtToolbar.h"
+#include "QtAudioEngine.h"
+#include "QtPlaylistDisplay.h"
 #include <QWidget>
-#include <QListView>
-#include <QStringListModel>
 #include <QLineEdit>
-#include <QMediaPlayer>
-#include <QAudioOutput>
 
 class QtView final : public QWidget, public IPlayerView {
     Q_OBJECT
 private:
     IPlayerListener* listener_ = nullptr;
     QtPlaybackPanel* playback_ = nullptr;
-    QtVolumePanel* volume_ = nullptr;
     QtToolbar* toolbar_ = nullptr;
-    QListView* playlist_;
-    QStringListModel* list_model_;
-    QLineEdit* search_;
-    QMediaPlayer* media_;
-    QAudioOutput* output_;
+    QtAudioEngine* audio_;
+    QtPlaylistDisplay* display_;
 
     void setup();
-    void wire();
+    void wire(const QLineEdit* search);
     void bind();
 
 public:
@@ -37,6 +30,10 @@ public:
     void highlight(int index) override;
     void enable(bool state) override;
     void reveal(bool visible) override;
+    void schedule(int delay) override;
+    void cancel() override;
+    void repeat(int mode) override;
+    void sort(const std::string& label) override;
     void notify(const std::string& message, bool success) override;
     bool confirm(const std::string& message) override;
     std::string browse() override;

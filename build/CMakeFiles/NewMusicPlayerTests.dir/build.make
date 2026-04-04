@@ -422,10 +422,24 @@ CMakeFiles/NewMusicPlayerTests.dir/model/Channel.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/NewMusicPlayerTests.dir/model/Channel.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/Channel.cpp -o CMakeFiles/NewMusicPlayerTests.dir/model/Channel.cpp.s
 
+CMakeFiles/NewMusicPlayerTests.dir/model/PlaybackNotifier.cpp.o: CMakeFiles/NewMusicPlayerTests.dir/flags.make
+CMakeFiles/NewMusicPlayerTests.dir/model/PlaybackNotifier.cpp.o: /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/PlaybackNotifier.cpp
+CMakeFiles/NewMusicPlayerTests.dir/model/PlaybackNotifier.cpp.o: CMakeFiles/NewMusicPlayerTests.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object CMakeFiles/NewMusicPlayerTests.dir/model/PlaybackNotifier.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/NewMusicPlayerTests.dir/model/PlaybackNotifier.cpp.o -MF CMakeFiles/NewMusicPlayerTests.dir/model/PlaybackNotifier.cpp.o.d -o CMakeFiles/NewMusicPlayerTests.dir/model/PlaybackNotifier.cpp.o -c /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/PlaybackNotifier.cpp
+
+CMakeFiles/NewMusicPlayerTests.dir/model/PlaybackNotifier.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/NewMusicPlayerTests.dir/model/PlaybackNotifier.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/PlaybackNotifier.cpp > CMakeFiles/NewMusicPlayerTests.dir/model/PlaybackNotifier.cpp.i
+
+CMakeFiles/NewMusicPlayerTests.dir/model/PlaybackNotifier.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/NewMusicPlayerTests.dir/model/PlaybackNotifier.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/PlaybackNotifier.cpp -o CMakeFiles/NewMusicPlayerTests.dir/model/PlaybackNotifier.cpp.s
+
 CMakeFiles/NewMusicPlayerTests.dir/model/Model.cpp.o: CMakeFiles/NewMusicPlayerTests.dir/flags.make
 CMakeFiles/NewMusicPlayerTests.dir/model/Model.cpp.o: /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/Model.cpp
 CMakeFiles/NewMusicPlayerTests.dir/model/Model.cpp.o: CMakeFiles/NewMusicPlayerTests.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object CMakeFiles/NewMusicPlayerTests.dir/model/Model.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building CXX object CMakeFiles/NewMusicPlayerTests.dir/model/Model.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/NewMusicPlayerTests.dir/model/Model.cpp.o -MF CMakeFiles/NewMusicPlayerTests.dir/model/Model.cpp.o.d -o CMakeFiles/NewMusicPlayerTests.dir/model/Model.cpp.o -c /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/Model.cpp
 
 CMakeFiles/NewMusicPlayerTests.dir/model/Model.cpp.i: cmake_force
@@ -463,6 +477,7 @@ NewMusicPlayerTests_OBJECTS = \
 "CMakeFiles/NewMusicPlayerTests.dir/model/Advertisement.cpp.o" \
 "CMakeFiles/NewMusicPlayerTests.dir/model/MusicLibrary.cpp.o" \
 "CMakeFiles/NewMusicPlayerTests.dir/model/Channel.cpp.o" \
+"CMakeFiles/NewMusicPlayerTests.dir/model/PlaybackNotifier.cpp.o" \
 "CMakeFiles/NewMusicPlayerTests.dir/model/Model.cpp.o"
 
 # External object files for target NewMusicPlayerTests
@@ -493,12 +508,13 @@ NewMusicPlayerTests: CMakeFiles/NewMusicPlayerTests.dir/model/Playlist.cpp.o
 NewMusicPlayerTests: CMakeFiles/NewMusicPlayerTests.dir/model/Advertisement.cpp.o
 NewMusicPlayerTests: CMakeFiles/NewMusicPlayerTests.dir/model/MusicLibrary.cpp.o
 NewMusicPlayerTests: CMakeFiles/NewMusicPlayerTests.dir/model/Channel.cpp.o
+NewMusicPlayerTests: CMakeFiles/NewMusicPlayerTests.dir/model/PlaybackNotifier.cpp.o
 NewMusicPlayerTests: CMakeFiles/NewMusicPlayerTests.dir/model/Model.cpp.o
 NewMusicPlayerTests: CMakeFiles/NewMusicPlayerTests.dir/build.make
 NewMusicPlayerTests: /opt/homebrew/lib/libgtest_main.a
 NewMusicPlayerTests: /opt/homebrew/lib/libgtest.a
 NewMusicPlayerTests: CMakeFiles/NewMusicPlayerTests.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Linking CXX executable NewMusicPlayerTests"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Linking CXX executable NewMusicPlayerTests"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/NewMusicPlayerTests.dir/link.txt --verbose=$(VERBOSE)
 	/opt/homebrew/bin/cmake -D TEST_TARGET=NewMusicPlayerTests -D TEST_EXECUTABLE=/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/NewMusicPlayerTests -D TEST_EXECUTOR= -D TEST_WORKING_DIR=/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build -D TEST_EXTRA_ARGS= -D TEST_PROPERTIES= -D TEST_PREFIX= -D TEST_SUFFIX= -D TEST_FILTER= -D NO_PRETTY_TYPES=FALSE -D NO_PRETTY_VALUES=FALSE -D TEST_LIST=NewMusicPlayerTests_TESTS -D CTEST_FILE=/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/NewMusicPlayerTests[1]_tests.cmake -D TEST_DISCOVERY_TIMEOUT=5 -D TEST_DISCOVERY_EXTRA_ARGS= -D TEST_XML_OUTPUT_DIR= -P /opt/homebrew/share/cmake/Modules/GoogleTestAddTests.cmake
 

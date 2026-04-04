@@ -87,14 +87,14 @@ TEST_F(AdvertisementTest, InterruptAfterConcludeWorks) {
 }
 
 TEST_F(AdvertisementTest, ScheduleReturnsBool) {
-    bool result = Advertisement::schedule();
+    bool result = Advertisement::isScheduled();
     EXPECT_TRUE(result == true || result == false);
 }
 
 TEST_F(AdvertisementTest, ScheduleProducesVariation) {
     int trueCount = 0;
     for (int i = 0; i < 1000; i++) {
-        if (Advertisement::schedule()) trueCount++;
+        if (Advertisement::isScheduled()) trueCount++;
     }
     EXPECT_GT(trueCount, 0);
     EXPECT_LT(trueCount, 1000);

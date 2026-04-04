@@ -2,7 +2,9 @@
 #define MODEL_TEST_FIXTURE_H
 
 #include <gtest/gtest.h>
+#include "../model/Model.h"
 #include "MockPlaybackListener.h"
+#include "TestPlaylistVisitor.h"
 #include <string>
 
 class ModelTestFixture : public ::testing::Test {

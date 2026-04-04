@@ -3,13 +3,14 @@
 
 Controller::Controller(Model& model, IPlayerView& view)
         : model_(model), view_(view) {
-    model_.add(*this);
+    model_.subscribe(*this);
     view_.add(this);
     refresh();
 }
 
 void Controller::onStart(const std::string& path) {
     view_.play(path);
+    playing_ = true;
 }
 
 void Controller::onChanged() {
@@ -28,6 +29,18 @@ void Controller::onReveal(const bool visible) {
     view_.reveal(visible);
 }
 
+void Controller::onSchedule(const int delay) {
+    view_.schedule(delay);
+}
+
+void Controller::onCancel() {
+    view_.cancel();
+}
+
+void Controller::onRepeatChanged(const int mode) {
+    view_.repeat(mode);
+}
+
 void Controller::onFeedback(const std::string& message, const bool success) {
     view_.notify(message, success);
 }
@@ -36,12 +49,13 @@ void Controller::onPlay(const int index) {
     model_.play(index);
 }
 
-void Controller::onResume() {
-    view_.resume();
-}
-
-void Controller::onPause() {
-    view_.pause();
+void Controller::onToggle() {
+    if (playing_) {
+        view_.pause();
+    } else {
+        view_.resume();
+    }
+    playing_ = !playing_;
 }
 
 void Controller::onRepeat() {
@@ -69,12 +83,19 @@ void Controller::onRemove(const int index) {
     }
 }
 
+void Controller::onShuffle() {
+    model_.shuffle();
+}
+
 void Controller::onSkip() {
     model_.skip();
 }
 
-void Controller::onSort(const bool byName) {
+void Controller::onSort() {
+    sort_mode_ = (sort_mode_ + 1) % 2;
+    const bool byName = sort_mode_ == 0;
     model_.sort(byName);
+    view_.sort(byName ? "Title \xe2\x96\xb2" : "# \xe2\x96\xb2");
 }
 
 void Controller::onSearch(const std::string& query) {

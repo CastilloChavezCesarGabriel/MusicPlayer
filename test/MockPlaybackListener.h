@@ -13,6 +13,7 @@ private:
     int changes_ = 0;
     int enables_ = 0;
     int reveals_ = 0;
+    int cancels_ = 0;
 
 public:
     void onStart(const std::string& path) override;
@@ -20,6 +21,9 @@ public:
     void onSelected(int index) override;
     void onEnabled(bool state) override;
     void onReveal(bool visible) override;
+    void onSchedule(int delay) override;
+    void onCancel() override;
+    void onRepeatChanged(int mode) override;
     void onFeedback(const std::string& message, bool success) override;
 
     bool wasStarted() const;
@@ -30,6 +34,7 @@ public:
     bool wasSelectedWith(int index) const;
     bool wasEnabled() const;
     bool wasRevealed() const;
+    bool wasCancelled() const;
     bool wasFeedback(const std::string& message) const;
 };
 

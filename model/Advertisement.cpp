@@ -10,8 +10,12 @@ void Advertisement::load() {
     ads_ = MusicLibrary::scan(path_);
 }
 
-bool Advertisement::schedule() {
+bool Advertisement::isScheduled() {
     return std::random_device{}() % 100 < 25;
+}
+
+int Advertisement::randomize() {
+    return (std::random_device{}() % 6 + 5) * 1000;
 }
 
 bool Advertisement::interrupt(IPlaybackListener& listener) {

@@ -32,6 +32,8 @@ add_executable(NewMusicPlayer main.cpp
         model/MusicLibrary.h
         model/Channel.cpp
         model/Channel.h
+        model/PlaybackNotifier.cpp
+        model/PlaybackNotifier.h
         model/Model.cpp
         model/Model.h
         view/IPlaylistPanel.h
@@ -53,8 +55,18 @@ add_executable(NewMusicPlayer main.cpp
         adapters/qt/QtVolumePanel.h
         adapters/qt/QtToolbar.cpp
         adapters/qt/QtToolbar.h
+        adapters/qt/QtProgressPanel.cpp
+        adapters/qt/QtProgressPanel.h
+        adapters/qt/QtSortHeader.cpp
+        adapters/qt/QtSortHeader.h
+        adapters/qt/QtPlaylistDisplay.cpp
+        adapters/qt/QtPlaylistDisplay.h
+        adapters/qt/QtAudioEngine.cpp
+        adapters/qt/QtAudioEngine.h
         adapters/qt/QtViewFactory.cpp
         adapters/qt/QtViewFactory.h
+        adapters/qt/QtStyler.cpp
+        adapters/qt/QtStyler.h
         adapters/qt/QtView.cpp
         adapters/qt/QtView.h
 )
@@ -121,6 +133,8 @@ add_executable(NewMusicPlayerTests
         model/MusicLibrary.h
         model/Channel.cpp
         model/Channel.h
+        model/PlaybackNotifier.cpp
+        model/PlaybackNotifier.h
         model/Model.cpp
         model/Model.h
 )

@@ -38,9 +38,9 @@ TEST_F(RegressionTest, ShellSortEmptyDoesNotCrash) {
 TEST_F(RegressionTest, ModelRefreshDoesNotRecurse) {
     createSong("a.mp3");
     createSong("b.mp3");
-    Model model(music_directory_, ads_directory_);
+    Model model(base_directory_);
     MockPlaybackListener listener_;
-    model.add(listener_);
+    model.subscribe(listener_);
     EXPECT_NO_THROW(model.sort(true));
     EXPECT_TRUE(listener_.wasChanged());
 }
@@ -49,9 +49,9 @@ TEST_F(RegressionTest, ModelSortByNameDoesNotCrash) {
     createSong("c.mp3");
     createSong("a.mp3");
     createSong("b.mp3");
-    Model model(music_directory_, ads_directory_);
+    Model model(base_directory_);
     MockPlaybackListener listener_;
-    model.add(listener_);
+    model.subscribe(listener_);
     EXPECT_NO_THROW(model.sort(true));
 }
 
@@ -59,9 +59,9 @@ TEST_F(RegressionTest, ModelSortByNumberDoesNotCrash) {
     createSong("(3) C.mp3");
     createSong("(1) A.mp3");
     createSong("(2) B.mp3");
-    Model model(music_directory_, ads_directory_);
+    Model model(base_directory_);
     MockPlaybackListener listener_;
-    model.add(listener_);
+    model.subscribe(listener_);
     EXPECT_NO_THROW(model.sort(false));
 }
 
@@ -69,9 +69,9 @@ TEST_F(RegressionTest, AdvanceUpdatesSelection) {
     createSong("a.mp3");
     createSong("b.mp3");
     createSong("c.mp3");
-    Model model(music_directory_, ads_directory_);
+    Model model(base_directory_);
     MockPlaybackListener listener_;
-    model.add(listener_);
+    model.subscribe(listener_);
     model.play(0);
     model.advance();
     EXPECT_TRUE(listener_.wasSelectedWith(1));
@@ -81,9 +81,9 @@ TEST_F(RegressionTest, RetreatUpdatesSelection) {
     createSong("a.mp3");
     createSong("b.mp3");
     createSong("c.mp3");
-    Model model(music_directory_, ads_directory_);
+    Model model(base_directory_);
     MockPlaybackListener listener_;
-    model.add(listener_);
+    model.subscribe(listener_);
     model.play(2);
     model.retreat();
     EXPECT_TRUE(listener_.wasSelectedWith(1));
@@ -111,9 +111,9 @@ TEST_F(RegressionTest, QuickSortPartitionDoesNotUnderflow) {
 }
 
 TEST_F(RegressionTest, InsertUnsupportedFileGivesFeedback) {
-    Model model(music_directory_, ads_directory_);
+    Model model(base_directory_);
     MockPlaybackListener listener_;
-    model.add(listener_);
+    model.subscribe(listener_);
     model.insert("");
     EXPECT_TRUE(listener_.wasFeedback("Unsupported file type."));
 }
@@ -124,9 +124,9 @@ TEST_F(RegressionTest, InsertDuplicateGivesFeedback) {
     std::filesystem::create_directories(srcDir);
     std::ofstream(srcDir + "/dup.mp3") << "data";
 
-    Model model(music_directory_, ads_directory_);
+    Model model(base_directory_);
     MockPlaybackListener listener_;
-    model.add(listener_);
+    model.subscribe(listener_);
     model.insert(srcDir + "/dup.mp3");
     EXPECT_TRUE(listener_.wasFeedback("This song already exists."));
 }
@@ -135,9 +135,9 @@ TEST_F(RegressionTest, SortPreservesAllSongs) {
     createSong("c.mp3");
     createSong("a.mp3");
     createSong("b.mp3");
-    Model model(music_directory_, ads_directory_);
+    Model model(base_directory_);
     MockPlaybackListener listener_;
-    model.add(listener_);
+    model.subscribe(listener_);
     model.sort(true);
     TestPlaylistVisitor visitor;
     model.accept(visitor);
@@ -156,14 +156,14 @@ TEST_F(RegressionTest, ShufflePreservesAllSongs) {
     EXPECT_TRUE(visitor.hasSongs(20));
 }
 
-TEST_F(RegressionTest, RepeatTogglesFeedback) {
-    Model model(music_directory_, ads_directory_);
+TEST_F(RegressionTest, RepeatCycles) {
+    Model model(base_directory_);
     MockPlaybackListener listener_;
-    model.add(listener_);
+    model.subscribe(listener_);
     model.repeat();
-    EXPECT_TRUE(listener_.wasFeedback("Repeat enabled"));
     model.repeat();
-    EXPECT_TRUE(listener_.wasFeedback("Repeat disabled"));
+    model.repeat();
+    EXPECT_NO_THROW(model.repeat());
 }
 
 TEST_F(RegressionTest, RemoveFromEmptyPlaylistDoesNotCrash) {
@@ -203,9 +203,9 @@ TEST_F(RegressionTest, MultipleSortsDoNotCrash) {
     createSong("c.mp3");
     createSong("a.mp3");
     createSong("b.mp3");
-    Model model(music_directory_, ads_directory_);
+    Model model(base_directory_);
     MockPlaybackListener listener_;
-    model.add(listener_);
+    model.subscribe(listener_);
     for (int i = 0; i < 10; i++) {
         EXPECT_NO_THROW(model.sort(i % 2 == 0));
     }
@@ -215,9 +215,9 @@ TEST_F(RegressionTest, SortThenAdvanceWorks) {
     createSong("c.mp3");
     createSong("a.mp3");
     createSong("b.mp3");
-    Model model(music_directory_, ads_directory_);
+    Model model(base_directory_);
     MockPlaybackListener listener_;
-    model.add(listener_);
+    model.subscribe(listener_);
     model.sort(true);
     model.play(0);
     EXPECT_NO_THROW(model.advance());

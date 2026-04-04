@@ -17,7 +17,8 @@ public:
     void load();
     bool interrupt(IPlaybackListener& listener);
     bool conclude();
-    static bool schedule();
+    static bool isScheduled();
+    static int randomize();
 };
 
 #endif //ADVERTISEMENT_H

@@ -21,6 +21,14 @@ void MockPlaybackListener::onReveal(bool) {
     reveals_++;
 }
 
+void MockPlaybackListener::onSchedule(int) {}
+
+void MockPlaybackListener::onCancel() {
+    cancels_++;
+}
+
+void MockPlaybackListener::onRepeatChanged(int) {}
+
 void MockPlaybackListener::onFeedback(const std::string& message, bool) {
     feedbacks_.push_back(message);
 }
@@ -55,6 +63,10 @@ bool MockPlaybackListener::wasEnabled() const {
 
 bool MockPlaybackListener::wasRevealed() const {
     return reveals_ > 0;
+}
+
+bool MockPlaybackListener::wasCancelled() const {
+    return cancels_ > 0;
 }
 
 bool MockPlaybackListener::wasFeedback(const std::string& message) const {

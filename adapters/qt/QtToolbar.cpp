@@ -1,5 +1,5 @@
 #include "QtToolbar.h"
-#include <QVBoxLayout>
+#include <QHBoxLayout>
 
 QtToolbar::QtToolbar(QWidget* parent) : QWidget(parent) {
     setup();
@@ -7,42 +7,35 @@ QtToolbar::QtToolbar(QWidget* parent) : QWidget(parent) {
 }
 
 void QtToolbar::setup() {
-    auto* sorting = new QHBoxLayout();
-    auto* files = new QHBoxLayout();
+    auto* layout = new QHBoxLayout(this);
 
-    sort_by_number_button = new QPushButton("Sort by number", this);
-    sort_by_name_button = new QPushButton("Sort by name", this);
-    sorting->addWidget(sort_by_number_button);
-    sorting->addWidget(sort_by_name_button);
-    sorting->setAlignment(Qt::AlignCenter);
-
-    add_button_ = new QPushButton("Add Song", this);
-    remove_button_ = new QPushButton("Remove Song", this);
-    skip_button_ = new QPushButton("Skip Ad", this);
+    add_button_ = new QPushButton("＋", this);
+    add_button_->setObjectName("add_button");
+    remove_button_ = new QPushButton("✕", this);
+    remove_button_->setObjectName("remove_button");
+    shuffle_button_ = new QPushButton("🔀", this);
+    skip_button_ = new QPushButton("⏭", this);
+    skip_button_->setObjectName("skip_button");
     skip_button_->setVisible(false);
-    files->addWidget(add_button_);
-    files->addWidget(remove_button_);
-    files->setAlignment(Qt::AlignCenter);
 
-    auto* layout = new QVBoxLayout(this);
-    layout->addLayout(sorting);
-    layout->addWidget(skip_button_, 0, Qt::AlignCenter);
-    layout->addLayout(files);
+    layout->addWidget(add_button_);
+    layout->addWidget(remove_button_);
+    layout->addWidget(shuffle_button_);
+    layout->addWidget(skip_button_);
+    layout->setAlignment(Qt::AlignCenter);
 }
 
 void QtToolbar::wire() {
     connect(add_button_, &QPushButton::clicked, this, &QtToolbar::addClicked);
     connect(remove_button_, &QPushButton::clicked, this, &QtToolbar::removeClicked);
+    connect(shuffle_button_, &QPushButton::clicked, this, &QtToolbar::shuffleClicked);
     connect(skip_button_, &QPushButton::clicked, this, &QtToolbar::skipClicked);
-    connect(sort_by_number_button, &QPushButton::clicked, this, &QtToolbar::sortByNumberClicked);
-    connect(sort_by_name_button, &QPushButton::clicked, this, &QtToolbar::sortByNameClicked);
 }
 
 void QtToolbar::enable(const bool state) const {
     add_button_->setEnabled(state);
     remove_button_->setEnabled(state);
-    sort_by_number_button->setEnabled(state);
-    sort_by_name_button->setEnabled(state);
+    shuffle_button_->setEnabled(state);
 }
 
 void QtToolbar::reveal(const bool visible) const {

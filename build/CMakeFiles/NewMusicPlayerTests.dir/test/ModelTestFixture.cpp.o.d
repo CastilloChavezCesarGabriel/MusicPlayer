@@ -880,6 +880,7 @@ CMakeFiles/NewMusicPlayerTests.dir/test/ModelTestFixture.cpp.o: \
   /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/../model/IPlaybackListener.h \
   /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/../model/Advertisement.h \
   /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/../model/Channel.h \
+  /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/../model/PlaybackNotifier.h \
   /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/MockPlaybackListener.h \
   /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/TestPlaylistVisitor.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/filesystem \

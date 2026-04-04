@@ -15,7 +15,8 @@ public:
     Song(const std::string& name, const std::string& path);
 
     void accept(IPlaylistVisitor& visitor) const;
-    bool match(const std::string& query) const;
+    bool matches(const std::string& query) const;
+    bool isEqualTo(const Song& other) const;
     static std::string parse(const std::string& name);
     static int order(const std::string& name);
 };

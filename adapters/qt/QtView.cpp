@@ -1,21 +1,27 @@
 #include "QtView.h"
 #include "QtViewFactory.h"
 #include <QVBoxLayout>
+#include "QtVolumePanel.h"
+#include "QtSortHeader.h"
 #include <QDragEnterEvent>
 #include <QMimeData>
 #include <QMessageBox>
 #include <QFileDialog>
-#include <QUrl>
 
 QtView::QtView(QWidget* parent) : QWidget(parent) {
-    media_ = new QMediaPlayer(this);
-    output_ = new QAudioOutput(this);
-    media_->setAudioOutput(output_);
+    setObjectName("MainWindow");
+    audio_ = new QtAudioEngine(this);
 
-    connect(media_, &QMediaPlayer::mediaStatusChanged, this, [this](const QMediaPlayer::MediaStatus status) {
-        if (status == QMediaPlayer::EndOfMedia && listener_) {
-            listener_->onEnd();
-        }
+    connect(audio_, &QtAudioEngine::endRequested, this, [this]() {
+        if (listener_) listener_->onEnd();
+    });
+
+    connect(audio_, &QtAudioEngine::revealRequested, this, [this]() {
+        if (toolbar_) toolbar_->reveal(true);
+    });
+
+    connect(audio_, &QtAudioEngine::toggleRequested, this, [this](const bool playing) {
+        if (playback_) playback_->toggle(playing);
     });
 
     setup();
@@ -27,24 +33,30 @@ void QtView::setup() {
 
     auto* main = new QVBoxLayout(this);
 
-    search_ = new QLineEdit(this);
-    search_->setPlaceholderText("Search...");
+    auto* search = new QLineEdit(this);
+    search->setPlaceholderText("Search...");
 
-    playlist_ = new QListView(this);
-    list_model_ = new QStringListModel(this);
-    playlist_->setModel(list_model_);
+    auto* sort_header = new QtSortHeader(this);
 
-    main->addWidget(search_);
-    main->addWidget(playlist_);
+    display_ = new QtPlaylistDisplay(this);
 
-    wire();
+    main->addWidget(search);
+    main->addWidget(sort_header);
+    main->addWidget(display_);
+    main->addWidget(audio_);
+
+    connect(sort_header, &QtSortHeader::clickRequested, this, [this]() {
+        if (listener_) listener_->onSort();
+    });
+
+    wire(search);
 }
 
-void QtView::wire() {
-    connect(playlist_, &QListView::doubleClicked, this, [this](const QModelIndex& index) {
-        if (listener_) listener_->onPlay(index.row());
+void QtView::wire(const QLineEdit* search) {
+    connect(display_, &QtPlaylistDisplay::selectRequested, this, [this](const int index) {
+        if (listener_) listener_->onPlay(index);
     });
-    connect(search_, &QLineEdit::textChanged, this, [this](const QString& text) {
+    connect(search, &QLineEdit::textChanged, this, [this](const QString& text) {
         if (listener_) listener_->onSearch(text.toStdString());
     });
 }
@@ -54,11 +66,11 @@ void QtView::add(IPlayerListener* listener) {
 
     auto* main = layout();
     playback_ = QtViewFactory::createPlayback(*listener, this);
-    volume_ = QtViewFactory::createVolume(*listener, this);
+    auto* volume = QtViewFactory::createVolume(*listener, this);
     toolbar_ = QtViewFactory::createToolbar(this);
 
     main->addWidget(playback_);
-    main->addWidget(volume_);
+    main->addWidget(volume);
     main->addWidget(toolbar_);
 
     bind();
@@ -68,38 +80,47 @@ void QtView::bind() {
     connect(toolbar_, &QtToolbar::addClicked, this, [this]() {
         listener_->onAdd();
     });
-    connect(toolbar_, &QtToolbar::removeClicked, this, [this]() {
-        const QModelIndex index = playlist_->currentIndex();
-        if (index.isValid()) listener_->onRemove(index.row());
+    connect(toolbar_, &QtToolbar::removeClicked, display_, &QtPlaylistDisplay::remove);
+    connect(display_, &QtPlaylistDisplay::removeRequested, this, [this](const int index) {
+        listener_->onRemove(index);
     });
     connect(toolbar_, &QtToolbar::skipClicked, this, [this]() {
         listener_->onSkip();
     });
-    connect(toolbar_, &QtToolbar::sortByNumberClicked, this, [this]() {
-        listener_->onSort(false);
-    });
-    connect(toolbar_, &QtToolbar::sortByNameClicked, this, [this]() {
-        listener_->onSort(true);
+    connect(toolbar_, &QtToolbar::shuffleClicked, this, [this]() {
+        listener_->onShuffle();
     });
 }
 
 void QtView::refresh(const std::vector<std::string>& names) {
-    QStringList list;
-    for (const auto& name : names) {
-        list.append(QString::fromStdString(name));
-    }
-    list_model_->setStringList(list);
+    display_->refresh(names);
 }
 
 void QtView::highlight(const int index) {
-    if (index >= 0 && index < list_model_->rowCount()) {
-        playlist_->setCurrentIndex(list_model_->index(index, 0));
-    }
+    display_->highlight(index);
 }
 
 void QtView::enable(const bool state) {
     if (playback_) playback_->enable(state);
     if (toolbar_) toolbar_->enable(state);
+    audio_->enable(state);
+}
+
+void QtView::schedule(const int delay) {
+    audio_->schedule(delay);
+}
+
+void QtView::cancel() {
+    audio_->cancel();
+}
+
+void QtView::repeat(const int mode) {
+    if (playback_) playback_->repeat(mode);
+}
+
+void QtView::sort(const std::string& label) {
+    auto* header = findChild<QtSortHeader*>();
+    if (header) header->display(label);
 }
 
 void QtView::reveal(const bool visible) {
@@ -122,26 +143,23 @@ std::string QtView::browse() {
 }
 
 void QtView::play(const std::string& path) {
-    media_->stop();
-    media_->setSource(QUrl::fromLocalFile(QString::fromStdString(path)));
-    media_->play();
+    audio_->play(path);
 }
 
 void QtView::resume() {
-    media_->play();
+    audio_->resume();
 }
 
 void QtView::pause() {
-    media_->pause();
+    audio_->pause();
 }
 
 void QtView::stop() {
-    media_->stop();
+    audio_->stop();
 }
 
 void QtView::adjust(const double volume) {
-    output_->setVolume(volume);
-    if (volume_) volume_->adjust(static_cast<int>(volume * 100));
+    audio_->adjust(volume);
 }
 
 void QtView::dragEnterEvent(QDragEnterEvent* event) {

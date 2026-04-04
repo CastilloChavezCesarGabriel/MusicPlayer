@@ -8,6 +8,7 @@ void QuickSort::visit(const std::string& name, const std::string&) {
 void QuickSort::sort(std::vector<Song>& songs) {
     if (songs.empty()) return;
 
+    songs_ = &songs;
     std::stack<std::pair<int, int>> stack;
     stack.push({0, static_cast<int>(songs.size()) - 1});
 
@@ -17,24 +18,25 @@ void QuickSort::sort(std::vector<Song>& songs) {
 
         if (startBound >= endBound) continue;
 
-        const int pivot = divide(songs, startBound, endBound);
+        const int pivot = divide(startBound, endBound);
         if (pivot - 1 > startBound) stack.push({startBound, pivot - 1});
         if (pivot + 1 < endBound) stack.push({pivot + 1, endBound});
     }
+    songs_ = nullptr;
 }
 
-int QuickSort::divide(std::vector<Song>& songs, const int startBound, const int endBound) {
-    songs[endBound].accept(*this);
+int QuickSort::divide(const int startBound, const int endBound) {
+    (*songs_)[endBound].accept(*this);
     const std::string pivot = title_;
     int i = startBound;
 
     for (int j = startBound; j < endBound; j++) {
-        songs[j].accept(*this);
+        (*songs_)[j].accept(*this);
         if (title_ < pivot) {
-            std::swap(songs[i], songs[j]);
+            std::swap((*songs_)[i], (*songs_)[j]);
             i++;
         }
     }
-    std::swap(songs[i], songs[endBound]);
+    std::swap((*songs_)[i], (*songs_)[endBound]);
     return i;
 }

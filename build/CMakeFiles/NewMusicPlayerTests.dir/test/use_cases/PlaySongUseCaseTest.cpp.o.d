@@ -881,6 +881,7 @@ CMakeFiles/NewMusicPlayerTests.dir/test/use_cases/PlaySongUseCaseTest.cpp.o: \
   /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/use_cases/../../model/IPlaybackListener.h \
   /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/use_cases/../../model/Advertisement.h \
   /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/use_cases/../../model/Channel.h \
+  /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/use_cases/../../model/PlaybackNotifier.h \
   /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/use_cases/../MockPlaybackListener.h \
   /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/use_cases/../TestPlaylistVisitor.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/filesystem \

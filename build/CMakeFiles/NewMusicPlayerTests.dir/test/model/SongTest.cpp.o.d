@@ -871,6 +871,6 @@ CMakeFiles/NewMusicPlayerTests.dir/test/model/SongTest.cpp.o: \
   /opt/homebrew/include/gtest/gtest-typed-test.h \
   /opt/homebrew/include/gtest/gtest_pred_impl.h \
   /opt/homebrew/include/gtest/gtest_prod.h \
-  /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/model/../../model/Song.h \
+  /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/model/../TestPlaylistVisitor.h \
   /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/model/../../model/IPlaylistVisitor.h \
-  /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/model/../TestPlaylistVisitor.h
+  /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/model/../../model/Song.h

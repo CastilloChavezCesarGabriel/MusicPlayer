@@ -371,100 +371,26 @@ NewMusicPlayerTests_autogen/timestamp: /Users/cesargabrielcastillochavez/CLionPr
   /opt/homebrew/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsTargets-release.cmake \
   /opt/homebrew/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsTargets.cmake \
   /opt/homebrew/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsVersionlessTargets.cmake \
-  /opt/homebrew/share/cmake/Modules/CMakeCCompiler.cmake.in \
-  /opt/homebrew/share/cmake/Modules/CMakeCCompilerABI.c \
   /opt/homebrew/share/cmake/Modules/CMakeCInformation.cmake \
-  /opt/homebrew/share/cmake/Modules/CMakeCXXCompiler.cmake.in \
-  /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp \
   /opt/homebrew/share/cmake/Modules/CMakeCXXInformation.cmake \
   /opt/homebrew/share/cmake/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake \
   /opt/homebrew/share/cmake/Modules/CMakeCommonLanguageInclude.cmake \
-  /opt/homebrew/share/cmake/Modules/CMakeCompilerIdDetection.cmake \
-  /opt/homebrew/share/cmake/Modules/CMakeDetermineCCompiler.cmake \
-  /opt/homebrew/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake \
-  /opt/homebrew/share/cmake/Modules/CMakeDetermineCompiler.cmake \
-  /opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerABI.cmake \
-  /opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerId.cmake \
-  /opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerSupport.cmake \
-  /opt/homebrew/share/cmake/Modules/CMakeDetermineSystem.cmake \
-  /opt/homebrew/share/cmake/Modules/CMakeFindBinUtils.cmake \
   /opt/homebrew/share/cmake/Modules/CMakeFindDependencyMacro.cmake \
   /opt/homebrew/share/cmake/Modules/CMakeGenericSystem.cmake \
   /opt/homebrew/share/cmake/Modules/CMakeInitializeConfigs.cmake \
   /opt/homebrew/share/cmake/Modules/CMakeLanguageInformation.cmake \
-  /opt/homebrew/share/cmake/Modules/CMakeParseImplicitIncludeInfo.cmake \
-  /opt/homebrew/share/cmake/Modules/CMakeParseImplicitLinkInfo.cmake \
-  /opt/homebrew/share/cmake/Modules/CMakeParseLibraryArchitecture.cmake \
-  /opt/homebrew/share/cmake/Modules/CMakeSystem.cmake.in \
   /opt/homebrew/share/cmake/Modules/CMakeSystemSpecificInformation.cmake \
   /opt/homebrew/share/cmake/Modules/CMakeSystemSpecificInitialize.cmake \
-  /opt/homebrew/share/cmake/Modules/CMakeTestCCompiler.cmake \
-  /opt/homebrew/share/cmake/Modules/CMakeTestCXXCompiler.cmake \
-  /opt/homebrew/share/cmake/Modules/CMakeTestCompilerCommon.cmake \
-  /opt/homebrew/share/cmake/Modules/CMakeUnixFindMake.cmake \
   /opt/homebrew/share/cmake/Modules/CheckCSourceCompiles.cmake \
   /opt/homebrew/share/cmake/Modules/CheckCXXCompilerFlag.cmake \
   /opt/homebrew/share/cmake/Modules/CheckCXXSourceCompiles.cmake \
   /opt/homebrew/share/cmake/Modules/CheckIncludeFile.cmake \
   /opt/homebrew/share/cmake/Modules/CheckLibraryExists.cmake \
-  /opt/homebrew/share/cmake/Modules/Compiler/ADSP-DetermineCompiler.cmake \
-  /opt/homebrew/share/cmake/Modules/Compiler/ARMCC-DetermineCompiler.cmake \
-  /opt/homebrew/share/cmake/Modules/Compiler/ARMClang-DetermineCompiler.cmake \
   /opt/homebrew/share/cmake/Modules/Compiler/AppleClang-C.cmake \
   /opt/homebrew/share/cmake/Modules/Compiler/AppleClang-CXX.cmake \
-  /opt/homebrew/share/cmake/Modules/Compiler/AppleClang-DetermineCompiler.cmake \
-  /opt/homebrew/share/cmake/Modules/Compiler/Borland-DetermineCompiler.cmake \
-  /opt/homebrew/share/cmake/Modules/Compiler/Bruce-C-DetermineCompiler.cmake \
   /opt/homebrew/share/cmake/Modules/Compiler/CMakeCommonCompilerMacros.cmake \
-  /opt/homebrew/share/cmake/Modules/Compiler/Clang-DetermineCompiler.cmake \
-  /opt/homebrew/share/cmake/Modules/Compiler/Clang-DetermineCompilerInternal.cmake \
   /opt/homebrew/share/cmake/Modules/Compiler/Clang.cmake \
-  /opt/homebrew/share/cmake/Modules/Compiler/Compaq-C-DetermineCompiler.cmake \
-  /opt/homebrew/share/cmake/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake \
-  /opt/homebrew/share/cmake/Modules/Compiler/Cray-DetermineCompiler.cmake \
-  /opt/homebrew/share/cmake/Modules/Compiler/CrayClang-DetermineCompiler.cmake \
-  /opt/homebrew/share/cmake/Modules/Compiler/Embarcadero-DetermineCompiler.cmake \
-  /opt/homebrew/share/cmake/Modules/Compiler/Fujitsu-DetermineCompiler.cmake \
-  /opt/homebrew/share/cmake/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake \
-  /opt/homebrew/share/cmake/Modules/Compiler/GHS-DetermineCompiler.cmake \
-  /opt/homebrew/share/cmake/Modules/Compiler/GNU-C-DetermineCompiler.cmake \
-  /opt/homebrew/share/cmake/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake \
   /opt/homebrew/share/cmake/Modules/Compiler/GNU.cmake \
-  /opt/homebrew/share/cmake/Modules/Compiler/HP-C-DetermineCompiler.cmake \
-  /opt/homebrew/share/cmake/Modules/Compiler/HP-CXX-DetermineCompiler.cmake \
-  /opt/homebrew/share/cmake/Modules/Compiler/IAR-DetermineCompiler.cmake \
-  /opt/homebrew/share/cmake/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake \
-  /opt/homebrew/share/cmake/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake \
-  /opt/homebrew/share/cmake/Modules/Compiler/IBMClang-C-DetermineCompiler.cmake \
-  /opt/homebrew/share/cmake/Modules/Compiler/IBMClang-CXX-DetermineCompiler.cmake \
-  /opt/homebrew/share/cmake/Modules/Compiler/Intel-DetermineCompiler.cmake \
-  /opt/homebrew/share/cmake/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake \
-  /opt/homebrew/share/cmake/Modules/Compiler/LCC-C-DetermineCompiler.cmake \
-  /opt/homebrew/share/cmake/Modules/Compiler/LCC-CXX-DetermineCompiler.cmake \
-  /opt/homebrew/share/cmake/Modules/Compiler/MSVC-DetermineCompiler.cmake \
-  /opt/homebrew/share/cmake/Modules/Compiler/NVHPC-DetermineCompiler.cmake \
-  /opt/homebrew/share/cmake/Modules/Compiler/NVIDIA-DetermineCompiler.cmake \
-  /opt/homebrew/share/cmake/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake \
-  /opt/homebrew/share/cmake/Modules/Compiler/OrangeC-DetermineCompiler.cmake \
-  /opt/homebrew/share/cmake/Modules/Compiler/PGI-DetermineCompiler.cmake \
-  /opt/homebrew/share/cmake/Modules/Compiler/PathScale-DetermineCompiler.cmake \
-  /opt/homebrew/share/cmake/Modules/Compiler/SCO-DetermineCompiler.cmake \
-  /opt/homebrew/share/cmake/Modules/Compiler/SDCC-C-DetermineCompiler.cmake \
-  /opt/homebrew/share/cmake/Modules/Compiler/SunPro-C-DetermineCompiler.cmake \
-  /opt/homebrew/share/cmake/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake \
-  /opt/homebrew/share/cmake/Modules/Compiler/TI-DetermineCompiler.cmake \
-  /opt/homebrew/share/cmake/Modules/Compiler/TIClang-DetermineCompiler.cmake \
-  /opt/homebrew/share/cmake/Modules/Compiler/Tasking-DetermineCompiler.cmake \
-  /opt/homebrew/share/cmake/Modules/Compiler/TinyCC-C-DetermineCompiler.cmake \
-  /opt/homebrew/share/cmake/Modules/Compiler/VisualAge-C-DetermineCompiler.cmake \
-  /opt/homebrew/share/cmake/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake \
-  /opt/homebrew/share/cmake/Modules/Compiler/Watcom-DetermineCompiler.cmake \
-  /opt/homebrew/share/cmake/Modules/Compiler/XL-C-DetermineCompiler.cmake \
-  /opt/homebrew/share/cmake/Modules/Compiler/XL-CXX-DetermineCompiler.cmake \
-  /opt/homebrew/share/cmake/Modules/Compiler/XLClang-C-DetermineCompiler.cmake \
-  /opt/homebrew/share/cmake/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake \
-  /opt/homebrew/share/cmake/Modules/Compiler/zOS-C-DetermineCompiler.cmake \
-  /opt/homebrew/share/cmake/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake \
   /opt/homebrew/share/cmake/Modules/FindGTest.cmake \
   /opt/homebrew/share/cmake/Modules/FindOpenGL.cmake \
   /opt/homebrew/share/cmake/Modules/FindPackageHandleStandardArgs.cmake \
@@ -476,13 +402,9 @@ NewMusicPlayerTests_autogen/timestamp: /Users/cesargabrielcastillochavez/CLionPr
   /opt/homebrew/share/cmake/Modules/Internal/CMakeCLinkerInformation.cmake \
   /opt/homebrew/share/cmake/Modules/Internal/CMakeCXXLinkerInformation.cmake \
   /opt/homebrew/share/cmake/Modules/Internal/CMakeCommonLinkerInformation.cmake \
-  /opt/homebrew/share/cmake/Modules/Internal/CMakeDetermineLinkerId.cmake \
-  /opt/homebrew/share/cmake/Modules/Internal/CMakeInspectCLinker.cmake \
-  /opt/homebrew/share/cmake/Modules/Internal/CMakeInspectCXXLinker.cmake \
   /opt/homebrew/share/cmake/Modules/Internal/CheckCompilerFlag.cmake \
   /opt/homebrew/share/cmake/Modules/Internal/CheckFlagCommonConfig.cmake \
   /opt/homebrew/share/cmake/Modules/Internal/CheckSourceCompiles.cmake \
-  /opt/homebrew/share/cmake/Modules/Internal/FeatureTesting.cmake \
   /opt/homebrew/share/cmake/Modules/Linker/AppleClang-C.cmake \
   /opt/homebrew/share/cmake/Modules/Linker/AppleClang-CXX.cmake \
   /opt/homebrew/share/cmake/Modules/Linker/AppleClang.cmake \
@@ -492,7 +414,6 @@ NewMusicPlayerTests_autogen/timestamp: /Users/cesargabrielcastillochavez/CLionPr
   /opt/homebrew/share/cmake/Modules/Platform/Apple-Clang-C.cmake \
   /opt/homebrew/share/cmake/Modules/Platform/Apple-Clang-CXX.cmake \
   /opt/homebrew/share/cmake/Modules/Platform/Apple-Clang.cmake \
-  /opt/homebrew/share/cmake/Modules/Platform/Darwin-Determine-CXX.cmake \
   /opt/homebrew/share/cmake/Modules/Platform/Darwin-Initialize.cmake \
   /opt/homebrew/share/cmake/Modules/Platform/Darwin.cmake \
   /opt/homebrew/share/cmake/Modules/Platform/Linker/Apple-AppleClang-C.cmake \
@@ -519,13 +440,9 @@ NewMusicPlayerTests_autogen/timestamp: /Users/cesargabrielcastillochavez/CLionPr
 
 /opt/homebrew/share/cmake/Modules/Linker/AppleClang-C.cmake:
 
-/opt/homebrew/share/cmake/Modules/Internal/FeatureTesting.cmake:
-
 /opt/homebrew/share/cmake/Modules/Internal/CheckFlagCommonConfig.cmake:
 
 /opt/homebrew/share/cmake/Modules/Internal/CheckCompilerFlag.cmake:
-
-/opt/homebrew/share/cmake/Modules/Internal/CMakeDetermineLinkerId.cmake:
 
 /opt/homebrew/share/cmake/Modules/Internal/CMakeCommonLinkerInformation.cmake:
 
@@ -533,149 +450,23 @@ NewMusicPlayerTests_autogen/timestamp: /Users/cesargabrielcastillochavez/CLionPr
 
 /opt/homebrew/share/cmake/Modules/GoogleTest.cmake:
 
-/opt/homebrew/share/cmake/Modules/FindVulkan.cmake:
-
 /opt/homebrew/share/cmake/Modules/FindThreads.cmake:
 
 /opt/homebrew/share/cmake/Modules/FindPackageHandleStandardArgs.cmake:
 
 /opt/homebrew/share/cmake/Modules/FindOpenGL.cmake:
 
-/opt/homebrew/share/cmake/Modules/FindGTest.cmake:
-
-/opt/homebrew/share/cmake/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake:
-
-/opt/homebrew/share/cmake/Modules/Compiler/zOS-C-DetermineCompiler.cmake:
-
-/opt/homebrew/share/cmake/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake:
-
-/opt/homebrew/share/cmake/Modules/Compiler/XLClang-C-DetermineCompiler.cmake:
-
-/opt/homebrew/share/cmake/Modules/Compiler/XL-CXX-DetermineCompiler.cmake:
-
-/opt/homebrew/share/cmake/Modules/Compiler/Watcom-DetermineCompiler.cmake:
-
-/opt/homebrew/share/cmake/Modules/Compiler/VisualAge-C-DetermineCompiler.cmake:
-
-/opt/homebrew/share/cmake/Modules/Compiler/TinyCC-C-DetermineCompiler.cmake:
-
-/opt/homebrew/share/cmake/Modules/Compiler/Tasking-DetermineCompiler.cmake:
-
-/opt/homebrew/share/cmake/Modules/Compiler/XL-C-DetermineCompiler.cmake:
-
-/opt/homebrew/share/cmake/Modules/Compiler/TIClang-DetermineCompiler.cmake:
-
-/opt/homebrew/share/cmake/Modules/Compiler/TI-DetermineCompiler.cmake:
-
-/opt/homebrew/share/cmake/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake:
-
-/opt/homebrew/share/cmake/Modules/Compiler/SunPro-C-DetermineCompiler.cmake:
-
-/opt/homebrew/share/cmake/Modules/Compiler/SDCC-C-DetermineCompiler.cmake:
-
-/opt/homebrew/share/cmake/Modules/Compiler/PathScale-DetermineCompiler.cmake:
-
-/opt/homebrew/share/cmake/Modules/Compiler/PGI-DetermineCompiler.cmake:
-
-/opt/homebrew/share/cmake/Modules/Compiler/OrangeC-DetermineCompiler.cmake:
-
-/opt/homebrew/share/cmake/Modules/Compiler/NVHPC-DetermineCompiler.cmake:
-
-/opt/homebrew/share/cmake/Modules/Compiler/LCC-CXX-DetermineCompiler.cmake:
-
-/opt/homebrew/share/cmake/Modules/Compiler/LCC-C-DetermineCompiler.cmake:
-
-/opt/homebrew/share/cmake/Modules/Compiler/IBMClang-CXX-DetermineCompiler.cmake:
-
-/opt/homebrew/share/cmake/Modules/Compiler/IBMClang-C-DetermineCompiler.cmake:
-
-/opt/homebrew/share/cmake/Modules/Compiler/IAR-DetermineCompiler.cmake:
-
-/opt/homebrew/share/cmake/Modules/Compiler/HP-C-DetermineCompiler.cmake:
-
-/opt/homebrew/share/cmake/Modules/Compiler/GNU.cmake:
-
-/opt/homebrew/share/cmake/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake:
-
-/opt/homebrew/share/cmake/Modules/Compiler/GNU-C-DetermineCompiler.cmake:
-
-/opt/homebrew/share/cmake/Modules/Compiler/GHS-DetermineCompiler.cmake:
-
-/opt/homebrew/share/cmake/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake:
-
-/opt/homebrew/share/cmake/Modules/Compiler/CrayClang-DetermineCompiler.cmake:
-
-/opt/homebrew/share/cmake/Modules/Compiler/Cray-DetermineCompiler.cmake:
-
-/opt/homebrew/share/cmake/Modules/Compiler/Compaq-C-DetermineCompiler.cmake:
-
 /opt/homebrew/share/cmake/Modules/Compiler/Clang.cmake:
-
-/opt/homebrew/share/cmake/Modules/Compiler/Clang-DetermineCompilerInternal.cmake:
-
-/opt/homebrew/share/cmake/Modules/Compiler/Clang-DetermineCompiler.cmake:
-
-/opt/homebrew/share/cmake/Modules/Compiler/CMakeCommonCompilerMacros.cmake:
-
-/opt/homebrew/share/cmake/Modules/Compiler/Bruce-C-DetermineCompiler.cmake:
-
-/opt/homebrew/share/cmake/Modules/Compiler/AppleClang-DetermineCompiler.cmake:
-
-/opt/homebrew/share/cmake/Modules/Compiler/AppleClang-CXX.cmake:
-
-/opt/homebrew/share/cmake/Modules/Compiler/ARMClang-DetermineCompiler.cmake:
-
-/opt/homebrew/share/cmake/Modules/Compiler/ARMCC-DetermineCompiler.cmake:
-
-/opt/homebrew/share/cmake/Modules/Compiler/ADSP-DetermineCompiler.cmake:
-
-/opt/homebrew/share/cmake/Modules/CheckLibraryExists.cmake:
-
-/opt/homebrew/share/cmake/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake:
-
-/opt/homebrew/share/cmake/Modules/CheckIncludeFile.cmake:
 
 /opt/homebrew/share/cmake/Modules/CheckCXXSourceCompiles.cmake:
 
-/opt/homebrew/share/cmake/Modules/CheckCSourceCompiles.cmake:
-
-/opt/homebrew/share/cmake/Modules/CMakeUnixFindMake.cmake:
-
-/opt/homebrew/share/cmake/Modules/CMakeTestCompilerCommon.cmake:
-
-/opt/homebrew/share/cmake/Modules/CMakeTestCXXCompiler.cmake:
-
-/opt/homebrew/share/cmake/Modules/CMakeParseLibraryArchitecture.cmake:
-
-/opt/homebrew/share/cmake/Modules/CMakeParseImplicitIncludeInfo.cmake:
-
 /opt/homebrew/share/cmake/Modules/CMakeGenericSystem.cmake:
-
-/opt/homebrew/share/cmake/Modules/CMakeFindBinUtils.cmake:
-
-/opt/homebrew/lib/cmake/Qt6Widgets/Qt6WidgetsConfigVersion.cmake:
-
-/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerId.cmake:
-
-/opt/homebrew/lib/cmake/Qt6DBus/Qt6DBusAdditionalTargetInfo.cmake:
-
-/opt/homebrew/share/cmake/Modules/CMakeDetermineCompiler.cmake:
-
-/opt/homebrew/share/cmake/Modules/CMakeCompilerIdDetection.cmake:
 
 /opt/homebrew/share/cmake/Modules/CMakeCommonLanguageInclude.cmake:
 
 /opt/homebrew/share/cmake/Modules/FindPackageMessage.cmake:
 
-/opt/homebrew/share/cmake/Modules/Compiler/Borland-DetermineCompiler.cmake:
-
 /opt/homebrew/share/cmake/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake:
-
-/opt/homebrew/share/cmake/Modules/CMakeCXXCompiler.cmake.in:
-
-/opt/homebrew/lib/cmake/Qt6Widgets/Qt6QMacStylePluginTargets-release.cmake:
-
-/opt/homebrew/share/cmake/Modules/CMakeCCompilerABI.c:
 
 /opt/homebrew/lib/cmake/Qt6Multimedia/Qt6MultimediaVersionlessAliasTargets.cmake:
 
@@ -711,9 +502,9 @@ CMakeFiles/4.0.1/CMakeCXXCompiler.cmake:
 
 /opt/homebrew/lib/cmake/Qt6Widgets/Qt6WidgetsConfigVersionImpl.cmake:
 
-/opt/homebrew/share/cmake/Modules/CMakeParseImplicitLinkInfo.cmake:
-
 /opt/homebrew/share/cmake/Modules/CMakeInitializeConfigs.cmake:
+
+/opt/homebrew/lib/cmake/Qt6Widgets/Qt6WidgetsConfigVersion.cmake:
 
 /opt/homebrew/share/cmake/Modules/CMakeSystemSpecificInitialize.cmake:
 
@@ -724,6 +515,8 @@ CMakeFiles/4.0.1/CMakeCXXCompiler.cmake:
 /opt/homebrew/lib/cmake/Qt6Widgets/Qt6WidgetsAdditionalTargetInfo.cmake:
 
 /opt/homebrew/lib/cmake/Qt6Widgets/Qt6QMacStylePluginTargets.cmake:
+
+/opt/homebrew/lib/cmake/Qt6Widgets/Qt6QMacStylePluginTargets-release.cmake:
 
 /opt/homebrew/lib/cmake/Qt6NetworkPrivate/Qt6NetworkPrivateVersionlessAliasTargets.cmake:
 
@@ -745,13 +538,9 @@ CMakeFiles/4.0.1/CMakeCXXCompiler.cmake:
 
 /opt/homebrew/lib/cmake/Qt6Network/Qt6QTlsBackendOpenSSLPluginAdditionalTargetInfo.cmake:
 
-/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:
-
 /opt/homebrew/lib/cmake/Qt6DBus/Qt6DBusMacros.cmake:
 
 /opt/homebrew/lib/cmake/Qt6Network/Qt6QTlsBackendCertOnlyPluginTargets-release.cmake:
-
-/opt/homebrew/share/cmake/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake:
 
 /opt/homebrew/lib/cmake/Qt6Network/Qt6QSCNetworkReachabilityNetworkInformationPluginTargets.cmake:
 
@@ -773,8 +562,6 @@ CMakeFiles/4.0.1/CMakeCXXCompiler.cmake:
 
 /opt/homebrew/lib/cmake/Qt6MultimediaPrivate/Qt6MultimediaPrivateConfigVersion.cmake:
 
-/opt/homebrew/share/cmake/Modules/CMakeDetermineSystem.cmake:
-
 /opt/homebrew/lib/cmake/Qt6MultimediaPrivate/Qt6MultimediaPrivateConfig.cmake:
 
 /opt/homebrew/lib/cmake/Qt6MultimediaPrivate/Qt6MultimediaPrivateAdditionalTargetInfo.cmake:
@@ -792,8 +579,6 @@ CMakeFiles/4.0.1/CMakeCXXCompiler.cmake:
 /opt/homebrew/lib/cmake/Qt6Gui/Qt6QVirtualKeyboardPluginAdditionalTargetInfo.cmake:
 
 /opt/homebrew/lib/cmake/Qt6Multimedia/Qt6MultimediaConfig.cmake:
-
-/opt/homebrew/share/cmake/Modules/Compiler/MSVC-DetermineCompiler.cmake:
 
 /opt/homebrew/lib/cmake/Qt6Multimedia/Qt6MultimediaAdditionalTargetInfo.cmake:
 
@@ -829,9 +614,9 @@ CMakeFiles/4.0.1/CMakeCXXCompiler.cmake:
 
 /opt/homebrew/lib/cmake/Qt6GuiPrivate/Qt6GuiPrivateConfigVersionImpl.cmake:
 
-/opt/homebrew/share/cmake/Modules/GNUInstallDirs.cmake:
-
 /opt/homebrew/lib/cmake/Qt6DBusPrivate/Qt6DBusPrivateConfigVersionImpl.cmake:
+
+/opt/homebrew/share/cmake/Modules/GNUInstallDirs.cmake:
 
 /opt/homebrew/lib/cmake/Qt6Gui/Qt6QSvgPluginConfig.cmake:
 
@@ -897,6 +682,10 @@ CMakeFiles/4.0.1/CMakeCXXCompiler.cmake:
 
 /opt/homebrew/lib/cmake/Qt6Network/Qt6QTlsBackendOpenSSLPluginConfig.cmake:
 
+/opt/homebrew/lib/cmake/Qt6Core/Qt6CoreConfigVersionImpl.cmake:
+
+/opt/homebrew/share/cmake/Modules/Compiler/AppleClang-C.cmake:
+
 /opt/homebrew/lib/cmake/Qt6Gui/Qt6QSvgIconPluginConfig.cmake:
 
 /opt/homebrew/lib/cmake/Qt6Widgets/Qt6WidgetsTargets-release.cmake:
@@ -920,8 +709,6 @@ CMakeFiles/4.0.1/CMakeCXXCompiler.cmake:
 /opt/homebrew/lib/cmake/Qt6CoreTools/Qt6CoreToolsTargets.cmake:
 
 /opt/homebrew/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsVersionlessTargets.cmake:
-
-/opt/homebrew/share/cmake/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake:
 
 /opt/homebrew/lib/cmake/Qt6Gui/Qt6QOffscreenIntegrationPluginAdditionalTargetInfo.cmake:
 
@@ -999,11 +786,7 @@ CMakeFiles/4.0.1/CMakeCXXCompiler.cmake:
 
 /opt/homebrew/lib/cmake/Qt6Gui/Qt6GuiConfig.cmake:
 
-/opt/homebrew/share/cmake/Modules/Compiler/NVIDIA-DetermineCompiler.cmake:
-
 /opt/homebrew/lib/cmake/Qt6CoreTools/Qt6CoreToolsVersionlessTargets.cmake:
-
-/opt/homebrew/share/cmake/Modules/Platform/Darwin-Determine-CXX.cmake:
 
 /opt/homebrew/lib/cmake/Qt6Core/Qt6QDarwinCameraPermissionPluginAdditionalTargetInfo.cmake:
 
@@ -1027,6 +810,8 @@ CMakeFiles/4.0.1/CMakeCXXCompiler.cmake:
 
 /opt/homebrew/lib/cmake/Qt6DBusTools/Qt6DBusToolsConfigVersionImpl.cmake:
 
+/opt/homebrew/share/cmake/Modules/FindVulkan.cmake:
+
 /opt/homebrew/lib/cmake/Qt6Core/Qt6QDarwinLocationPermissionPluginTargets-release.cmake:
 
 /opt/homebrew/lib/cmake/Qt6DBusTools/Qt6DBusToolsConfigVersion.cmake:
@@ -1043,8 +828,6 @@ CMakeFiles/4.0.1/CMakeCXXCompiler.cmake:
 
 /opt/homebrew/lib/cmake/Qt6DBusTools/Qt6DBusToolsAdditionalTargetInfo.cmake:
 
-/opt/homebrew/share/cmake/Modules/Internal/CMakeInspectCXXLinker.cmake:
-
 /opt/homebrew/lib/cmake/Qt6DBusPrivate/Qt6DBusPrivateVersionlessAliasTargets.cmake:
 
 /opt/homebrew/lib/cmake/Qt6Gui/Qt6QSvgIconPluginTargets.cmake:
@@ -1056,14 +839,6 @@ CMakeFiles/4.0.1/CMakeCXXCompiler.cmake:
 /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/model/SortingTest.cpp:
 
 /opt/homebrew/lib/cmake/Qt6DBus/Qt6DBusVersionlessAliasTargets.cmake:
-
-/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerSupport.cmake:
-
-/opt/homebrew/share/cmake/Modules/CheckCXXCompilerFlag.cmake:
-
-CMakeFiles/4.0.1/CMakeCCompiler.cmake:
-
-/opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp:
 
 /opt/homebrew/lib/cmake/Qt6DBus/Qt6DBusDependencies.cmake:
 
@@ -1081,11 +856,11 @@ CMakeFiles/4.0.1/CMakeCCompiler.cmake:
 
 /opt/homebrew/lib/cmake/Qt6Gui/Qt6GuiDependencies.cmake:
 
-/opt/homebrew/share/cmake/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake:
-
 /opt/homebrew/lib/cmake/Qt6DBus/Qt6DBusConfig.cmake:
 
 /opt/homebrew/lib/cmake/Qt6/QtPublicCMakeEarlyPolicyHelpers.cmake:
+
+/opt/homebrew/lib/cmake/Qt6DBus/Qt6DBusAdditionalTargetInfo.cmake:
 
 /opt/homebrew/lib/cmake/Qt6/QtPublicTargetHelpers.cmake:
 
@@ -1097,17 +872,15 @@ CMakeFiles/4.0.1/CMakeCCompiler.cmake:
 
 /opt/homebrew/lib/cmake/Qt6GuiTools/Qt6GuiToolsVersionlessTargets.cmake:
 
-/opt/homebrew/share/cmake/Modules/Compiler/HP-CXX-DetermineCompiler.cmake:
-
 /opt/homebrew/lib/cmake/Qt6Gui/Qt6QMngPluginAdditionalTargetInfo.cmake:
-
-/opt/homebrew/share/cmake/Modules/Compiler/Embarcadero-DetermineCompiler.cmake:
 
 /opt/homebrew/lib/cmake/Qt6Gui/Qt6QCocoaIntegrationPluginTargets.cmake:
 
 /opt/homebrew/lib/cmake/Qt6Gui/Qt6QPdfPluginTargets-release.cmake:
 
 /opt/homebrew/lib/cmake/Qt6Gui/Qt6QGifPluginConfig.cmake:
+
+/opt/homebrew/share/cmake/Modules/Compiler/GNU.cmake:
 
 /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/Playlist.h:
 
@@ -1127,6 +900,8 @@ CMakeFiles/4.0.1/CMakeCCompiler.cmake:
 
 /opt/homebrew/lib/cmake/Qt6Gui/Qt6QCocoaIntegrationPluginAdditionalTargetInfo.cmake:
 
+/opt/homebrew/share/cmake/Modules/CheckIncludeFile.cmake:
+
 /opt/homebrew/lib/cmake/Qt6Core/Qt6QDarwinLocationPermissionPluginAdditionalTargetInfo.cmake:
 
 /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/use_cases/AddSongUseCaseTest.cpp:
@@ -1140,8 +915,6 @@ CMakeFiles/4.0.1/CMakeCCompiler.cmake:
 /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/use_cases/AddSongUseCaseTest.h:
 
 /opt/homebrew/lib/cmake/Qt6/QtPublicGitHelpers.cmake:
-
-/opt/homebrew/share/cmake/Modules/CMakeSystem.cmake.in:
 
 /opt/homebrew/lib/cmake/Qt6/QtPublicSbomFileHelpers.cmake:
 
@@ -1171,8 +944,6 @@ CMakeFiles/4.0.1/CMakeCCompiler.cmake:
 
 /opt/homebrew/lib/cmake/Qt6Core/Qt6QDarwinBluetoothPermissionPluginConfig.cmake:
 
-/opt/homebrew/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:
-
 /opt/homebrew/lib/cmake/Qt6Gui/Qt6QICNSPluginConfig.cmake:
 
 /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/TestPlaylistVisitor.h:
@@ -1184,10 +955,6 @@ CMakeFiles/4.0.1/CMakeCCompiler.cmake:
 /opt/homebrew/lib/cmake/Qt6Gui/Qt6QWebpPluginConfig.cmake:
 
 /opt/homebrew/lib/cmake/Qt6Core/Qt6CoreMacros.cmake:
-
-/opt/homebrew/share/cmake/Modules/Compiler/AppleClang-C.cmake:
-
-/opt/homebrew/lib/cmake/Qt6Core/Qt6CoreConfigVersionImpl.cmake:
 
 /opt/homebrew/lib/cmake/Qt6Core/Qt6QDarwinMicrophonePermissionPluginTargets.cmake:
 
@@ -1235,8 +1002,6 @@ CMakeFiles/4.0.1/CMakeSystem.cmake:
 
 /opt/homebrew/lib/cmake/Qt6/FindWrapOpenGL.cmake:
 
-/opt/homebrew/share/cmake/Modules/Compiler/SCO-DetermineCompiler.cmake:
-
 /opt/homebrew/lib/cmake/Qt6Gui/Qt6QCocoaIntegrationPluginConfig.cmake:
 
 /opt/homebrew/lib/cmake/Qt6/QtPublicSbomQtEntityHelpers.cmake:
@@ -1244,8 +1009,6 @@ CMakeFiles/4.0.1/CMakeSystem.cmake:
 /opt/homebrew/share/cmake/Modules/Platform/Linker/Apple-AppleClang.cmake:
 
 /opt/homebrew/lib/cmake/Qt6Gui/Qt6GuiPlugins.cmake:
-
-/opt/homebrew/share/cmake/Modules/Compiler/Fujitsu-DetermineCompiler.cmake:
 
 /opt/homebrew/lib/cmake/Qt6Core/Qt6QDarwinContactsPermissionPluginDependencies.cmake:
 
@@ -1265,21 +1028,21 @@ CMakeFiles/4.0.1/CMakeSystem.cmake:
 
 /opt/homebrew/lib/cmake/Qt6/QtPublicCMakeVersionHelpers.cmake:
 
-/opt/homebrew/share/cmake/Modules/CMakeDetermineCCompiler.cmake:
-
 /opt/homebrew/lib/cmake/Qt6Core/Qt6CoreTargets.cmake:
 
 /opt/homebrew/share/cmake/Modules/Linker/AppleClang-CXX.cmake:
 
 /opt/homebrew/lib/cmake/Qt6Gui/Qt6QTiffPluginAdditionalTargetInfo.cmake:
 
-/opt/homebrew/share/cmake/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake:
-
 /opt/homebrew/lib/cmake/Qt6Gui/Qt6QTgaPluginConfig.cmake:
 
 /opt/homebrew/lib/cmake/Qt6Gui/Qt6QMinimalIntegrationPluginTargets.cmake:
 
 /opt/homebrew/lib/cmake/Qt6/QtPublicCMakeHelpers.cmake:
+
+CMakeFiles/4.0.1/CMakeCCompiler.cmake:
+
+/opt/homebrew/share/cmake/Modules/CheckCXXCompilerFlag.cmake:
 
 /opt/homebrew/share/cmake/Modules/Platform/UnixPaths.cmake:
 
@@ -1341,13 +1104,9 @@ CMakeFiles/4.0.1/CMakeSystem.cmake:
 
 /opt/homebrew/lib/cmake/Qt6DBus/Qt6DBusTargets.cmake:
 
-/opt/homebrew/share/cmake/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake:
-
 /opt/homebrew/lib/cmake/Qt6GuiTools/Qt6GuiToolsConfigVersion.cmake:
 
 /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/DirectoryTestFixture.h:
-
-/opt/homebrew/share/cmake/Modules/CMakeTestCCompiler.cmake:
 
 /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/use_cases/SortPlaylistUseCaseTest.cpp:
 
@@ -1359,13 +1118,13 @@ CMakeFiles/4.0.1/CMakeSystem.cmake:
 
 /opt/homebrew/lib/cmake/Qt6Gui/Qt6QJpegPluginAdditionalTargetInfo.cmake:
 
-/opt/homebrew/share/cmake/Modules/Compiler/Intel-DetermineCompiler.cmake:
-
 /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/use_cases/PlaySongUseCaseTest.cpp:
 
 /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/use_cases/NavigatePlaylistUseCaseTest.h:
 
 /opt/homebrew/lib/cmake/Qt6DBusPrivate/Qt6DBusPrivateConfigVersion.cmake:
+
+/opt/homebrew/share/cmake/Modules/FindGTest.cmake:
 
 /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/model/PlaylistTest.h:
 
@@ -1400,8 +1159,6 @@ CMakeFiles/4.0.1/CMakeSystem.cmake:
 /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/IPlaylistVisitor.h:
 
 /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/QuickSort.h:
-
-/opt/homebrew/share/cmake/Modules/Internal/CMakeInspectCLinker.cmake:
 
 /opt/homebrew/lib/cmake/Qt6Core/Qt6QDarwinCameraPermissionPluginConfig.cmake:
 
@@ -1443,6 +1200,8 @@ CMakeFiles/4.0.1/CMakeSystem.cmake:
 
 /opt/homebrew/lib/cmake/Qt6Core/Qt6CoreDependencies.cmake:
 
+/opt/homebrew/share/cmake/Modules/CheckLibraryExists.cmake:
+
 /opt/homebrew/lib/cmake/Qt6GuiTools/Qt6GuiToolsConfig.cmake:
 
 /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/model/SongTest.cpp:
@@ -1463,21 +1222,25 @@ CMakeFiles/4.0.1/CMakeSystem.cmake:
 
 /opt/homebrew/lib/cmake/GTest/GTestTargets.cmake:
 
-/opt/homebrew/share/cmake/Modules/CMakeCCompiler.cmake.in:
-
 /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/MusicLibrary.h:
 
 /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/model/SortingTest.h:
 
+/opt/homebrew/share/cmake/Modules/Compiler/AppleClang-CXX.cmake:
+
 /opt/homebrew/lib/cmake/Qt6/QtPublicSbomGenerationHelpers.cmake:
 
 /opt/homebrew/lib/cmake/Qt6Core/Qt6QDarwinBluetoothPermissionPluginTargets.cmake:
+
+/opt/homebrew/share/cmake/Modules/CheckCSourceCompiles.cmake:
 
 /opt/homebrew/bin/cmake:
 
 /opt/homebrew/lib/cmake/Qt6Gui/Qt6QICOPluginTargets.cmake:
 
 /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/Song.cpp:
+
+/opt/homebrew/share/cmake/Modules/Compiler/CMakeCommonCompilerMacros.cmake:
 
 /opt/homebrew/lib/cmake/Qt6Core/Qt6QDarwinMicrophonePermissionPluginDependencies.cmake:
 

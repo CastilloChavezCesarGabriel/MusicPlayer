@@ -877,10 +877,10 @@ CMakeFiles/NewMusicPlayerTests.dir/test/model/PlaylistTest.cpp.o: \
   /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/model/../../model/MusicLibrary.h \
   /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/model/../../model/SortingAlgorithm.h \
   /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/model/../../model/IPlaybackListener.h \
-  /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/model/../../model/ShellSort.h \
-  /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/model/../../model/QuickSort.h \
   /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/model/../TestPlaylistVisitor.h \
   /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/model/../MockPlaybackListener.h \
+  /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/model/../../model/ShellSort.h \
+  /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/model/../../model/QuickSort.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/filesystem \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/copy_options.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/directory_entry.h \

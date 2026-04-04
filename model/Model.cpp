@@ -3,8 +3,10 @@
 #include "QuickSort.h"
 #include <filesystem>
 
-Model::Model(const std::string& musicPath, const std::string& adsPath)
-    : music_library_(musicPath), playlist_(music_library_), advertisement_(adsPath) {
+Model::Model(const std::string& basePath)
+    : music_library_(basePath + "/music"),
+      playlist_(music_library_),
+      advertisement_(basePath + "/announcements") {
 
     for (const Song& song : music_library_.load()) {
         playlist_.add(song);
@@ -13,17 +15,17 @@ Model::Model(const std::string& musicPath, const std::string& adsPath)
     advertisement_.load();
 }
 
-void Model::add(IPlaybackListener& listener) {
-    listener_ = &listener;
-    channel_ = new Channel(listener);
+void Model::subscribe(IPlaybackListener& listener) {
+    notifier_.add(listener);
 }
 
 void Model::play(const int index) {
-    playlist_.select(index, *listener_);
+    playlist_.select(index, notifier_);
 
-    if (Advertisement::schedule()) {
-        listener_->onEnabled(false);
-        advertisement_.interrupt(*listener_);
+    if (Advertisement::isScheduled()) {
+        notifier_.onEnabled(false);
+        notifier_.onSchedule(Advertisement::randomize());
+        advertisement_.interrupt(notifier_);
     } else {
         broadcast();
     }
@@ -31,13 +33,13 @@ void Model::play(const int index) {
 
 void Model::advance() {
     if (playlist_.hasNext()) {
-        playlist_.advance(*listener_);
+        playlist_.advance(notifier_);
         broadcast();
     }
 }
 
 void Model::retreat() {
-    playlist_.retreat(*listener_);
+    playlist_.retreat(notifier_);
     broadcast();
 }
 
@@ -47,12 +49,17 @@ void Model::end() {
         return;
     }
 
-    if (repeat_song_) {
+    if (repeat_mode_ == 1) {
         broadcast();
         return;
     }
 
-    advance();
+    if (playlist_.hasNext()) {
+        advance();
+    } else if (repeat_mode_ == 2) {
+        playlist_.select(0, notifier_);
+        broadcast();
+    }
 }
 
 void Model::skip() {
@@ -61,23 +68,25 @@ void Model::skip() {
     }
 }
 
-void Model::broadcast() const {
-    playlist_.play(*channel_);
+void Model::broadcast() {
+    Channel channel(notifier_);
+    playlist_.play(channel);
 }
 
-void Model::refresh() const {
-    listener_->onChanged();
+void Model::refresh() {
+    notifier_.onChanged();
 }
 
-void Model::resume() const {
-    listener_->onReveal(false);
-    listener_->onEnabled(true);
+void Model::resume() {
+    notifier_.onCancel();
+    notifier_.onReveal(false);
+    notifier_.onEnabled(true);
     broadcast();
 }
 
 void Model::repeat() {
-    repeat_song_ = !repeat_song_;
-    listener_->onFeedback(repeat_song_ ? "Repeat enabled" : "Repeat disabled", true);
+    repeat_mode_ = (repeat_mode_ + 1) % 3;
+    notifier_.onRepeatChanged(repeat_mode_);
 }
 
 void Model::insert(const std::string& filePath) {
@@ -85,18 +94,18 @@ void Model::insert(const std::string& filePath) {
 
     playlist_.add(music_library_.import(filePath));
     refresh();
-    listener_->onFeedback("Song added successfully!", true);
+    notifier_.onFeedback("Song added successfully!", true);
 }
 
-bool Model::validate(const std::string& filePath) const {
+bool Model::validate(const std::string& filePath) {
     if (filePath.empty() || !MusicLibrary::isSupported(filePath)) {
-        listener_->onFeedback("Unsupported file type.", false);
+        notifier_.onFeedback("Unsupported file type.", false);
         return false;
     }
 
     const std::filesystem::path source(filePath);
     if (music_library_.contains(source.filename().string())) {
-        listener_->onFeedback("This song already exists.", false);
+        notifier_.onFeedback("This song already exists.", false);
         return false;
     }
 
@@ -105,6 +114,11 @@ bool Model::validate(const std::string& filePath) const {
 
 void Model::remove(const int index) {
     playlist_.remove(index);
+    refresh();
+}
+
+void Model::shuffle() {
+    playlist_.shuffle();
     refresh();
 }
 

@@ -5,7 +5,7 @@
 void ModelTestFixture::SetUp() {
     base_directory_ = std::filesystem::temp_directory_path().string() + "/" + identify();
     music_directory_ = base_directory_ + "/music";
-    ads_directory_ = base_directory_ + "/ads";
+    ads_directory_ = base_directory_ + "/announcements";
     std::filesystem::create_directories(music_directory_);
     std::filesystem::create_directories(ads_directory_);
 }
