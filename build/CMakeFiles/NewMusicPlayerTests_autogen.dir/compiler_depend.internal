@@ -16,6 +16,8 @@
  /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/Model.h
  /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/MusicLibrary.cpp
  /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/MusicLibrary.h
+ /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/PlaybackNotifier.cpp
+ /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/PlaybackNotifier.h
  /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/Playlist.cpp
  /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/Playlist.h
  /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/QuickSort.cpp

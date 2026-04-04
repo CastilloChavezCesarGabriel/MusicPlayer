@@ -196,7 +196,7 @@ TEST_F(RegressionTest, PlayWithNoSelectionDoesNotCrash) {
 
 TEST_F(RegressionTest, ConcludeWithoutInterruptReturnsFalse) {
     Advertisement ad(ads_directory_);
-    EXPECT_FALSE(ad.conclude());
+    EXPECT_FALSE(ad.conclude(listener_));
 }
 
 TEST_F(RegressionTest, MultipleSortsDoNotCrash) {

@@ -14,6 +14,7 @@ public:
     explicit MusicLibrary(const std::string& musicPath);
 
     std::vector<Song> load() const;
+    std::string validate(const std::string& filePath) const;
     Song import(const std::string& sourcePath) const;
     void visit(const std::string& name, const std::string& path) override;
     bool contains(const std::string& filename) const;

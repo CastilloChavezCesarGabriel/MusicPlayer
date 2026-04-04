@@ -16,7 +16,9 @@ public:
 
     void load();
     bool interrupt(IPlaybackListener& listener);
-    bool conclude();
+    bool conclude(IPlaybackListener& listener);
+
+private:
     static bool isScheduled();
     static int randomize();
 };

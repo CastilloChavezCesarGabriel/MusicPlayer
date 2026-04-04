@@ -1,7 +1,6 @@
 #ifndef QT_SORT_HEADER_H
 #define QT_SORT_HEADER_H
 
-#include <QWidget>
 #include <QPushButton>
 #include <string>
 

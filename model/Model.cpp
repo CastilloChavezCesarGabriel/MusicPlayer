@@ -1,7 +1,7 @@
 #include "Model.h"
+#include "Channel.h"
 #include "ShellSort.h"
 #include "QuickSort.h"
-#include <filesystem>
 
 Model::Model(const std::string& basePath)
     : music_library_(basePath + "/music"),
@@ -22,11 +22,7 @@ void Model::subscribe(IPlaybackListener& listener) {
 void Model::play(const int index) {
     playlist_.select(index, notifier_);
 
-    if (Advertisement::isScheduled()) {
-        notifier_.onEnabled(false);
-        notifier_.onSchedule(Advertisement::randomize());
-        advertisement_.interrupt(notifier_);
-    } else {
+    if (!advertisement_.interrupt(notifier_)) {
         broadcast();
     }
 }
@@ -44,8 +40,8 @@ void Model::retreat() {
 }
 
 void Model::end() {
-    if (advertisement_.conclude()) {
-        resume();
+    if (advertisement_.conclude(notifier_)) {
+        broadcast();
         return;
     }
 
@@ -63,8 +59,8 @@ void Model::end() {
 }
 
 void Model::skip() {
-    if (advertisement_.conclude()) {
-        resume();
+    if (advertisement_.conclude(notifier_)) {
+        broadcast();
     }
 }
 
@@ -77,39 +73,21 @@ void Model::refresh() {
     notifier_.onChanged();
 }
 
-void Model::resume() {
-    notifier_.onCancel();
-    notifier_.onReveal(false);
-    notifier_.onEnabled(true);
-    broadcast();
-}
-
 void Model::repeat() {
     repeat_mode_ = (repeat_mode_ + 1) % 3;
     notifier_.onRepeatChanged(repeat_mode_);
 }
 
 void Model::insert(const std::string& filePath) {
-    if (!validate(filePath)) return;
+    const std::string reason = music_library_.validate(filePath);
+    if (!reason.empty()) {
+        notifier_.onFeedback(reason, false);
+        return;
+    }
 
     playlist_.add(music_library_.import(filePath));
     refresh();
     notifier_.onFeedback("Song added successfully!", true);
-}
-
-bool Model::validate(const std::string& filePath) {
-    if (filePath.empty() || !MusicLibrary::isSupported(filePath)) {
-        notifier_.onFeedback("Unsupported file type.", false);
-        return false;
-    }
-
-    const std::filesystem::path source(filePath);
-    if (music_library_.contains(source.filename().string())) {
-        notifier_.onFeedback("This song already exists.", false);
-        return false;
-    }
-
-    return true;
 }
 
 void Model::remove(const int index) {

@@ -19,9 +19,11 @@ int Advertisement::randomize() {
 }
 
 bool Advertisement::interrupt(IPlaybackListener& listener) {
-    if (ads_.empty()) return false;
+    if (ads_.empty() || !isScheduled()) return false;
 
     is_playing_ = true;
+    listener.onEnabled(false);
+    listener.onSchedule(randomize());
 
     std::mt19937 engine(std::random_device{}());
     std::uniform_int_distribution<> distribution(0, ads_.size() - 1);
@@ -29,8 +31,11 @@ bool Advertisement::interrupt(IPlaybackListener& listener) {
     return true;
 }
 
-bool Advertisement::conclude() {
+bool Advertisement::conclude(IPlaybackListener& listener) {
     if (!is_playing_) return false;
     is_playing_ = false;
+    listener.onCancel();
+    listener.onReveal(false);
+    listener.onEnabled(true);
     return true;
 }

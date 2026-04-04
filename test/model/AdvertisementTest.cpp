@@ -11,7 +11,12 @@ TEST_F(AdvertisementTest, LoadFindsAudioFiles) {
     createFile("ad2.wav");
     Advertisement ad(test_directory_);
     ad.load();
-    EXPECT_TRUE(ad.interrupt(listener_));
+    bool interrupted = false;
+    for (int i = 0; i < 100 && !interrupted; i++) {
+        interrupted = ad.interrupt(listener_);
+        if (interrupted) ad.conclude(listener_);
+    }
+    EXPECT_TRUE(interrupted);
 }
 
 TEST_F(AdvertisementTest, LoadIgnoresNonAudioFiles) {
@@ -38,15 +43,20 @@ TEST_F(AdvertisementTest, InterruptStartsPlayback) {
     createFile("ad.mp3");
     Advertisement ad(test_directory_);
     ad.load();
-    ad.interrupt(listener_);
+    while (!ad.interrupt(listener_)) {}
     EXPECT_TRUE(listener_.wasStarted());
 }
 
-TEST_F(AdvertisementTest, InterruptReturnsTrueWhenAdsExist) {
+TEST_F(AdvertisementTest, InterruptReturnsTrueWithAds) {
     createFile("ad.mp3");
     Advertisement ad(test_directory_);
     ad.load();
-    EXPECT_TRUE(ad.interrupt(listener_));
+    bool interrupted = false;
+    for (int i = 0; i < 100 && !interrupted; i++) {
+        interrupted = ad.interrupt(listener_);
+        if (interrupted) ad.conclude(listener_);
+    }
+    EXPECT_TRUE(interrupted);
 }
 
 TEST_F(AdvertisementTest, InterruptReturnsFalseWhenNoAds) {
@@ -59,45 +69,32 @@ TEST_F(AdvertisementTest, ConcludeReturnsTrueAfterInterrupt) {
     createFile("ad.mp3");
     Advertisement ad(test_directory_);
     ad.load();
-    ad.interrupt(listener_);
-    EXPECT_TRUE(ad.conclude());
+    while (!ad.interrupt(listener_)) {}
+    EXPECT_TRUE(ad.conclude(listener_));
 }
 
 TEST_F(AdvertisementTest, ConcludeReturnsFalseWithoutInterrupt) {
     Advertisement ad(test_directory_);
-    EXPECT_FALSE(ad.conclude());
+    EXPECT_FALSE(ad.conclude(listener_));
 }
 
 TEST_F(AdvertisementTest, ConcludeReturnsFalseOnSecondCall) {
     createFile("ad.mp3");
     Advertisement ad(test_directory_);
     ad.load();
-    ad.interrupt(listener_);
-    ad.conclude();
-    EXPECT_FALSE(ad.conclude());
+    while (!ad.interrupt(listener_)) {}
+    ad.conclude(listener_);
+    EXPECT_FALSE(ad.conclude(listener_));
 }
 
 TEST_F(AdvertisementTest, InterruptAfterConcludeWorks) {
     createFile("ad.mp3");
     Advertisement ad(test_directory_);
     ad.load();
-    ad.interrupt(listener_);
-    ad.conclude();
-    EXPECT_TRUE(ad.interrupt(listener_));
-}
-
-TEST_F(AdvertisementTest, ScheduleReturnsBool) {
-    bool result = Advertisement::isScheduled();
-    EXPECT_TRUE(result == true || result == false);
-}
-
-TEST_F(AdvertisementTest, ScheduleProducesVariation) {
-    int trueCount = 0;
-    for (int i = 0; i < 1000; i++) {
-        if (Advertisement::isScheduled()) trueCount++;
-    }
-    EXPECT_GT(trueCount, 0);
-    EXPECT_LT(trueCount, 1000);
+    while (!ad.interrupt(listener_)) {}
+    ad.conclude(listener_);
+    while (!ad.interrupt(listener_)) {}
+    EXPECT_TRUE(ad.conclude(listener_));
 }
 
 TEST_F(AdvertisementTest, LoadMixedFiles) {
@@ -107,14 +104,19 @@ TEST_F(AdvertisementTest, LoadMixedFiles) {
     createFile("image.jpg");
     Advertisement ad(test_directory_);
     ad.load();
-    EXPECT_TRUE(ad.interrupt(listener_));
+    bool interrupted = false;
+    for (int i = 0; i < 100 && !interrupted; i++) {
+        interrupted = ad.interrupt(listener_);
+        if (interrupted) ad.conclude(listener_);
+    }
+    EXPECT_TRUE(interrupted);
 }
 
 TEST_F(AdvertisementTest, InterruptPlaysFromLoadedAds) {
     createFile("only_ad.mp3");
     Advertisement ad(test_directory_);
     ad.load();
-    ad.interrupt(listener_);
+    while (!ad.interrupt(listener_)) {}
     EXPECT_TRUE(listener_.wasStarted());
 }
 
@@ -122,15 +124,15 @@ TEST_F(AdvertisementTest, MultipleInterruptsAllStart) {
     createFile("ad.mp3");
     Advertisement ad(test_directory_);
     ad.load();
-    ad.interrupt(listener_);
-    ad.conclude();
-    ad.interrupt(listener_);
+    while (!ad.interrupt(listener_)) {}
+    ad.conclude(listener_);
+    while (!ad.interrupt(listener_)) {}
     EXPECT_TRUE(listener_.wasStarted());
 }
 
 TEST_F(AdvertisementTest, ConcludeWithoutLoadReturnsFalse) {
     Advertisement ad(test_directory_);
-    EXPECT_FALSE(ad.conclude());
+    EXPECT_FALSE(ad.conclude(listener_));
 }
 
 TEST_F(AdvertisementTest, LoadMultipleMp3Files) {
@@ -139,7 +141,12 @@ TEST_F(AdvertisementTest, LoadMultipleMp3Files) {
     }
     Advertisement ad(test_directory_);
     ad.load();
-    EXPECT_TRUE(ad.interrupt(listener_));
+    bool interrupted = false;
+    for (int i = 0; i < 100 && !interrupted; i++) {
+        interrupted = ad.interrupt(listener_);
+        if (interrupted) ad.conclude(listener_);
+    }
+    EXPECT_TRUE(interrupted);
 }
 
 TEST_F(AdvertisementTest, InterruptDoesNotStartWhenEmpty) {
@@ -153,5 +160,25 @@ TEST_F(AdvertisementTest, LoadWavFiles) {
     createFile("sound.wav");
     Advertisement ad(test_directory_);
     ad.load();
-    EXPECT_TRUE(ad.interrupt(listener_));
+    bool interrupted = false;
+    for (int i = 0; i < 100 && !interrupted; i++) {
+        interrupted = ad.interrupt(listener_);
+        if (interrupted) ad.conclude(listener_);
+    }
+    EXPECT_TRUE(interrupted);
+}
+
+TEST_F(AdvertisementTest, InterruptProducesVariation) {
+    createFile("ad.mp3");
+    Advertisement ad(test_directory_);
+    ad.load();
+    int trueCount = 0;
+    for (int i = 0; i < 1000; i++) {
+        if (ad.interrupt(listener_)) {
+            trueCount++;
+            ad.conclude(listener_);
+        }
+    }
+    EXPECT_GT(trueCount, 0);
+    EXPECT_LT(trueCount, 1000);
 }

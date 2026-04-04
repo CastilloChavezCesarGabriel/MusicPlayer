@@ -1,5 +1,6 @@
 #include "QtSortHeader.h"
 #include <QHBoxLayout>
+#include <QWidget>
 
 QtSortHeader::QtSortHeader(QWidget* parent)
     : QWidget(parent) {

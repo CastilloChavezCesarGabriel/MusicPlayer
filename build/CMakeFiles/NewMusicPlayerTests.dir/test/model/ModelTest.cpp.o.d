@@ -880,7 +880,6 @@ CMakeFiles/NewMusicPlayerTests.dir/test/model/ModelTest.cpp.o: \
   /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/model/../../model/SortingAlgorithm.h \
   /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/model/../../model/IPlaybackListener.h \
   /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/model/../../model/Advertisement.h \
-  /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/model/../../model/Channel.h \
   /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/model/../../model/PlaybackNotifier.h \
   /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/model/../MockPlaybackListener.h \
   /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/model/../TestPlaylistVisitor.h \

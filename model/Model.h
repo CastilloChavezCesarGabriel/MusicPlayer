@@ -4,7 +4,6 @@
 #include "Playlist.h"
 #include "Advertisement.h"
 #include "MusicLibrary.h"
-#include "Channel.h"
 #include "PlaybackNotifier.h"
 #include "IPlaylistVisitor.h"
 
@@ -34,10 +33,8 @@ public:
     void search(const std::string& query, IPlaylistVisitor& visitor) const;
 
 private:
-    bool validate(const std::string& filePath);
     void broadcast();
     void refresh();
-    void resume();
 };
 
 #endif //MODEL_H

@@ -1210,7 +1210,6 @@ CMakeFiles/NewMusicPlayer.dir/main.cpp.o: \
   /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/SortingAlgorithm.h \
   /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/IPlaybackListener.h \
   /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/Advertisement.h \
-  /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/Channel.h \
   /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/PlaybackNotifier.h \
   /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/adapters/qt/QtView.h \
   /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/adapters/qt/../../view/IPlayerView.h \

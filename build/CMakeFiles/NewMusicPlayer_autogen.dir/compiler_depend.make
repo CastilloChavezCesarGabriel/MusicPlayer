@@ -986,6 +986,8 @@ NewMusicPlayer_autogen/timestamp: /Applications/Xcode.app/Contents/Developer/Pla
   /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/Model.h \
   /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/MusicLibrary.cpp \
   /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/MusicLibrary.h \
+  /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/PlaybackNotifier.cpp \
+  /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/PlaybackNotifier.h \
   /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/Playlist.cpp \
   /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/Playlist.h \
   /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/QuickSort.cpp \
@@ -2229,6 +2231,8 @@ NewMusicPlayer_autogen/timestamp: /Applications/Xcode.app/Contents/Developer/Pla
 /opt/homebrew/Cellar/qtbase/6.9.3_1/lib/QtGui.framework/Versions/A/Headers/qtextformat.h:
 
 /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/QuickSort.cpp:
+
+/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/PlaybackNotifier.h:
 
 /opt/homebrew/lib/cmake/Qt6NetworkPrivate/Qt6NetworkPrivateConfigVersionImpl.cmake:
 
@@ -4695,6 +4699,8 @@ CMakeFiles/4.0.1/CMakeCCompiler.cmake:
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/fill_n.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/common_reference.h:
+
+/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/PlaybackNotifier.cpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/reverse.h:
 

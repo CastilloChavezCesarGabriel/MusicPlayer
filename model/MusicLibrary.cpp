@@ -26,6 +26,13 @@ std::vector<Song> MusicLibrary::load() const {
     return songs;
 }
 
+std::string MusicLibrary::validate(const std::string& filePath) const {
+    if (filePath.empty() || !isSupported(filePath)) return "Unsupported file type.";
+    const std::string filename = std::filesystem::path(filePath).filename().string();
+    if (contains(filename)) return "This song already exists.";
+    return "";
+}
+
 Song MusicLibrary::import(const std::string& sourcePath) const {
     const std::filesystem::path source(sourcePath);
     const std::string filename = source.filename().string();

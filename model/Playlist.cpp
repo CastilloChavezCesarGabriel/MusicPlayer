@@ -26,7 +26,7 @@ void Playlist::sort(SortingAlgorithm& criteria) {
         return;
     }
 
-    Song current = songs_[current_song_];
+    const Song current = songs_[current_song_];
     criteria.sort(songs_);
 
     for (int i = 0; i < songs_.size(); i++) {

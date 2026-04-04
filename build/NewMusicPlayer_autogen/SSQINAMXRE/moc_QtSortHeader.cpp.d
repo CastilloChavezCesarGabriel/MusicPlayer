@@ -1096,7 +1096,6 @@
   /opt/homebrew/Cellar/qtbase/6.9.3_1/lib/QtGui.framework/Versions/A/Headers/qtransform.h \
   /opt/homebrew/Cellar/qtbase/6.9.3_1/lib/QtGui.framework/Versions/A/Headers/qwindowdefs.h \
   /opt/homebrew/Cellar/qtbase/6.9.3_1/lib/QtWidgets.framework/Versions/A/Headers/QPushButton \
-  /opt/homebrew/Cellar/qtbase/6.9.3_1/lib/QtWidgets.framework/Versions/A/Headers/QWidget \
   /opt/homebrew/Cellar/qtbase/6.9.3_1/lib/QtWidgets.framework/Versions/A/Headers/qabstractbutton.h \
   /opt/homebrew/Cellar/qtbase/6.9.3_1/lib/QtWidgets.framework/Versions/A/Headers/qpushbutton.h \
   /opt/homebrew/Cellar/qtbase/6.9.3_1/lib/QtWidgets.framework/Versions/A/Headers/qsizepolicy.h \

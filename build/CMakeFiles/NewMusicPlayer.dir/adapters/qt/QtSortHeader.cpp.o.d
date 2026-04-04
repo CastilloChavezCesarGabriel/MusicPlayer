@@ -1,8 +1,8 @@
 CMakeFiles/NewMusicPlayer.dir/adapters/qt/QtSortHeader.cpp.o: \
   /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/adapters/qt/QtSortHeader.cpp \
   /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/adapters/qt/QtSortHeader.h \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/QWidget \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/qwidget.h \
+  /opt/homebrew/lib/QtWidgets.framework/Headers/QPushButton \
+  /opt/homebrew/lib/QtWidgets.framework/Headers/qpushbutton.h \
   /opt/homebrew/lib/QtWidgets.framework/Headers/qtwidgetsglobal.h \
   /opt/homebrew/lib/QtGui.framework/Headers/qtguiglobal.h \
   /opt/homebrew/lib/QtCore.framework/Headers/qglobal.h \
@@ -796,8 +796,9 @@ CMakeFiles/NewMusicPlayer.dir/adapters/qt/QtSortHeader.cpp.o: \
   /opt/homebrew/lib/QtGui.framework/Headers/qtguiexports.h \
   /opt/homebrew/lib/QtWidgets.framework/Headers/qtwidgets-config.h \
   /opt/homebrew/lib/QtWidgets.framework/Headers/qtwidgetsexports.h \
-  /opt/homebrew/lib/QtGui.framework/Headers/qwindowdefs.h \
-  /opt/homebrew/lib/QtCore.framework/Headers/qobjectdefs.h \
+  /opt/homebrew/lib/QtWidgets.framework/Headers/qabstractbutton.h \
+  /opt/homebrew/lib/QtGui.framework/Headers/qicon.h \
+  /opt/homebrew/lib/QtCore.framework/Headers/qsize.h \
   /opt/homebrew/lib/QtCore.framework/Headers/qnamespace.h \
   /opt/homebrew/lib/QtCore.framework/Headers/qcompare.h \
   /opt/homebrew/lib/QtCore.framework/Headers/qstdlibdetection.h \
@@ -872,22 +873,7 @@ CMakeFiles/NewMusicPlayer.dir/adapters/qt/QtSortHeader.cpp.o: \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__vector/container_traits.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__vector/swap.h \
   /opt/homebrew/lib/QtCore.framework/Headers/qtmetamacros.h \
-  /opt/homebrew/lib/QtCore.framework/Headers/qobjectdefs_impl.h \
-  /opt/homebrew/lib/QtCore.framework/Headers/qfunctionaltools_impl.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/memory \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__memory/align.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__memory/inout_ptr.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__memory/is_sufficiently_aligned.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__memory/out_ptr.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__memory/raw_storage_iterator.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__memory/temporary_buffer.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__memory/assume_aligned.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__memory/concepts.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__memory/ranges_construct_at.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__memory/ranges_destroy.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__memory/ranges_uninitialized_algorithms.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__memory/uses_allocator_construction.h \
-  /opt/homebrew/lib/QtCore.framework/Headers/qobject.h \
+  /opt/homebrew/lib/QtCore.framework/Headers/qhashfunctions.h \
   /opt/homebrew/lib/QtCore.framework/Headers/qstring.h \
   /opt/homebrew/lib/QtCore.framework/Headers/qchar.h \
   /opt/homebrew/lib/QtCore.framework/Headers/qstringview.h \
@@ -912,6 +898,19 @@ CMakeFiles/NewMusicPlayer.dir/adapters/qt/QtSortHeader.cpp.o: \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__iterator/ostreambuf_iterator.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__iterator/common_iterator.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__iterator/counted_iterator.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/memory \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__memory/align.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__memory/inout_ptr.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__memory/is_sufficiently_aligned.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__memory/out_ptr.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__memory/raw_storage_iterator.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__memory/temporary_buffer.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__memory/assume_aligned.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__memory/concepts.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__memory/ranges_construct_at.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__memory/ranges_destroy.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__memory/ranges_uninitialized_algorithms.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__memory/uses_allocator_construction.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/new \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__new/new_handler.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__new/interference_size.h \
@@ -937,8 +936,6 @@ CMakeFiles/NewMusicPlayer.dir/adapters/qt/QtSortHeader.cpp.o: \
   /opt/homebrew/lib/QtCore.framework/Headers/qstringbuilder.h \
   /opt/homebrew/lib/QtCore.framework/Headers/qstringconverter.h \
   /opt/homebrew/lib/QtCore.framework/Headers/qstringconverter_base.h \
-  /opt/homebrew/lib/QtCore.framework/Headers/qlist.h \
-  /opt/homebrew/lib/QtCore.framework/Headers/qhashfunctions.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/numeric \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__numeric/accumulate.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__numeric/adjacent_difference.h \
@@ -955,15 +952,45 @@ CMakeFiles/NewMusicPlayer.dir/adapters/qt/QtSortHeader.cpp.o: \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__numeric/transform_reduce.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__numeric/midpoint.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__numeric/saturation_arithmetic.h \
+  /opt/homebrew/lib/QtCore.framework/Headers/qmargins.h \
+  /opt/homebrew/lib/QtCore.framework/Headers/q23utility.h \
+  /opt/homebrew/lib/QtCore.framework/Headers/q20utility.h \
+  /opt/homebrew/lib/QtCore.framework/Headers/qlist.h \
   /opt/homebrew/lib/QtCore.framework/Headers/qiterator.h \
   /opt/homebrew/lib/QtCore.framework/Headers/qbytearraylist.h \
   /opt/homebrew/lib/QtCore.framework/Headers/qstringlist.h \
   /opt/homebrew/lib/QtCore.framework/Headers/qalgorithms.h \
   /opt/homebrew/lib/QtCore.framework/Headers/qstringmatcher.h \
-  /opt/homebrew/lib/QtCore.framework/Headers/qscopedpointer.h \
-  /opt/homebrew/lib/QtCore.framework/Headers/qmetatype.h \
+  /opt/homebrew/lib/QtGui.framework/Headers/qpixmap.h \
+  /opt/homebrew/lib/QtGui.framework/Headers/qpaintdevice.h \
+  /opt/homebrew/lib/QtGui.framework/Headers/qwindowdefs.h \
+  /opt/homebrew/lib/QtCore.framework/Headers/qobjectdefs.h \
+  /opt/homebrew/lib/QtCore.framework/Headers/qobjectdefs_impl.h \
+  /opt/homebrew/lib/QtCore.framework/Headers/qfunctionaltools_impl.h \
+  /opt/homebrew/lib/QtCore.framework/Headers/qrect.h \
+  /opt/homebrew/lib/QtCore.framework/Headers/qpoint.h \
+  /opt/homebrew/lib/QtGui.framework/Headers/qcolor.h \
+  /opt/homebrew/lib/QtGui.framework/Headers/qrgb.h \
+  /opt/homebrew/lib/QtGui.framework/Headers/qrgba64.h \
+  /opt/homebrew/lib/QtCore.framework/Headers/qshareddata.h \
+  /opt/homebrew/lib/QtGui.framework/Headers/qimage.h \
+  /opt/homebrew/lib/QtGui.framework/Headers/qpixelformat.h \
+  /opt/homebrew/lib/QtGui.framework/Headers/qtransform.h \
+  /opt/homebrew/lib/QtGui.framework/Headers/qpolygon.h \
+  /opt/homebrew/lib/QtGui.framework/Headers/qregion.h \
   /opt/homebrew/lib/QtCore.framework/Headers/qdatastream.h \
+  /opt/homebrew/lib/QtCore.framework/Headers/qscopedpointer.h \
   /opt/homebrew/lib/QtCore.framework/Headers/qiodevicebase.h \
+  /opt/homebrew/lib/QtCore.framework/Headers/qspan.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/cassert \
+  /opt/homebrew/lib/QtCore.framework/Headers/q20iterator.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/span \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__fwd/span.h \
+  /opt/homebrew/lib/QtCore.framework/Headers/qline.h \
+  /opt/homebrew/lib/QtGui.framework/Headers/qkeysequence.h \
+  /opt/homebrew/lib/QtWidgets.framework/Headers/qwidget.h \
+  /opt/homebrew/lib/QtCore.framework/Headers/qobject.h \
+  /opt/homebrew/lib/QtCore.framework/Headers/qmetatype.h \
   /opt/homebrew/lib/QtCore.framework/Headers/qfloat16.h \
   /opt/homebrew/lib/QtCore.framework/Headers/qmath.h \
   /opt/homebrew/lib/QtCore.framework/Headers/qtformat_impl.h \
@@ -1134,32 +1161,7 @@ CMakeFiles/NewMusicPlayer.dir/adapters/qt/QtSortHeader.cpp.o: \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__locale_dir/wbuffer_convert.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__locale_dir/wstring_convert.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__chrono/parser_std_format_spec.h \
-  /opt/homebrew/lib/QtCore.framework/Headers/qmargins.h \
-  /opt/homebrew/lib/QtCore.framework/Headers/q23utility.h \
-  /opt/homebrew/lib/QtCore.framework/Headers/q20utility.h \
   /opt/homebrew/lib/QtGui.framework/Headers/qaction.h \
-  /opt/homebrew/lib/QtGui.framework/Headers/qkeysequence.h \
-  /opt/homebrew/lib/QtGui.framework/Headers/qicon.h \
-  /opt/homebrew/lib/QtCore.framework/Headers/qsize.h \
-  /opt/homebrew/lib/QtGui.framework/Headers/qpixmap.h \
-  /opt/homebrew/lib/QtGui.framework/Headers/qpaintdevice.h \
-  /opt/homebrew/lib/QtCore.framework/Headers/qrect.h \
-  /opt/homebrew/lib/QtCore.framework/Headers/qpoint.h \
-  /opt/homebrew/lib/QtGui.framework/Headers/qcolor.h \
-  /opt/homebrew/lib/QtGui.framework/Headers/qrgb.h \
-  /opt/homebrew/lib/QtGui.framework/Headers/qrgba64.h \
-  /opt/homebrew/lib/QtCore.framework/Headers/qshareddata.h \
-  /opt/homebrew/lib/QtGui.framework/Headers/qimage.h \
-  /opt/homebrew/lib/QtGui.framework/Headers/qpixelformat.h \
-  /opt/homebrew/lib/QtGui.framework/Headers/qtransform.h \
-  /opt/homebrew/lib/QtGui.framework/Headers/qpolygon.h \
-  /opt/homebrew/lib/QtGui.framework/Headers/qregion.h \
-  /opt/homebrew/lib/QtCore.framework/Headers/qspan.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/cassert \
-  /opt/homebrew/lib/QtCore.framework/Headers/q20iterator.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/span \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__fwd/span.h \
-  /opt/homebrew/lib/QtCore.framework/Headers/qline.h \
   /opt/homebrew/lib/QtCore.framework/Headers/qvariant.h \
   /opt/homebrew/lib/QtCore.framework/Headers/qdebug.h \
   /opt/homebrew/lib/QtCore.framework/Headers/qtextstream.h \
@@ -1183,11 +1185,9 @@ CMakeFiles/NewMusicPlayer.dir/adapters/qt/QtSortHeader.cpp.o: \
   /opt/homebrew/lib/QtWidgets.framework/Headers/qsizepolicy.h \
   /opt/homebrew/lib/QtGui.framework/Headers/qcursor.h \
   /opt/homebrew/lib/QtGui.framework/Headers/qbitmap.h \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/QPushButton \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/qpushbutton.h \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/qabstractbutton.h \
   /opt/homebrew/lib/QtWidgets.framework/Headers/QHBoxLayout \
   /opt/homebrew/lib/QtWidgets.framework/Headers/qboxlayout.h \
   /opt/homebrew/lib/QtWidgets.framework/Headers/qlayout.h \
   /opt/homebrew/lib/QtWidgets.framework/Headers/qlayoutitem.h \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/qgridlayout.h
+  /opt/homebrew/lib/QtWidgets.framework/Headers/qgridlayout.h \
+  /opt/homebrew/lib/QtWidgets.framework/Headers/QWidget
