@@ -1,2 +1,0 @@
-CMakeFiles/NewMusicPlayerTests.dir/NewMusicPlayerTests_autogen/mocs_compilation.cpp.o: \
-  /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/NewMusicPlayerTests_autogen/mocs_compilation.cpp

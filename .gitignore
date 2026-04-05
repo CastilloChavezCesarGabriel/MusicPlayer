@@ -1,8 +1,14 @@
-# Ignore CLion and CMake generated files
-.idea/
+# Build directories
+build/
 cmake-build-*/
 
-# Ignore compiled binaries and object files
+# IDE
+.idea/
+
+# macOS
+.DS_Store
+
+# Compiled binaries and object files
 *.o
 *.obj
 *.so
@@ -12,11 +18,16 @@ cmake-build-*/
 *.lib
 *.dylib
 
-# Ignore configuration and log files
-*.log
-*.cache
-*.cmake
+# CMake generated
+CMakeCache.txt
+CMakeFiles/
+compile_commands.json
 
-# Ignore Qt Creator files
+# Qt generated
 *.pro.user
 *.qmake.stash
+*_autogen/
+
+# Logs
+*.log
+*.cache
