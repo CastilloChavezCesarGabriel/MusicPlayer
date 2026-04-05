@@ -45,15 +45,19 @@ void QtPlaybackPanel::toggle(const bool playing) const {
     toggle_button_->setText(playing ? "\xe2\x8f\xb8" : "\xe2\x96\xb6");
 }
 
+void QtPlaybackPanel::reset(const std::string& icon) const {
+    repeat_button_->setText(QString::fromStdString(icon));
+    repeat_button_->setStyleSheet("");
+}
+
 void QtPlaybackPanel::repeat(const int mode) const {
-    if (mode == 0) {
+    if (mode == 2) {
         repeat_button_->setText("\xf0\x9f\x94\x81");
-        repeat_button_->setStyleSheet("");
-    } else if (mode == 1) {
-        repeat_button_->setText("\xf0\x9f\x94\x82");
-        repeat_button_->setStyleSheet("color: #a78bfa;");
+        repeat_button_->setStyleSheet(
+            "background-color: qlineargradient(x1:0, y1:0, x2:1, y2:1, stop:0 #a78bfa, stop:1 #7c3aed);"
+            "color: white;"
+        );
     } else {
-        repeat_button_->setText("\xf0\x9f\x94\x81");
-        repeat_button_->setStyleSheet("color: #a78bfa;");
+        reset(mode == 1 ? "\xf0\x9f\x94\x82" : "\xf0\x9f\x94\x81");
     }
 }

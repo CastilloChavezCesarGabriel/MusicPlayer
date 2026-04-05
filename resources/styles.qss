@@ -68,18 +68,7 @@ QPushButton:checked {
 }
 
 QPushButton#repeat_button {
-    background-color: transparent;
-    color: #475569;
-    padding: 8px 14px;
-}
-
-QPushButton#repeat_button:checked {
-    background-color: transparent;
-    color: #a78bfa;
-}
-
-QPushButton#repeat_button:hover {
-    background-color: #1e293b;
+    padding: 8px 17px;
 }
 
 QPushButton#toggle_button {

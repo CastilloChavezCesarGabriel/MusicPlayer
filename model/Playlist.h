@@ -36,6 +36,7 @@ public:
 
 private:
     void preserve();
+    void track();
     void locate(const Song& target);
     void notify(IPlaybackListener& listener) const;
 };

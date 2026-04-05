@@ -5,8 +5,9 @@
 #include <QPushButton>
 #include <QHBoxLayout>
 #include "../../view/IPlayerListener.h"
+#include "IWidgetSetup.h"
 
-class QtPlaybackPanel final : public QWidget {
+class QtPlaybackPanel final : public QWidget, public IWidgetSetup {
     Q_OBJECT
 private:
     IPlayerListener& player_listener_;
@@ -15,11 +16,12 @@ private:
     QPushButton* next_button_;
     QPushButton* previous_button_;
 
-    void setup();
-    void wire();
+    void reset(const std::string& icon) const;
 
 public:
-    QtPlaybackPanel(IPlayerListener& listener, QWidget* parent = nullptr);
+    explicit QtPlaybackPanel(IPlayerListener& listener, QWidget* parent = nullptr);
+    void setup() override;
+    void wire() override;
     void enable(bool state) const;
     void toggle(bool playing) const;
     void repeat(int mode) const;

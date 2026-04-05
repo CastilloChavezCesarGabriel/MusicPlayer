@@ -10,6 +10,7 @@ private:
     std::string path_;
 
     static std::string trim(const std::string& string);
+    static bool exists(const std::string& path);
 
 public:
     Song(const std::string& name, const std::string& path);

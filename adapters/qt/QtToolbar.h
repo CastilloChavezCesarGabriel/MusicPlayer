@@ -3,8 +3,9 @@
 
 #include <QWidget>
 #include <QPushButton>
+#include "IWidgetSetup.h"
 
-class QtToolbar final : public QWidget {
+class QtToolbar final : public QWidget, public IWidgetSetup {
     Q_OBJECT
 private:
     QPushButton* add_button_;
@@ -12,11 +13,10 @@ private:
     QPushButton* skip_button_;
     QPushButton* shuffle_button_;
 
-    void setup();
-    void wire();
-
 public:
     explicit QtToolbar(QWidget* parent = nullptr);
+    void setup() override;
+    void wire() override;
     void enable(bool state) const;
     void reveal(bool visible) const;
 

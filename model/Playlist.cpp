@@ -1,6 +1,7 @@
 #include "Playlist.h"
 #include <random>
 #include <algorithm>
+#include <ranges>
 
 Playlist::Playlist(MusicLibrary& musicLibrary) : music_library_(musicLibrary) {}
 
@@ -22,43 +23,33 @@ void Playlist::remove(const int index) {
 
 void Playlist::sort(SortingAlgorithm& criteria) {
     preserve();
-    if (!hasSelected()) {
-        criteria.sort(songs_);
-        return;
-    }
-    const Song current = songs_[current_song_];
     criteria.sort(songs_);
-    locate(current);
+    track();
 }
 
 void Playlist::reverse() {
     preserve();
-    if (!hasSelected()) {
-        std::ranges::reverse(songs_);
-        return;
-    }
-    const Song current = songs_[current_song_];
     std::ranges::reverse(songs_);
-    locate(current);
+    track();
 }
 
 void Playlist::restore() {
     if (custom_order_.empty()) return;
-    if (!hasSelected()) {
-        songs_ = custom_order_;
-        custom_order_.clear();
-        return;
-    }
-    const Song current = songs_[current_song_];
     songs_ = custom_order_;
     custom_order_.clear();
-    locate(current);
+    track();
 }
 
 void Playlist::preserve() {
     if (custom_order_.empty()) {
         custom_order_ = songs_;
     }
+}
+
+void Playlist::track() {
+    if (!hasSelected()) return;
+    const Song current = songs_[current_song_];
+    locate(current);
 }
 
 void Playlist::locate(const Song& target) {
