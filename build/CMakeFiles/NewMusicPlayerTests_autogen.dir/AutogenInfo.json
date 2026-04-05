@@ -512,6 +512,18 @@
 			null
 		],
 		[
+			"/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/DateSort.h",
+			"MU",
+			"NLOY5YBGEN/moc_DateSort.cpp",
+			null
+		],
+		[
+			"/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/DurationSort.h",
+			"MU",
+			"NLOY5YBGEN/moc_DurationSort.cpp",
+			null
+		],
+		[
 			"/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/IPlaybackListener.h",
 			"MU",
 			"NLOY5YBGEN/moc_IPlaybackListener.cpp",
@@ -736,6 +748,16 @@
 		],
 		[
 			"/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/Channel.cpp",
+			"MU",
+			null
+		],
+		[
+			"/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/DateSort.cpp",
+			"MU",
+			null
+		],
+		[
+			"/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/DurationSort.cpp",
 			"MU",
 			null
 		],

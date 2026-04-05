@@ -1,7 +1,5 @@
 #include "Model.h"
 #include "Channel.h"
-#include "ShellSort.h"
-#include "QuickSort.h"
 
 Model::Model(const std::string& basePath)
     : music_library_(basePath + "/music"),
@@ -100,14 +98,18 @@ void Model::shuffle() {
     refresh();
 }
 
-void Model::sort(const bool byName) {
-    if (byName) {
-        QuickSort byTitle;
-        playlist_.sort(byTitle);
-    } else {
-        ShellSort byNumber;
-        playlist_.sort(byNumber);
-    }
+void Model::sort(SortingAlgorithm& criteria) {
+    playlist_.sort(criteria);
+    refresh();
+}
+
+void Model::reverse() {
+    playlist_.reverse();
+    refresh();
+}
+
+void Model::restore() {
+    playlist_.restore();
     refresh();
 }
 

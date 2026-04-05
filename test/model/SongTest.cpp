@@ -63,34 +63,6 @@ TEST_F(SongTest, ParseReturnsEmptyForWhitespaceOnly) {
     EXPECT_EQ("", Song::parse("   "));
 }
 
-TEST_F(SongTest, OrderExtractsNumberFromParentheses) {
-    EXPECT_EQ(3, Song::order("(3) Third Song.mp3"));
-}
-
-TEST_F(SongTest, OrderExtractsNumberFromBrackets) {
-    EXPECT_EQ(5, Song::order("[5] Fifth Song.mp3"));
-}
-
-TEST_F(SongTest, OrderReturnsZeroWhenNoNumber) {
-    EXPECT_EQ(0, Song::order("Hello.wav"));
-}
-
-TEST_F(SongTest, OrderExtractsSingleDigit) {
-    EXPECT_EQ(1, Song::order("(1) First.mp3"));
-}
-
-TEST_F(SongTest, OrderExtractsMultiDigit) {
-    EXPECT_EQ(42, Song::order("(42) Song.mp3"));
-}
-
-TEST_F(SongTest, OrderHandlesLeadingSpaces) {
-    EXPECT_EQ(7, Song::order("  (7) Song.mp3"));
-}
-
-TEST_F(SongTest, OrderHandlesNumberWithoutParens) {
-    EXPECT_EQ(3, Song::order("3 Song.mp3"));
-}
-
 TEST_F(SongTest, AcceptMultipleSongsToSameVisitor) {
     Song first("A.mp3", "/a");
     Song second("B.mp3", "/b");
@@ -123,10 +95,6 @@ TEST_F(SongTest, ConstructionWithEmptyPath) {
     Song song("song.mp3", "");
     song.accept(visitor_);
     EXPECT_TRUE(visitor_.hasPath(""));
-}
-
-TEST_F(SongTest, OrderReturnsZeroForEmptyString) {
-    EXPECT_EQ(0, Song::order(""));
 }
 
 TEST_F(SongTest, ParseHandlesEmptyString) {

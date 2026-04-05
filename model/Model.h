@@ -28,7 +28,9 @@ public:
     void insert(const std::string& filePath);
     void remove(int index);
     void shuffle();
-    void sort(bool byName);
+    void sort(SortingAlgorithm& criteria);
+    void reverse();
+    void restore();
     void accept(IPlaylistVisitor& visitor) const;
     void search(const std::string& query, IPlaylistVisitor& visitor) const;
 

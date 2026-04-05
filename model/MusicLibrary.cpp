@@ -45,8 +45,6 @@ Song MusicLibrary::import(const std::string& sourcePath) const {
     return Song(filename, destination.string());
 }
 
-
-
 void MusicLibrary::visit(const std::string&, const std::string& path) {
     std::filesystem::remove(path);
 }

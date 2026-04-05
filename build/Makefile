@@ -536,6 +536,78 @@ controller/Controller.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/NewMusicPlayer.dir/build.make CMakeFiles/NewMusicPlayer.dir/controller/Controller.cpp.s
 .PHONY : controller/Controller.cpp.s
 
+controller/CustomMode.o: controller/CustomMode.cpp.o
+.PHONY : controller/CustomMode.o
+
+# target to build an object file
+controller/CustomMode.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NewMusicPlayer.dir/build.make CMakeFiles/NewMusicPlayer.dir/controller/CustomMode.cpp.o
+.PHONY : controller/CustomMode.cpp.o
+
+controller/CustomMode.i: controller/CustomMode.cpp.i
+.PHONY : controller/CustomMode.i
+
+# target to preprocess a source file
+controller/CustomMode.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NewMusicPlayer.dir/build.make CMakeFiles/NewMusicPlayer.dir/controller/CustomMode.cpp.i
+.PHONY : controller/CustomMode.cpp.i
+
+controller/CustomMode.s: controller/CustomMode.cpp.s
+.PHONY : controller/CustomMode.s
+
+# target to generate assembly for a file
+controller/CustomMode.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NewMusicPlayer.dir/build.make CMakeFiles/NewMusicPlayer.dir/controller/CustomMode.cpp.s
+.PHONY : controller/CustomMode.cpp.s
+
+controller/DateMode.o: controller/DateMode.cpp.o
+.PHONY : controller/DateMode.o
+
+# target to build an object file
+controller/DateMode.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NewMusicPlayer.dir/build.make CMakeFiles/NewMusicPlayer.dir/controller/DateMode.cpp.o
+.PHONY : controller/DateMode.cpp.o
+
+controller/DateMode.i: controller/DateMode.cpp.i
+.PHONY : controller/DateMode.i
+
+# target to preprocess a source file
+controller/DateMode.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NewMusicPlayer.dir/build.make CMakeFiles/NewMusicPlayer.dir/controller/DateMode.cpp.i
+.PHONY : controller/DateMode.cpp.i
+
+controller/DateMode.s: controller/DateMode.cpp.s
+.PHONY : controller/DateMode.s
+
+# target to generate assembly for a file
+controller/DateMode.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NewMusicPlayer.dir/build.make CMakeFiles/NewMusicPlayer.dir/controller/DateMode.cpp.s
+.PHONY : controller/DateMode.cpp.s
+
+controller/DurationMode.o: controller/DurationMode.cpp.o
+.PHONY : controller/DurationMode.o
+
+# target to build an object file
+controller/DurationMode.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NewMusicPlayer.dir/build.make CMakeFiles/NewMusicPlayer.dir/controller/DurationMode.cpp.o
+.PHONY : controller/DurationMode.cpp.o
+
+controller/DurationMode.i: controller/DurationMode.cpp.i
+.PHONY : controller/DurationMode.i
+
+# target to preprocess a source file
+controller/DurationMode.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NewMusicPlayer.dir/build.make CMakeFiles/NewMusicPlayer.dir/controller/DurationMode.cpp.i
+.PHONY : controller/DurationMode.cpp.i
+
+controller/DurationMode.s: controller/DurationMode.cpp.s
+.PHONY : controller/DurationMode.s
+
+# target to generate assembly for a file
+controller/DurationMode.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NewMusicPlayer.dir/build.make CMakeFiles/NewMusicPlayer.dir/controller/DurationMode.cpp.s
+.PHONY : controller/DurationMode.cpp.s
+
 controller/PlaylistRenderer.o: controller/PlaylistRenderer.cpp.o
 .PHONY : controller/PlaylistRenderer.o
 
@@ -559,6 +631,78 @@ controller/PlaylistRenderer.s: controller/PlaylistRenderer.cpp.s
 controller/PlaylistRenderer.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/NewMusicPlayer.dir/build.make CMakeFiles/NewMusicPlayer.dir/controller/PlaylistRenderer.cpp.s
 .PHONY : controller/PlaylistRenderer.cpp.s
+
+controller/SortMode.o: controller/SortMode.cpp.o
+.PHONY : controller/SortMode.o
+
+# target to build an object file
+controller/SortMode.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NewMusicPlayer.dir/build.make CMakeFiles/NewMusicPlayer.dir/controller/SortMode.cpp.o
+.PHONY : controller/SortMode.cpp.o
+
+controller/SortMode.i: controller/SortMode.cpp.i
+.PHONY : controller/SortMode.i
+
+# target to preprocess a source file
+controller/SortMode.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NewMusicPlayer.dir/build.make CMakeFiles/NewMusicPlayer.dir/controller/SortMode.cpp.i
+.PHONY : controller/SortMode.cpp.i
+
+controller/SortMode.s: controller/SortMode.cpp.s
+.PHONY : controller/SortMode.s
+
+# target to generate assembly for a file
+controller/SortMode.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NewMusicPlayer.dir/build.make CMakeFiles/NewMusicPlayer.dir/controller/SortMode.cpp.s
+.PHONY : controller/SortMode.cpp.s
+
+controller/TitleAscending.o: controller/TitleAscending.cpp.o
+.PHONY : controller/TitleAscending.o
+
+# target to build an object file
+controller/TitleAscending.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NewMusicPlayer.dir/build.make CMakeFiles/NewMusicPlayer.dir/controller/TitleAscending.cpp.o
+.PHONY : controller/TitleAscending.cpp.o
+
+controller/TitleAscending.i: controller/TitleAscending.cpp.i
+.PHONY : controller/TitleAscending.i
+
+# target to preprocess a source file
+controller/TitleAscending.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NewMusicPlayer.dir/build.make CMakeFiles/NewMusicPlayer.dir/controller/TitleAscending.cpp.i
+.PHONY : controller/TitleAscending.cpp.i
+
+controller/TitleAscending.s: controller/TitleAscending.cpp.s
+.PHONY : controller/TitleAscending.s
+
+# target to generate assembly for a file
+controller/TitleAscending.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NewMusicPlayer.dir/build.make CMakeFiles/NewMusicPlayer.dir/controller/TitleAscending.cpp.s
+.PHONY : controller/TitleAscending.cpp.s
+
+controller/TitleDescending.o: controller/TitleDescending.cpp.o
+.PHONY : controller/TitleDescending.o
+
+# target to build an object file
+controller/TitleDescending.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NewMusicPlayer.dir/build.make CMakeFiles/NewMusicPlayer.dir/controller/TitleDescending.cpp.o
+.PHONY : controller/TitleDescending.cpp.o
+
+controller/TitleDescending.i: controller/TitleDescending.cpp.i
+.PHONY : controller/TitleDescending.i
+
+# target to preprocess a source file
+controller/TitleDescending.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NewMusicPlayer.dir/build.make CMakeFiles/NewMusicPlayer.dir/controller/TitleDescending.cpp.i
+.PHONY : controller/TitleDescending.cpp.i
+
+controller/TitleDescending.s: controller/TitleDescending.cpp.s
+.PHONY : controller/TitleDescending.s
+
+# target to generate assembly for a file
+controller/TitleDescending.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NewMusicPlayer.dir/build.make CMakeFiles/NewMusicPlayer.dir/controller/TitleDescending.cpp.s
+.PHONY : controller/TitleDescending.cpp.s
 
 main.o: main.cpp.o
 .PHONY : main.o
@@ -637,6 +781,60 @@ model/Channel.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/NewMusicPlayer.dir/build.make CMakeFiles/NewMusicPlayer.dir/model/Channel.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/NewMusicPlayerTests.dir/build.make CMakeFiles/NewMusicPlayerTests.dir/model/Channel.cpp.s
 .PHONY : model/Channel.cpp.s
+
+model/DateSort.o: model/DateSort.cpp.o
+.PHONY : model/DateSort.o
+
+# target to build an object file
+model/DateSort.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NewMusicPlayer.dir/build.make CMakeFiles/NewMusicPlayer.dir/model/DateSort.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NewMusicPlayerTests.dir/build.make CMakeFiles/NewMusicPlayerTests.dir/model/DateSort.cpp.o
+.PHONY : model/DateSort.cpp.o
+
+model/DateSort.i: model/DateSort.cpp.i
+.PHONY : model/DateSort.i
+
+# target to preprocess a source file
+model/DateSort.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NewMusicPlayer.dir/build.make CMakeFiles/NewMusicPlayer.dir/model/DateSort.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NewMusicPlayerTests.dir/build.make CMakeFiles/NewMusicPlayerTests.dir/model/DateSort.cpp.i
+.PHONY : model/DateSort.cpp.i
+
+model/DateSort.s: model/DateSort.cpp.s
+.PHONY : model/DateSort.s
+
+# target to generate assembly for a file
+model/DateSort.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NewMusicPlayer.dir/build.make CMakeFiles/NewMusicPlayer.dir/model/DateSort.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NewMusicPlayerTests.dir/build.make CMakeFiles/NewMusicPlayerTests.dir/model/DateSort.cpp.s
+.PHONY : model/DateSort.cpp.s
+
+model/DurationSort.o: model/DurationSort.cpp.o
+.PHONY : model/DurationSort.o
+
+# target to build an object file
+model/DurationSort.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NewMusicPlayer.dir/build.make CMakeFiles/NewMusicPlayer.dir/model/DurationSort.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NewMusicPlayerTests.dir/build.make CMakeFiles/NewMusicPlayerTests.dir/model/DurationSort.cpp.o
+.PHONY : model/DurationSort.cpp.o
+
+model/DurationSort.i: model/DurationSort.cpp.i
+.PHONY : model/DurationSort.i
+
+# target to preprocess a source file
+model/DurationSort.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NewMusicPlayer.dir/build.make CMakeFiles/NewMusicPlayer.dir/model/DurationSort.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NewMusicPlayerTests.dir/build.make CMakeFiles/NewMusicPlayerTests.dir/model/DurationSort.cpp.i
+.PHONY : model/DurationSort.cpp.i
+
+model/DurationSort.s: model/DurationSort.cpp.s
+.PHONY : model/DurationSort.s
+
+# target to generate assembly for a file
+model/DurationSort.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NewMusicPlayer.dir/build.make CMakeFiles/NewMusicPlayer.dir/model/DurationSort.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NewMusicPlayerTests.dir/build.make CMakeFiles/NewMusicPlayerTests.dir/model/DurationSort.cpp.s
+.PHONY : model/DurationSort.cpp.s
 
 model/Model.o: model/Model.cpp.o
 .PHONY : model/Model.o
@@ -1291,9 +1489,27 @@ help:
 	@echo "... controller/Controller.o"
 	@echo "... controller/Controller.i"
 	@echo "... controller/Controller.s"
+	@echo "... controller/CustomMode.o"
+	@echo "... controller/CustomMode.i"
+	@echo "... controller/CustomMode.s"
+	@echo "... controller/DateMode.o"
+	@echo "... controller/DateMode.i"
+	@echo "... controller/DateMode.s"
+	@echo "... controller/DurationMode.o"
+	@echo "... controller/DurationMode.i"
+	@echo "... controller/DurationMode.s"
 	@echo "... controller/PlaylistRenderer.o"
 	@echo "... controller/PlaylistRenderer.i"
 	@echo "... controller/PlaylistRenderer.s"
+	@echo "... controller/SortMode.o"
+	@echo "... controller/SortMode.i"
+	@echo "... controller/SortMode.s"
+	@echo "... controller/TitleAscending.o"
+	@echo "... controller/TitleAscending.i"
+	@echo "... controller/TitleAscending.s"
+	@echo "... controller/TitleDescending.o"
+	@echo "... controller/TitleDescending.i"
+	@echo "... controller/TitleDescending.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
@@ -1303,6 +1519,12 @@ help:
 	@echo "... model/Channel.o"
 	@echo "... model/Channel.i"
 	@echo "... model/Channel.s"
+	@echo "... model/DateSort.o"
+	@echo "... model/DateSort.i"
+	@echo "... model/DateSort.s"
+	@echo "... model/DurationSort.o"
+	@echo "... model/DurationSort.i"
+	@echo "... model/DurationSort.s"
 	@echo "... model/Model.o"
 	@echo "... model/Model.i"
 	@echo "... model/Model.s"

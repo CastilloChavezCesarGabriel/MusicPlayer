@@ -25,6 +25,18 @@
 },
 {
   "directory": "/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build",
+  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_MULTIMEDIA_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB -isystem /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/NewMusicPlayer_autogen/include -isystem /opt/homebrew/lib/QtCore.framework/Headers -iframework /opt/homebrew/lib -isystem /opt/homebrew/share/qt/mkspecs/macx-clang -isystem /opt/homebrew/include -isystem /opt/homebrew/lib/QtGui.framework/Headers -isystem /opt/homebrew/lib/QtWidgets.framework/Headers -isystem /opt/homebrew/lib/QtMultimedia.framework/Headers -isystem /opt/homebrew/lib/QtNetwork.framework/Headers -std=gnu++2b -arch arm64 -o CMakeFiles/NewMusicPlayer.dir/model/DurationSort.cpp.o -c /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/DurationSort.cpp",
+  "file": "/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/DurationSort.cpp",
+  "output": "CMakeFiles/NewMusicPlayer.dir/model/DurationSort.cpp.o"
+},
+{
+  "directory": "/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build",
+  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_MULTIMEDIA_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB -isystem /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/NewMusicPlayer_autogen/include -isystem /opt/homebrew/lib/QtCore.framework/Headers -iframework /opt/homebrew/lib -isystem /opt/homebrew/share/qt/mkspecs/macx-clang -isystem /opt/homebrew/include -isystem /opt/homebrew/lib/QtGui.framework/Headers -isystem /opt/homebrew/lib/QtWidgets.framework/Headers -isystem /opt/homebrew/lib/QtMultimedia.framework/Headers -isystem /opt/homebrew/lib/QtNetwork.framework/Headers -std=gnu++2b -arch arm64 -o CMakeFiles/NewMusicPlayer.dir/model/DateSort.cpp.o -c /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/DateSort.cpp",
+  "file": "/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/DateSort.cpp",
+  "output": "CMakeFiles/NewMusicPlayer.dir/model/DateSort.cpp.o"
+},
+{
+  "directory": "/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build",
   "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_MULTIMEDIA_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB -isystem /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/NewMusicPlayer_autogen/include -isystem /opt/homebrew/lib/QtCore.framework/Headers -iframework /opt/homebrew/lib -isystem /opt/homebrew/share/qt/mkspecs/macx-clang -isystem /opt/homebrew/include -isystem /opt/homebrew/lib/QtGui.framework/Headers -isystem /opt/homebrew/lib/QtWidgets.framework/Headers -isystem /opt/homebrew/lib/QtMultimedia.framework/Headers -isystem /opt/homebrew/lib/QtNetwork.framework/Headers -std=gnu++2b -arch arm64 -o CMakeFiles/NewMusicPlayer.dir/model/QuickSort.cpp.o -c /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/QuickSort.cpp",
   "file": "/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/QuickSort.cpp",
   "output": "CMakeFiles/NewMusicPlayer.dir/model/QuickSort.cpp.o"
@@ -70,6 +82,42 @@
   "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_MULTIMEDIA_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB -isystem /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/NewMusicPlayer_autogen/include -isystem /opt/homebrew/lib/QtCore.framework/Headers -iframework /opt/homebrew/lib -isystem /opt/homebrew/share/qt/mkspecs/macx-clang -isystem /opt/homebrew/include -isystem /opt/homebrew/lib/QtGui.framework/Headers -isystem /opt/homebrew/lib/QtWidgets.framework/Headers -isystem /opt/homebrew/lib/QtMultimedia.framework/Headers -isystem /opt/homebrew/lib/QtNetwork.framework/Headers -std=gnu++2b -arch arm64 -o CMakeFiles/NewMusicPlayer.dir/controller/PlaylistRenderer.cpp.o -c /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/controller/PlaylistRenderer.cpp",
   "file": "/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/controller/PlaylistRenderer.cpp",
   "output": "CMakeFiles/NewMusicPlayer.dir/controller/PlaylistRenderer.cpp.o"
+},
+{
+  "directory": "/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build",
+  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_MULTIMEDIA_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB -isystem /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/NewMusicPlayer_autogen/include -isystem /opt/homebrew/lib/QtCore.framework/Headers -iframework /opt/homebrew/lib -isystem /opt/homebrew/share/qt/mkspecs/macx-clang -isystem /opt/homebrew/include -isystem /opt/homebrew/lib/QtGui.framework/Headers -isystem /opt/homebrew/lib/QtWidgets.framework/Headers -isystem /opt/homebrew/lib/QtMultimedia.framework/Headers -isystem /opt/homebrew/lib/QtNetwork.framework/Headers -std=gnu++2b -arch arm64 -o CMakeFiles/NewMusicPlayer.dir/controller/SortMode.cpp.o -c /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/controller/SortMode.cpp",
+  "file": "/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/controller/SortMode.cpp",
+  "output": "CMakeFiles/NewMusicPlayer.dir/controller/SortMode.cpp.o"
+},
+{
+  "directory": "/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build",
+  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_MULTIMEDIA_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB -isystem /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/NewMusicPlayer_autogen/include -isystem /opt/homebrew/lib/QtCore.framework/Headers -iframework /opt/homebrew/lib -isystem /opt/homebrew/share/qt/mkspecs/macx-clang -isystem /opt/homebrew/include -isystem /opt/homebrew/lib/QtGui.framework/Headers -isystem /opt/homebrew/lib/QtWidgets.framework/Headers -isystem /opt/homebrew/lib/QtMultimedia.framework/Headers -isystem /opt/homebrew/lib/QtNetwork.framework/Headers -std=gnu++2b -arch arm64 -o CMakeFiles/NewMusicPlayer.dir/controller/TitleAscending.cpp.o -c /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/controller/TitleAscending.cpp",
+  "file": "/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/controller/TitleAscending.cpp",
+  "output": "CMakeFiles/NewMusicPlayer.dir/controller/TitleAscending.cpp.o"
+},
+{
+  "directory": "/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build",
+  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_MULTIMEDIA_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB -isystem /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/NewMusicPlayer_autogen/include -isystem /opt/homebrew/lib/QtCore.framework/Headers -iframework /opt/homebrew/lib -isystem /opt/homebrew/share/qt/mkspecs/macx-clang -isystem /opt/homebrew/include -isystem /opt/homebrew/lib/QtGui.framework/Headers -isystem /opt/homebrew/lib/QtWidgets.framework/Headers -isystem /opt/homebrew/lib/QtMultimedia.framework/Headers -isystem /opt/homebrew/lib/QtNetwork.framework/Headers -std=gnu++2b -arch arm64 -o CMakeFiles/NewMusicPlayer.dir/controller/TitleDescending.cpp.o -c /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/controller/TitleDescending.cpp",
+  "file": "/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/controller/TitleDescending.cpp",
+  "output": "CMakeFiles/NewMusicPlayer.dir/controller/TitleDescending.cpp.o"
+},
+{
+  "directory": "/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build",
+  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_MULTIMEDIA_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB -isystem /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/NewMusicPlayer_autogen/include -isystem /opt/homebrew/lib/QtCore.framework/Headers -iframework /opt/homebrew/lib -isystem /opt/homebrew/share/qt/mkspecs/macx-clang -isystem /opt/homebrew/include -isystem /opt/homebrew/lib/QtGui.framework/Headers -isystem /opt/homebrew/lib/QtWidgets.framework/Headers -isystem /opt/homebrew/lib/QtMultimedia.framework/Headers -isystem /opt/homebrew/lib/QtNetwork.framework/Headers -std=gnu++2b -arch arm64 -o CMakeFiles/NewMusicPlayer.dir/controller/DurationMode.cpp.o -c /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/controller/DurationMode.cpp",
+  "file": "/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/controller/DurationMode.cpp",
+  "output": "CMakeFiles/NewMusicPlayer.dir/controller/DurationMode.cpp.o"
+},
+{
+  "directory": "/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build",
+  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_MULTIMEDIA_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB -isystem /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/NewMusicPlayer_autogen/include -isystem /opt/homebrew/lib/QtCore.framework/Headers -iframework /opt/homebrew/lib -isystem /opt/homebrew/share/qt/mkspecs/macx-clang -isystem /opt/homebrew/include -isystem /opt/homebrew/lib/QtGui.framework/Headers -isystem /opt/homebrew/lib/QtWidgets.framework/Headers -isystem /opt/homebrew/lib/QtMultimedia.framework/Headers -isystem /opt/homebrew/lib/QtNetwork.framework/Headers -std=gnu++2b -arch arm64 -o CMakeFiles/NewMusicPlayer.dir/controller/DateMode.cpp.o -c /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/controller/DateMode.cpp",
+  "file": "/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/controller/DateMode.cpp",
+  "output": "CMakeFiles/NewMusicPlayer.dir/controller/DateMode.cpp.o"
+},
+{
+  "directory": "/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build",
+  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_MULTIMEDIA_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB -isystem /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/NewMusicPlayer_autogen/include -isystem /opt/homebrew/lib/QtCore.framework/Headers -iframework /opt/homebrew/lib -isystem /opt/homebrew/share/qt/mkspecs/macx-clang -isystem /opt/homebrew/include -isystem /opt/homebrew/lib/QtGui.framework/Headers -isystem /opt/homebrew/lib/QtWidgets.framework/Headers -isystem /opt/homebrew/lib/QtMultimedia.framework/Headers -isystem /opt/homebrew/lib/QtNetwork.framework/Headers -std=gnu++2b -arch arm64 -o CMakeFiles/NewMusicPlayer.dir/controller/CustomMode.cpp.o -c /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/controller/CustomMode.cpp",
+  "file": "/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/controller/CustomMode.cpp",
+  "output": "CMakeFiles/NewMusicPlayer.dir/controller/CustomMode.cpp.o"
 },
 {
   "directory": "/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build",
@@ -256,6 +304,18 @@
   "command": "/usr/bin/c++  -isystem /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/NewMusicPlayerTests_autogen/include -isystem /opt/homebrew/include -std=gnu++2b -arch arm64 -o CMakeFiles/NewMusicPlayerTests.dir/model/ShellSort.cpp.o -c /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/ShellSort.cpp",
   "file": "/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/ShellSort.cpp",
   "output": "CMakeFiles/NewMusicPlayerTests.dir/model/ShellSort.cpp.o"
+},
+{
+  "directory": "/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build",
+  "command": "/usr/bin/c++  -isystem /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/NewMusicPlayerTests_autogen/include -isystem /opt/homebrew/include -std=gnu++2b -arch arm64 -o CMakeFiles/NewMusicPlayerTests.dir/model/DurationSort.cpp.o -c /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/DurationSort.cpp",
+  "file": "/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/DurationSort.cpp",
+  "output": "CMakeFiles/NewMusicPlayerTests.dir/model/DurationSort.cpp.o"
+},
+{
+  "directory": "/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build",
+  "command": "/usr/bin/c++  -isystem /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/NewMusicPlayerTests_autogen/include -isystem /opt/homebrew/include -std=gnu++2b -arch arm64 -o CMakeFiles/NewMusicPlayerTests.dir/model/DateSort.cpp.o -c /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/DateSort.cpp",
+  "file": "/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/DateSort.cpp",
+  "output": "CMakeFiles/NewMusicPlayerTests.dir/model/DateSort.cpp.o"
 },
 {
   "directory": "/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build",

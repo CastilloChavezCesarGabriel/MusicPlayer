@@ -883,6 +883,9 @@ CMakeFiles/NewMusicPlayerTests.dir/test/use_cases/SortPlaylistUseCaseTest.cpp.o:
   /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/use_cases/../../model/PlaybackNotifier.h \
   /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/use_cases/../MockPlaybackListener.h \
   /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/use_cases/../TestPlaylistVisitor.h \
+  /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/use_cases/../../model/QuickSort.h \
+  /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/use_cases/../../model/DurationSort.h \
+  /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/use_cases/../../model/ShellSort.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/filesystem \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/copy_options.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/directory_entry.h \

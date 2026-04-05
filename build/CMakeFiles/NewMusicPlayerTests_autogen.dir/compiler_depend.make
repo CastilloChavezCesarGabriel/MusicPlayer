@@ -9,6 +9,10 @@ NewMusicPlayerTests_autogen/timestamp: /Users/cesargabrielcastillochavez/CLionPr
   /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/Advertisement.h \
   /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/Channel.cpp \
   /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/Channel.h \
+  /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/DateSort.cpp \
+  /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/DateSort.h \
+  /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/DurationSort.cpp \
+  /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/DurationSort.h \
   /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/IPlaybackListener.h \
   /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/IPlaylistVisitor.h \
   /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/Model.cpp \
@@ -614,10 +618,6 @@ CMakeFiles/4.0.1/CMakeCXXCompiler.cmake:
 
 /opt/homebrew/lib/cmake/Qt6GuiPrivate/Qt6GuiPrivateDependencies.cmake:
 
-/opt/homebrew/lib/cmake/Qt6Gui/Qt6GuiConfigVersion.cmake:
-
-/opt/homebrew/lib/cmake/Qt6GuiPrivate/Qt6GuiPrivateConfigVersionImpl.cmake:
-
 /opt/homebrew/share/cmake/Modules/GNUInstallDirs.cmake:
 
 /opt/homebrew/lib/cmake/Qt6DBusPrivate/Qt6DBusPrivateConfigVersionImpl.cmake:
@@ -780,6 +780,18 @@ CMakeFiles/4.0.1/CMakeCXXCompiler.cmake:
 
 /opt/homebrew/lib/cmake/Qt6Gui/Qt6QCocoaIntegrationPluginTargets-release.cmake:
 
+/opt/homebrew/lib/cmake/Qt6/QtPublicSbomQtEntityHelpers.cmake:
+
+/opt/homebrew/lib/cmake/Qt6Gui/Qt6QCocoaIntegrationPluginConfig.cmake:
+
+/opt/homebrew/lib/cmake/Qt6MultimediaPrivate/Qt6MultimediaPrivateConfigVersionImpl.cmake:
+
+/opt/homebrew/lib/cmake/Qt6Gui/Qt6QCocoaIntegrationPluginAdditionalTargetInfo.cmake:
+
+/opt/homebrew/lib/cmake/Qt6Network/Qt6QSecureTransportBackendPluginTargets-release.cmake:
+
+/opt/homebrew/lib/cmake/Qt6Gui/Qt6GuiVersionlessAliasTargets.cmake:
+
 /opt/homebrew/lib/cmake/Qt6Gui/Qt6GuiTargets-release.cmake:
 
 /opt/homebrew/lib/cmake/Qt6Gui/Qt6QTuioTouchPluginTargets.cmake:
@@ -894,10 +906,6 @@ CMakeFiles/4.0.1/CMakeCXXCompiler.cmake:
 
 /opt/homebrew/lib/cmake/Qt6Core/Qt6QDarwinLocationPermissionPluginConfig.cmake:
 
-/opt/homebrew/lib/cmake/Qt6MultimediaPrivate/Qt6MultimediaPrivateConfigVersionImpl.cmake:
-
-/opt/homebrew/lib/cmake/Qt6Gui/Qt6QCocoaIntegrationPluginAdditionalTargetInfo.cmake:
-
 /opt/homebrew/share/cmake/Modules/CheckIncludeFile.cmake:
 
 /opt/homebrew/lib/cmake/Qt6Core/Qt6QDarwinLocationPermissionPluginAdditionalTargetInfo.cmake:
@@ -910,9 +918,9 @@ CMakeFiles/4.0.1/CMakeCXXCompiler.cmake:
 
 /opt/homebrew/lib/cmake/Qt6Core/Qt6QDarwinContactsPermissionPluginAdditionalTargetInfo.cmake:
 
-/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/use_cases/AddSongUseCaseTest.h:
-
 /opt/homebrew/lib/cmake/Qt6/QtPublicGitHelpers.cmake:
+
+/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/use_cases/AddSongUseCaseTest.h:
 
 /opt/homebrew/lib/cmake/Qt6/QtPublicSbomFileHelpers.cmake:
 
@@ -932,10 +940,6 @@ CMakeFiles/4.0.1/CMakeCXXCompiler.cmake:
 
 /opt/homebrew/lib/cmake/Qt6Core/Qt6QDarwinCalendarPermissionPluginConfig.cmake:
 
-/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/Model.cpp:
-
-/opt/homebrew/lib/cmake/Qt6Core/Qt6QDarwinBluetoothPermissionPluginDependencies.cmake:
-
 /opt/homebrew/lib/cmake/Qt6/QtPublicSbomPurlHelpers.cmake:
 
 /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/ShellSort.cpp:
@@ -953,6 +957,10 @@ CMakeFiles/4.0.1/CMakeCXXCompiler.cmake:
 /opt/homebrew/lib/cmake/Qt6Gui/Qt6QWebpPluginConfig.cmake:
 
 /opt/homebrew/lib/cmake/Qt6Core/Qt6CoreMacros.cmake:
+
+/opt/homebrew/lib/cmake/Qt6GuiPrivate/Qt6GuiPrivateConfigVersionImpl.cmake:
+
+/opt/homebrew/lib/cmake/Qt6Gui/Qt6GuiConfigVersion.cmake:
 
 /opt/homebrew/lib/cmake/Qt6Widgets/Qt6WidgetsVersionlessAliasTargets.cmake:
 
@@ -974,12 +982,6 @@ CMakeFiles/4.0.1/CMakeCXXCompiler.cmake:
 
 /opt/homebrew/lib/cmake/Qt6Core/Qt6CoreConfig.cmake:
 
-CMakeFiles/4.0.1/CMakeSystem.cmake:
-
-/opt/homebrew/lib/cmake/Qt6Core/Qt6CorePlugins.cmake:
-
-/opt/homebrew/lib/cmake/Qt6Core/Qt6CoreAdditionalTargetInfo.cmake:
-
 /opt/homebrew/lib/cmake/Qt6/QtPublicWalkLibsHelpers.cmake:
 
 /opt/homebrew/lib/cmake/Qt6Gui/Qt6QWebpPluginAdditionalTargetInfo.cmake:
@@ -1000,19 +1002,23 @@ CMakeFiles/4.0.1/CMakeSystem.cmake:
 
 /opt/homebrew/lib/cmake/Qt6/FindWrapOpenGL.cmake:
 
-/opt/homebrew/lib/cmake/Qt6Gui/Qt6QCocoaIntegrationPluginConfig.cmake:
-
-/opt/homebrew/lib/cmake/Qt6/QtPublicSbomQtEntityHelpers.cmake:
-
 /opt/homebrew/share/cmake/Modules/Platform/Linker/Apple-AppleClang.cmake:
 
 /opt/homebrew/lib/cmake/Qt6Gui/Qt6GuiPlugins.cmake:
 
-/opt/homebrew/lib/cmake/Qt6Core/Qt6QDarwinContactsPermissionPluginDependencies.cmake:
+/opt/homebrew/lib/cmake/Qt6Network/Qt6QTlsBackendCertOnlyPluginTargets.cmake:
 
-/opt/homebrew/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:
+/opt/homebrew/lib/cmake/Qt6Network/Qt6NetworkTargets.cmake:
 
-/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/SortingAlgorithm.h:
+/opt/homebrew/lib/cmake/Qt6CoreTools/Qt6CoreToolsTargets-release.cmake:
+
+/opt/homebrew/lib/cmake/Qt6/QtFeature.cmake:
+
+/opt/homebrew/lib/cmake/Qt6/QtPublicSbomLicenseHelpers.cmake:
+
+/opt/homebrew/lib/cmake/Qt6Core/Qt6QDarwinBluetoothPermissionPluginTargets.cmake:
+
+/opt/homebrew/lib/cmake/Qt6/QtPublicSbomGenerationHelpers.cmake:
 
 /opt/homebrew/lib/cmake/Qt6Gui/Qt6QPdfPluginAdditionalTargetInfo.cmake:
 
@@ -1049,10 +1055,6 @@ CMakeFiles/4.0.1/CMakeCCompiler.cmake:
 /opt/homebrew/lib/cmake/Qt6Network/Qt6NetworkConfigVersion.cmake:
 
 /opt/homebrew/lib/cmake/Qt6/QtFeatureCommon.cmake:
-
-/opt/homebrew/lib/cmake/Qt6/QtPublicSbomLicenseHelpers.cmake:
-
-/opt/homebrew/lib/cmake/Qt6/QtFeature.cmake:
 
 /opt/homebrew/lib/cmake/Qt6Network/Qt6QTlsBackendCertOnlyPluginAdditionalTargetInfo.cmake:
 
@@ -1112,6 +1114,8 @@ CMakeFiles/4.0.1/CMakeCCompiler.cmake:
 
 /opt/homebrew/lib/cmake/Qt6/QtPublicSbomHelpers.cmake:
 
+/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/DateSort.h:
+
 /opt/homebrew/lib/cmake/Qt6Multimedia/Qt6QDarwinMediaPluginAdditionalTargetInfo.cmake:
 
 /opt/homebrew/lib/cmake/Qt6Core/Qt6QDarwinLocationPermissionPluginTargets.cmake:
@@ -1124,19 +1128,21 @@ CMakeFiles/4.0.1/CMakeCCompiler.cmake:
 
 /opt/homebrew/lib/cmake/Qt6DBusTools/Qt6DBusToolsConfig.cmake:
 
-/opt/homebrew/lib/cmake/Qt6Network/Qt6QTlsBackendCertOnlyPluginTargets.cmake:
-
-/opt/homebrew/lib/cmake/Qt6Network/Qt6NetworkTargets.cmake:
-
-/opt/homebrew/lib/cmake/Qt6CoreTools/Qt6CoreToolsTargets-release.cmake:
-
 /opt/homebrew/lib/cmake/Qt6NetworkPrivate/Qt6NetworkPrivateAdditionalTargetInfo.cmake:
 
 /opt/homebrew/lib/cmake/Qt6CoreTools/Qt6CoreToolsDependencies.cmake:
 
 /opt/homebrew/lib/cmake/Qt6/Qt6Config.cmake:
 
+/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/model/SortingTest.h:
+
 /opt/homebrew/lib/cmake/Qt6DBusPrivate/Qt6DBusPrivateConfigVersion.cmake:
+
+/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/RegressionTest.h:
+
+/opt/homebrew/lib/cmake/Qt6Multimedia/Qt6MultimediaConfigVersion.cmake:
+
+/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/model/SongTest.h:
 
 /opt/homebrew/share/cmake/Modules/FindGTest.cmake:
 
@@ -1146,13 +1152,9 @@ CMakeFiles/4.0.1/CMakeCCompiler.cmake:
 
 /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/RegressionTest.cpp:
 
+/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/DateSort.cpp:
+
 /opt/homebrew/lib/cmake/Qt6CoreTools/Qt6CoreToolsAdditionalTargetInfo.cmake:
-
-/opt/homebrew/lib/cmake/Qt6Multimedia/Qt6MultimediaConfigVersion.cmake:
-
-/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/model/SongTest.h:
-
-/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/RegressionTest.h:
 
 /opt/homebrew/lib/cmake/Qt6Network/Qt6QSecureTransportBackendPluginConfig.cmake:
 
@@ -1163,6 +1165,8 @@ CMakeFiles/4.0.1/CMakeCCompiler.cmake:
 /opt/homebrew/lib/cmake/Qt6Core/Qt6QDarwinCalendarPermissionPluginDependencies.cmake:
 
 /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/IPlaylistVisitor.h:
+
+CMakeFiles/4.0.1/CMakeSystem.cmake:
 
 /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/QuickSort.h:
 
@@ -1186,13 +1190,17 @@ CMakeFiles/4.0.1/CMakeCCompiler.cmake:
 
 /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/DirectoryTestFixture.cpp:
 
-/opt/homebrew/lib/cmake/Qt6Multimedia/Qt6QDarwinMediaPluginTargets-release.cmake:
+/opt/homebrew/lib/cmake/Qt6Gui/Qt6QICOPluginTargets.cmake:
 
-/opt/homebrew/lib/cmake/Qt6/QtPublicSbomDepHelpers.cmake:
-
-/opt/homebrew/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake:
+/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/Song.cpp:
 
 /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/model/PlaylistTest.cpp:
+
+/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/Model.cpp:
+
+/opt/homebrew/lib/cmake/Qt6Core/Qt6QDarwinBluetoothPermissionPluginDependencies.cmake:
+
+/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/DurationSort.h:
 
 /opt/homebrew/lib/cmake/Qt6Gui/Qt6QICOPluginTargets-release.cmake:
 
@@ -1203,6 +1211,38 @@ CMakeFiles/4.0.1/CMakeCCompiler.cmake:
 /opt/homebrew/lib/cmake/Qt6GuiPrivate/Qt6GuiPrivateConfig.cmake:
 
 /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/PlaybackNotifier.h:
+
+/opt/homebrew/lib/cmake/Qt6Gui/Qt6QOffscreenIntegrationPluginTargets.cmake:
+
+/opt/homebrew/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsAdditionalTargetInfo.cmake:
+
+/opt/homebrew/lib/cmake/Qt6Core/Qt6CorePlugins.cmake:
+
+/opt/homebrew/lib/cmake/Qt6Core/Qt6CoreAdditionalTargetInfo.cmake:
+
+/opt/homebrew/lib/cmake/Qt6DBusPrivate/Qt6DBusPrivateAdditionalTargetInfo.cmake:
+
+/opt/homebrew/lib/cmake/Qt6Core/Qt6QDarwinBluetoothPermissionPluginTargets-release.cmake:
+
+/opt/homebrew/lib/cmake/Qt6Network/Qt6QTlsBackendOpenSSLPluginTargets-release.cmake:
+
+/opt/homebrew/lib/cmake/Qt6/Qt6ConfigVersion.cmake:
+
+/opt/homebrew/lib/cmake/GTest/GTestTargets.cmake:
+
+/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/MusicLibrary.h:
+
+/opt/homebrew/lib/cmake/Qt6Multimedia/Qt6QDarwinMediaPluginTargets-release.cmake:
+
+/opt/homebrew/lib/cmake/Qt6/QtPublicSbomDepHelpers.cmake:
+
+/opt/homebrew/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake:
+
+/opt/homebrew/lib/cmake/Qt6Core/Qt6QDarwinContactsPermissionPluginDependencies.cmake:
+
+/opt/homebrew/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:
+
+/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/SortingAlgorithm.h:
 
 /opt/homebrew/share/cmake/Modules/CheckCSourceCompiles.cmake:
 
@@ -1218,27 +1258,7 @@ CMakeFiles/4.0.1/CMakeCCompiler.cmake:
 
 /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/model/SongTest.cpp:
 
-/opt/homebrew/lib/cmake/Qt6Gui/Qt6QOffscreenIntegrationPluginTargets.cmake:
-
-/opt/homebrew/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsAdditionalTargetInfo.cmake:
-
-/opt/homebrew/lib/cmake/Qt6DBusPrivate/Qt6DBusPrivateAdditionalTargetInfo.cmake:
-
-/opt/homebrew/lib/cmake/Qt6Core/Qt6QDarwinBluetoothPermissionPluginTargets-release.cmake:
-
-/opt/homebrew/lib/cmake/Qt6Network/Qt6QTlsBackendOpenSSLPluginTargets-release.cmake:
-
-/opt/homebrew/lib/cmake/Qt6/Qt6ConfigVersion.cmake:
-
-/opt/homebrew/lib/cmake/GTest/GTestTargets.cmake:
-
-/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/MusicLibrary.h:
-
-/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/model/SortingTest.h:
-
-/opt/homebrew/lib/cmake/Qt6Gui/Qt6QICOPluginTargets.cmake:
-
-/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/Song.cpp:
+/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/DurationSort.cpp:
 
 /opt/homebrew/share/cmake/Modules/Compiler/CMakeCommonCompilerMacros.cmake:
 
@@ -1249,14 +1269,6 @@ CMakeFiles/4.0.1/CMakeCCompiler.cmake:
 /opt/homebrew/lib/cmake/Qt6Network/Qt6QGlibNetworkInformationPluginTargets.cmake:
 
 /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/Model.h:
-
-/opt/homebrew/lib/cmake/Qt6Core/Qt6QDarwinBluetoothPermissionPluginTargets.cmake:
-
-/opt/homebrew/lib/cmake/Qt6/QtPublicSbomGenerationHelpers.cmake:
-
-/opt/homebrew/lib/cmake/Qt6Network/Qt6QSecureTransportBackendPluginTargets-release.cmake:
-
-/opt/homebrew/lib/cmake/Qt6Gui/Qt6GuiVersionlessAliasTargets.cmake:
 
 /opt/homebrew/lib/cmake/Qt6MultimediaPrivate/Qt6MultimediaPrivateDependencies.cmake:
 

@@ -1,5 +1,6 @@
 #include "RemoveSongUseCaseTest.h"
 #include "../TestPlaylistVisitor.h"
+#include "../../model/QuickSort.h"
 #include <filesystem>
 #include <fstream>
 
@@ -124,7 +125,8 @@ TEST_F(RemoveSongUseCaseTest, RemoveThenSort) {
     Model model(base_directory_);
     model.subscribe(listener_);
     model.remove(0);
-    model.sort(true);
+    QuickSort byTitle;
+    model.sort(byTitle);
     TestPlaylistVisitor visitor;
     model.accept(visitor);
     EXPECT_TRUE(visitor.hasSongs(2));
@@ -135,7 +137,8 @@ TEST_F(RemoveSongUseCaseTest, RemoveThenSearch) {
     createSong("jazz.mp3");
     Model model(base_directory_);
     model.subscribe(listener_);
-    model.sort(true);
+    QuickSort byTitle;
+    model.sort(byTitle);
     model.remove(0);
     TestPlaylistVisitor visitor;
     model.search("jazz", visitor);
@@ -175,7 +178,8 @@ TEST_F(RemoveSongUseCaseTest, RemovePreservesOtherSongs) {
     createSong("c.mp3");
     Model model(base_directory_);
     model.subscribe(listener_);
-    model.sort(true);
+    QuickSort byTitle;
+    model.sort(byTitle);
     model.remove(1);
     TestPlaylistVisitor visitor;
     model.accept(visitor);
@@ -188,7 +192,8 @@ TEST_F(RemoveSongUseCaseTest, RemoveFirstPreservesRest) {
     createSong("b.mp3");
     Model model(base_directory_);
     model.subscribe(listener_);
-    model.sort(true);
+    QuickSort byTitle;
+    model.sort(byTitle);
     model.remove(0);
     TestPlaylistVisitor visitor;
     model.accept(visitor);
@@ -200,7 +205,8 @@ TEST_F(RemoveSongUseCaseTest, RemoveLastPreservesRest) {
     createSong("b.mp3");
     Model model(base_directory_);
     model.subscribe(listener_);
-    model.sort(true);
+    QuickSort byTitle;
+    model.sort(byTitle);
     model.remove(1);
     TestPlaylistVisitor visitor;
     model.accept(visitor);
@@ -275,7 +281,8 @@ TEST_F(RemoveSongUseCaseTest, RemoveThenSortRemaining) {
     createSong("b.mp3");
     Model model(base_directory_);
     model.subscribe(listener_);
-    model.sort(true);
+    QuickSort byTitle;
+    model.sort(byTitle);
     model.remove(0);
     TestPlaylistVisitor visitor;
     model.accept(visitor);
@@ -332,7 +339,8 @@ TEST_F(RemoveSongUseCaseTest, RemoveThenSearchFindsRemaining) {
     createSong("jazz.mp3");
     Model model(base_directory_);
     model.subscribe(listener_);
-    model.sort(true);
+    QuickSort byTitle;
+    model.sort(byTitle);
     model.remove(1);
     TestPlaylistVisitor visitor;
     model.search("jazz", visitor);

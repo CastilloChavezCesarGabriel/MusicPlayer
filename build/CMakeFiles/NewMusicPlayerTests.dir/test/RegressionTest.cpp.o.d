@@ -883,6 +883,7 @@ CMakeFiles/NewMusicPlayerTests.dir/test/RegressionTest.cpp.o: \
   /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/../model/PlaybackNotifier.h \
   /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/MockPlaybackListener.h \
   /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/TestPlaylistVisitor.h \
+  /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/../model/DurationSort.h \
   /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/../model/ShellSort.h \
   /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/test/../model/QuickSort.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/filesystem \

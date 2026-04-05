@@ -1,5 +1,6 @@
 #include "NavigatePlaylistUseCaseTest.h"
 #include "../TestPlaylistVisitor.h"
+#include "../../model/QuickSort.h"
 #include <filesystem>
 #include <fstream>
 
@@ -149,7 +150,8 @@ TEST_F(NavigatePlaylistUseCaseTest, AdvanceAfterSort) {
     createSong("b.mp3");
     Model model(base_directory_);
     model.subscribe(listener_);
-    model.sort(true);
+    QuickSort byTitle;
+    model.sort(byTitle);
     model.play(0);
     model.advance();
     EXPECT_TRUE(listener_.wasSelectedWith(1));
@@ -161,7 +163,8 @@ TEST_F(NavigatePlaylistUseCaseTest, RetreatAfterSort) {
     createSong("b.mp3");
     Model model(base_directory_);
     model.subscribe(listener_);
-    model.sort(true);
+    QuickSort byTitle;
+    model.sort(byTitle);
     model.play(2);
     model.retreat();
     EXPECT_TRUE(listener_.wasSelectedWith(1));
@@ -348,7 +351,8 @@ TEST_F(NavigatePlaylistUseCaseTest, AdvanceSortedPlaylist) {
     createSong("b.mp3");
     Model model(base_directory_);
     model.subscribe(listener_);
-    model.sort(true);
+    QuickSort byTitle;
+    model.sort(byTitle);
     model.play(0);
     model.advance();
     model.advance();
@@ -361,7 +365,8 @@ TEST_F(NavigatePlaylistUseCaseTest, RetreatSortedPlaylist) {
     createSong("b.mp3");
     Model model(base_directory_);
     model.subscribe(listener_);
-    model.sort(true);
+    QuickSort byTitle;
+    model.sort(byTitle);
     model.play(2);
     model.retreat();
     model.retreat();

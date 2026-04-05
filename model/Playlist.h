@@ -11,15 +11,18 @@
 class Playlist {
 private:
     std::vector<Song> songs_;
-    MusicLibrary& library_;
+    std::vector<Song> custom_order_;
+    MusicLibrary& music_library_;
     int current_song_ = -1;
 
 public:
-    explicit Playlist(MusicLibrary& library);
+    explicit Playlist(MusicLibrary& musicLibrary);
 
     void add(const Song& song);
     void remove(int index);
     void sort(SortingAlgorithm& criteria);
+    void reverse();
+    void restore();
     void shuffle();
     void clear();
     void select(int index, IPlaybackListener& listener);
@@ -32,6 +35,8 @@ public:
     bool hasSelected() const;
 
 private:
+    void preserve();
+    void locate(const Song& target);
     void notify(IPlaybackListener& listener) const;
 };
 

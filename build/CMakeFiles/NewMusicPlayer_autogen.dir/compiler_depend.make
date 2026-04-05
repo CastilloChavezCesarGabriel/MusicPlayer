@@ -973,13 +973,29 @@ NewMusicPlayer_autogen/timestamp: /Applications/Xcode.app/Contents/Developer/Pla
   NewMusicPlayer_autogen/moc_predefs.h \
   /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/controller/Controller.cpp \
   /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/controller/Controller.h \
+  /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/controller/CustomMode.cpp \
+  /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/controller/CustomMode.h \
+  /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/controller/DateMode.cpp \
+  /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/controller/DateMode.h \
+  /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/controller/DurationMode.cpp \
+  /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/controller/DurationMode.h \
   /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/controller/PlaylistRenderer.cpp \
   /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/controller/PlaylistRenderer.h \
+  /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/controller/SortMode.cpp \
+  /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/controller/SortMode.h \
+  /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/controller/TitleAscending.cpp \
+  /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/controller/TitleAscending.h \
+  /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/controller/TitleDescending.cpp \
+  /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/controller/TitleDescending.h \
   /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/main.cpp \
   /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/Advertisement.cpp \
   /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/Advertisement.h \
   /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/Channel.cpp \
   /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/Channel.h \
+  /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/DateSort.cpp \
+  /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/DateSort.h \
+  /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/DurationSort.cpp \
+  /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/DurationSort.h \
   /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/IPlaybackListener.h \
   /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/IPlaylistVisitor.h \
   /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/Model.cpp \
@@ -2242,6 +2258,10 @@ NewMusicPlayer_autogen/timestamp: /Applications/Xcode.app/Contents/Developer/Pla
 
 /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/IPlaybackListener.h:
 
+/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/DurationSort.cpp:
+
+/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/DateSort.h:
+
 /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/Channel.h:
 
 /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/Channel.cpp:
@@ -2250,7 +2270,15 @@ NewMusicPlayer_autogen/timestamp: /Applications/Xcode.app/Contents/Developer/Pla
 
 /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/Advertisement.cpp:
 
+/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/controller/TitleDescending.cpp:
+
+/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/controller/TitleAscending.h:
+
+/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/controller/TitleAscending.cpp:
+
 /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/controller/PlaylistRenderer.cpp:
+
+/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/controller/DateMode.cpp:
 
 /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/controller/Controller.h:
 
@@ -2764,6 +2792,8 @@ CMakeFiles/4.0.1/CMakeCXXCompiler.cmake:
 
 /opt/homebrew/Cellar/qtbase/6.9.3_1/lib/QtCore.framework/Versions/A/Headers/qtypes.h:
 
+/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/controller/DateMode.h:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/cmath:
 
 /opt/homebrew/lib/cmake/Qt6Multimedia/Qt6MultimediaVersionlessAliasTargets.cmake:
@@ -3018,6 +3048,8 @@ CMakeFiles/4.0.1/CMakeCXXCompiler.cmake:
 
 /opt/homebrew/Cellar/qtbase/6.9.3_1/lib/QtCore.framework/Versions/A/Headers/q20type_traits.h:
 
+/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/controller/DurationMode.cpp:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/wctype.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_static_assert.h:
@@ -3065,6 +3097,8 @@ CMakeFiles/4.0.1/CMakeCXXCompiler.cmake:
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__memory/shared_count.h:
 
 /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/view/IAudioPlayer.h:
+
+/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/controller/CustomMode.cpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__memory/out_ptr.h:
 
@@ -3436,6 +3470,8 @@ CMakeFiles/4.0.1/CMakeCXXCompiler.cmake:
 
 /opt/homebrew/lib/cmake/Qt6DBusTools/Qt6DBusToolsVersionlessTargets.cmake:
 
+/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/controller/SortMode.cpp:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__format/width_estimation_table.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/is_class.h:
@@ -3774,6 +3810,8 @@ CMakeFiles/4.0.1/CMakeCXXCompiler.cmake:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/remove_cv.h:
 
+/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/controller/TitleDescending.h:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__fwd/deque.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__utility/scope_guard.h:
@@ -3897,6 +3935,8 @@ CMakeFiles/4.0.1/CMakeCXXCompiler.cmake:
 /opt/homebrew/lib/cmake/Qt6Core/Qt6QDarwinCameraPermissionPluginConfig.cmake:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__bit/byteswap.h:
+
+/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/controller/CustomMode.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/binary_search.h:
 
@@ -4026,6 +4066,8 @@ CMakeFiles/4.0.1/CMakeCCompiler.cmake:
 
 /opt/homebrew/Cellar/qtbase/6.9.3_1/lib/QtWidgets.framework/Versions/A/Headers/qtabwidget.h:
 
+/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/DurationSort.h:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__exception/exception.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__atomic/atomic.h:
@@ -4085,6 +4127,8 @@ CMakeFiles/4.0.1/CMakeCCompiler.cmake:
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/remove.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/copy_cv.h:
+
+/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/controller/SortMode.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__chrono/calendar.h:
 
@@ -4530,6 +4574,8 @@ CMakeFiles/4.0.1/CMakeCCompiler.cmake:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/is_partitioned.h:
 
+/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/controller/DurationMode.h:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__format/format_arg.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/AvailabilityInternal.h:
@@ -4653,6 +4699,8 @@ CMakeFiles/4.0.1/CMakeCCompiler.cmake:
 /opt/homebrew/Cellar/qtbase/6.9.3_1/lib/QtCore.framework/Versions/A/Headers/qobject_impl.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/equal.h:
+
+/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/DateSort.cpp:
 
 /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/adapters/qt/QtAudioEngine.cpp:
 

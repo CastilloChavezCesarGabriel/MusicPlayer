@@ -2,7 +2,7 @@
 #define SORTINGTEST_H
 
 #include <gtest/gtest.h>
-#include "../../model/ShellSort.h"
+#include "../../model/DurationSort.h"
 #include "../../model/QuickSort.h"
 #include "../../model/Song.h"
 #include "../TestPlaylistVisitor.h"
@@ -11,10 +11,13 @@
 
 class ShellSortTest : public ::testing::Test {
 protected:
-    ShellSort sorter_;
+    std::string test_directory_;
+    DurationSort sorter_;
     TestPlaylistVisitor visitor_;
 
-    void verify(std::vector<Song>& songs, const std::vector<std::string>& expected);
+    void SetUp() override;
+    void TearDown() override;
+    std::string createFile(const std::string& name, int size) const;
 };
 
 class QuickSortTest : public ::testing::Test {

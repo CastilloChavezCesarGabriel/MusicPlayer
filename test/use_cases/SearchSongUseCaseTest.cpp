@@ -1,5 +1,6 @@
 #include "SearchSongUseCaseTest.h"
 #include "../TestPlaylistVisitor.h"
+#include "../../model/QuickSort.h"
 #include <filesystem>
 #include <fstream>
 
@@ -87,7 +88,8 @@ TEST_F(SearchSongUseCaseTest, SearchAfterSort) {
     createSong("banana.mp3");
     Model model(base_directory_);
     model.subscribe(listener_);
-    model.sort(true);
+    QuickSort byTitle;
+    model.sort(byTitle);
     TestPlaylistVisitor visitor;
     model.search("banana", visitor);
     EXPECT_TRUE(visitor.hasName("banana.mp3"));
@@ -261,7 +263,8 @@ TEST_F(SearchSongUseCaseTest, SearchAfterSortFindsAll) {
     createSong("jazz.mp3");
     Model model(base_directory_);
     model.subscribe(listener_);
-    model.sort(true);
+    QuickSort byTitle;
+    model.sort(byTitle);
     TestPlaylistVisitor visitor;
     model.search("rock", visitor);
     EXPECT_TRUE(visitor.hasSongs(2));

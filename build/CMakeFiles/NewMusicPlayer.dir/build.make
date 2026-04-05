@@ -128,10 +128,38 @@ CMakeFiles/NewMusicPlayer.dir/model/ShellSort.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/NewMusicPlayer.dir/model/ShellSort.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/ShellSort.cpp -o CMakeFiles/NewMusicPlayer.dir/model/ShellSort.cpp.s
 
+CMakeFiles/NewMusicPlayer.dir/model/DurationSort.cpp.o: CMakeFiles/NewMusicPlayer.dir/flags.make
+CMakeFiles/NewMusicPlayer.dir/model/DurationSort.cpp.o: /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/DurationSort.cpp
+CMakeFiles/NewMusicPlayer.dir/model/DurationSort.cpp.o: CMakeFiles/NewMusicPlayer.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/NewMusicPlayer.dir/model/DurationSort.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/NewMusicPlayer.dir/model/DurationSort.cpp.o -MF CMakeFiles/NewMusicPlayer.dir/model/DurationSort.cpp.o.d -o CMakeFiles/NewMusicPlayer.dir/model/DurationSort.cpp.o -c /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/DurationSort.cpp
+
+CMakeFiles/NewMusicPlayer.dir/model/DurationSort.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/NewMusicPlayer.dir/model/DurationSort.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/DurationSort.cpp > CMakeFiles/NewMusicPlayer.dir/model/DurationSort.cpp.i
+
+CMakeFiles/NewMusicPlayer.dir/model/DurationSort.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/NewMusicPlayer.dir/model/DurationSort.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/DurationSort.cpp -o CMakeFiles/NewMusicPlayer.dir/model/DurationSort.cpp.s
+
+CMakeFiles/NewMusicPlayer.dir/model/DateSort.cpp.o: CMakeFiles/NewMusicPlayer.dir/flags.make
+CMakeFiles/NewMusicPlayer.dir/model/DateSort.cpp.o: /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/DateSort.cpp
+CMakeFiles/NewMusicPlayer.dir/model/DateSort.cpp.o: CMakeFiles/NewMusicPlayer.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/NewMusicPlayer.dir/model/DateSort.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/NewMusicPlayer.dir/model/DateSort.cpp.o -MF CMakeFiles/NewMusicPlayer.dir/model/DateSort.cpp.o.d -o CMakeFiles/NewMusicPlayer.dir/model/DateSort.cpp.o -c /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/DateSort.cpp
+
+CMakeFiles/NewMusicPlayer.dir/model/DateSort.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/NewMusicPlayer.dir/model/DateSort.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/DateSort.cpp > CMakeFiles/NewMusicPlayer.dir/model/DateSort.cpp.i
+
+CMakeFiles/NewMusicPlayer.dir/model/DateSort.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/NewMusicPlayer.dir/model/DateSort.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/DateSort.cpp -o CMakeFiles/NewMusicPlayer.dir/model/DateSort.cpp.s
+
 CMakeFiles/NewMusicPlayer.dir/model/QuickSort.cpp.o: CMakeFiles/NewMusicPlayer.dir/flags.make
 CMakeFiles/NewMusicPlayer.dir/model/QuickSort.cpp.o: /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/QuickSort.cpp
 CMakeFiles/NewMusicPlayer.dir/model/QuickSort.cpp.o: CMakeFiles/NewMusicPlayer.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/NewMusicPlayer.dir/model/QuickSort.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/NewMusicPlayer.dir/model/QuickSort.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/NewMusicPlayer.dir/model/QuickSort.cpp.o -MF CMakeFiles/NewMusicPlayer.dir/model/QuickSort.cpp.o.d -o CMakeFiles/NewMusicPlayer.dir/model/QuickSort.cpp.o -c /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/QuickSort.cpp
 
 CMakeFiles/NewMusicPlayer.dir/model/QuickSort.cpp.i: cmake_force
@@ -145,7 +173,7 @@ CMakeFiles/NewMusicPlayer.dir/model/QuickSort.cpp.s: cmake_force
 CMakeFiles/NewMusicPlayer.dir/model/Playlist.cpp.o: CMakeFiles/NewMusicPlayer.dir/flags.make
 CMakeFiles/NewMusicPlayer.dir/model/Playlist.cpp.o: /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/Playlist.cpp
 CMakeFiles/NewMusicPlayer.dir/model/Playlist.cpp.o: CMakeFiles/NewMusicPlayer.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/NewMusicPlayer.dir/model/Playlist.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/NewMusicPlayer.dir/model/Playlist.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/NewMusicPlayer.dir/model/Playlist.cpp.o -MF CMakeFiles/NewMusicPlayer.dir/model/Playlist.cpp.o.d -o CMakeFiles/NewMusicPlayer.dir/model/Playlist.cpp.o -c /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/Playlist.cpp
 
 CMakeFiles/NewMusicPlayer.dir/model/Playlist.cpp.i: cmake_force
@@ -159,7 +187,7 @@ CMakeFiles/NewMusicPlayer.dir/model/Playlist.cpp.s: cmake_force
 CMakeFiles/NewMusicPlayer.dir/model/Advertisement.cpp.o: CMakeFiles/NewMusicPlayer.dir/flags.make
 CMakeFiles/NewMusicPlayer.dir/model/Advertisement.cpp.o: /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/Advertisement.cpp
 CMakeFiles/NewMusicPlayer.dir/model/Advertisement.cpp.o: CMakeFiles/NewMusicPlayer.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/NewMusicPlayer.dir/model/Advertisement.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/NewMusicPlayer.dir/model/Advertisement.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/NewMusicPlayer.dir/model/Advertisement.cpp.o -MF CMakeFiles/NewMusicPlayer.dir/model/Advertisement.cpp.o.d -o CMakeFiles/NewMusicPlayer.dir/model/Advertisement.cpp.o -c /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/Advertisement.cpp
 
 CMakeFiles/NewMusicPlayer.dir/model/Advertisement.cpp.i: cmake_force
@@ -173,7 +201,7 @@ CMakeFiles/NewMusicPlayer.dir/model/Advertisement.cpp.s: cmake_force
 CMakeFiles/NewMusicPlayer.dir/model/MusicLibrary.cpp.o: CMakeFiles/NewMusicPlayer.dir/flags.make
 CMakeFiles/NewMusicPlayer.dir/model/MusicLibrary.cpp.o: /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/MusicLibrary.cpp
 CMakeFiles/NewMusicPlayer.dir/model/MusicLibrary.cpp.o: CMakeFiles/NewMusicPlayer.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/NewMusicPlayer.dir/model/MusicLibrary.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/NewMusicPlayer.dir/model/MusicLibrary.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/NewMusicPlayer.dir/model/MusicLibrary.cpp.o -MF CMakeFiles/NewMusicPlayer.dir/model/MusicLibrary.cpp.o.d -o CMakeFiles/NewMusicPlayer.dir/model/MusicLibrary.cpp.o -c /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/MusicLibrary.cpp
 
 CMakeFiles/NewMusicPlayer.dir/model/MusicLibrary.cpp.i: cmake_force
@@ -187,7 +215,7 @@ CMakeFiles/NewMusicPlayer.dir/model/MusicLibrary.cpp.s: cmake_force
 CMakeFiles/NewMusicPlayer.dir/model/Channel.cpp.o: CMakeFiles/NewMusicPlayer.dir/flags.make
 CMakeFiles/NewMusicPlayer.dir/model/Channel.cpp.o: /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/Channel.cpp
 CMakeFiles/NewMusicPlayer.dir/model/Channel.cpp.o: CMakeFiles/NewMusicPlayer.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/NewMusicPlayer.dir/model/Channel.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/NewMusicPlayer.dir/model/Channel.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/NewMusicPlayer.dir/model/Channel.cpp.o -MF CMakeFiles/NewMusicPlayer.dir/model/Channel.cpp.o.d -o CMakeFiles/NewMusicPlayer.dir/model/Channel.cpp.o -c /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/Channel.cpp
 
 CMakeFiles/NewMusicPlayer.dir/model/Channel.cpp.i: cmake_force
@@ -201,7 +229,7 @@ CMakeFiles/NewMusicPlayer.dir/model/Channel.cpp.s: cmake_force
 CMakeFiles/NewMusicPlayer.dir/model/PlaybackNotifier.cpp.o: CMakeFiles/NewMusicPlayer.dir/flags.make
 CMakeFiles/NewMusicPlayer.dir/model/PlaybackNotifier.cpp.o: /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/PlaybackNotifier.cpp
 CMakeFiles/NewMusicPlayer.dir/model/PlaybackNotifier.cpp.o: CMakeFiles/NewMusicPlayer.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/NewMusicPlayer.dir/model/PlaybackNotifier.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/NewMusicPlayer.dir/model/PlaybackNotifier.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/NewMusicPlayer.dir/model/PlaybackNotifier.cpp.o -MF CMakeFiles/NewMusicPlayer.dir/model/PlaybackNotifier.cpp.o.d -o CMakeFiles/NewMusicPlayer.dir/model/PlaybackNotifier.cpp.o -c /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/PlaybackNotifier.cpp
 
 CMakeFiles/NewMusicPlayer.dir/model/PlaybackNotifier.cpp.i: cmake_force
@@ -215,7 +243,7 @@ CMakeFiles/NewMusicPlayer.dir/model/PlaybackNotifier.cpp.s: cmake_force
 CMakeFiles/NewMusicPlayer.dir/model/Model.cpp.o: CMakeFiles/NewMusicPlayer.dir/flags.make
 CMakeFiles/NewMusicPlayer.dir/model/Model.cpp.o: /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/Model.cpp
 CMakeFiles/NewMusicPlayer.dir/model/Model.cpp.o: CMakeFiles/NewMusicPlayer.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/NewMusicPlayer.dir/model/Model.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/NewMusicPlayer.dir/model/Model.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/NewMusicPlayer.dir/model/Model.cpp.o -MF CMakeFiles/NewMusicPlayer.dir/model/Model.cpp.o.d -o CMakeFiles/NewMusicPlayer.dir/model/Model.cpp.o -c /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/Model.cpp
 
 CMakeFiles/NewMusicPlayer.dir/model/Model.cpp.i: cmake_force
@@ -229,7 +257,7 @@ CMakeFiles/NewMusicPlayer.dir/model/Model.cpp.s: cmake_force
 CMakeFiles/NewMusicPlayer.dir/controller/PlaylistRenderer.cpp.o: CMakeFiles/NewMusicPlayer.dir/flags.make
 CMakeFiles/NewMusicPlayer.dir/controller/PlaylistRenderer.cpp.o: /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/controller/PlaylistRenderer.cpp
 CMakeFiles/NewMusicPlayer.dir/controller/PlaylistRenderer.cpp.o: CMakeFiles/NewMusicPlayer.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/NewMusicPlayer.dir/controller/PlaylistRenderer.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/NewMusicPlayer.dir/controller/PlaylistRenderer.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/NewMusicPlayer.dir/controller/PlaylistRenderer.cpp.o -MF CMakeFiles/NewMusicPlayer.dir/controller/PlaylistRenderer.cpp.o.d -o CMakeFiles/NewMusicPlayer.dir/controller/PlaylistRenderer.cpp.o -c /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/controller/PlaylistRenderer.cpp
 
 CMakeFiles/NewMusicPlayer.dir/controller/PlaylistRenderer.cpp.i: cmake_force
@@ -240,10 +268,94 @@ CMakeFiles/NewMusicPlayer.dir/controller/PlaylistRenderer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/NewMusicPlayer.dir/controller/PlaylistRenderer.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/controller/PlaylistRenderer.cpp -o CMakeFiles/NewMusicPlayer.dir/controller/PlaylistRenderer.cpp.s
 
+CMakeFiles/NewMusicPlayer.dir/controller/SortMode.cpp.o: CMakeFiles/NewMusicPlayer.dir/flags.make
+CMakeFiles/NewMusicPlayer.dir/controller/SortMode.cpp.o: /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/controller/SortMode.cpp
+CMakeFiles/NewMusicPlayer.dir/controller/SortMode.cpp.o: CMakeFiles/NewMusicPlayer.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/NewMusicPlayer.dir/controller/SortMode.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/NewMusicPlayer.dir/controller/SortMode.cpp.o -MF CMakeFiles/NewMusicPlayer.dir/controller/SortMode.cpp.o.d -o CMakeFiles/NewMusicPlayer.dir/controller/SortMode.cpp.o -c /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/controller/SortMode.cpp
+
+CMakeFiles/NewMusicPlayer.dir/controller/SortMode.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/NewMusicPlayer.dir/controller/SortMode.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/controller/SortMode.cpp > CMakeFiles/NewMusicPlayer.dir/controller/SortMode.cpp.i
+
+CMakeFiles/NewMusicPlayer.dir/controller/SortMode.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/NewMusicPlayer.dir/controller/SortMode.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/controller/SortMode.cpp -o CMakeFiles/NewMusicPlayer.dir/controller/SortMode.cpp.s
+
+CMakeFiles/NewMusicPlayer.dir/controller/TitleAscending.cpp.o: CMakeFiles/NewMusicPlayer.dir/flags.make
+CMakeFiles/NewMusicPlayer.dir/controller/TitleAscending.cpp.o: /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/controller/TitleAscending.cpp
+CMakeFiles/NewMusicPlayer.dir/controller/TitleAscending.cpp.o: CMakeFiles/NewMusicPlayer.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/NewMusicPlayer.dir/controller/TitleAscending.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/NewMusicPlayer.dir/controller/TitleAscending.cpp.o -MF CMakeFiles/NewMusicPlayer.dir/controller/TitleAscending.cpp.o.d -o CMakeFiles/NewMusicPlayer.dir/controller/TitleAscending.cpp.o -c /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/controller/TitleAscending.cpp
+
+CMakeFiles/NewMusicPlayer.dir/controller/TitleAscending.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/NewMusicPlayer.dir/controller/TitleAscending.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/controller/TitleAscending.cpp > CMakeFiles/NewMusicPlayer.dir/controller/TitleAscending.cpp.i
+
+CMakeFiles/NewMusicPlayer.dir/controller/TitleAscending.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/NewMusicPlayer.dir/controller/TitleAscending.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/controller/TitleAscending.cpp -o CMakeFiles/NewMusicPlayer.dir/controller/TitleAscending.cpp.s
+
+CMakeFiles/NewMusicPlayer.dir/controller/TitleDescending.cpp.o: CMakeFiles/NewMusicPlayer.dir/flags.make
+CMakeFiles/NewMusicPlayer.dir/controller/TitleDescending.cpp.o: /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/controller/TitleDescending.cpp
+CMakeFiles/NewMusicPlayer.dir/controller/TitleDescending.cpp.o: CMakeFiles/NewMusicPlayer.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/NewMusicPlayer.dir/controller/TitleDescending.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/NewMusicPlayer.dir/controller/TitleDescending.cpp.o -MF CMakeFiles/NewMusicPlayer.dir/controller/TitleDescending.cpp.o.d -o CMakeFiles/NewMusicPlayer.dir/controller/TitleDescending.cpp.o -c /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/controller/TitleDescending.cpp
+
+CMakeFiles/NewMusicPlayer.dir/controller/TitleDescending.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/NewMusicPlayer.dir/controller/TitleDescending.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/controller/TitleDescending.cpp > CMakeFiles/NewMusicPlayer.dir/controller/TitleDescending.cpp.i
+
+CMakeFiles/NewMusicPlayer.dir/controller/TitleDescending.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/NewMusicPlayer.dir/controller/TitleDescending.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/controller/TitleDescending.cpp -o CMakeFiles/NewMusicPlayer.dir/controller/TitleDescending.cpp.s
+
+CMakeFiles/NewMusicPlayer.dir/controller/DurationMode.cpp.o: CMakeFiles/NewMusicPlayer.dir/flags.make
+CMakeFiles/NewMusicPlayer.dir/controller/DurationMode.cpp.o: /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/controller/DurationMode.cpp
+CMakeFiles/NewMusicPlayer.dir/controller/DurationMode.cpp.o: CMakeFiles/NewMusicPlayer.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/NewMusicPlayer.dir/controller/DurationMode.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/NewMusicPlayer.dir/controller/DurationMode.cpp.o -MF CMakeFiles/NewMusicPlayer.dir/controller/DurationMode.cpp.o.d -o CMakeFiles/NewMusicPlayer.dir/controller/DurationMode.cpp.o -c /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/controller/DurationMode.cpp
+
+CMakeFiles/NewMusicPlayer.dir/controller/DurationMode.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/NewMusicPlayer.dir/controller/DurationMode.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/controller/DurationMode.cpp > CMakeFiles/NewMusicPlayer.dir/controller/DurationMode.cpp.i
+
+CMakeFiles/NewMusicPlayer.dir/controller/DurationMode.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/NewMusicPlayer.dir/controller/DurationMode.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/controller/DurationMode.cpp -o CMakeFiles/NewMusicPlayer.dir/controller/DurationMode.cpp.s
+
+CMakeFiles/NewMusicPlayer.dir/controller/DateMode.cpp.o: CMakeFiles/NewMusicPlayer.dir/flags.make
+CMakeFiles/NewMusicPlayer.dir/controller/DateMode.cpp.o: /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/controller/DateMode.cpp
+CMakeFiles/NewMusicPlayer.dir/controller/DateMode.cpp.o: CMakeFiles/NewMusicPlayer.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/NewMusicPlayer.dir/controller/DateMode.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/NewMusicPlayer.dir/controller/DateMode.cpp.o -MF CMakeFiles/NewMusicPlayer.dir/controller/DateMode.cpp.o.d -o CMakeFiles/NewMusicPlayer.dir/controller/DateMode.cpp.o -c /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/controller/DateMode.cpp
+
+CMakeFiles/NewMusicPlayer.dir/controller/DateMode.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/NewMusicPlayer.dir/controller/DateMode.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/controller/DateMode.cpp > CMakeFiles/NewMusicPlayer.dir/controller/DateMode.cpp.i
+
+CMakeFiles/NewMusicPlayer.dir/controller/DateMode.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/NewMusicPlayer.dir/controller/DateMode.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/controller/DateMode.cpp -o CMakeFiles/NewMusicPlayer.dir/controller/DateMode.cpp.s
+
+CMakeFiles/NewMusicPlayer.dir/controller/CustomMode.cpp.o: CMakeFiles/NewMusicPlayer.dir/flags.make
+CMakeFiles/NewMusicPlayer.dir/controller/CustomMode.cpp.o: /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/controller/CustomMode.cpp
+CMakeFiles/NewMusicPlayer.dir/controller/CustomMode.cpp.o: CMakeFiles/NewMusicPlayer.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/NewMusicPlayer.dir/controller/CustomMode.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/NewMusicPlayer.dir/controller/CustomMode.cpp.o -MF CMakeFiles/NewMusicPlayer.dir/controller/CustomMode.cpp.o.d -o CMakeFiles/NewMusicPlayer.dir/controller/CustomMode.cpp.o -c /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/controller/CustomMode.cpp
+
+CMakeFiles/NewMusicPlayer.dir/controller/CustomMode.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/NewMusicPlayer.dir/controller/CustomMode.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/controller/CustomMode.cpp > CMakeFiles/NewMusicPlayer.dir/controller/CustomMode.cpp.i
+
+CMakeFiles/NewMusicPlayer.dir/controller/CustomMode.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/NewMusicPlayer.dir/controller/CustomMode.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/controller/CustomMode.cpp -o CMakeFiles/NewMusicPlayer.dir/controller/CustomMode.cpp.s
+
 CMakeFiles/NewMusicPlayer.dir/controller/Controller.cpp.o: CMakeFiles/NewMusicPlayer.dir/flags.make
 CMakeFiles/NewMusicPlayer.dir/controller/Controller.cpp.o: /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/controller/Controller.cpp
 CMakeFiles/NewMusicPlayer.dir/controller/Controller.cpp.o: CMakeFiles/NewMusicPlayer.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/NewMusicPlayer.dir/controller/Controller.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/NewMusicPlayer.dir/controller/Controller.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/NewMusicPlayer.dir/controller/Controller.cpp.o -MF CMakeFiles/NewMusicPlayer.dir/controller/Controller.cpp.o.d -o CMakeFiles/NewMusicPlayer.dir/controller/Controller.cpp.o -c /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/controller/Controller.cpp
 
 CMakeFiles/NewMusicPlayer.dir/controller/Controller.cpp.i: cmake_force
@@ -257,7 +369,7 @@ CMakeFiles/NewMusicPlayer.dir/controller/Controller.cpp.s: cmake_force
 CMakeFiles/NewMusicPlayer.dir/adapters/qt/QtPlaybackPanel.cpp.o: CMakeFiles/NewMusicPlayer.dir/flags.make
 CMakeFiles/NewMusicPlayer.dir/adapters/qt/QtPlaybackPanel.cpp.o: /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/adapters/qt/QtPlaybackPanel.cpp
 CMakeFiles/NewMusicPlayer.dir/adapters/qt/QtPlaybackPanel.cpp.o: CMakeFiles/NewMusicPlayer.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/NewMusicPlayer.dir/adapters/qt/QtPlaybackPanel.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/NewMusicPlayer.dir/adapters/qt/QtPlaybackPanel.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/NewMusicPlayer.dir/adapters/qt/QtPlaybackPanel.cpp.o -MF CMakeFiles/NewMusicPlayer.dir/adapters/qt/QtPlaybackPanel.cpp.o.d -o CMakeFiles/NewMusicPlayer.dir/adapters/qt/QtPlaybackPanel.cpp.o -c /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/adapters/qt/QtPlaybackPanel.cpp
 
 CMakeFiles/NewMusicPlayer.dir/adapters/qt/QtPlaybackPanel.cpp.i: cmake_force
@@ -271,7 +383,7 @@ CMakeFiles/NewMusicPlayer.dir/adapters/qt/QtPlaybackPanel.cpp.s: cmake_force
 CMakeFiles/NewMusicPlayer.dir/adapters/qt/QtVolumePanel.cpp.o: CMakeFiles/NewMusicPlayer.dir/flags.make
 CMakeFiles/NewMusicPlayer.dir/adapters/qt/QtVolumePanel.cpp.o: /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/adapters/qt/QtVolumePanel.cpp
 CMakeFiles/NewMusicPlayer.dir/adapters/qt/QtVolumePanel.cpp.o: CMakeFiles/NewMusicPlayer.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/NewMusicPlayer.dir/adapters/qt/QtVolumePanel.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/NewMusicPlayer.dir/adapters/qt/QtVolumePanel.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/NewMusicPlayer.dir/adapters/qt/QtVolumePanel.cpp.o -MF CMakeFiles/NewMusicPlayer.dir/adapters/qt/QtVolumePanel.cpp.o.d -o CMakeFiles/NewMusicPlayer.dir/adapters/qt/QtVolumePanel.cpp.o -c /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/adapters/qt/QtVolumePanel.cpp
 
 CMakeFiles/NewMusicPlayer.dir/adapters/qt/QtVolumePanel.cpp.i: cmake_force
@@ -285,7 +397,7 @@ CMakeFiles/NewMusicPlayer.dir/adapters/qt/QtVolumePanel.cpp.s: cmake_force
 CMakeFiles/NewMusicPlayer.dir/adapters/qt/QtToolbar.cpp.o: CMakeFiles/NewMusicPlayer.dir/flags.make
 CMakeFiles/NewMusicPlayer.dir/adapters/qt/QtToolbar.cpp.o: /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/adapters/qt/QtToolbar.cpp
 CMakeFiles/NewMusicPlayer.dir/adapters/qt/QtToolbar.cpp.o: CMakeFiles/NewMusicPlayer.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/NewMusicPlayer.dir/adapters/qt/QtToolbar.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object CMakeFiles/NewMusicPlayer.dir/adapters/qt/QtToolbar.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/NewMusicPlayer.dir/adapters/qt/QtToolbar.cpp.o -MF CMakeFiles/NewMusicPlayer.dir/adapters/qt/QtToolbar.cpp.o.d -o CMakeFiles/NewMusicPlayer.dir/adapters/qt/QtToolbar.cpp.o -c /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/adapters/qt/QtToolbar.cpp
 
 CMakeFiles/NewMusicPlayer.dir/adapters/qt/QtToolbar.cpp.i: cmake_force
@@ -299,7 +411,7 @@ CMakeFiles/NewMusicPlayer.dir/adapters/qt/QtToolbar.cpp.s: cmake_force
 CMakeFiles/NewMusicPlayer.dir/adapters/qt/QtProgressPanel.cpp.o: CMakeFiles/NewMusicPlayer.dir/flags.make
 CMakeFiles/NewMusicPlayer.dir/adapters/qt/QtProgressPanel.cpp.o: /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/adapters/qt/QtProgressPanel.cpp
 CMakeFiles/NewMusicPlayer.dir/adapters/qt/QtProgressPanel.cpp.o: CMakeFiles/NewMusicPlayer.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/NewMusicPlayer.dir/adapters/qt/QtProgressPanel.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object CMakeFiles/NewMusicPlayer.dir/adapters/qt/QtProgressPanel.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/NewMusicPlayer.dir/adapters/qt/QtProgressPanel.cpp.o -MF CMakeFiles/NewMusicPlayer.dir/adapters/qt/QtProgressPanel.cpp.o.d -o CMakeFiles/NewMusicPlayer.dir/adapters/qt/QtProgressPanel.cpp.o -c /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/adapters/qt/QtProgressPanel.cpp
 
 CMakeFiles/NewMusicPlayer.dir/adapters/qt/QtProgressPanel.cpp.i: cmake_force
@@ -313,7 +425,7 @@ CMakeFiles/NewMusicPlayer.dir/adapters/qt/QtProgressPanel.cpp.s: cmake_force
 CMakeFiles/NewMusicPlayer.dir/adapters/qt/QtSortHeader.cpp.o: CMakeFiles/NewMusicPlayer.dir/flags.make
 CMakeFiles/NewMusicPlayer.dir/adapters/qt/QtSortHeader.cpp.o: /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/adapters/qt/QtSortHeader.cpp
 CMakeFiles/NewMusicPlayer.dir/adapters/qt/QtSortHeader.cpp.o: CMakeFiles/NewMusicPlayer.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/NewMusicPlayer.dir/adapters/qt/QtSortHeader.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object CMakeFiles/NewMusicPlayer.dir/adapters/qt/QtSortHeader.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/NewMusicPlayer.dir/adapters/qt/QtSortHeader.cpp.o -MF CMakeFiles/NewMusicPlayer.dir/adapters/qt/QtSortHeader.cpp.o.d -o CMakeFiles/NewMusicPlayer.dir/adapters/qt/QtSortHeader.cpp.o -c /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/adapters/qt/QtSortHeader.cpp
 
 CMakeFiles/NewMusicPlayer.dir/adapters/qt/QtSortHeader.cpp.i: cmake_force
@@ -327,7 +439,7 @@ CMakeFiles/NewMusicPlayer.dir/adapters/qt/QtSortHeader.cpp.s: cmake_force
 CMakeFiles/NewMusicPlayer.dir/adapters/qt/QtPlaylistDisplay.cpp.o: CMakeFiles/NewMusicPlayer.dir/flags.make
 CMakeFiles/NewMusicPlayer.dir/adapters/qt/QtPlaylistDisplay.cpp.o: /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/adapters/qt/QtPlaylistDisplay.cpp
 CMakeFiles/NewMusicPlayer.dir/adapters/qt/QtPlaylistDisplay.cpp.o: CMakeFiles/NewMusicPlayer.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/NewMusicPlayer.dir/adapters/qt/QtPlaylistDisplay.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building CXX object CMakeFiles/NewMusicPlayer.dir/adapters/qt/QtPlaylistDisplay.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/NewMusicPlayer.dir/adapters/qt/QtPlaylistDisplay.cpp.o -MF CMakeFiles/NewMusicPlayer.dir/adapters/qt/QtPlaylistDisplay.cpp.o.d -o CMakeFiles/NewMusicPlayer.dir/adapters/qt/QtPlaylistDisplay.cpp.o -c /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/adapters/qt/QtPlaylistDisplay.cpp
 
 CMakeFiles/NewMusicPlayer.dir/adapters/qt/QtPlaylistDisplay.cpp.i: cmake_force
@@ -341,7 +453,7 @@ CMakeFiles/NewMusicPlayer.dir/adapters/qt/QtPlaylistDisplay.cpp.s: cmake_force
 CMakeFiles/NewMusicPlayer.dir/adapters/qt/QtAudioEngine.cpp.o: CMakeFiles/NewMusicPlayer.dir/flags.make
 CMakeFiles/NewMusicPlayer.dir/adapters/qt/QtAudioEngine.cpp.o: /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/adapters/qt/QtAudioEngine.cpp
 CMakeFiles/NewMusicPlayer.dir/adapters/qt/QtAudioEngine.cpp.o: CMakeFiles/NewMusicPlayer.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/NewMusicPlayer.dir/adapters/qt/QtAudioEngine.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building CXX object CMakeFiles/NewMusicPlayer.dir/adapters/qt/QtAudioEngine.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/NewMusicPlayer.dir/adapters/qt/QtAudioEngine.cpp.o -MF CMakeFiles/NewMusicPlayer.dir/adapters/qt/QtAudioEngine.cpp.o.d -o CMakeFiles/NewMusicPlayer.dir/adapters/qt/QtAudioEngine.cpp.o -c /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/adapters/qt/QtAudioEngine.cpp
 
 CMakeFiles/NewMusicPlayer.dir/adapters/qt/QtAudioEngine.cpp.i: cmake_force
@@ -355,7 +467,7 @@ CMakeFiles/NewMusicPlayer.dir/adapters/qt/QtAudioEngine.cpp.s: cmake_force
 CMakeFiles/NewMusicPlayer.dir/adapters/qt/QtViewFactory.cpp.o: CMakeFiles/NewMusicPlayer.dir/flags.make
 CMakeFiles/NewMusicPlayer.dir/adapters/qt/QtViewFactory.cpp.o: /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/adapters/qt/QtViewFactory.cpp
 CMakeFiles/NewMusicPlayer.dir/adapters/qt/QtViewFactory.cpp.o: CMakeFiles/NewMusicPlayer.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/NewMusicPlayer.dir/adapters/qt/QtViewFactory.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building CXX object CMakeFiles/NewMusicPlayer.dir/adapters/qt/QtViewFactory.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/NewMusicPlayer.dir/adapters/qt/QtViewFactory.cpp.o -MF CMakeFiles/NewMusicPlayer.dir/adapters/qt/QtViewFactory.cpp.o.d -o CMakeFiles/NewMusicPlayer.dir/adapters/qt/QtViewFactory.cpp.o -c /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/adapters/qt/QtViewFactory.cpp
 
 CMakeFiles/NewMusicPlayer.dir/adapters/qt/QtViewFactory.cpp.i: cmake_force
@@ -369,7 +481,7 @@ CMakeFiles/NewMusicPlayer.dir/adapters/qt/QtViewFactory.cpp.s: cmake_force
 CMakeFiles/NewMusicPlayer.dir/adapters/qt/QtStyler.cpp.o: CMakeFiles/NewMusicPlayer.dir/flags.make
 CMakeFiles/NewMusicPlayer.dir/adapters/qt/QtStyler.cpp.o: /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/adapters/qt/QtStyler.cpp
 CMakeFiles/NewMusicPlayer.dir/adapters/qt/QtStyler.cpp.o: CMakeFiles/NewMusicPlayer.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/NewMusicPlayer.dir/adapters/qt/QtStyler.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building CXX object CMakeFiles/NewMusicPlayer.dir/adapters/qt/QtStyler.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/NewMusicPlayer.dir/adapters/qt/QtStyler.cpp.o -MF CMakeFiles/NewMusicPlayer.dir/adapters/qt/QtStyler.cpp.o.d -o CMakeFiles/NewMusicPlayer.dir/adapters/qt/QtStyler.cpp.o -c /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/adapters/qt/QtStyler.cpp
 
 CMakeFiles/NewMusicPlayer.dir/adapters/qt/QtStyler.cpp.i: cmake_force
@@ -383,7 +495,7 @@ CMakeFiles/NewMusicPlayer.dir/adapters/qt/QtStyler.cpp.s: cmake_force
 CMakeFiles/NewMusicPlayer.dir/adapters/qt/QtView.cpp.o: CMakeFiles/NewMusicPlayer.dir/flags.make
 CMakeFiles/NewMusicPlayer.dir/adapters/qt/QtView.cpp.o: /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/adapters/qt/QtView.cpp
 CMakeFiles/NewMusicPlayer.dir/adapters/qt/QtView.cpp.o: CMakeFiles/NewMusicPlayer.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/NewMusicPlayer.dir/adapters/qt/QtView.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building CXX object CMakeFiles/NewMusicPlayer.dir/adapters/qt/QtView.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/NewMusicPlayer.dir/adapters/qt/QtView.cpp.o -MF CMakeFiles/NewMusicPlayer.dir/adapters/qt/QtView.cpp.o.d -o CMakeFiles/NewMusicPlayer.dir/adapters/qt/QtView.cpp.o -c /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/adapters/qt/QtView.cpp
 
 CMakeFiles/NewMusicPlayer.dir/adapters/qt/QtView.cpp.i: cmake_force
@@ -400,6 +512,8 @@ NewMusicPlayer_OBJECTS = \
 "CMakeFiles/NewMusicPlayer.dir/main.cpp.o" \
 "CMakeFiles/NewMusicPlayer.dir/model/Song.cpp.o" \
 "CMakeFiles/NewMusicPlayer.dir/model/ShellSort.cpp.o" \
+"CMakeFiles/NewMusicPlayer.dir/model/DurationSort.cpp.o" \
+"CMakeFiles/NewMusicPlayer.dir/model/DateSort.cpp.o" \
 "CMakeFiles/NewMusicPlayer.dir/model/QuickSort.cpp.o" \
 "CMakeFiles/NewMusicPlayer.dir/model/Playlist.cpp.o" \
 "CMakeFiles/NewMusicPlayer.dir/model/Advertisement.cpp.o" \
@@ -408,6 +522,12 @@ NewMusicPlayer_OBJECTS = \
 "CMakeFiles/NewMusicPlayer.dir/model/PlaybackNotifier.cpp.o" \
 "CMakeFiles/NewMusicPlayer.dir/model/Model.cpp.o" \
 "CMakeFiles/NewMusicPlayer.dir/controller/PlaylistRenderer.cpp.o" \
+"CMakeFiles/NewMusicPlayer.dir/controller/SortMode.cpp.o" \
+"CMakeFiles/NewMusicPlayer.dir/controller/TitleAscending.cpp.o" \
+"CMakeFiles/NewMusicPlayer.dir/controller/TitleDescending.cpp.o" \
+"CMakeFiles/NewMusicPlayer.dir/controller/DurationMode.cpp.o" \
+"CMakeFiles/NewMusicPlayer.dir/controller/DateMode.cpp.o" \
+"CMakeFiles/NewMusicPlayer.dir/controller/CustomMode.cpp.o" \
 "CMakeFiles/NewMusicPlayer.dir/controller/Controller.cpp.o" \
 "CMakeFiles/NewMusicPlayer.dir/adapters/qt/QtPlaybackPanel.cpp.o" \
 "CMakeFiles/NewMusicPlayer.dir/adapters/qt/QtVolumePanel.cpp.o" \
@@ -427,6 +547,8 @@ NewMusicPlayer: CMakeFiles/NewMusicPlayer.dir/NewMusicPlayer_autogen/mocs_compil
 NewMusicPlayer: CMakeFiles/NewMusicPlayer.dir/main.cpp.o
 NewMusicPlayer: CMakeFiles/NewMusicPlayer.dir/model/Song.cpp.o
 NewMusicPlayer: CMakeFiles/NewMusicPlayer.dir/model/ShellSort.cpp.o
+NewMusicPlayer: CMakeFiles/NewMusicPlayer.dir/model/DurationSort.cpp.o
+NewMusicPlayer: CMakeFiles/NewMusicPlayer.dir/model/DateSort.cpp.o
 NewMusicPlayer: CMakeFiles/NewMusicPlayer.dir/model/QuickSort.cpp.o
 NewMusicPlayer: CMakeFiles/NewMusicPlayer.dir/model/Playlist.cpp.o
 NewMusicPlayer: CMakeFiles/NewMusicPlayer.dir/model/Advertisement.cpp.o
@@ -435,6 +557,12 @@ NewMusicPlayer: CMakeFiles/NewMusicPlayer.dir/model/Channel.cpp.o
 NewMusicPlayer: CMakeFiles/NewMusicPlayer.dir/model/PlaybackNotifier.cpp.o
 NewMusicPlayer: CMakeFiles/NewMusicPlayer.dir/model/Model.cpp.o
 NewMusicPlayer: CMakeFiles/NewMusicPlayer.dir/controller/PlaylistRenderer.cpp.o
+NewMusicPlayer: CMakeFiles/NewMusicPlayer.dir/controller/SortMode.cpp.o
+NewMusicPlayer: CMakeFiles/NewMusicPlayer.dir/controller/TitleAscending.cpp.o
+NewMusicPlayer: CMakeFiles/NewMusicPlayer.dir/controller/TitleDescending.cpp.o
+NewMusicPlayer: CMakeFiles/NewMusicPlayer.dir/controller/DurationMode.cpp.o
+NewMusicPlayer: CMakeFiles/NewMusicPlayer.dir/controller/DateMode.cpp.o
+NewMusicPlayer: CMakeFiles/NewMusicPlayer.dir/controller/CustomMode.cpp.o
 NewMusicPlayer: CMakeFiles/NewMusicPlayer.dir/controller/Controller.cpp.o
 NewMusicPlayer: CMakeFiles/NewMusicPlayer.dir/adapters/qt/QtPlaybackPanel.cpp.o
 NewMusicPlayer: CMakeFiles/NewMusicPlayer.dir/adapters/qt/QtVolumePanel.cpp.o
@@ -453,7 +581,7 @@ NewMusicPlayer: /opt/homebrew/lib/QtGui.framework/Versions/A/QtGui
 NewMusicPlayer: /opt/homebrew/lib/QtNetwork.framework/Versions/A/QtNetwork
 NewMusicPlayer: /opt/homebrew/lib/QtCore.framework/Versions/A/QtCore
 NewMusicPlayer: CMakeFiles/NewMusicPlayer.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Linking CXX executable NewMusicPlayer"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Linking CXX executable NewMusicPlayer"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/NewMusicPlayer.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

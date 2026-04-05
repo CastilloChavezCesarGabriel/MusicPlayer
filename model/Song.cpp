@@ -1,5 +1,6 @@
 #include "Song.h"
 #include <regex>
+#include <filesystem>
 
 Song::Song(const std::string& name, const std::string& path)
        : name_(name), path_(path) {
@@ -26,13 +27,15 @@ std::string Song::parse(const std::string& name) {
     return trim(name);
 }
 
-int Song::order(const std::string& name) {
-    static const std::regex pattern(R"(^\s*[\(\[]?(\d+)[\)\]]?[\s\-_:]*)");
-    std::smatch match;
-    if (std::regex_search(name, match, pattern)) {
-        return std::stoi(match[1]);
-    }
-    return 0;
+long long Song::stamp(const std::string& path) {
+    if (!std::filesystem::exists(path)) return 0;
+    const auto time = std::filesystem::last_write_time(path);
+    return time.time_since_epoch().count();
+}
+
+int Song::last(const std::string& path) {
+    if (!std::filesystem::exists(path)) return 0;
+    return static_cast<int>(std::filesystem::file_size(path));
 }
 
 std::string Song::trim(const std::string& string) {

@@ -1,4 +1,5 @@
 #include "PlaySongUseCaseTest.h"
+#include "../../model/QuickSort.h"
 #include <filesystem>
 #include <fstream>
 
@@ -230,7 +231,8 @@ TEST_F(PlaySongUseCaseTest, PlaySortedThenAdvance) {
     createSong("b.mp3");
     Model model(base_directory_);
     model.subscribe(listener_);
-    model.sort(true);
+    QuickSort byTitle;
+    model.sort(byTitle);
     model.play(0);
     model.advance();
     EXPECT_TRUE(listener_.wasSelected());

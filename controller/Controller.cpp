@@ -1,8 +1,18 @@
 #include "Controller.h"
 #include "PlaylistRenderer.h"
+#include "TitleAscending.h"
+#include "TitleDescending.h"
+#include "DurationMode.h"
+#include "DateMode.h"
+#include "CustomMode.h"
 
 Controller::Controller(Model& model, IPlayerView& view)
         : model_(model), view_(view) {
+    modes_.push_back(std::make_unique<TitleAscending>());
+    modes_.push_back(std::make_unique<TitleDescending>());
+    modes_.push_back(std::make_unique<DurationMode>());
+    modes_.push_back(std::make_unique<DateMode>());
+    modes_.push_back(std::make_unique<CustomMode>());
     model_.subscribe(*this);
     view_.add(this);
     refresh();
@@ -92,10 +102,9 @@ void Controller::onSkip() {
 }
 
 void Controller::onSort() {
-    sort_mode_ = (sort_mode_ + 1) % 2;
-    const bool byName = sort_mode_ == 0;
-    model_.sort(byName);
-    view_.sort(byName ? "Title \xe2\x96\xb2" : "# \xe2\x96\xb2");
+    sort_index_ = (sort_index_ + 1) % static_cast<int>(modes_.size());
+    modes_[sort_index_]->apply(model_);
+    modes_[sort_index_]->display(view_);
 }
 
 void Controller::onSearch(const std::string& query) {

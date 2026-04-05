@@ -1,5 +1,6 @@
 #include "AddSongUseCaseTest.h"
 #include "../../model/Model.h"
+#include "../../model/QuickSort.h"
 #include "../TestPlaylistVisitor.h"
 #include <filesystem>
 #include <fstream>
@@ -124,7 +125,8 @@ TEST_F(AddSongUseCaseTest, AddThenSort) {
     model.subscribe(listener_);
     std::string path = prepare("a.mp3");
     model.insert(path);
-    model.sort(true);
+    QuickSort byTitle;
+    model.sort(byTitle);
     TestPlaylistVisitor visitor;
     model.accept(visitor);
     EXPECT_TRUE(visitor.hasNameAt(0, "a.mp3"));
@@ -288,7 +290,8 @@ TEST_F(AddSongUseCaseTest, AddThenSortThenSearch) {
     model.subscribe(listener_);
     model.insert(prepare("zebra.mp3"));
     model.insert(prepare("alpha.mp3"));
-    model.sort(true);
+    QuickSort byTitle;
+    model.sort(byTitle);
     TestPlaylistVisitor visitor;
     model.search("alpha", visitor);
     EXPECT_TRUE(visitor.hasName("alpha.mp3"));

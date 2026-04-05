@@ -3,7 +3,7 @@
 #include "../model/Playlist.h"
 #include "../model/MusicLibrary.h"
 #include "../model/Model.h"
-#include "../model/ShellSort.h"
+#include "../model/DurationSort.h"
 #include "../model/QuickSort.h"
 #include "TestPlaylistVisitor.h"
 #include <filesystem>
@@ -31,7 +31,7 @@ TEST_F(RegressionTest, SortSingleSongDoesNotCrash) {
 TEST_F(RegressionTest, ShellSortEmptyDoesNotCrash) {
     MusicLibrary lib(music_directory_);
     Playlist playlist(lib);
-    ShellSort byNumber;
+    DurationSort byNumber;
     EXPECT_NO_THROW(playlist.sort(byNumber));
 }
 
@@ -41,7 +41,8 @@ TEST_F(RegressionTest, ModelRefreshDoesNotRecurse) {
     Model model(base_directory_);
     MockPlaybackListener listener_;
     model.subscribe(listener_);
-    EXPECT_NO_THROW(model.sort(true));
+    QuickSort byTitle;
+    EXPECT_NO_THROW(model.sort(byTitle));
     EXPECT_TRUE(listener_.wasChanged());
 }
 
@@ -52,7 +53,8 @@ TEST_F(RegressionTest, ModelSortByNameDoesNotCrash) {
     Model model(base_directory_);
     MockPlaybackListener listener_;
     model.subscribe(listener_);
-    EXPECT_NO_THROW(model.sort(true));
+    QuickSort byTitle;
+    EXPECT_NO_THROW(model.sort(byTitle));
 }
 
 TEST_F(RegressionTest, ModelSortByNumberDoesNotCrash) {
@@ -62,7 +64,8 @@ TEST_F(RegressionTest, ModelSortByNumberDoesNotCrash) {
     Model model(base_directory_);
     MockPlaybackListener listener_;
     model.subscribe(listener_);
-    EXPECT_NO_THROW(model.sort(false));
+    DurationSort byDuration;
+    EXPECT_NO_THROW(model.sort(byDuration));
 }
 
 TEST_F(RegressionTest, AdvanceUpdatesSelection) {
@@ -138,7 +141,8 @@ TEST_F(RegressionTest, SortPreservesAllSongs) {
     Model model(base_directory_);
     MockPlaybackListener listener_;
     model.subscribe(listener_);
-    model.sort(true);
+    QuickSort byTitle;
+    model.sort(byTitle);
     TestPlaylistVisitor visitor;
     model.accept(visitor);
     EXPECT_TRUE(visitor.hasSongs(3));
@@ -207,7 +211,13 @@ TEST_F(RegressionTest, MultipleSortsDoNotCrash) {
     MockPlaybackListener listener_;
     model.subscribe(listener_);
     for (int i = 0; i < 10; i++) {
-        EXPECT_NO_THROW(model.sort(i % 2 == 0));
+        if (i % 2 == 0) {
+            QuickSort byTitle;
+            EXPECT_NO_THROW(model.sort(byTitle));
+        } else {
+            DurationSort byDuration;
+            EXPECT_NO_THROW(model.sort(byDuration));
+        }
     }
 }
 
@@ -218,7 +228,8 @@ TEST_F(RegressionTest, SortThenAdvanceWorks) {
     Model model(base_directory_);
     MockPlaybackListener listener_;
     model.subscribe(listener_);
-    model.sort(true);
+    QuickSort byTitle;
+    model.sort(byTitle);
     model.play(0);
     EXPECT_NO_THROW(model.advance());
 }
@@ -229,7 +240,7 @@ TEST_F(RegressionTest, LargePlaylistSortDoesNotCrash) {
     for (int i = 500; i > 0; i--) {
         playlist.add(Song("(" + std::to_string(i) + ") Song.mp3", "/s"));
     }
-    ShellSort byNumber;
+    DurationSort byNumber;
     EXPECT_NO_THROW(playlist.sort(byNumber));
     QuickSort byName;
     EXPECT_NO_THROW(playlist.sort(byName));

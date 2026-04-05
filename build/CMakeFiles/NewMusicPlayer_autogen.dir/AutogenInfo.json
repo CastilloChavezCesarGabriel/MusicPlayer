@@ -566,9 +566,45 @@
 			null
 		],
 		[
+			"/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/controller/CustomMode.h",
+			"MU",
+			"NPUKSKGWT2/moc_CustomMode.cpp",
+			null
+		],
+		[
+			"/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/controller/DateMode.h",
+			"MU",
+			"NPUKSKGWT2/moc_DateMode.cpp",
+			null
+		],
+		[
+			"/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/controller/DurationMode.h",
+			"MU",
+			"NPUKSKGWT2/moc_DurationMode.cpp",
+			null
+		],
+		[
 			"/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/controller/PlaylistRenderer.h",
 			"MU",
 			"NPUKSKGWT2/moc_PlaylistRenderer.cpp",
+			null
+		],
+		[
+			"/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/controller/SortMode.h",
+			"MU",
+			"NPUKSKGWT2/moc_SortMode.cpp",
+			null
+		],
+		[
+			"/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/controller/TitleAscending.h",
+			"MU",
+			"NPUKSKGWT2/moc_TitleAscending.cpp",
+			null
+		],
+		[
+			"/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/controller/TitleDescending.h",
+			"MU",
+			"NPUKSKGWT2/moc_TitleDescending.cpp",
 			null
 		],
 		[
@@ -581,6 +617,18 @@
 			"/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/Channel.h",
 			"MU",
 			"NLOY5YBGEN/moc_Channel.cpp",
+			null
+		],
+		[
+			"/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/DateSort.h",
+			"MU",
+			"NLOY5YBGEN/moc_DateSort.cpp",
+			null
+		],
+		[
+			"/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/DurationSort.h",
+			"MU",
+			"NLOY5YBGEN/moc_DurationSort.cpp",
 			null
 		],
 		[
@@ -825,7 +873,37 @@
 			null
 		],
 		[
+			"/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/controller/CustomMode.cpp",
+			"MU",
+			null
+		],
+		[
+			"/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/controller/DateMode.cpp",
+			"MU",
+			null
+		],
+		[
+			"/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/controller/DurationMode.cpp",
+			"MU",
+			null
+		],
+		[
 			"/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/controller/PlaylistRenderer.cpp",
+			"MU",
+			null
+		],
+		[
+			"/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/controller/SortMode.cpp",
+			"MU",
+			null
+		],
+		[
+			"/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/controller/TitleAscending.cpp",
+			"MU",
+			null
+		],
+		[
+			"/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/controller/TitleDescending.cpp",
 			"MU",
 			null
 		],
@@ -841,6 +919,16 @@
 		],
 		[
 			"/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/Channel.cpp",
+			"MU",
+			null
+		],
+		[
+			"/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/DateSort.cpp",
+			"MU",
+			null
+		],
+		[
+			"/Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/DurationSort.cpp",
 			"MU",
 			null
 		],

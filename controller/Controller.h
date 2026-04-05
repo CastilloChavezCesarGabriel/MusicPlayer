@@ -5,12 +5,16 @@
 #include "../model/PlaybackNotifier.h"
 #include "../view/IPlayerView.h"
 #include "../view/IPlayerListener.h"
+#include "SortMode.h"
+#include <vector>
+#include <memory>
 
 class Controller final : public IPlaybackListener, public IPlayerListener {
 private:
     Model& model_;
     IPlayerView& view_;
-    int sort_mode_ = 0;
+    std::vector<std::unique_ptr<SortMode>> modes_;
+    int sort_index_ = -1;
     bool playing_ = false;
 
     void refresh(const std::string& query = "") const;

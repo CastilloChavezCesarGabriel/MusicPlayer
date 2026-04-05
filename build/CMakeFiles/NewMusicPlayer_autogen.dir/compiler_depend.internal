@@ -974,13 +974,29 @@
  /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/build/NewMusicPlayer_autogen/moc_predefs.h
  /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/controller/Controller.cpp
  /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/controller/Controller.h
+ /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/controller/CustomMode.cpp
+ /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/controller/CustomMode.h
+ /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/controller/DateMode.cpp
+ /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/controller/DateMode.h
+ /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/controller/DurationMode.cpp
+ /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/controller/DurationMode.h
  /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/controller/PlaylistRenderer.cpp
  /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/controller/PlaylistRenderer.h
+ /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/controller/SortMode.cpp
+ /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/controller/SortMode.h
+ /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/controller/TitleAscending.cpp
+ /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/controller/TitleAscending.h
+ /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/controller/TitleDescending.cpp
+ /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/controller/TitleDescending.h
  /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/main.cpp
  /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/Advertisement.cpp
  /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/Advertisement.h
  /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/Channel.cpp
  /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/Channel.h
+ /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/DateSort.cpp
+ /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/DateSort.h
+ /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/DurationSort.cpp
+ /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/DurationSort.h
  /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/IPlaybackListener.h
  /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/IPlaylistVisitor.h
  /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/model/Model.cpp

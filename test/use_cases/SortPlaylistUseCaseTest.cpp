@@ -1,5 +1,7 @@
 #include "SortPlaylistUseCaseTest.h"
 #include "../TestPlaylistVisitor.h"
+#include "../../model/QuickSort.h"
+#include "../../model/DurationSort.h"
 #include <filesystem>
 #include <fstream>
 
@@ -12,7 +14,8 @@ TEST_F(SortPlaylistUseCaseTest, SortByNameNotifiesChanged) {
     createSong("a.mp3");
     Model model(base_directory_);
     model.subscribe(listener_);
-    model.sort(true);
+    QuickSort byTitle;
+    model.sort(byTitle);
     EXPECT_TRUE(listener_.wasChanged());
 }
 
@@ -21,7 +24,8 @@ TEST_F(SortPlaylistUseCaseTest, SortByNumberNotifiesChanged) {
     createSong("a.mp3");
     Model model(base_directory_);
     model.subscribe(listener_);
-    model.sort(false);
+    DurationSort byDuration;
+    model.sort(byDuration);
     EXPECT_TRUE(listener_.wasChanged());
 }
 
@@ -31,7 +35,8 @@ TEST_F(SortPlaylistUseCaseTest, SortByNameOrdersAlphabetically) {
     createSong("banana.mp3");
     Model model(base_directory_);
     model.subscribe(listener_);
-    model.sort(true);
+    QuickSort byTitle;
+    model.sort(byTitle);
     TestPlaylistVisitor visitor;
     model.accept(visitor);
     EXPECT_TRUE(visitor.hasNameAt(0, "apple.mp3"));
@@ -42,13 +47,15 @@ TEST_F(SortPlaylistUseCaseTest, SortByNameOrdersAlphabetically) {
 TEST_F(SortPlaylistUseCaseTest, SortEmptyPlaylistDoesNotCrash) {
     Model model(base_directory_);
     model.subscribe(listener_);
-    EXPECT_NO_THROW(model.sort(true));
+    QuickSort byTitle;
+    EXPECT_NO_THROW(model.sort(byTitle));
 }
 
 TEST_F(SortPlaylistUseCaseTest, SortEmptyPlaylistNotifiesChanged) {
     Model model(base_directory_);
     model.subscribe(listener_);
-    model.sort(true);
+    QuickSort byTitle;
+    model.sort(byTitle);
     EXPECT_TRUE(listener_.wasChanged());
 }
 
@@ -56,14 +63,16 @@ TEST_F(SortPlaylistUseCaseTest, SortSingleSongDoesNotCrash) {
     createSong("only.mp3");
     Model model(base_directory_);
     model.subscribe(listener_);
-    EXPECT_NO_THROW(model.sort(true));
+    QuickSort byTitle;
+    EXPECT_NO_THROW(model.sort(byTitle));
 }
 
 TEST_F(SortPlaylistUseCaseTest, SortSingleSongPreserves) {
     createSong("only.mp3");
     Model model(base_directory_);
     model.subscribe(listener_);
-    model.sort(true);
+    QuickSort byTitle;
+    model.sort(byTitle);
     TestPlaylistVisitor visitor;
     model.accept(visitor);
     EXPECT_TRUE(visitor.hasName("only.mp3"));
@@ -76,7 +85,8 @@ TEST_F(SortPlaylistUseCaseTest, SortPreservesSongCount) {
     createSong("b.mp3");
     Model model(base_directory_);
     model.subscribe(listener_);
-    model.sort(true);
+    QuickSort byTitle;
+    model.sort(byTitle);
     TestPlaylistVisitor visitor;
     model.accept(visitor);
     EXPECT_TRUE(visitor.hasSongs(3));
@@ -88,7 +98,8 @@ TEST_F(SortPlaylistUseCaseTest, SortPreservesAllSongNames) {
     createSong("b.mp3");
     Model model(base_directory_);
     model.subscribe(listener_);
-    model.sort(true);
+    QuickSort byTitle;
+    model.sort(byTitle);
     TestPlaylistVisitor visitor;
     model.accept(visitor);
     EXPECT_TRUE(visitor.hasName("a.mp3"));
@@ -102,7 +113,8 @@ TEST_F(SortPlaylistUseCaseTest, SortThenPlayFirstSong) {
     createSong("b.mp3");
     Model model(base_directory_);
     model.subscribe(listener_);
-    model.sort(true);
+    QuickSort byTitle;
+    model.sort(byTitle);
     model.play(0);
     EXPECT_TRUE(listener_.wasSelected());
 }
@@ -112,7 +124,8 @@ TEST_F(SortPlaylistUseCaseTest, SortThenPlaySelectsCorrectIndex) {
     createSong("a.mp3");
     Model model(base_directory_);
     model.subscribe(listener_);
-    model.sort(true);
+    QuickSort byTitle;
+    model.sort(byTitle);
     model.play(0);
     EXPECT_TRUE(listener_.wasSelectedWith(0));
 }
@@ -123,7 +136,8 @@ TEST_F(SortPlaylistUseCaseTest, SortThenAdvance) {
     createSong("b.mp3");
     Model model(base_directory_);
     model.subscribe(listener_);
-    model.sort(true);
+    QuickSort byTitle;
+    model.sort(byTitle);
     model.play(0);
     model.advance();
     EXPECT_TRUE(listener_.wasSelectedWith(1));
@@ -135,7 +149,8 @@ TEST_F(SortPlaylistUseCaseTest, SortThenRetreat) {
     createSong("b.mp3");
     Model model(base_directory_);
     model.subscribe(listener_);
-    model.sort(true);
+    QuickSort byTitle;
+    model.sort(byTitle);
     model.play(1);
     model.retreat();
     EXPECT_TRUE(listener_.wasSelectedWith(0));
@@ -146,9 +161,11 @@ TEST_F(SortPlaylistUseCaseTest, SortMultipleTimesDoesNotCrash) {
     createSong("a.mp3");
     Model model(base_directory_);
     model.subscribe(listener_);
-    EXPECT_NO_THROW(model.sort(true));
-    EXPECT_NO_THROW(model.sort(false));
-    EXPECT_NO_THROW(model.sort(true));
+    QuickSort byTitle;
+    EXPECT_NO_THROW(model.sort(byTitle));
+    DurationSort byDuration;
+    EXPECT_NO_THROW(model.sort(byDuration));
+    EXPECT_NO_THROW(model.sort(byTitle));
 }
 
 TEST_F(SortPlaylistUseCaseTest, SortMultipleTimesNotifiesEachTime) {
@@ -156,9 +173,11 @@ TEST_F(SortPlaylistUseCaseTest, SortMultipleTimesNotifiesEachTime) {
     createSong("a.mp3");
     Model model(base_directory_);
     model.subscribe(listener_);
-    model.sort(true);
-    model.sort(false);
-    model.sort(true);
+    QuickSort byTitle;
+    DurationSort byDuration;
+    model.sort(byTitle);
+    model.sort(byDuration);
+    model.sort(byTitle);
     EXPECT_TRUE(listener_.wasChangedTimes(3));
 }
 
@@ -168,7 +187,8 @@ TEST_F(SortPlaylistUseCaseTest, SortAlreadySortedPreservesOrder) {
     createSong("c.mp3");
     Model model(base_directory_);
     model.subscribe(listener_);
-    model.sort(true);
+    QuickSort byTitle;
+    model.sort(byTitle);
     TestPlaylistVisitor visitor;
     model.accept(visitor);
     EXPECT_TRUE(visitor.hasNameAt(0, "a.mp3"));
@@ -182,7 +202,8 @@ TEST_F(SortPlaylistUseCaseTest, SortByNumberDoesNotCrash) {
     createSong("b.mp3");
     Model model(base_directory_);
     model.subscribe(listener_);
-    EXPECT_NO_THROW(model.sort(false));
+    DurationSort byDuration;
+    EXPECT_NO_THROW(model.sort(byDuration));
 }
 
 TEST_F(SortPlaylistUseCaseTest, SortByNumberPreservesSongCount) {
@@ -191,7 +212,8 @@ TEST_F(SortPlaylistUseCaseTest, SortByNumberPreservesSongCount) {
     createSong("b.mp3");
     Model model(base_directory_);
     model.subscribe(listener_);
-    model.sort(false);
+    DurationSort byDuration;
+    model.sort(byDuration);
     TestPlaylistVisitor visitor;
     model.accept(visitor);
     EXPECT_TRUE(visitor.hasSongs(3));
@@ -206,7 +228,8 @@ TEST_F(SortPlaylistUseCaseTest, SortAfterInsert) {
     Model model(base_directory_);
     model.subscribe(listener_);
     model.insert(srcDir + "/b.mp3");
-    model.sort(true);
+    QuickSort byTitle;
+    model.sort(byTitle);
     TestPlaylistVisitor visitor;
     model.accept(visitor);
     EXPECT_TRUE(visitor.hasNameAt(0, "a.mp3"));
@@ -220,7 +243,8 @@ TEST_F(SortPlaylistUseCaseTest, SortAfterRemove) {
     createSong("b.mp3");
     Model model(base_directory_);
     model.subscribe(listener_);
-    model.sort(true);
+    QuickSort byTitle;
+    model.sort(byTitle);
     model.remove(1);
     TestPlaylistVisitor visitor;
     model.accept(visitor);
@@ -234,8 +258,10 @@ TEST_F(SortPlaylistUseCaseTest, SortByNameThenByNumber) {
     createSong("a.mp3");
     Model model(base_directory_);
     model.subscribe(listener_);
-    model.sort(true);
-    model.sort(false);
+    QuickSort byTitle;
+    model.sort(byTitle);
+    DurationSort byDuration;
+    model.sort(byDuration);
     TestPlaylistVisitor visitor;
     model.accept(visitor);
     EXPECT_TRUE(visitor.hasSongs(2));
@@ -246,7 +272,8 @@ TEST_F(SortPlaylistUseCaseTest, SortByNameTwoSongs) {
     createSong("a.mp3");
     Model model(base_directory_);
     model.subscribe(listener_);
-    model.sort(true);
+    QuickSort byTitle;
+    model.sort(byTitle);
     TestPlaylistVisitor visitor;
     model.accept(visitor);
     EXPECT_TRUE(visitor.hasNameAt(0, "a.mp3"));
@@ -261,7 +288,8 @@ TEST_F(SortPlaylistUseCaseTest, SortFiveSongsByName) {
     createSong("b.mp3");
     Model model(base_directory_);
     model.subscribe(listener_);
-    model.sort(true);
+    QuickSort byTitle;
+    model.sort(byTitle);
     TestPlaylistVisitor visitor;
     model.accept(visitor);
     EXPECT_TRUE(visitor.hasNameAt(0, "a.mp3"));
@@ -277,7 +305,8 @@ TEST_F(SortPlaylistUseCaseTest, SortThenAcceptVisitsAll) {
     createSong("c.mp3");
     Model model(base_directory_);
     model.subscribe(listener_);
-    model.sort(true);
+    QuickSort byTitle;
+    model.sort(byTitle);
     TestPlaylistVisitor visitor;
     model.accept(visitor);
     EXPECT_FALSE(visitor.isEmpty());
@@ -289,7 +318,8 @@ TEST_F(SortPlaylistUseCaseTest, SortDoesNotAffectPlayback) {
     createSong("a.mp3");
     Model model(base_directory_);
     model.subscribe(listener_);
-    model.sort(true);
+    QuickSort byTitle;
+    model.sort(byTitle);
     EXPECT_FALSE(listener_.wasStarted());
 }
 
@@ -298,7 +328,8 @@ TEST_F(SortPlaylistUseCaseTest, SortDoesNotSelect) {
     createSong("a.mp3");
     Model model(base_directory_);
     model.subscribe(listener_);
-    model.sort(true);
+    QuickSort byTitle;
+    model.sort(byTitle);
     EXPECT_FALSE(listener_.wasSelected());
 }
 
@@ -308,7 +339,8 @@ TEST_F(SortPlaylistUseCaseTest, SortThenPlayThenAdvanceThroughAll) {
     createSong("b.mp3");
     Model model(base_directory_);
     model.subscribe(listener_);
-    model.sort(true);
+    QuickSort byTitle;
+    model.sort(byTitle);
     model.play(0);
     model.advance();
     model.advance();
@@ -320,7 +352,8 @@ TEST_F(SortPlaylistUseCaseTest, SortWavFiles) {
     createSong("a.wav");
     Model model(base_directory_);
     model.subscribe(listener_);
-    model.sort(true);
+    QuickSort byTitle;
+    model.sort(byTitle);
     TestPlaylistVisitor visitor;
     model.accept(visitor);
     EXPECT_TRUE(visitor.hasNameAt(0, "a.wav"));
@@ -332,7 +365,8 @@ TEST_F(SortPlaylistUseCaseTest, SortMixedExtensions) {
     createSong("a.mp3");
     Model model(base_directory_);
     model.subscribe(listener_);
-    model.sort(true);
+    QuickSort byTitle;
+    model.sort(byTitle);
     TestPlaylistVisitor visitor;
     model.accept(visitor);
     EXPECT_TRUE(visitor.hasSongs(2));
@@ -342,7 +376,8 @@ TEST_F(SortPlaylistUseCaseTest, SortSingleSongNotifiesChanged) {
     createSong("only.mp3");
     Model model(base_directory_);
     model.subscribe(listener_);
-    model.sort(true);
+    QuickSort byTitle;
+    model.sort(byTitle);
     EXPECT_TRUE(listener_.wasChangedTimes(1));
 }
 
@@ -352,7 +387,8 @@ TEST_F(SortPlaylistUseCaseTest, SortThenSearchFindsCorrectly) {
     createSong("banana.mp3");
     Model model(base_directory_);
     model.subscribe(listener_);
-    model.sort(true);
+    QuickSort byTitle;
+    model.sort(byTitle);
     TestPlaylistVisitor visitor;
     model.search("apple", visitor);
     EXPECT_TRUE(visitor.hasName("apple.mp3"));

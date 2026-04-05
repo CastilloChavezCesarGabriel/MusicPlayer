@@ -1,54 +1,63 @@
 #include "SortingTest.h"
+#include <filesystem>
+#include <fstream>
 
-void ShellSortTest::verify(std::vector<Song>& songs, const std::vector<std::string>& expected) {
-    for (int i = 0; i < expected.size(); i++) {
-        songs[i].accept(visitor_);
-    }
-    for (int i = 0; i < expected.size(); i++) {
-        EXPECT_TRUE(visitor_.hasNameAt(i, expected[i]));
-    }
+void ShellSortTest::SetUp() {
+    test_directory_ = std::filesystem::temp_directory_path().string() + "/shell_sort_test";
+    std::filesystem::create_directories(test_directory_);
 }
 
-TEST_F(ShellSortTest, SortByNumberAscending) {
-    std::vector<Song> songs = {
-        Song("(3) C.mp3", "/c"),
-        Song("(1) A.mp3", "/a"),
-        Song("(2) B.mp3", "/b")
-    };
+void ShellSortTest::TearDown() {
+    std::filesystem::remove_all(test_directory_);
+}
+
+std::string ShellSortTest::createFile(const std::string& name, const int size) const {
+    const std::string path = test_directory_ + "/" + name;
+    std::ofstream(path) << std::string(size, 'x');
+    return path;
+}
+
+TEST_F(ShellSortTest, SortByDurationAscending) {
+    const std::string c = createFile("c.mp3", 300);
+    const std::string a = createFile("a.mp3", 100);
+    const std::string b = createFile("b.mp3", 200);
+    std::vector<Song> songs = {Song("c.mp3", c), Song("a.mp3", a), Song("b.mp3", b)};
     sorter_.sort(songs);
     songs[0].accept(visitor_);
-    EXPECT_TRUE(visitor_.hasNameAt(0, "(1) A.mp3"));
+    EXPECT_TRUE(visitor_.hasNameAt(0, "a.mp3"));
 }
 
 TEST_F(ShellSortTest, SortAlreadySorted) {
-    std::vector<Song> songs = {
-        Song("(1) A.mp3", "/a"),
-        Song("(2) B.mp3", "/b"),
-        Song("(3) C.mp3", "/c")
-    };
+    const std::string a = createFile("a.mp3", 100);
+    const std::string b = createFile("b.mp3", 200);
+    const std::string c = createFile("c.mp3", 300);
+    std::vector<Song> songs = {Song("a.mp3", a), Song("b.mp3", b), Song("c.mp3", c)};
     sorter_.sort(songs);
     songs[0].accept(visitor_);
-    EXPECT_TRUE(visitor_.hasNameAt(0, "(1) A.mp3"));
+    EXPECT_TRUE(visitor_.hasNameAt(0, "a.mp3"));
 }
 
 TEST_F(ShellSortTest, SortReversed) {
+    const std::string e = createFile("e.mp3", 500);
+    const std::string d = createFile("d.mp3", 400);
+    const std::string c = createFile("c.mp3", 300);
+    const std::string b = createFile("b.mp3", 200);
+    const std::string a = createFile("a.mp3", 100);
     std::vector<Song> songs = {
-        Song("(5) E.mp3", "/e"),
-        Song("(4) D.mp3", "/d"),
-        Song("(3) C.mp3", "/c"),
-        Song("(2) B.mp3", "/b"),
-        Song("(1) A.mp3", "/a")
+        Song("e.mp3", e), Song("d.mp3", d), Song("c.mp3", c),
+        Song("b.mp3", b), Song("a.mp3", a)
     };
     sorter_.sort(songs);
     songs[0].accept(visitor_);
-    EXPECT_TRUE(visitor_.hasNameAt(0, "(1) A.mp3"));
+    EXPECT_TRUE(visitor_.hasNameAt(0, "a.mp3"));
 }
 
 TEST_F(ShellSortTest, SortSingleElement) {
-    std::vector<Song> songs = { Song("(1) A.mp3", "/a") };
+    const std::string a = createFile("a.mp3", 100);
+    std::vector<Song> songs = {Song("a.mp3", a)};
     sorter_.sort(songs);
     songs[0].accept(visitor_);
-    EXPECT_TRUE(visitor_.hasNameAt(0, "(1) A.mp3"));
+    EXPECT_TRUE(visitor_.hasNameAt(0, "a.mp3"));
 }
 
 TEST_F(ShellSortTest, SortEmptyVector) {
@@ -57,54 +66,44 @@ TEST_F(ShellSortTest, SortEmptyVector) {
     EXPECT_TRUE(songs.empty());
 }
 
-TEST_F(ShellSortTest, SortDuplicateNumbers) {
-    std::vector<Song> songs = {
-        Song("(2) B.mp3", "/b"),
-        Song("(1) A.mp3", "/a"),
-        Song("(2) C.mp3", "/c")
-    };
+TEST_F(ShellSortTest, SortDuplicateSizes) {
+    const std::string b = createFile("b.mp3", 200);
+    const std::string a = createFile("a.mp3", 100);
+    const std::string c = createFile("c.mp3", 200);
+    std::vector<Song> songs = {Song("b.mp3", b), Song("a.mp3", a), Song("c.mp3", c)};
     sorter_.sort(songs);
     songs[0].accept(visitor_);
-    EXPECT_TRUE(visitor_.hasNameAt(0, "(1) A.mp3"));
-}
-
-TEST_F(ShellSortTest, SortSongsWithoutNumbers) {
-    std::vector<Song> songs = {
-        Song("B.mp3", "/b"),
-        Song("A.mp3", "/a")
-    };
-    sorter_.sort(songs);
-    EXPECT_EQ(2, songs.size());
-}
-
-TEST_F(ShellSortTest, SortLargeCollection) {
-    std::vector<Song> songs;
-    for (int i = 100; i > 0; i--) {
-        songs.emplace_back("(" + std::to_string(i) + ") Song.mp3", "/s");
-    }
-    sorter_.sort(songs);
-    songs[0].accept(visitor_);
-    EXPECT_TRUE(visitor_.hasNameAt(0, "(1) Song.mp3"));
+    EXPECT_TRUE(visitor_.hasNameAt(0, "a.mp3"));
 }
 
 TEST_F(ShellSortTest, SortPreservesAllElements) {
-    std::vector<Song> songs = {
-        Song("(3) C.mp3", "/c"),
-        Song("(1) A.mp3", "/a"),
-        Song("(2) B.mp3", "/b")
-    };
+    const std::string c = createFile("c.mp3", 300);
+    const std::string a = createFile("a.mp3", 100);
+    const std::string b = createFile("b.mp3", 200);
+    std::vector<Song> songs = {Song("c.mp3", c), Song("a.mp3", a), Song("b.mp3", b)};
     sorter_.sort(songs);
     EXPECT_EQ(3, songs.size());
 }
 
 TEST_F(ShellSortTest, SortTwoElements) {
-    std::vector<Song> songs = {
-        Song("(2) B.mp3", "/b"),
-        Song("(1) A.mp3", "/a")
-    };
+    const std::string b = createFile("b.mp3", 200);
+    const std::string a = createFile("a.mp3", 100);
+    std::vector<Song> songs = {Song("b.mp3", b), Song("a.mp3", a)};
     sorter_.sort(songs);
     songs[0].accept(visitor_);
-    EXPECT_TRUE(visitor_.hasNameAt(0, "(1) A.mp3"));
+    EXPECT_TRUE(visitor_.hasNameAt(0, "a.mp3"));
+}
+
+TEST_F(ShellSortTest, SortLargeCollection) {
+    std::vector<Song> songs;
+    for (int i = 100; i > 0; i--) {
+        const std::string name = std::to_string(i) + ".mp3";
+        const std::string path = createFile(name, i * 10);
+        songs.emplace_back(name, path);
+    }
+    sorter_.sort(songs);
+    songs[0].accept(visitor_);
+    EXPECT_TRUE(visitor_.hasNameAt(0, "1.mp3"));
 }
 
 TEST_F(QuickSortTest, SortByNameAlphabetical) {

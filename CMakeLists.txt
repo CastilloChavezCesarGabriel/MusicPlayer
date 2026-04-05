@@ -21,6 +21,10 @@ add_executable(NewMusicPlayer main.cpp
         model/SortingAlgorithm.h
         model/ShellSort.cpp
         model/ShellSort.h
+        model/DurationSort.cpp
+        model/DurationSort.h
+        model/DateSort.cpp
+        model/DateSort.h
         model/QuickSort.cpp
         model/QuickSort.h
         model/Playlist.cpp
@@ -47,6 +51,18 @@ add_executable(NewMusicPlayer main.cpp
         view/IAudioPlayer.h
         controller/PlaylistRenderer.cpp
         controller/PlaylistRenderer.h
+        controller/SortMode.cpp
+        controller/SortMode.h
+        controller/TitleAscending.cpp
+        controller/TitleAscending.h
+        controller/TitleDescending.cpp
+        controller/TitleDescending.h
+        controller/DurationMode.cpp
+        controller/DurationMode.h
+        controller/DateMode.cpp
+        controller/DateMode.h
+        controller/CustomMode.cpp
+        controller/CustomMode.h
         controller/Controller.cpp
         controller/Controller.h
         adapters/qt/QtPlaybackPanel.cpp
@@ -123,6 +139,10 @@ add_executable(NewMusicPlayerTests
         model/SortingAlgorithm.h
         model/ShellSort.cpp
         model/ShellSort.h
+        model/DurationSort.cpp
+        model/DurationSort.h
+        model/DateSort.cpp
+        model/DateSort.h
         model/QuickSort.cpp
         model/QuickSort.h
         model/Playlist.cpp

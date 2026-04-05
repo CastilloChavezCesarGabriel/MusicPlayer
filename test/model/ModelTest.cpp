@@ -1,5 +1,7 @@
 #include "ModelTest.h"
 #include "../TestPlaylistVisitor.h"
+#include "../../model/QuickSort.h"
+#include "../../model/DurationSort.h"
 #include <filesystem>
 #include <fstream>
 
@@ -155,7 +157,8 @@ TEST_F(ModelTest, SortByNameNotifiesChanged) {
     createSong("a.mp3");
     Model model = create();
     model.subscribe(listener_);
-    model.sort(true);
+    QuickSort byTitle;
+    model.sort(byTitle);
     EXPECT_TRUE(listener_.wasChanged());
 }
 
@@ -164,7 +167,8 @@ TEST_F(ModelTest, SortByNumberNotifiesChanged) {
     createSong("(1) A.mp3");
     Model model = create();
     model.subscribe(listener_);
-    model.sort(false);
+    DurationSort byDuration;
+    model.sort(byDuration);
     EXPECT_TRUE(listener_.wasChanged());
 }
 
@@ -236,7 +240,8 @@ TEST_F(ModelTest, SortByNameOrders) {
     createSong("B.mp3");
     Model model = create();
     model.subscribe(listener_);
-    model.sort(true);
+    QuickSort byTitle;
+    model.sort(byTitle);
     TestPlaylistVisitor visitor;
     model.accept(visitor);
     EXPECT_TRUE(visitor.hasNameAt(0, "A.mp3"));

@@ -1296,4 +1296,5 @@ CMakeFiles/NewMusicPlayer.dir/main.cpp.o: \
   /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/controller/../model/Model.h \
   /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/controller/../model/PlaybackNotifier.h \
   /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/controller/../view/IPlayerView.h \
-  /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/controller/../view/IPlayerListener.h
+  /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/controller/../view/IPlayerListener.h \
+  /Users/cesargabrielcastillochavez/CLionProjects/NewMusicPlayer/controller/SortMode.h

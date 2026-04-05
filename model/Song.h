@@ -18,7 +18,8 @@ public:
     bool matches(const std::string& query) const;
     bool isEqualTo(const Song& other) const;
     static std::string parse(const std::string& name);
-    static int order(const std::string& name);
+    static long long stamp(const std::string& path);
+    static int last(const std::string& path);
 };
 
 #endif //SONG_H

@@ -1,8 +1,9 @@
 #include "PlaylistTest.h"
-#include "../../model/ShellSort.h"
+#include "../../model/DurationSort.h"
 #include "../../model/QuickSort.h"
 #include "../../model/IPlaybackListener.h"
 #include <filesystem>
+#include <fstream>
 
 void PlaylistTest::SetUp() {
     test_directory_ = std::filesystem::temp_directory_path().string() + "/playlist_test";
@@ -100,16 +101,22 @@ TEST_F(PlaylistTest, SortByNameAlphabetical) {
     EXPECT_TRUE(visitor_.hasNameAt(2, "C.mp3"));
 }
 
-TEST_F(PlaylistTest, SortByNumberAscending) {
-    playlist_->add(Song("(3) Third.mp3", "/c"));
-    playlist_->add(Song("(1) First.mp3", "/a"));
-    playlist_->add(Song("(2) Second.mp3", "/b"));
-    ShellSort byNumber;
-    playlist_->sort(byNumber);
+TEST_F(PlaylistTest, SortByDurationAscending) {
+    const std::string large = test_directory_ + "/large.mp3";
+    const std::string small = test_directory_ + "/small.mp3";
+    const std::string medium = test_directory_ + "/medium.mp3";
+    std::ofstream(large) << std::string(300, 'x');
+    std::ofstream(small) << std::string(100, 'x');
+    std::ofstream(medium) << std::string(200, 'x');
+    playlist_->add(Song("large.mp3", large));
+    playlist_->add(Song("small.mp3", small));
+    playlist_->add(Song("medium.mp3", medium));
+    DurationSort byDuration;
+    playlist_->sort(byDuration);
     playlist_->accept(visitor_);
-    EXPECT_TRUE(visitor_.hasNameAt(0, "(1) First.mp3"));
-    EXPECT_TRUE(visitor_.hasNameAt(1, "(2) Second.mp3"));
-    EXPECT_TRUE(visitor_.hasNameAt(2, "(3) Third.mp3"));
+    EXPECT_TRUE(visitor_.hasNameAt(0, "small.mp3"));
+    EXPECT_TRUE(visitor_.hasNameAt(1, "medium.mp3"));
+    EXPECT_TRUE(visitor_.hasNameAt(2, "large.mp3"));
 }
 
 TEST_F(PlaylistTest, SortEmptyPlaylist) {
