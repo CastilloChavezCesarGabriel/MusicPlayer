@@ -53,14 +53,8 @@ add_executable(NewMusicPlayer main.cpp
         controller/PlaylistRenderer.h
         controller/SortMode.cpp
         controller/SortMode.h
-        controller/TitleAscending.cpp
-        controller/TitleAscending.h
         controller/TitleDescending.cpp
         controller/TitleDescending.h
-        controller/DurationMode.cpp
-        controller/DurationMode.h
-        controller/DateMode.cpp
-        controller/DateMode.h
         controller/CustomMode.cpp
         controller/CustomMode.h
         controller/Controller.cpp

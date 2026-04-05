@@ -1,17 +1,17 @@
 #include "Controller.h"
 #include "PlaylistRenderer.h"
-#include "TitleAscending.h"
 #include "TitleDescending.h"
-#include "DurationMode.h"
-#include "DateMode.h"
 #include "CustomMode.h"
+#include "../model/QuickSort.h"
+#include "../model/DurationSort.h"
+#include "../model/DateSort.h"
 
 Controller::Controller(Model& model, IPlayerView& view)
         : model_(model), view_(view) {
-    modes_.push_back(std::make_unique<TitleAscending>());
+    modes_.push_back(std::make_unique<SortMode>("Title \xe2\x96\xb2", new QuickSort()));
     modes_.push_back(std::make_unique<TitleDescending>());
-    modes_.push_back(std::make_unique<DurationMode>());
-    modes_.push_back(std::make_unique<DateMode>());
+    modes_.push_back(std::make_unique<SortMode>("Duration \xe2\x96\xb2", new DurationSort()));
+    modes_.push_back(std::make_unique<SortMode>("Date Added \xe2\x96\xb2", new DateSort()));
     modes_.push_back(std::make_unique<CustomMode>());
     model_.subscribe(*this);
     view_.add(this);
