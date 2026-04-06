@@ -35,16 +35,16 @@ void QtView::setup() {
     auto* main = new QVBoxLayout(this);
     auto* search = new QLineEdit(this);
     search->setPlaceholderText("Search...");
-    auto* sort_header = new QtSortHeader(this);
+    sort_header_ = new QtSortHeader(this);
     display_ = new QtPlaylistDisplay(this);
-    new QtSearchOverlay(this);
+    search_overlay_ = new QtSearchOverlay(this);
 
     main->addWidget(search);
-    main->addWidget(sort_header);
+    main->addWidget(sort_header_);
     main->addWidget(display_);
     main->addWidget(audio_);
 
-    connect(sort_header, &QtSortHeader::clickRequested, this, [this]() {
+    connect(sort_header_, &QtSortHeader::clickRequested, this, [this]() {
         if (listener_) listener_->onSort();
     });
 
@@ -100,13 +100,11 @@ void QtView::highlight(const int index) {
 }
 
 void QtView::suggest(const std::vector<std::string>& names) {
-    auto* overlay = findChild<QtSearchOverlay*>();
-    if (overlay) overlay->display(names);
+    search_overlay_->display(names);
 }
 
 void QtView::dismiss() {
-    auto* overlay = findChild<QtSearchOverlay*>();
-    if (overlay) overlay->clear();
+    search_overlay_->clear();
 }
 
 void QtView::enable(const bool state) {
@@ -128,10 +126,7 @@ void QtView::repeat(const int mode) {
 }
 
 void QtView::sort(const std::string& label) {
-    const auto* header = findChild<QtSortHeader*>();
-    if (header) {
-        header->display(label);
-    }
+    sort_header_->display(label);
 }
 
 void QtView::reveal(const bool visible) {

@@ -6,6 +6,8 @@
 #include "QtToolbar.h"
 #include "QtAudioEngine.h"
 #include "QtPlaylistDisplay.h"
+#include "QtSortHeader.h"
+#include "QtSearchOverlay.h"
 #include <QWidget>
 #include <QLineEdit>
 
@@ -17,6 +19,8 @@ private:
     QtToolbar* toolbar_ = nullptr;
     QtAudioEngine* audio_;
     QtPlaylistDisplay* display_;
+    QtSortHeader* sort_header_;
+    QtSearchOverlay* search_overlay_;
 
     void setup();
     void wire(const QLineEdit* search);
