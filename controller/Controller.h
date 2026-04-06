@@ -17,7 +17,7 @@ private:
     int sort_index_ = -1;
     bool playing_ = false;
 
-    void refresh(const std::string& query = "") const;
+    void refresh() const;
 
 public:
     Controller(Model& model, IPlayerView& view);

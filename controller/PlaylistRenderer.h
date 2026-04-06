@@ -15,6 +15,7 @@ public:
     explicit PlaylistRenderer(IPlayerView& view);
     void visit(const std::string& name, const std::string& path) override;
     void render() const;
+    void suggest() const;
 };
 
 #endif //PLAYLIST_RENDERER_H

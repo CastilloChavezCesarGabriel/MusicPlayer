@@ -119,6 +119,25 @@ QPushButton#sort_header:hover {
     color: #f1f5f9;
 }
 
+QListWidget#search_results {
+    background-color: #1e293b;
+    color: #f1f5f9;
+    border: 1px solid #7c3aed;
+    border-radius: 8px;
+    padding: 4px;
+    font-size: 14px;
+    outline: none;
+}
+
+QListWidget#search_results::item {
+    padding: 8px 12px;
+    border-radius: 4px;
+}
+
+QListWidget#search_results::item:hover {
+    background-color: #334155;
+}
+
 QSlider::groove:horizontal {
     background-color: #334155;
     height: 4px;

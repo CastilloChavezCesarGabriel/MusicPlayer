@@ -108,7 +108,13 @@ void Controller::onSort() {
 }
 
 void Controller::onSearch(const std::string& query) {
-    refresh(query);
+    if (query.empty()) {
+        view_.dismiss();
+        return;
+    }
+    PlaylistRenderer renderer(view_);
+    model_.search(query, renderer);
+    renderer.suggest();
 }
 
 void Controller::onDrop(const std::vector<std::string>& paths) {
@@ -125,12 +131,8 @@ void Controller::onEnd() {
     model_.end();
 }
 
-void Controller::refresh(const std::string& query) const {
+void Controller::refresh() const {
     PlaylistRenderer renderer(view_);
-    if (query.empty()) {
-        model_.accept(renderer);
-    } else {
-        model_.search(query, renderer);
-    }
+    model_.accept(renderer);
     renderer.render();
 }

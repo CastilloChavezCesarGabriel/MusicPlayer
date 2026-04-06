@@ -28,6 +28,8 @@ public:
     void add(IPlayerListener* listener) override;
     void refresh(const std::vector<std::string>& names) override;
     void highlight(int index) override;
+    void suggest(const std::vector<std::string>& names) override;
+    void dismiss() override;
     void enable(bool state) override;
     void reveal(bool visible) override;
     void schedule(int delay) override;

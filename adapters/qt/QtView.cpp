@@ -1,5 +1,6 @@
 #include "QtView.h"
 #include "QtViewFactory.h"
+#include "QtSearchOverlay.h"
 #include <QVBoxLayout>
 #include "QtVolumePanel.h"
 #include "QtSortHeader.h"
@@ -36,6 +37,7 @@ void QtView::setup() {
     search->setPlaceholderText("Search...");
     auto* sort_header = new QtSortHeader(this);
     display_ = new QtPlaylistDisplay(this);
+    new QtSearchOverlay(this);
 
     main->addWidget(search);
     main->addWidget(sort_header);
@@ -95,6 +97,16 @@ void QtView::refresh(const std::vector<std::string>& names) {
 
 void QtView::highlight(const int index) {
     display_->highlight(index);
+}
+
+void QtView::suggest(const std::vector<std::string>& names) {
+    auto* overlay = findChild<QtSearchOverlay*>();
+    if (overlay) overlay->display(names);
+}
+
+void QtView::dismiss() {
+    auto* overlay = findChild<QtSearchOverlay*>();
+    if (overlay) overlay->clear();
 }
 
 void QtView::enable(const bool state) {

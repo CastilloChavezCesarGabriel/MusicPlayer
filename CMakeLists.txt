@@ -71,6 +71,8 @@ add_executable(NewMusicPlayer main.cpp
         adapters/qt/QtSortHeader.h
         adapters/qt/QtPlaylistDisplay.cpp
         adapters/qt/QtPlaylistDisplay.h
+        adapters/qt/QtSearchOverlay.cpp
+        adapters/qt/QtSearchOverlay.h
         adapters/qt/QtAudioEngine.cpp
         adapters/qt/QtAudioEngine.h
         adapters/qt/QtViewFactory.cpp

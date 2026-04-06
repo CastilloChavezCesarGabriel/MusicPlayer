@@ -11,3 +11,7 @@ void PlaylistRenderer::visit(const std::string& name, const std::string&) {
 void PlaylistRenderer::render() const {
     view_.refresh(names_);
 }
+
+void PlaylistRenderer::suggest() const {
+    view_.suggest(names_);
+}
