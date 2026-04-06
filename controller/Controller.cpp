@@ -10,7 +10,6 @@ Controller::Controller(Model& model, IPlayerView& view) : model_(model), view_(v
 
 void Controller::onStart(const std::string& path) {
     view_.play(path);
-    view_.enable(true);
     playing_ = true;
 }
 
@@ -20,6 +19,7 @@ void Controller::onChanged() {
 
 void Controller::onSelected(const int index) {
     view_.highlight(index);
+    view_.enable(true);
 }
 
 void Controller::onEnabled(const bool state) {
