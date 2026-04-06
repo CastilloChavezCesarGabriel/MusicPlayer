@@ -68,7 +68,12 @@ QPushButton:checked {
 }
 
 QPushButton#repeat_button {
-    padding: 8px 17px;
+    padding: 10px 17px;
+}
+
+QPushButton#repeat_button[active="true"] {
+    background-color: qlineargradient(x1:0, y1:0, x2:1, y2:1, stop:0 #a78bfa, stop:1 #7c3aed);
+    padding: 10px 17px;
 }
 
 QPushButton#toggle_button {

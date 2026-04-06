@@ -1,4 +1,13 @@
 #include "QtPlaybackPanel.h"
+#include <QIcon>
+#include <QPixmap>
+#include <QPainter>
+#include <QStyle>
+#include <filesystem>
+
+static std::string resolve(const std::string& path) {
+    return std::filesystem::current_path().string() + path;
+}
 
 QtPlaybackPanel::QtPlaybackPanel(IPlayerListener& listener, QWidget* parent)
     : QWidget(parent), player_listener_(listener) {
@@ -13,14 +22,17 @@ void QtPlaybackPanel::setup() {
     toggle_button_ = new QPushButton("\xe2\x96\xb6", this);
     toggle_button_->setObjectName("toggle_button");
     next_button_ = new QPushButton("\xe2\x8f\xad", this);
-    repeat_button_ = new QPushButton("\xf0\x9f\x94\x81", this);
+    repeat_button_ = new QPushButton(this);
     repeat_button_->setObjectName("repeat_button");
+    repeat_button_->setIconSize(QSize(16, 16));
 
     layout->addWidget(previous_button_);
     layout->addWidget(toggle_button_);
     layout->addWidget(next_button_);
     layout->addWidget(repeat_button_);
     layout->setAlignment(Qt::AlignCenter);
+
+    reset("/resources/icons/repeat.png");
 }
 
 void QtPlaybackPanel::wire() {
@@ -45,19 +57,19 @@ void QtPlaybackPanel::toggle(const bool playing) const {
     toggle_button_->setText(playing ? "\xe2\x8f\xb8" : "\xe2\x96\xb6");
 }
 
-void QtPlaybackPanel::reset(const std::string& icon) const {
-    repeat_button_->setText(QString::fromStdString(icon));
-    repeat_button_->setStyleSheet("");
+void QtPlaybackPanel::reset(const std::string& path) const {
+    QPixmap pixmap(QString::fromStdString(resolve(path)));
+    QPainter painter(&pixmap);
+    painter.setCompositionMode(QPainter::CompositionMode_SourceIn);
+    painter.fillRect(pixmap.rect(), Qt::white);
+    painter.end();
+    repeat_button_->setIcon(QIcon(pixmap));
+    repeat_button_->setText("");
 }
 
 void QtPlaybackPanel::repeat(const int mode) const {
-    if (mode == 2) {
-        repeat_button_->setText("\xf0\x9f\x94\x81");
-        repeat_button_->setStyleSheet(
-            "background-color: qlineargradient(x1:0, y1:0, x2:1, y2:1, stop:0 #a78bfa, stop:1 #7c3aed);"
-            "color: white;"
-        );
-    } else {
-        reset(mode == 1 ? "\xf0\x9f\x94\x82" : "\xf0\x9f\x94\x81");
-    }
+    reset(mode == 1 ? "/resources/icons/repeat_one.png" : "/resources/icons/repeat.png");
+    repeat_button_->setProperty("active", mode == 2);
+    repeat_button_->style()->unpolish(repeat_button_);
+    repeat_button_->style()->polish(repeat_button_);
 }

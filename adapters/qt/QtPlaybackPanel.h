@@ -16,7 +16,7 @@ private:
     QPushButton* next_button_;
     QPushButton* previous_button_;
 
-    void reset(const std::string& icon) const;
+    void reset(const std::string& path) const;
 
 public:
     explicit QtPlaybackPanel(IPlayerListener& listener, QWidget* parent = nullptr);
