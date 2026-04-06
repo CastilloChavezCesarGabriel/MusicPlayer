@@ -97,6 +97,15 @@ void Playlist::select(const int index, IPlaybackListener& listener) {
     }
 }
 
+void Playlist::pick(const std::string& name, IPlaybackListener& listener) {
+    for (int i = 0; i < songs_.size(); i++) {
+        if (songs_[i].matches(name)) {
+            select(i, listener);
+            return;
+        }
+    }
+}
+
 void Playlist::advance(IPlaybackListener& listener) {
     if (hasNext()) {
         current_song_++;

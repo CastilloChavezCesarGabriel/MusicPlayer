@@ -26,6 +26,7 @@ public:
     void shuffle();
     void clear();
     void select(int index, IPlaybackListener& listener);
+    void pick(const std::string& name, IPlaybackListener& listener);
     void advance(IPlaybackListener& listener);
     void retreat(IPlaybackListener& listener);
     void play(IPlaylistVisitor& player) const;

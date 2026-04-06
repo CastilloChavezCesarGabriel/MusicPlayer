@@ -100,6 +100,11 @@ void Controller::onSearch(const std::string& query) {
     search_.search(query);
 }
 
+void Controller::onPick(const std::string& name) {
+    model_.pick(name);
+    view_.dismiss();
+}
+
 void Controller::onDrop(const std::vector<std::string>& paths) {
     for (const auto& path : paths) {
         model_.insert(path);

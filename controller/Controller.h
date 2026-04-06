@@ -40,6 +40,7 @@ public:
     void onSkip() override;
     void onSort() override;
     void onSearch(const std::string& query) override;
+    void onPick(const std::string& name) override;
     void onDrop(const std::vector<std::string>& paths) override;
     void onAdjust(int volume) override;
     void onEnd() override;

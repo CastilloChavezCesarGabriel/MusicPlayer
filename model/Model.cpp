@@ -25,6 +25,14 @@ void Model::play(const int index) {
     }
 }
 
+void Model::pick(const std::string& name) {
+    playlist_.pick(name, notifier_);
+
+    if (!advertisement_.interrupt(notifier_)) {
+        broadcast();
+    }
+}
+
 void Model::advance() {
     if (playlist_.hasNext()) {
         playlist_.advance(notifier_);

@@ -20,6 +20,7 @@ public:
 
     void subscribe(IPlaybackListener& listener);
     void play(int index);
+    void pick(const std::string& name);
     void advance();
     void retreat();
     void end();

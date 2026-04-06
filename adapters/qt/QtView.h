@@ -23,7 +23,7 @@ private:
     QtSearchOverlay* search_overlay_;
 
     void setup();
-    void wire(const QLineEdit* search);
+    void wire(QLineEdit* search);
     void bind();
 
 public:
