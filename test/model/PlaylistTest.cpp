@@ -310,3 +310,78 @@ TEST_F(PlaylistTest, RetreatNotifiesListener) {
     playlist_->retreat(listener_);
     EXPECT_TRUE(listener_.wasSelectedWith(1));
 }
+
+TEST_F(PlaylistTest, ReverseInvertsOrder) {
+    playlist_->add(Song("A.mp3", "/a"));
+    playlist_->add(Song("B.mp3", "/b"));
+    playlist_->add(Song("C.mp3", "/c"));
+    playlist_->reverse();
+    playlist_->accept(visitor_);
+    EXPECT_TRUE(visitor_.hasNameAt(0, "C.mp3"));
+    EXPECT_TRUE(visitor_.hasNameAt(1, "B.mp3"));
+    EXPECT_TRUE(visitor_.hasNameAt(2, "A.mp3"));
+}
+
+TEST_F(PlaylistTest, ReverseEmptyPlaylist) {
+    playlist_->reverse();
+    playlist_->accept(visitor_);
+    EXPECT_TRUE(visitor_.isEmpty());
+}
+
+TEST_F(PlaylistTest, ReversePreservesCurrentSong) {
+    playlist_->add(Song("A.mp3", "/a"));
+    playlist_->add(Song("B.mp3", "/b"));
+    playlist_->add(Song("C.mp3", "/c"));
+    playlist_->select(0, listener_);
+    playlist_->reverse();
+    playlist_->retreat(listener_);
+    EXPECT_TRUE(listener_.wasSelectedWith(1));
+}
+
+TEST_F(PlaylistTest, RestoreReturnsOriginalOrder) {
+    playlist_->add(Song("C.mp3", "/c"));
+    playlist_->add(Song("A.mp3", "/a"));
+    playlist_->add(Song("B.mp3", "/b"));
+    QuickSort byName;
+    playlist_->sort(byName);
+    playlist_->restore();
+    playlist_->accept(visitor_);
+    EXPECT_TRUE(visitor_.hasNameAt(0, "C.mp3"));
+    EXPECT_TRUE(visitor_.hasNameAt(1, "A.mp3"));
+    EXPECT_TRUE(visitor_.hasNameAt(2, "B.mp3"));
+}
+
+TEST_F(PlaylistTest, RestoreDoesNothingWhenNothingPreserved) {
+    playlist_->add(Song("A.mp3", "/a"));
+    playlist_->add(Song("B.mp3", "/b"));
+    playlist_->restore();
+    playlist_->accept(visitor_);
+    EXPECT_TRUE(visitor_.hasNameAt(0, "A.mp3"));
+    EXPECT_TRUE(visitor_.hasNameAt(1, "B.mp3"));
+}
+
+TEST_F(PlaylistTest, RestorePreservesCurrentSong) {
+    playlist_->add(Song("C.mp3", "/c"));
+    playlist_->add(Song("A.mp3", "/a"));
+    playlist_->add(Song("B.mp3", "/b"));
+    playlist_->select(0, listener_);
+    QuickSort byName;
+    playlist_->sort(byName);
+    playlist_->restore();
+    playlist_->advance(listener_);
+    EXPECT_TRUE(listener_.wasSelectedWith(1));
+}
+
+TEST_F(PlaylistTest, SortReverseRestoreFullCycle) {
+    playlist_->add(Song("C.mp3", "/c"));
+    playlist_->add(Song("A.mp3", "/a"));
+    playlist_->add(Song("B.mp3", "/b"));
+    QuickSort byName;
+    playlist_->sort(byName);
+    playlist_->reverse();
+    playlist_->restore();
+    playlist_->accept(visitor_);
+    EXPECT_TRUE(visitor_.hasNameAt(0, "C.mp3"));
+    EXPECT_TRUE(visitor_.hasNameAt(1, "A.mp3"));
+    EXPECT_TRUE(visitor_.hasNameAt(2, "B.mp3"));
+}

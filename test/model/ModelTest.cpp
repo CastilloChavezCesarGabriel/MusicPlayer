@@ -2,6 +2,7 @@
 #include "../TestPlaylistVisitor.h"
 #include "../../model/QuickSort.h"
 #include "../../model/DurationSort.h"
+#include "../../model/DateSort.h"
 #include <filesystem>
 #include <fstream>
 
@@ -271,4 +272,59 @@ TEST_F(ModelTest, MultipleInserts) {
     model.insert(srcDir + "/a.mp3");
     model.insert(srcDir + "/b.mp3");
     EXPECT_TRUE(listener_.wasChangedTimes(2));
+}
+
+TEST_F(ModelTest, ReverseNotifiesChanged) {
+    createSong("a.mp3");
+    createSong("b.mp3");
+    Model model = create();
+    model.subscribe(listener_);
+    model.reverse();
+    EXPECT_TRUE(listener_.wasChanged());
+}
+
+TEST_F(ModelTest, ReverseInvertsOrder) {
+    createSong("a.mp3");
+    createSong("b.mp3");
+    createSong("c.mp3");
+    Model model = create();
+    model.subscribe(listener_);
+    QuickSort byName;
+    model.sort(byName);
+    model.reverse();
+    TestPlaylistVisitor visitor;
+    model.accept(visitor);
+    EXPECT_TRUE(visitor.hasNameAt(0, "c.mp3"));
+    EXPECT_TRUE(visitor.hasNameAt(2, "a.mp3"));
+}
+
+TEST_F(ModelTest, RestoreNotifiesChanged) {
+    createSong("a.mp3");
+    Model model = create();
+    model.subscribe(listener_);
+    QuickSort byName;
+    model.sort(byName);
+    model.restore();
+    EXPECT_TRUE(listener_.wasChanged());
+}
+
+TEST_F(ModelTest, SortByDateNotifiesChanged) {
+    createSong("a.mp3");
+    Model model = create();
+    model.subscribe(listener_);
+    DateSort byDate;
+    model.sort(byDate);
+    EXPECT_TRUE(listener_.wasChanged());
+}
+
+TEST_F(ModelTest, SortByDateAcceptsSongs) {
+    createSong("a.mp3");
+    createSong("b.mp3");
+    Model model = create();
+    model.subscribe(listener_);
+    DateSort byDate;
+    model.sort(byDate);
+    TestPlaylistVisitor visitor;
+    model.accept(visitor);
+    EXPECT_TRUE(visitor.hasSongs(2));
 }
