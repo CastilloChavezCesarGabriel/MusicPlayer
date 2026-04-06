@@ -6,7 +6,7 @@ QtSortHeader::QtSortHeader(QWidget* parent)
     : QWidget(parent) {
     auto* layout = new QHBoxLayout(this);
 
-    header_ = new QPushButton("Title", this);
+    header_ = new QPushButton("Custom", this);
     header_->setObjectName("sort_header");
     header_->setFlat(true);
     header_->setCursor(Qt::PointingHandCursor);
