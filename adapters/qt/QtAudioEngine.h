@@ -19,6 +19,7 @@ private:
     QtProgressPanel* progress_bar_;
 
     void monitor();
+    void start();
 
 public:
     explicit QtAudioEngine(QWidget* parent = nullptr);

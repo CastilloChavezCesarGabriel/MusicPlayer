@@ -12,6 +12,7 @@ QtAudioEngine::QtAudioEngine(QWidget* parent) : QWidget(parent) {
 void QtAudioEngine::setup() {
     media_player_ = new QMediaPlayer(this);
     audio_output_ = new QAudioOutput(this);
+    audio_output_->setVolume(0.5);
     media_player_->setAudioOutput(audio_output_);
 
     ad_timer_ = new QTimer(this);
@@ -43,16 +44,19 @@ void QtAudioEngine::monitor() {
     });
 }
 
-void QtAudioEngine::play(const std::string& path) {
-    media_player_->stop();
-    media_player_->setSource(QUrl::fromLocalFile(QString::fromStdString(path)));
+void QtAudioEngine::start() {
     media_player_->play();
     emit toggleRequested(true);
 }
 
+void QtAudioEngine::play(const std::string& path) {
+    media_player_->stop();
+    media_player_->setSource(QUrl::fromLocalFile(QString::fromStdString(path)));
+    start();
+}
+
 void QtAudioEngine::resume() {
-    media_player_->play();
-    emit toggleRequested(true);
+    start();
 }
 
 void QtAudioEngine::pause() {
