@@ -41,7 +41,7 @@ public:
     void resume() override;
     void pause() override;
     void stop() override;
-    void adjust(double volume) override;
+    void adjust(int volume) override;
 
 protected:
     void dragEnterEvent(QDragEnterEvent* event) override;

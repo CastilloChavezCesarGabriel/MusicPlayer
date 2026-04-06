@@ -119,8 +119,10 @@ void QtView::repeat(const int mode) {
 }
 
 void QtView::sort(const std::string& label) {
-    auto* header = findChild<QtSortHeader*>();
-    if (header) header->display(label);
+    const auto* header = findChild<QtSortHeader*>();
+    if (header) {
+        header->display(label);
+    }
 }
 
 void QtView::reveal(const bool visible) {
@@ -158,8 +160,8 @@ void QtView::stop() {
     audio_->stop();
 }
 
-void QtView::adjust(const double volume) {
-    audio_->adjust(volume);
+void QtView::adjust(const int volume) {
+    audio_->adjust(volume / 100.0);
 }
 
 void QtView::dragEnterEvent(QDragEnterEvent* event) {

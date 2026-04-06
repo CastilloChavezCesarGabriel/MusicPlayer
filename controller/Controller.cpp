@@ -118,7 +118,7 @@ void Controller::onDrop(const std::vector<std::string>& paths) {
 }
 
 void Controller::onAdjust(const int volume) {
-    view_.adjust(volume / 100.0);
+    view_.adjust(volume);
 }
 
 void Controller::onEnd() {

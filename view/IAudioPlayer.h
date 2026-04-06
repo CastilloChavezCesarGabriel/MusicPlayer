@@ -9,7 +9,7 @@ public:
     virtual void resume() = 0;
     virtual void pause() = 0;
     virtual void stop() = 0;
-    virtual void adjust(double volume) = 0;
+    virtual void adjust(int volume) = 0;
 };
 
 #endif //I_AUDIO_PLAYER_H
