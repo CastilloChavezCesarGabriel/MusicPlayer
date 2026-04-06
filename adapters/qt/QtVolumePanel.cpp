@@ -16,6 +16,7 @@ QtVolumePanel::QtVolumePanel(IPlayerListener& listener, QWidget* parent)
     layout->addWidget(slider_);
 
     connect(slider_, &QSlider::valueChanged, this, [this](const int value) {
+        adjust(value);
         listener_.onAdjust(value);
     });
 }

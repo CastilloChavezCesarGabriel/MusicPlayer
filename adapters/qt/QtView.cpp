@@ -55,6 +55,7 @@ void QtView::wire(const QLineEdit* search) {
     connect(display_, &QtPlaylistDisplay::selectRequested, this, [this](const int index) {
         if (listener_) listener_->onPlay(index);
     });
+
     connect(search, &QLineEdit::textChanged, this, [this](const QString& text) {
         if (listener_) listener_->onSearch(text.toStdString());
     });
