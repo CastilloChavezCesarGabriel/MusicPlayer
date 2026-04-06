@@ -33,6 +33,7 @@ void QtPlaybackPanel::setup() {
     layout->setAlignment(Qt::AlignCenter);
 
     reset("/resources/icons/repeat.png");
+    enable(false);
 }
 
 void QtPlaybackPanel::wire() {
