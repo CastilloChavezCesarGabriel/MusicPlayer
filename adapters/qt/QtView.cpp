@@ -32,12 +32,9 @@ void QtView::setup() {
     setWindowTitle("Music Player");
 
     auto* main = new QVBoxLayout(this);
-
     auto* search = new QLineEdit(this);
     search->setPlaceholderText("Search...");
-
     auto* sort_header = new QtSortHeader(this);
-
     display_ = new QtPlaylistDisplay(this);
 
     main->addWidget(search);

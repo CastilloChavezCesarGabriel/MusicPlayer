@@ -2,7 +2,6 @@
 #define QT_VOLUME_PANEL_H
 
 #include "../../view/IPlayerListener.h"
-#include <QWidget>
 #include <QSlider>
 #include <QLabel>
 
@@ -14,7 +13,7 @@ private:
     QLabel* label_;
 
 public:
-    QtVolumePanel(IPlayerListener& listener, QWidget* parent = nullptr);
+    explicit QtVolumePanel(IPlayerListener& listener, QWidget* parent = nullptr);
     void adjust(int volume) const;
 };
 

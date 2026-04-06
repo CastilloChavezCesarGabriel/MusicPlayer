@@ -1,9 +1,12 @@
 #include "QtAudioEngine.h"
 #include <QVBoxLayout>
+#include <QAudioDevice>
 #include <QUrl>
 
 QtAudioEngine::QtAudioEngine(QWidget* parent) : QWidget(parent) {
     setup();
+    wire();
+    monitor();
 }
 
 void QtAudioEngine::setup() {
@@ -13,13 +16,14 @@ void QtAudioEngine::setup() {
 
     ad_timer_ = new QTimer(this);
     ad_timer_->setSingleShot(true);
-
     progress_bar_ = new QtProgressPanel(*media_player_, this);
 
     auto* layout = new QVBoxLayout(this);
     layout->setContentsMargins(0, 0, 0, 0);
     layout->addWidget(progress_bar_);
+}
 
+void QtAudioEngine::wire() {
     connect(media_player_, &QMediaPlayer::mediaStatusChanged, this, [this]
         (const QMediaPlayer::MediaStatus status) {
         if (status == QMediaPlayer::EndOfMedia) {
@@ -29,6 +33,13 @@ void QtAudioEngine::setup() {
 
     connect(ad_timer_, &QTimer::timeout, this, [this]() {
         emit revealRequested();
+    });
+}
+
+void QtAudioEngine::monitor() {
+    auto* devices = new QMediaDevices(this);
+    connect(devices, &QMediaDevices::audioOutputsChanged, this, [this]() {
+        audio_output_->setDevice(QMediaDevices::defaultAudioOutput());
     });
 }
 

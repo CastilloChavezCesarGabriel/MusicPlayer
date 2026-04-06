@@ -2,13 +2,15 @@
 #define QT_AUDIO_ENGINE_H
 
 #include "QtProgressPanel.h"
+#include "IWidgetSetup.h"
 #include <QWidget>
 #include <QMediaPlayer>
 #include <QAudioOutput>
+#include <QMediaDevices>
 #include <QTimer>
 #include <string>
 
-class QtAudioEngine final : public QWidget {
+class QtAudioEngine final : public QWidget, public IWidgetSetup {
     Q_OBJECT
 private:
     QMediaPlayer* media_player_;
@@ -16,10 +18,12 @@ private:
     QTimer* ad_timer_;
     QtProgressPanel* progress_bar_;
 
-    void setup();
+    void monitor();
 
 public:
     explicit QtAudioEngine(QWidget* parent = nullptr);
+    void setup() override;
+    void wire() override;
     void play(const std::string& path);
     void resume();
     void pause();
