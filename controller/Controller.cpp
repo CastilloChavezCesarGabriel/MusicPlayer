@@ -1,18 +1,8 @@
 #include "Controller.h"
 #include "PlaylistRenderer.h"
-#include "TitleDescending.h"
-#include "CustomMode.h"
-#include "../model/QuickSort.h"
-#include "../model/DurationSort.h"
-#include "../model/DateSort.h"
 
-Controller::Controller(Model& model, IPlayerView& view)
-        : model_(model), view_(view) {
-    modes_.push_back(std::make_unique<SortMode>("Title \xe2\x96\xb2", new QuickSort()));
-    modes_.push_back(std::make_unique<TitleDescending>());
-    modes_.push_back(std::make_unique<SortMode>("Duration \xe2\x96\xb2", new DurationSort()));
-    modes_.push_back(std::make_unique<SortMode>("Date Added \xe2\x96\xb2", new DateSort()));
-    modes_.push_back(std::make_unique<CustomMode>());
+Controller::Controller(Model& model, IPlayerView& view) : model_(model), view_(view),
+          sort_(model, view), search_(model, view) {
     model_.subscribe(*this);
     view_.add(this);
     refresh();
@@ -102,19 +92,11 @@ void Controller::onSkip() {
 }
 
 void Controller::onSort() {
-    sort_index_ = (sort_index_ + 1) % static_cast<int>(modes_.size());
-    modes_[sort_index_]->apply(model_);
-    modes_[sort_index_]->display(view_);
+    sort_.cycle();
 }
 
 void Controller::onSearch(const std::string& query) {
-    if (query.empty()) {
-        view_.dismiss();
-        return;
-    }
-    PlaylistRenderer renderer(view_);
-    model_.search(query, renderer);
-    renderer.suggest();
+    search_.search(query);
 }
 
 void Controller::onDrop(const std::vector<std::string>& paths) {

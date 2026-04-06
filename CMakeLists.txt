@@ -41,6 +41,7 @@ add_executable(NewMusicPlayer main.cpp
         model/Model.cpp
         model/Model.h
         view/IPlaylistPanel.h
+        view/ISearchPanel.h
         view/IControlPanel.h
         view/INotification.h
         view/IPlayerView.h
@@ -57,6 +58,10 @@ add_executable(NewMusicPlayer main.cpp
         controller/TitleDescending.h
         controller/CustomMode.cpp
         controller/CustomMode.h
+        controller/SortController.cpp
+        controller/SortController.h
+        controller/SearchController.cpp
+        controller/SearchController.h
         controller/Controller.cpp
         controller/Controller.h
         adapters/qt/QtPlaybackPanel.cpp

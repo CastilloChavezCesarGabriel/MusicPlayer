@@ -2,19 +2,17 @@
 #define CONTROLLER_H
 
 #include "../model/Model.h"
-#include "../model/PlaybackNotifier.h"
 #include "../view/IPlayerView.h"
 #include "../view/IPlayerListener.h"
-#include "SortMode.h"
-#include <vector>
-#include <memory>
+#include "SortController.h"
+#include "SearchController.h"
 
 class Controller final : public IPlaybackListener, public IPlayerListener {
 private:
     Model& model_;
     IPlayerView& view_;
-    std::vector<std::unique_ptr<SortMode>> modes_;
-    int sort_index_ = -1;
+    SortController sort_;
+    SearchController search_;
     bool playing_ = false;
 
     void refresh() const;
