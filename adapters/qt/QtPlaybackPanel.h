@@ -11,6 +11,7 @@ class QtPlaybackPanel final : public QWidget, public IWidgetSetup {
     Q_OBJECT
 private:
     IPlayerListener& player_listener_;
+    QPushButton* shuffle_button_;
     QPushButton* toggle_button_;
     QPushButton* repeat_button_;
     QPushButton* next_button_;

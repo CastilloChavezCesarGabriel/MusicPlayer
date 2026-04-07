@@ -11,7 +11,6 @@ private:
     QPushButton* add_button_;
     QPushButton* remove_button_;
     QPushButton* skip_button_;
-    QPushButton* shuffle_button_;
 
 public:
     explicit QtToolbar(QWidget* parent = nullptr);
@@ -24,7 +23,6 @@ signals:
     void addClicked();
     void removeClicked();
     void skipClicked();
-    void shuffleClicked();
 };
 
 #endif //QT_TOOLBAR_H

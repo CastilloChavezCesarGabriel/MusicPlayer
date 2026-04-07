@@ -92,9 +92,6 @@ void QtView::bind() {
     connect(toolbar_, &QtToolbar::skipClicked, this, [this]() {
         listener_->onSkip();
     });
-    connect(toolbar_, &QtToolbar::shuffleClicked, this, [this]() {
-        listener_->onShuffle();
-    });
 }
 
 void QtView::refresh(const std::vector<std::string>& names) {

@@ -12,7 +12,7 @@ private:
 
 public:
     SearchController(Model& model, IPlayerView& view);
-    void search(const std::string& query);
+    void search(const std::string& query) const;
 };
 
 #endif //SEARCH_CONTROLLER_H

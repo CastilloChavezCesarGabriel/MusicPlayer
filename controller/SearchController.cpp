@@ -4,7 +4,7 @@
 SearchController::SearchController(Model& model, IPlayerView& view)
     : model_(model), view_(view) {}
 
-void SearchController::search(const std::string& query) {
+void SearchController::search(const std::string& query) const {
     if (query.empty()) {
         view_.dismiss();
         return;
