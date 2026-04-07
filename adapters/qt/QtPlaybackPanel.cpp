@@ -74,7 +74,6 @@ void QtPlaybackPanel::paint(QPushButton* button, const std::string& path) {
 
 void QtPlaybackPanel::repeat(const int mode) const {
     paint(repeat_button_, mode == 1 ? "/resources/icons/repeat_one.png" : "/resources/icons/repeat.png");
-    repeat_button_->setIconSize(mode == 1 ? QSize(20, 20) : QSize(16, 16));
     repeat_button_->setProperty("active", mode == 2);
     repeat_button_->style()->unpolish(repeat_button_);
     repeat_button_->style()->polish(repeat_button_);
