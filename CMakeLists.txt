@@ -76,6 +76,8 @@ add_executable(NewMusicPlayer main.cpp
         controller/SearchController.h
         controller/Controller.cpp
         controller/Controller.h
+        adapters/qt/QtLayoutHelper.cpp
+        adapters/qt/QtLayoutHelper.h
         adapters/qt/QtPlaybackPanel.cpp
         adapters/qt/QtPlaybackPanel.h
         adapters/qt/QtVolumePanel.cpp

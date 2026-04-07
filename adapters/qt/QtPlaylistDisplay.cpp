@@ -1,4 +1,5 @@
 #include "QtPlaylistDisplay.h"
+#include "QtLayoutHelper.h"
 #include <QVBoxLayout>
 
 QtPlaylistDisplay::QtPlaylistDisplay(QWidget* parent) : QWidget(parent) {
@@ -7,7 +8,7 @@ QtPlaylistDisplay::QtPlaylistDisplay(QWidget* parent) : QWidget(parent) {
 
 void QtPlaylistDisplay::setup() {
     auto* layout = new QVBoxLayout(this);
-    layout->setContentsMargins(0, 0, 0, 0);
+    QtLayoutHelper::flatten(layout);
 
     list_model_ = new QStringListModel(this);
     playlist_ = new QListView(this);

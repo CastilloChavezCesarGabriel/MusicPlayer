@@ -1,4 +1,5 @@
 #include "QtSearchOverlay.h"
+#include "QtLayoutHelper.h"
 #include <QVBoxLayout>
 
 QtSearchOverlay::QtSearchOverlay(QWidget* parent) : QWidget(parent) {
@@ -11,7 +12,7 @@ void QtSearchOverlay::setup() {
     results_->setObjectName("search_results");
 
     auto* layout = new QVBoxLayout(this);
-    layout->setContentsMargins(0, 0, 0, 0);
+    QtLayoutHelper::flatten(layout);
     layout->addWidget(results_);
 
     connect(results_, &QListWidget::itemDoubleClicked, this, [this](const QListWidgetItem* item) {

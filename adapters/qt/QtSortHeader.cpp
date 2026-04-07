@@ -1,4 +1,5 @@
 #include "QtSortHeader.h"
+#include "QtLayoutHelper.h"
 #include <QHBoxLayout>
 #include <QWidget>
 
@@ -12,7 +13,7 @@ QtSortHeader::QtSortHeader(QWidget* parent)
     header_->setCursor(Qt::PointingHandCursor);
 
     layout->addWidget(header_);
-    layout->setContentsMargins(0, 0, 0, 0);
+    QtLayoutHelper::flatten(layout);
 
     connect(header_, &QPushButton::clicked, this, &QtSortHeader::clickRequested);
 }

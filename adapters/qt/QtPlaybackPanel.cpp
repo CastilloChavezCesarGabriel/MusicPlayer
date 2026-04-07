@@ -1,4 +1,5 @@
 #include "QtPlaybackPanel.h"
+#include "QtLayoutHelper.h"
 #include <QIcon>
 #include <QPixmap>
 #include <QPainter>
@@ -34,7 +35,7 @@ void QtPlaybackPanel::setup() {
     layout->addWidget(toggle_button_);
     layout->addWidget(next_button_);
     layout->addWidget(repeat_button_);
-    layout->setAlignment(Qt::AlignCenter);
+    QtLayoutHelper::center(layout);
 
     paint(shuffle_button_, "/resources/icons/shuffle.png");
     paint(repeat_button_, "/resources/icons/repeat.png");
@@ -42,15 +43,9 @@ void QtPlaybackPanel::setup() {
 }
 
 void QtPlaybackPanel::wire() {
-    connect(toggle_button_, &QPushButton::clicked, this, [this]() {
-        player_listener_.onToggle();
-    });
-    connect(repeat_button_, &QPushButton::clicked, this, [this]() {
-        player_listener_.onRepeat();
-    });
-    connect(shuffle_button_, &QPushButton::clicked, this, [this]() {
-        player_listener_.onShuffle();
-    });
+    connect(toggle_button_, &QPushButton::clicked, this, [this]() { player_listener_.onToggle(); });
+    connect(repeat_button_, &QPushButton::clicked, this, [this]() { player_listener_.onRepeat(); });
+    connect(shuffle_button_, &QPushButton::clicked, this, [this]() { player_listener_.onShuffle(); });
     connect(next_button_, &QPushButton::clicked, this, [this]() { player_listener_.onAdvance(); });
     connect(previous_button_, &QPushButton::clicked, this, [this]() { player_listener_.onRetreat(); });
 }
@@ -79,7 +74,7 @@ void QtPlaybackPanel::paint(QPushButton* button, const std::string& path) {
 
 void QtPlaybackPanel::repeat(const int mode) const {
     paint(repeat_button_, mode == 1 ? "/resources/icons/repeat_one.png" : "/resources/icons/repeat.png");
-    repeat_button_->setIconSize(mode == 1 ? QSize(20, 20) : QSize(18, 18));
+    repeat_button_->setIconSize(mode == 1 ? QSize(20, 20) : QSize(16, 16));
     repeat_button_->setProperty("active", mode == 2);
     repeat_button_->style()->unpolish(repeat_button_);
     repeat_button_->style()->polish(repeat_button_);

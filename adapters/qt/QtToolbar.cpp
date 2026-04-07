@@ -1,4 +1,5 @@
 #include "QtToolbar.h"
+#include "QtLayoutHelper.h"
 #include <QHBoxLayout>
 
 QtToolbar::QtToolbar(QWidget* parent) : QWidget(parent) {
@@ -20,7 +21,7 @@ void QtToolbar::setup() {
     layout->addWidget(add_button_);
     layout->addWidget(remove_button_);
     layout->addWidget(skip_button_);
-    layout->setAlignment(Qt::AlignCenter);
+    QtLayoutHelper::center(layout);
 }
 
 void QtToolbar::wire() {

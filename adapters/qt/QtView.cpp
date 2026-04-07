@@ -11,15 +11,15 @@ QtView::QtView(QWidget* parent) : QWidget(parent) {
     audio_ = new QtAudioEngine(this);
 
     connect(audio_, &QtAudioEngine::endRequested, this, [this]() {
-        if (listener_) listener_->onEnd();
+        listener_->onEnd();
     });
 
     connect(audio_, &QtAudioEngine::revealRequested, this, [this]() {
-        if (toolbar_) toolbar_->reveal(true);
+        toolbar_->reveal(true);
     });
 
     connect(audio_, &QtAudioEngine::toggleRequested, this, [this](const bool playing) {
-        if (playback_) playback_->toggle(playing);
+        playback_->toggle(playing);
     });
 
     setup();
@@ -44,7 +44,7 @@ void QtView::setup() {
     main->addWidget(audio_);
 
     connect(sort_header_, &QtSortHeader::clickRequested, this, [this]() {
-        if (listener_) listener_->onSort();
+        listener_->onSort();
     });
 
     wire(search);
@@ -52,15 +52,15 @@ void QtView::setup() {
 
 void QtView::wire(QLineEdit* search) {
     connect(display_, &QtPlaylistDisplay::selectRequested, this, [this](const int index) {
-        if (listener_) listener_->onPlay(index);
+        listener_->onPlay(index);
     });
 
     connect(search, &QLineEdit::textChanged, this, [this](const QString& text) {
-        if (listener_) listener_->onSearch(text.toStdString());
+        listener_->onSearch(text.toStdString());
     });
 
     connect(search_overlay_, &QtSearchOverlay::selectRequested, this, [this, search](const std::string& name) {
-        if (listener_) listener_->onPick(name);
+        listener_->onPick(name);
         search->clear();
     });
 }
@@ -110,8 +110,8 @@ void QtView::dismiss() {
 }
 
 void QtView::enable(const bool state) {
-    if (playback_) playback_->enable(state);
-    if (toolbar_) toolbar_->enable(state);
+    playback_->enable(state);
+    toolbar_->enable(state);
     audio_->enable(state);
 }
 
@@ -124,7 +124,7 @@ void QtView::cancel() {
 }
 
 void QtView::repeat(const int mode) {
-    if (playback_) playback_->repeat(mode);
+    playback_->repeat(mode);
 }
 
 void QtView::sort(const std::string& label) {
@@ -132,7 +132,7 @@ void QtView::sort(const std::string& label) {
 }
 
 void QtView::reveal(const bool visible) {
-    if (toolbar_) toolbar_->reveal(visible);
+    toolbar_->reveal(visible);
 }
 
 void QtView::notify(const std::string& message, const bool success) {
@@ -172,7 +172,6 @@ void QtView::dragEnterEvent(QDragEnterEvent* event) {
 }
 
 void QtView::dropEvent(QDropEvent* event) {
-    if (!listener_) return;
     const std::vector<std::string> paths = QtDragDrop::extract(event);
     if (!paths.empty()) listener_->onDrop(paths);
 }

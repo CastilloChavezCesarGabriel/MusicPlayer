@@ -1,4 +1,5 @@
 #include "QtAudioEngine.h"
+#include "QtLayoutHelper.h"
 #include <QVBoxLayout>
 #include <QAudioDevice>
 #include <QUrl>
@@ -20,7 +21,7 @@ void QtAudioEngine::setup() {
     progress_bar_ = new QtProgressPanel(*media_player_, this);
 
     auto* layout = new QVBoxLayout(this);
-    layout->setContentsMargins(0, 0, 0, 0);
+    QtLayoutHelper::flatten(layout);
     layout->addWidget(progress_bar_);
 }
 
