@@ -17,7 +17,7 @@ private:
     QPushButton* next_button_;
     QPushButton* previous_button_;
 
-    void reset(const std::string& path) const;
+    static void paint(QPushButton* button, const std::string& path);
 
 public:
     explicit QtPlaybackPanel(IPlayerListener& listener, QWidget* parent = nullptr);

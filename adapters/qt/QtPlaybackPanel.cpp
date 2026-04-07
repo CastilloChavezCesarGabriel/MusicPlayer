@@ -18,7 +18,9 @@ QtPlaybackPanel::QtPlaybackPanel(IPlayerListener& listener, QWidget* parent)
 void QtPlaybackPanel::setup() {
     auto* layout = new QHBoxLayout(this);
 
-    shuffle_button_ = new QPushButton("\xf0\x9f\x94\x80", this);
+    shuffle_button_ = new QPushButton(this);
+    shuffle_button_->setObjectName("shuffle_button");
+    shuffle_button_->setIconSize(QSize(16, 20));
     previous_button_ = new QPushButton("\xe2\x8f\xae", this);
     toggle_button_ = new QPushButton("\xe2\x96\xb6", this);
     toggle_button_->setObjectName("toggle_button");
@@ -34,7 +36,8 @@ void QtPlaybackPanel::setup() {
     layout->addWidget(repeat_button_);
     layout->setAlignment(Qt::AlignCenter);
 
-    reset("/resources/icons/repeat.png");
+    paint(shuffle_button_, "/resources/icons/shuffle.png");
+    paint(repeat_button_, "/resources/icons/repeat.png");
     enable(false);
 }
 
@@ -64,19 +67,19 @@ void QtPlaybackPanel::toggle(const bool playing) const {
     toggle_button_->setText(playing ? "\xe2\x8f\xb8" : "\xe2\x96\xb6");
 }
 
-void QtPlaybackPanel::reset(const std::string& path) const {
+void QtPlaybackPanel::paint(QPushButton* button, const std::string& path) {
     QPixmap pixmap(QString::fromStdString(resolve(path)));
     QPainter painter(&pixmap);
     painter.setCompositionMode(QPainter::CompositionMode_SourceIn);
     painter.fillRect(pixmap.rect(), Qt::white);
     painter.end();
-    repeat_button_->setIcon(QIcon(pixmap));
-    repeat_button_->setText("");
+    button->setIcon(QIcon(pixmap));
+    button->setText("");
 }
 
 void QtPlaybackPanel::repeat(const int mode) const {
-    reset(mode == 1 ? "/resources/icons/repeat_one.png" : "/resources/icons/repeat.png");
-    repeat_button_->setIconSize(mode == 1 ? QSize(20, 20) : QSize(16, 16));
+    paint(repeat_button_, mode == 1 ? "/resources/icons/repeat_one.png" : "/resources/icons/repeat.png");
+    repeat_button_->setIconSize(mode == 1 ? QSize(20, 20) : QSize(18, 18));
     repeat_button_->setProperty("active", mode == 2);
     repeat_button_->style()->unpolish(repeat_button_);
     repeat_button_->style()->polish(repeat_button_);
