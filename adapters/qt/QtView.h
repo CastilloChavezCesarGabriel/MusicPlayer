@@ -8,6 +8,8 @@
 #include "QtPlaylistDisplay.h"
 #include "QtSortHeader.h"
 #include "QtSearchOverlay.h"
+#include "QtNotification.h"
+#include "QtDialog.h"
 #include <QWidget>
 #include <QLineEdit>
 
@@ -21,6 +23,8 @@ private:
     QtPlaylistDisplay* display_;
     QtSortHeader* sort_header_;
     QtSearchOverlay* search_overlay_;
+    QtNotification* notification_;
+    QtDialog* dialog_;
 
     void setup();
     void wire(QLineEdit* search);

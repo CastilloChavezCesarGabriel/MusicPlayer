@@ -11,3 +11,11 @@ QtVolumePanel* QtViewFactory::createVolume(IPlayerListener& listener, QWidget* p
 QtToolbar* QtViewFactory::createToolbar(QWidget* parent) {
     return new QtToolbar(parent);
 }
+
+QtNotification* QtViewFactory::createNotification(QWidget* parent) {
+    return new QtNotification(parent);
+}
+
+QtDialog* QtViewFactory::createDialog(QWidget* parent) {
+    return new QtDialog(parent);
+}

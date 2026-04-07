@@ -38,12 +38,24 @@ add_executable(NewMusicPlayer main.cpp
         model/Channel.h
         model/PlaybackNotifier.cpp
         model/PlaybackNotifier.h
+        model/IRepeatMode.h
+        model/NoRepeatMode.cpp
+        model/NoRepeatMode.h
+        model/RepeatOneMode.cpp
+        model/RepeatOneMode.h
+        model/RepeatAllMode.cpp
+        model/RepeatAllMode.h
+        model/RepeatMode.cpp
+        model/RepeatMode.h
+        model/MusicPlayer.cpp
+        model/MusicPlayer.h
         model/Model.cpp
         model/Model.h
         view/IPlaylistPanel.h
         view/ISearchPanel.h
         view/IControlPanel.h
         view/INotification.h
+        view/IDialog.h
         view/IPlayerView.h
         view/IPlaybackControl.h
         view/ILibraryControl.h
@@ -80,6 +92,12 @@ add_executable(NewMusicPlayer main.cpp
         adapters/qt/QtSearchOverlay.h
         adapters/qt/QtAudioEngine.cpp
         adapters/qt/QtAudioEngine.h
+        adapters/qt/QtNotification.cpp
+        adapters/qt/QtNotification.h
+        adapters/qt/QtDialog.cpp
+        adapters/qt/QtDialog.h
+        adapters/qt/QtDragDrop.cpp
+        adapters/qt/QtDragDrop.h
         adapters/qt/QtViewFactory.cpp
         adapters/qt/QtViewFactory.h
         adapters/qt/QtStyler.cpp
@@ -156,6 +174,17 @@ add_executable(NewMusicPlayerTests
         model/Channel.h
         model/PlaybackNotifier.cpp
         model/PlaybackNotifier.h
+        model/IRepeatMode.h
+        model/NoRepeatMode.cpp
+        model/NoRepeatMode.h
+        model/RepeatOneMode.cpp
+        model/RepeatOneMode.h
+        model/RepeatAllMode.cpp
+        model/RepeatAllMode.h
+        model/RepeatMode.cpp
+        model/RepeatMode.h
+        model/MusicPlayer.cpp
+        model/MusicPlayer.h
         model/Model.cpp
         model/Model.h
 )

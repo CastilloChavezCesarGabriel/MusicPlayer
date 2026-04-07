@@ -1,14 +1,26 @@
-#ifndef MODEL_H
-#define MODEL_H
+#ifndef MUSIC_PLAYER_H
+#define MUSIC_PLAYER_H
 
-#include "MusicPlayer.h"
+#include "Playlist.h"
+#include "Advertisement.h"
+#include "MusicLibrary.h"
+#include "PlaybackNotifier.h"
+#include "RepeatMode.h"
+#include "IPlaylistVisitor.h"
 
-class Model {
+class MusicPlayer {
 private:
-    MusicPlayer music_player_;
+    MusicLibrary music_library_;
+    Playlist playlist_;
+    Advertisement advertisement_;
+    PlaybackNotifier notifier_;
+    RepeatMode repeat_mode_;
+
+    void broadcast();
+    void refresh();
 
 public:
-    explicit Model(const std::string& basePath);
+    explicit MusicPlayer(const std::string& basePath);
 
     void subscribe(IPlaybackListener& listener);
     void play(int index);
@@ -28,4 +40,4 @@ public:
     void search(const std::string& query, IPlaylistVisitor& visitor) const;
 };
 
-#endif //MODEL_H
+#endif //MUSIC_PLAYER_H

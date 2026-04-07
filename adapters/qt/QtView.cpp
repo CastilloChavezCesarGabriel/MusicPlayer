@@ -1,13 +1,10 @@
 #include "QtView.h"
 #include "QtViewFactory.h"
 #include "QtSearchOverlay.h"
+#include "QtDragDrop.h"
 #include <QVBoxLayout>
 #include "QtVolumePanel.h"
 #include "QtSortHeader.h"
-#include <QDragEnterEvent>
-#include <QMimeData>
-#include <QMessageBox>
-#include <QFileDialog>
 
 QtView::QtView(QWidget* parent) : QWidget(parent) {
     setObjectName("MainWindow");
@@ -38,6 +35,8 @@ void QtView::setup() {
     sort_header_ = new QtSortHeader(this);
     display_ = new QtPlaylistDisplay(this);
     search_overlay_ = new QtSearchOverlay(this);
+    notification_ = QtViewFactory::createNotification(this);
+    dialog_ = QtViewFactory::createDialog(this);
 
     main->addWidget(search);
     main->addWidget(sort_header_);
@@ -137,18 +136,15 @@ void QtView::reveal(const bool visible) {
 }
 
 void QtView::notify(const std::string& message, const bool success) {
-    QMessageBox::information(this, success ? "Success" : "Oops",
-                             QString::fromStdString(message));
+    notification_->notify(message, success);
 }
 
 bool QtView::confirm(const std::string& message) {
-    return QMessageBox::question(this, "",
-        QString::fromStdString(message),
-        QMessageBox::Yes | QMessageBox::No) == QMessageBox::Yes;
+    return dialog_->confirm(message);
 }
 
 std::string QtView::browse() {
-    return QFileDialog::getOpenFileName(this).toStdString();
+    return dialog_->browse();
 }
 
 void QtView::play(const std::string& path) {
@@ -172,19 +168,11 @@ void QtView::adjust(const int volume) {
 }
 
 void QtView::dragEnterEvent(QDragEnterEvent* event) {
-    if (event->mimeData()->hasUrls()) {
-        event->acceptProposedAction();
-    }
+    QtDragDrop::accept(event);
 }
 
 void QtView::dropEvent(QDropEvent* event) {
     if (!listener_) return;
-    const QList<QUrl> urls = event->mimeData()->urls();
-    if (urls.isEmpty()) return;
-
-    std::vector<std::string> paths;
-    for (const auto& url : urls) {
-        paths.push_back(url.toLocalFile().toStdString());
-    }
-    listener_->onDrop(paths);
+    const std::vector<std::string> paths = QtDragDrop::extract(event);
+    if (!paths.empty()) listener_->onDrop(paths);
 }

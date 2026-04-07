@@ -6,9 +6,11 @@
 #include "ISearchPanel.h"
 #include "IControlPanel.h"
 #include "INotification.h"
+#include "IDialog.h"
 #include "IAudioPlayer.h"
 
-class IPlayerView : public IPlaylistPanel, public ISearchPanel, public IControlPanel, public INotification, public IAudioPlayer {
+class IPlayerView : public IPlaylistPanel, public ISearchPanel, public IControlPanel,
+                    public INotification, public IDialog, public IAudioPlayer {
 public:
     ~IPlayerView() override = default;
     virtual void add(IPlayerListener* listener) = 0;

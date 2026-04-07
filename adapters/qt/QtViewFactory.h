@@ -5,6 +5,8 @@
 #include "QtPlaybackPanel.h"
 #include "QtVolumePanel.h"
 #include "QtToolbar.h"
+#include "QtNotification.h"
+#include "QtDialog.h"
 #include <QWidget>
 
 class QtViewFactory {
@@ -12,6 +14,8 @@ public:
     static QtPlaybackPanel* createPlayback(IPlayerListener& listener, QWidget* parent);
     static QtVolumePanel* createVolume(IPlayerListener& listener, QWidget* parent);
     static QtToolbar* createToolbar(QWidget* parent);
+    static QtNotification* createNotification(QWidget* parent);
+    static QtDialog* createDialog(QWidget* parent);
 };
 
 #endif //QT_VIEW_FACTORY_H

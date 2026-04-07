@@ -1,130 +1,67 @@
 #include "Model.h"
-#include "Channel.h"
 
-Model::Model(const std::string& basePath)
-    : music_library_(basePath + "/music"),
-      playlist_(music_library_),
-      advertisement_(basePath + "/announcements") {
-
-    for (const Song& song : music_library_.load()) {
-        playlist_.add(song);
-    }
-    playlist_.shuffle();
-    advertisement_.load();
-}
+Model::Model(const std::string& basePath) : music_player_(basePath) {}
 
 void Model::subscribe(IPlaybackListener& listener) {
-    notifier_.add(listener);
+    music_player_.subscribe(listener);
 }
 
 void Model::play(const int index) {
-    playlist_.select(index, notifier_);
-
-    if (!advertisement_.interrupt(notifier_)) {
-        broadcast();
-    }
+    music_player_.play(index);
 }
 
 void Model::pick(const std::string& name) {
-    playlist_.pick(name, notifier_);
-
-    if (!advertisement_.interrupt(notifier_)) {
-        broadcast();
-    }
+    music_player_.pick(name);
 }
 
 void Model::advance() {
-    if (playlist_.hasNext()) {
-        playlist_.advance(notifier_);
-        broadcast();
-    }
+    music_player_.advance();
 }
 
 void Model::retreat() {
-    playlist_.retreat(notifier_);
-    broadcast();
+    music_player_.retreat();
 }
 
 void Model::end() {
-    if (advertisement_.conclude(notifier_)) {
-        broadcast();
-        return;
-    }
-
-    if (repeat_mode_ == 1) {
-        broadcast();
-        return;
-    }
-
-    if (playlist_.hasNext()) {
-        advance();
-    } else if (repeat_mode_ == 2) {
-        playlist_.select(0, notifier_);
-        broadcast();
-    }
+    music_player_.end();
 }
 
 void Model::skip() {
-    if (advertisement_.conclude(notifier_)) {
-        broadcast();
-    }
-}
-
-void Model::broadcast() {
-    Channel channel(notifier_);
-    playlist_.play(channel);
-}
-
-void Model::refresh() {
-    notifier_.onChanged();
+    music_player_.skip();
 }
 
 void Model::repeat() {
-    repeat_mode_ = (repeat_mode_ + 1) % 3;
-    notifier_.onRepeatChanged(repeat_mode_);
+    music_player_.repeat();
 }
 
 void Model::insert(const std::string& filePath) {
-    const std::string reason = music_library_.validate(filePath);
-    if (!reason.empty()) {
-        notifier_.onFeedback(reason, false);
-        return;
-    }
-
-    playlist_.add(music_library_.import(filePath));
-    refresh();
-    notifier_.onFeedback("Song added successfully!", true);
+    music_player_.insert(filePath);
 }
 
 void Model::remove(const int index) {
-    playlist_.remove(index);
-    refresh();
+    music_player_.remove(index);
 }
 
 void Model::shuffle() {
-    playlist_.shuffle();
-    refresh();
+    music_player_.shuffle();
 }
 
 void Model::sort(SortingAlgorithm& criteria) {
-    playlist_.sort(criteria);
-    refresh();
+    music_player_.sort(criteria);
 }
 
 void Model::reverse() {
-    playlist_.reverse();
-    refresh();
+    music_player_.reverse();
 }
 
 void Model::restore() {
-    playlist_.restore();
-    refresh();
+    music_player_.restore();
 }
 
 void Model::accept(IPlaylistVisitor& visitor) const {
-    playlist_.accept(visitor);
+    music_player_.accept(visitor);
 }
 
 void Model::search(const std::string& query, IPlaylistVisitor& visitor) const {
-    playlist_.search(query, visitor);
+    music_player_.search(query, visitor);
 }
