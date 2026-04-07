@@ -1,4 +1,3 @@
-#include <QApplication>
 #include <filesystem>
 #include "model/Model.h"
 #include "adapters/qt/QtView.h"
