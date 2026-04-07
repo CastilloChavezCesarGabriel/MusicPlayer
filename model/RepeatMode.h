@@ -1,7 +1,7 @@
 #ifndef REPEAT_MODE_H
 #define REPEAT_MODE_H
 
-#include "IRepeatMode.h"
+#include "RepeatStrategy.h"
 #include "Playlist.h"
 #include "PlaybackNotifier.h"
 #include <vector>
@@ -11,13 +11,13 @@ class RepeatMode {
 private:
     Playlist& playlist_;
     PlaybackNotifier& notifier_;
-    std::vector<std::unique_ptr<IRepeatMode>> modes_;
+    std::vector<std::unique_ptr<RepeatStrategy>> modes_;
     int index_ = 0;
 
 public:
     RepeatMode(Playlist& playlist, PlaybackNotifier& notifier);
     void advance();
-    void apply();
+    void apply() const;
 };
 
 #endif //REPEAT_MODE_H

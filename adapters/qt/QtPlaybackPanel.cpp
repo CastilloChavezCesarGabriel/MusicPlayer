@@ -1,5 +1,5 @@
 #include "QtPlaybackPanel.h"
-#include "QtLayoutHelper.h"
+#include "QtLayoutUtil.h"
 #include <QIcon>
 #include <QPixmap>
 #include <QPainter>
@@ -35,7 +35,7 @@ void QtPlaybackPanel::setup() {
     layout->addWidget(toggle_button_);
     layout->addWidget(next_button_);
     layout->addWidget(repeat_button_);
-    QtLayoutHelper::center(layout);
+    QtLayoutUtil::center(layout);
 
     paint(shuffle_button_, "/resources/icons/shuffle.png");
     paint(repeat_button_, "/resources/icons/repeat.png");

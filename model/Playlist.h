@@ -7,6 +7,7 @@
 #include "IPlaylistVisitor.h"
 #include "IPlaybackListener.h"
 #include <vector>
+#include <functional>
 
 class Playlist {
 private:
@@ -37,6 +38,7 @@ public:
 
 private:
     void preserve();
+    void rearrange(const std::function<void()>& operation);
     void locate(const Song& target);
     void notify(IPlaybackListener& listener) const;
 };

@@ -23,43 +23,33 @@ void Playlist::remove(const int index) {
 
 void Playlist::sort(SortingAlgorithm& criteria) {
     preserve();
-    if (!hasSelected()) {
-        criteria.sort(songs_);
-        return;
-    }
-    const Song current = songs_[current_song_];
-    criteria.sort(songs_);
-    locate(current);
+    rearrange([&] { criteria.sort(songs_); });
 }
 
 void Playlist::reverse() {
     preserve();
-    if (!hasSelected()) {
-        std::ranges::reverse(songs_);
-        return;
-    }
-    const Song current = songs_[current_song_];
-    std::ranges::reverse(songs_);
-    locate(current);
+    rearrange([this] { std::ranges::reverse(songs_); });
 }
 
 void Playlist::restore() {
     if (custom_order_.empty()) return;
-    if (!hasSelected()) {
-        songs_ = custom_order_;
-        custom_order_.clear();
-        return;
-    }
-    const Song current = songs_[current_song_];
-    songs_ = custom_order_;
-    custom_order_.clear();
-    locate(current);
+    rearrange([this] { songs_ = custom_order_; custom_order_.clear(); });
 }
 
 void Playlist::preserve() {
     if (custom_order_.empty()) {
         custom_order_ = songs_;
     }
+}
+
+void Playlist::rearrange(const std::function<void()>& operation) {
+    if (!hasSelected()) {
+        operation();
+        return;
+    }
+    const Song current = songs_[current_song_];
+    operation();
+    locate(current);
 }
 
 void Playlist::locate(const Song& target) {

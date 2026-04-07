@@ -1,12 +1,12 @@
 #ifndef NO_REPEAT_MODE_H
 #define NO_REPEAT_MODE_H
 
-#include "IRepeatMode.h"
+#include "RepeatStrategy.h"
 
-class NoRepeatMode final : public IRepeatMode {
+class NoRepeatMode final : public RepeatStrategy {
 public:
+    NoRepeatMode();
     void apply(Playlist& playlist, IPlaybackListener& listener) override;
-    void announce(IPlaybackListener& listener) const override;
 };
 
 #endif //NO_REPEAT_MODE_H

@@ -1,12 +1,12 @@
 #ifndef REPEAT_ALL_MODE_H
 #define REPEAT_ALL_MODE_H
 
-#include "IRepeatMode.h"
+#include "RepeatStrategy.h"
 
-class RepeatAllMode final : public IRepeatMode {
+class RepeatAllMode final : public RepeatStrategy {
 public:
+    RepeatAllMode();
     void apply(Playlist& playlist, IPlaybackListener& listener) override;
-    void announce(IPlaybackListener& listener) const override;
 };
 
 #endif //REPEAT_ALL_MODE_H

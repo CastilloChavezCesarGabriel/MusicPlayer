@@ -4,10 +4,13 @@
 #include "IPlaybackListener.h"
 #include <vector>
 #include <string>
+#include <functional>
 
 class PlaybackNotifier final : public IPlaybackListener {
 private:
     std::vector<IPlaybackListener*> listeners_;
+
+    void notify(const std::function<void(IPlaybackListener*)>& action) const;
 
 public:
     void add(IPlaybackListener& listener);

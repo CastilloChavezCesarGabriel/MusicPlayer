@@ -1,8 +1,5 @@
 #include "RepeatOneMode.h"
 
-void RepeatOneMode::apply(Playlist&, IPlaybackListener&) {
-}
+RepeatOneMode::RepeatOneMode() : RepeatStrategy(1) {}
 
-void RepeatOneMode::announce(IPlaybackListener& listener) const {
-    listener.onRepeatChanged(1);
-}
+void RepeatOneMode::apply(Playlist&, IPlaybackListener&) {}

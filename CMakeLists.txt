@@ -38,7 +38,8 @@ add_executable(NewMusicPlayer main.cpp
         model/Channel.h
         model/PlaybackNotifier.cpp
         model/PlaybackNotifier.h
-        model/IRepeatMode.h
+        model/RepeatStrategy.cpp
+        model/RepeatStrategy.h
         model/NoRepeatMode.cpp
         model/NoRepeatMode.h
         model/RepeatOneMode.cpp
@@ -76,8 +77,8 @@ add_executable(NewMusicPlayer main.cpp
         controller/SearchController.h
         controller/Controller.cpp
         controller/Controller.h
-        adapters/qt/QtLayoutHelper.cpp
-        adapters/qt/QtLayoutHelper.h
+        adapters/qt/QtLayoutUtil.cpp
+        adapters/qt/QtLayoutUtil.h
         adapters/qt/QtPlaybackPanel.cpp
         adapters/qt/QtPlaybackPanel.h
         adapters/qt/QtVolumePanel.cpp
@@ -176,7 +177,8 @@ add_executable(NewMusicPlayerTests
         model/Channel.h
         model/PlaybackNotifier.cpp
         model/PlaybackNotifier.h
-        model/IRepeatMode.h
+        model/RepeatStrategy.cpp
+        model/RepeatStrategy.h
         model/NoRepeatMode.cpp
         model/NoRepeatMode.h
         model/RepeatOneMode.cpp
