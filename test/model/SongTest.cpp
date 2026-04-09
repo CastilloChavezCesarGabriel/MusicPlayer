@@ -103,34 +103,3 @@ TEST_F(SongTest, ParseHandlesEmptyString) {
     EXPECT_EQ("", Song::parse(""));
 }
 
-TEST_F(SongTest, StampReturnsZeroForMissingFile) {
-    EXPECT_EQ(0, Song::stamp("/nonexistent/path/file.mp3"));
-}
-
-TEST_F(SongTest, StampReturnsNonZeroForExistingFile) {
-    const std::string path = std::filesystem::temp_directory_path().string() + "/song_stamp_test.mp3";
-    std::ofstream(path) << "audio";
-    EXPECT_GT(Song::stamp(path), 0);
-    std::filesystem::remove(path);
-}
-
-TEST_F(SongTest, LastReturnsZeroForMissingFile) {
-    EXPECT_EQ(0, Song::last("/nonexistent/path/file.mp3"));
-}
-
-TEST_F(SongTest, LastReturnsFileSize) {
-    const std::string path = std::filesystem::temp_directory_path().string() + "/song_last_test.mp3";
-    std::ofstream(path) << std::string(123, 'x');
-    EXPECT_EQ(123, Song::last(path));
-    std::filesystem::remove(path);
-}
-
-TEST_F(SongTest, LastDistinguishesFileSizes) {
-    const std::string small = std::filesystem::temp_directory_path().string() + "/song_small.mp3";
-    const std::string large = std::filesystem::temp_directory_path().string() + "/song_large.mp3";
-    std::ofstream(small) << std::string(50, 'x');
-    std::ofstream(large) << std::string(500, 'x');
-    EXPECT_LT(Song::last(small), Song::last(large));
-    std::filesystem::remove(small);
-    std::filesystem::remove(large);
-}

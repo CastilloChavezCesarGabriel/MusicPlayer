@@ -23,6 +23,7 @@ public:
     void onCancel() override;
     void onRepeatChanged(int mode) override;
     void onFeedback(const std::string& message, bool success) override;
+    void onStopped() override;
 };
 
 #endif //PLAYBACK_NOTIFIER_H

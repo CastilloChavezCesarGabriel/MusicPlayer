@@ -29,6 +29,8 @@ add_executable(NewMusicPlayer main.cpp
         model/QuickSort.h
         model/Playlist.cpp
         model/Playlist.h
+        model/Arrangement.cpp
+        model/Arrangement.h
         model/IPlaybackListener.h
         model/Advertisement.cpp
         model/Advertisement.h
@@ -50,8 +52,11 @@ add_executable(NewMusicPlayer main.cpp
         model/RepeatMode.h
         model/MusicPlayer.cpp
         model/MusicPlayer.h
-        model/Model.cpp
-        model/Model.h
+        model/IDice.h
+        model/Dice.cpp
+        model/Dice.h
+        model/FileMetadata.cpp
+        model/FileMetadata.h
         view/IPlaylistPanel.h
         view/ISearchPanel.h
         view/IControlPanel.h
@@ -135,6 +140,8 @@ add_executable(NewMusicPlayerTests
         test/ModelTestFixture.h
         test/DirectoryTestFixture.cpp
         test/DirectoryTestFixture.h
+        test/model/FileMetadataTest.cpp
+        test/model/FileMetadataTest.h
         test/model/SongTest.cpp
         test/model/PlaylistTest.cpp
         test/model/AdvertisementTest.cpp
@@ -169,6 +176,8 @@ add_executable(NewMusicPlayerTests
         model/QuickSort.h
         model/Playlist.cpp
         model/Playlist.h
+        model/Arrangement.cpp
+        model/Arrangement.h
         model/Advertisement.cpp
         model/Advertisement.h
         model/MusicLibrary.cpp
@@ -189,8 +198,11 @@ add_executable(NewMusicPlayerTests
         model/RepeatMode.h
         model/MusicPlayer.cpp
         model/MusicPlayer.h
-        model/Model.cpp
-        model/Model.h
+        model/IDice.h
+        model/Dice.cpp
+        model/Dice.h
+        model/FileMetadata.cpp
+        model/FileMetadata.h
 )
 
 target_link_libraries(NewMusicPlayerTests GTest::gtest_main)

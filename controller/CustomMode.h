@@ -6,7 +6,7 @@
 class CustomMode final : public SortMode {
 public:
     CustomMode();
-    void apply(Model& model) override;
+    void apply(MusicPlayer& musicPlayer) override;
 };
 
 #endif //CUSTOM_MODE_H

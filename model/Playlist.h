@@ -2,22 +2,22 @@
 #define PLAYLIST_H
 
 #include "Song.h"
-#include "MusicLibrary.h"
 #include "SortingAlgorithm.h"
 #include "IPlaylistVisitor.h"
 #include "IPlaybackListener.h"
+#include "Arrangement.h"
 #include <vector>
 #include <functional>
 
 class Playlist {
 private:
     std::vector<Song> songs_;
-    std::vector<Song> custom_order_;
-    MusicLibrary& music_library_;
+    Arrangement arrangement_;
+    IPlaylistVisitor& deleter_;
     int current_song_ = -1;
 
 public:
-    explicit Playlist(MusicLibrary& musicLibrary);
+    explicit Playlist(IPlaylistVisitor& deleter);
 
     void add(const Song& song);
     void remove(int index);
@@ -37,7 +37,6 @@ public:
     bool hasSelected() const;
 
 private:
-    void preserve();
     void rearrange(const std::function<void()>& operation);
     void locate(const Song& target);
     void notify(IPlaybackListener& listener) const;

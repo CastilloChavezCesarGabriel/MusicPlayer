@@ -1,5 +1,6 @@
 #include <filesystem>
-#include "model/Model.h"
+#include "model/MusicPlayer.h"
+#include "model/Dice.h"
 #include "adapters/qt/QtView.h"
 #include "adapters/qt/QtStyler.h"
 #include "controller/Controller.h"
@@ -10,9 +11,10 @@ int main(int argc, char *argv[]) {
     const std::string base = std::filesystem::current_path().string();
     QtStyler::apply(app, base + "/resources/styles.qss");
 
-    Model model(base + "/resources");
+    Dice dice;
+    MusicPlayer musicPlayer(base + "/resources", dice);
     QtView view;
-    Controller controller(model, view);
+    Controller controller(musicPlayer, view);
 
     view.show();
     return app.exec();

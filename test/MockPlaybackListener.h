@@ -14,6 +14,7 @@ private:
     int enables_ = 0;
     int reveals_ = 0;
     int cancels_ = 0;
+    int stops_ = 0;
 
 public:
     void onStart(const std::string& path) override;
@@ -25,6 +26,7 @@ public:
     void onCancel() override;
     void onRepeatChanged(int mode) override;
     void onFeedback(const std::string& message, bool success) override;
+    void onStopped() override;
 
     bool wasStarted() const;
     bool wasStartedWith(const std::string& path) const;
@@ -36,6 +38,7 @@ public:
     bool wasRevealed() const;
     bool wasCancelled() const;
     bool wasFeedback(const std::string& message) const;
+    bool wasStopped() const;
 };
 
 #endif //MOCK_PLAYBACK_LISTENER_H

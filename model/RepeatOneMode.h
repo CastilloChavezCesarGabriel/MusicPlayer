@@ -6,7 +6,7 @@
 class RepeatOneMode final : public RepeatStrategy {
 public:
     RepeatOneMode();
-    void apply(Playlist& playlist, IPlaybackListener& listener) override;
+    bool apply(Playlist& playlist, IPlaybackListener& listener) override;
 };
 
 #endif //REPEAT_ONE_MODE_H

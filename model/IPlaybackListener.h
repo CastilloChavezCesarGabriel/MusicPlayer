@@ -14,6 +14,7 @@ public:
     virtual void onCancel() = 0;
     virtual void onRepeatChanged(int mode) = 0;
     virtual void onFeedback(const std::string& message, bool success) = 0;
+    virtual void onStopped() = 0;
 };
 
 #endif //I_PLAYBACK_LISTENER_H

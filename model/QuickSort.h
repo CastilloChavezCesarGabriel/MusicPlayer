@@ -1,14 +1,15 @@
 #ifndef QUICK_SORT_H
 #define QUICK_SORT_H
+
 #include "SortingAlgorithm.h"
+#include <utility>
 
 class QuickSort final : public SortingAlgorithm {
 private:
     std::string title_;
-    std::vector<Song>* songs_ = nullptr;
 
     void visit(const std::string& name, const std::string& path) override;
-    int divide(int startBound, int endBound);
+    int divide(std::vector<Song>& songs, const std::pair<int, int> &bounds);
 
 public:
     void sort(std::vector<Song>& songs) override;

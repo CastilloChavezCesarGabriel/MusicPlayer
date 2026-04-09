@@ -10,38 +10,38 @@ std::string SearchSongUseCaseTest::identify() const {
 
 TEST_F(SearchSongUseCaseTest, SearchFindsExactMatch) {
     createSong("hello.mp3");
-    Model model(base_directory_);
-    model.subscribe(listener_);
+    MusicPlayer musicPlayer(base_directory_, dice_);
+    musicPlayer.subscribe(listener_);
     TestPlaylistVisitor visitor;
-    model.search("hello", visitor);
+    musicPlayer.search("hello", visitor);
     EXPECT_TRUE(visitor.hasName("hello.mp3"));
 }
 
 TEST_F(SearchSongUseCaseTest, SearchNoMatchReturnsEmpty) {
     createSong("hello.mp3");
-    Model model(base_directory_);
-    model.subscribe(listener_);
+    MusicPlayer musicPlayer(base_directory_, dice_);
+    musicPlayer.subscribe(listener_);
     TestPlaylistVisitor visitor;
-    model.search("goodbye", visitor);
+    musicPlayer.search("goodbye", visitor);
     EXPECT_TRUE(visitor.isEmpty());
 }
 
 TEST_F(SearchSongUseCaseTest, SearchEmptyQueryReturnsAll) {
     createSong("a.mp3");
     createSong("b.mp3");
-    Model model(base_directory_);
-    model.subscribe(listener_);
+    MusicPlayer musicPlayer(base_directory_, dice_);
+    musicPlayer.subscribe(listener_);
     TestPlaylistVisitor visitor;
-    model.search("", visitor);
+    musicPlayer.search("", visitor);
     EXPECT_TRUE(visitor.hasSongs(2));
 }
 
 TEST_F(SearchSongUseCaseTest, SearchPartialName) {
     createSong("summer_breeze.mp3");
-    Model model(base_directory_);
-    model.subscribe(listener_);
+    MusicPlayer musicPlayer(base_directory_, dice_);
+    musicPlayer.subscribe(listener_);
     TestPlaylistVisitor visitor;
-    model.search("summer", visitor);
+    musicPlayer.search("summer", visitor);
     EXPECT_TRUE(visitor.hasName("summer_breeze.mp3"));
 }
 
@@ -49,36 +49,36 @@ TEST_F(SearchSongUseCaseTest, SearchMultipleResults) {
     createSong("rock_anthem.mp3");
     createSong("rock_ballad.mp3");
     createSong("jazz_tune.mp3");
-    Model model(base_directory_);
-    model.subscribe(listener_);
+    MusicPlayer musicPlayer(base_directory_, dice_);
+    musicPlayer.subscribe(listener_);
     TestPlaylistVisitor visitor;
-    model.search("rock", visitor);
+    musicPlayer.search("rock", visitor);
     EXPECT_TRUE(visitor.hasSongs(2));
 }
 
 TEST_F(SearchSongUseCaseTest, SearchSingleResult) {
     createSong("rock_anthem.mp3");
     createSong("jazz_tune.mp3");
-    Model model(base_directory_);
-    model.subscribe(listener_);
+    MusicPlayer musicPlayer(base_directory_, dice_);
+    musicPlayer.subscribe(listener_);
     TestPlaylistVisitor visitor;
-    model.search("jazz", visitor);
+    musicPlayer.search("jazz", visitor);
     EXPECT_TRUE(visitor.hasSongs(1));
 }
 
 TEST_F(SearchSongUseCaseTest, SearchOnEmptyPlaylist) {
-    Model model(base_directory_);
-    model.subscribe(listener_);
+    MusicPlayer musicPlayer(base_directory_, dice_);
+    musicPlayer.subscribe(listener_);
     TestPlaylistVisitor visitor;
-    model.search("anything", visitor);
+    musicPlayer.search("anything", visitor);
     EXPECT_TRUE(visitor.isEmpty());
 }
 
 TEST_F(SearchSongUseCaseTest, SearchEmptyQueryOnEmptyPlaylist) {
-    Model model(base_directory_);
-    model.subscribe(listener_);
+    MusicPlayer musicPlayer(base_directory_, dice_);
+    musicPlayer.subscribe(listener_);
     TestPlaylistVisitor visitor;
-    model.search("", visitor);
+    musicPlayer.search("", visitor);
     EXPECT_TRUE(visitor.isEmpty());
 }
 
@@ -86,12 +86,12 @@ TEST_F(SearchSongUseCaseTest, SearchAfterSort) {
     createSong("cherry.mp3");
     createSong("apple.mp3");
     createSong("banana.mp3");
-    Model model(base_directory_);
-    model.subscribe(listener_);
+    MusicPlayer musicPlayer(base_directory_, dice_);
+    musicPlayer.subscribe(listener_);
     QuickSort byTitle;
-    model.sort(byTitle);
+    musicPlayer.sort(byTitle);
     TestPlaylistVisitor visitor;
-    model.search("banana", visitor);
+    musicPlayer.search("banana", visitor);
     EXPECT_TRUE(visitor.hasName("banana.mp3"));
 }
 
@@ -100,138 +100,138 @@ TEST_F(SearchSongUseCaseTest, SearchAfterInsert) {
     std::string srcDir = base_directory_ + "/src";
     std::filesystem::create_directories(srcDir);
     std::ofstream(srcDir + "/b.mp3") << "audio";
-    Model model(base_directory_);
-    model.subscribe(listener_);
-    model.insert(srcDir + "/b.mp3");
+    MusicPlayer musicPlayer(base_directory_, dice_);
+    musicPlayer.subscribe(listener_);
+    musicPlayer.insert(srcDir + "/b.mp3");
     TestPlaylistVisitor visitor;
-    model.search("b", visitor);
+    musicPlayer.search("b", visitor);
     EXPECT_TRUE(visitor.hasName("b.mp3"));
 }
 
 TEST_F(SearchSongUseCaseTest, SearchAfterRemove) {
     createSong("unique_song.mp3");
-    Model model(base_directory_);
-    model.subscribe(listener_);
-    model.remove(0);
+    MusicPlayer musicPlayer(base_directory_, dice_);
+    musicPlayer.subscribe(listener_);
+    musicPlayer.remove(0);
     TestPlaylistVisitor visitor;
-    model.search("unique_song", visitor);
+    musicPlayer.search("unique_song", visitor);
     EXPECT_TRUE(visitor.isEmpty());
 }
 
 TEST_F(SearchSongUseCaseTest, SearchDoesNotStartPlayback) {
     createSong("song.mp3");
-    Model model(base_directory_);
-    model.subscribe(listener_);
+    MusicPlayer musicPlayer(base_directory_, dice_);
+    musicPlayer.subscribe(listener_);
     TestPlaylistVisitor visitor;
-    model.search("song", visitor);
+    musicPlayer.search("song", visitor);
     EXPECT_FALSE(listener_.wasStarted());
 }
 
 TEST_F(SearchSongUseCaseTest, SearchDoesNotSelect) {
     createSong("song.mp3");
-    Model model(base_directory_);
-    model.subscribe(listener_);
+    MusicPlayer musicPlayer(base_directory_, dice_);
+    musicPlayer.subscribe(listener_);
     TestPlaylistVisitor visitor;
-    model.search("song", visitor);
+    musicPlayer.search("song", visitor);
     EXPECT_FALSE(listener_.wasSelected());
 }
 
 TEST_F(SearchSongUseCaseTest, SearchDoesNotNotifyChanged) {
     createSong("song.mp3");
-    Model model(base_directory_);
-    model.subscribe(listener_);
+    MusicPlayer musicPlayer(base_directory_, dice_);
+    musicPlayer.subscribe(listener_);
     TestPlaylistVisitor visitor;
-    model.search("song", visitor);
+    musicPlayer.search("song", visitor);
     EXPECT_FALSE(listener_.wasChanged());
 }
 
 TEST_F(SearchSongUseCaseTest, SearchWithExtension) {
     createSong("song.mp3");
-    Model model(base_directory_);
-    model.subscribe(listener_);
+    MusicPlayer musicPlayer(base_directory_, dice_);
+    musicPlayer.subscribe(listener_);
     TestPlaylistVisitor visitor;
-    model.search(".mp3", visitor);
+    musicPlayer.search(".mp3", visitor);
     EXPECT_TRUE(visitor.hasName("song.mp3"));
 }
 
 TEST_F(SearchSongUseCaseTest, SearchWavFile) {
     createSong("track.wav");
-    Model model(base_directory_);
-    model.subscribe(listener_);
+    MusicPlayer musicPlayer(base_directory_, dice_);
+    musicPlayer.subscribe(listener_);
     TestPlaylistVisitor visitor;
-    model.search("track", visitor);
+    musicPlayer.search("track", visitor);
     EXPECT_TRUE(visitor.hasName("track.wav"));
 }
 
 TEST_F(SearchSongUseCaseTest, SearchWithUnderscore) {
     createSong("my_song.mp3");
-    Model model(base_directory_);
-    model.subscribe(listener_);
+    MusicPlayer musicPlayer(base_directory_, dice_);
+    musicPlayer.subscribe(listener_);
     TestPlaylistVisitor visitor;
-    model.search("my_song", visitor);
+    musicPlayer.search("my_song", visitor);
     EXPECT_TRUE(visitor.hasName("my_song.mp3"));
 }
 
 TEST_F(SearchSongUseCaseTest, SearchWithDash) {
     createSong("my-song.mp3");
-    Model model(base_directory_);
-    model.subscribe(listener_);
+    MusicPlayer musicPlayer(base_directory_, dice_);
+    musicPlayer.subscribe(listener_);
     TestPlaylistVisitor visitor;
-    model.search("my-song", visitor);
+    musicPlayer.search("my-song", visitor);
     EXPECT_TRUE(visitor.hasName("my-song.mp3"));
 }
 
 TEST_F(SearchSongUseCaseTest, SearchWithNumbers) {
     createSong("track01.mp3");
     createSong("track02.mp3");
-    Model model(base_directory_);
-    model.subscribe(listener_);
+    MusicPlayer musicPlayer(base_directory_, dice_);
+    musicPlayer.subscribe(listener_);
     TestPlaylistVisitor visitor;
-    model.search("track0", visitor);
+    musicPlayer.search("track0", visitor);
     EXPECT_TRUE(visitor.hasSongs(2));
 }
 
 TEST_F(SearchSongUseCaseTest, SearchSingleCharacter) {
     createSong("a.mp3");
     createSong("b.mp3");
-    Model model(base_directory_);
-    model.subscribe(listener_);
+    MusicPlayer musicPlayer(base_directory_, dice_);
+    musicPlayer.subscribe(listener_);
     TestPlaylistVisitor visitor;
-    model.search("a", visitor);
+    musicPlayer.search("a", visitor);
     EXPECT_TRUE(visitor.hasName("a.mp3"));
 }
 
 TEST_F(SearchSongUseCaseTest, SearchTwiceWithDifferentQueries) {
     createSong("rock.mp3");
     createSong("jazz.mp3");
-    Model model(base_directory_);
-    model.subscribe(listener_);
+    MusicPlayer musicPlayer(base_directory_, dice_);
+    musicPlayer.subscribe(listener_);
     TestPlaylistVisitor v1;
-    model.search("rock", v1);
+    musicPlayer.search("rock", v1);
     EXPECT_TRUE(v1.hasName("rock.mp3"));
     TestPlaylistVisitor v2;
-    model.search("jazz", v2);
+    musicPlayer.search("jazz", v2);
     EXPECT_TRUE(v2.hasName("jazz.mp3"));
 }
 
 TEST_F(SearchSongUseCaseTest, SearchDoesNotAffectPlaylist) {
     createSong("a.mp3");
     createSong("b.mp3");
-    Model model(base_directory_);
-    model.subscribe(listener_);
+    MusicPlayer musicPlayer(base_directory_, dice_);
+    musicPlayer.subscribe(listener_);
     TestPlaylistVisitor searchVisitor;
-    model.search("a", searchVisitor);
+    musicPlayer.search("a", searchVisitor);
     TestPlaylistVisitor acceptVisitor;
-    model.accept(acceptVisitor);
+    musicPlayer.accept(acceptVisitor);
     EXPECT_TRUE(acceptVisitor.hasSongs(2));
 }
 
 TEST_F(SearchSongUseCaseTest, SearchResultHasCorrectName) {
     createSong("specific_name.mp3");
-    Model model(base_directory_);
-    model.subscribe(listener_);
+    MusicPlayer musicPlayer(base_directory_, dice_);
+    musicPlayer.subscribe(listener_);
     TestPlaylistVisitor visitor;
-    model.search("specific", visitor);
+    musicPlayer.search("specific", visitor);
     EXPECT_TRUE(visitor.hasName("specific_name.mp3"));
     EXPECT_TRUE(visitor.hasSongs(1));
 }
@@ -240,20 +240,20 @@ TEST_F(SearchSongUseCaseTest, SearchAllSongsMatch) {
     createSong("song_a.mp3");
     createSong("song_b.mp3");
     createSong("song_c.mp3");
-    Model model(base_directory_);
-    model.subscribe(listener_);
+    MusicPlayer musicPlayer(base_directory_, dice_);
+    musicPlayer.subscribe(listener_);
     TestPlaylistVisitor visitor;
-    model.search("song", visitor);
+    musicPlayer.search("song", visitor);
     EXPECT_TRUE(visitor.hasSongs(3));
 }
 
 TEST_F(SearchSongUseCaseTest, SearchNoSongsMatch) {
     createSong("a.mp3");
     createSong("b.mp3");
-    Model model(base_directory_);
-    model.subscribe(listener_);
+    MusicPlayer musicPlayer(base_directory_, dice_);
+    musicPlayer.subscribe(listener_);
     TestPlaylistVisitor visitor;
-    model.search("zzz", visitor);
+    musicPlayer.search("zzz", visitor);
     EXPECT_TRUE(visitor.isEmpty());
 }
 
@@ -261,49 +261,49 @@ TEST_F(SearchSongUseCaseTest, SearchAfterSortFindsAll) {
     createSong("rock_a.mp3");
     createSong("rock_b.mp3");
     createSong("jazz.mp3");
-    Model model(base_directory_);
-    model.subscribe(listener_);
+    MusicPlayer musicPlayer(base_directory_, dice_);
+    musicPlayer.subscribe(listener_);
     QuickSort byTitle;
-    model.sort(byTitle);
+    musicPlayer.sort(byTitle);
     TestPlaylistVisitor visitor;
-    model.search("rock", visitor);
+    musicPlayer.search("rock", visitor);
     EXPECT_TRUE(visitor.hasSongs(2));
 }
 
 TEST_F(SearchSongUseCaseTest, SearchLongQuery) {
     createSong("very_long_song_name_here.mp3");
-    Model model(base_directory_);
-    model.subscribe(listener_);
+    MusicPlayer musicPlayer(base_directory_, dice_);
+    musicPlayer.subscribe(listener_);
     TestPlaylistVisitor visitor;
-    model.search("very_long_song_name_here", visitor);
+    musicPlayer.search("very_long_song_name_here", visitor);
     EXPECT_TRUE(visitor.hasName("very_long_song_name_here.mp3"));
 }
 
 TEST_F(SearchSongUseCaseTest, SearchSingleSongPlaylist) {
     createSong("only.mp3");
-    Model model(base_directory_);
-    model.subscribe(listener_);
+    MusicPlayer musicPlayer(base_directory_, dice_);
+    musicPlayer.subscribe(listener_);
     TestPlaylistVisitor visitor;
-    model.search("only", visitor);
+    musicPlayer.search("only", visitor);
     EXPECT_TRUE(visitor.hasSongs(1));
 }
 
 TEST_F(SearchSongUseCaseTest, SearchDoesNotCrashOnEmptyPlaylist) {
-    Model model(base_directory_);
-    model.subscribe(listener_);
+    MusicPlayer musicPlayer(base_directory_, dice_);
+    musicPlayer.subscribe(listener_);
     TestPlaylistVisitor visitor;
-    EXPECT_NO_THROW(model.search("test", visitor));
+    EXPECT_NO_THROW(musicPlayer.search("test", visitor));
 }
 
 TEST_F(SearchSongUseCaseTest, SearchVisitorIsIndependent) {
     createSong("a.mp3");
     createSong("b.mp3");
-    Model model(base_directory_);
-    model.subscribe(listener_);
+    MusicPlayer musicPlayer(base_directory_, dice_);
+    musicPlayer.subscribe(listener_);
     TestPlaylistVisitor v1;
-    model.search("a", v1);
+    musicPlayer.search("a", v1);
     TestPlaylistVisitor v2;
-    model.search("b", v2);
+    musicPlayer.search("b", v2);
     EXPECT_TRUE(v1.hasSongs(1));
     EXPECT_TRUE(v2.hasSongs(1));
 }

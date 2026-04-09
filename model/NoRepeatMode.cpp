@@ -2,8 +2,8 @@
 
 NoRepeatMode::NoRepeatMode() : RepeatStrategy(0) {}
 
-void NoRepeatMode::apply(Playlist& playlist, IPlaybackListener& listener) {
-    if (playlist.hasNext()) {
-        playlist.advance(listener);
-    }
+bool NoRepeatMode::apply(Playlist& playlist, IPlaybackListener& listener) {
+    if (!playlist.hasNext()) return false;
+    playlist.advance(listener);
+    return true;
 }

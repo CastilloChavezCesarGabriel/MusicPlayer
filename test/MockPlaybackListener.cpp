@@ -33,6 +33,10 @@ void MockPlaybackListener::onFeedback(const std::string& message, bool) {
     feedbacks_.push_back(message);
 }
 
+void MockPlaybackListener::onStopped() {
+    stops_++;
+}
+
 bool MockPlaybackListener::wasStarted() const {
     return !starts_.empty();
 }
@@ -71,4 +75,8 @@ bool MockPlaybackListener::wasCancelled() const {
 
 bool MockPlaybackListener::wasFeedback(const std::string& message) const {
     return std::ranges::find(feedbacks_, message) != feedbacks_.end();
+}
+
+bool MockPlaybackListener::wasStopped() const {
+    return stops_ > 0;
 }

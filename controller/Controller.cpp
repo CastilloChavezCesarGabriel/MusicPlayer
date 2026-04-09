@@ -1,9 +1,9 @@
 #include "Controller.h"
 #include "PlaylistRenderer.h"
 
-Controller::Controller(Model& model, IPlayerView& view) : model_(model), view_(view),
-          sort_(model, view), search_(model, view) {
-    model_.subscribe(*this);
+Controller::Controller(MusicPlayer& musicPlayer, IPlayerView& view) : music_player_(musicPlayer), view_(view),
+          sort_(musicPlayer, view), search_(musicPlayer, view) {
+    music_player_.subscribe(*this);
     view_.add(this);
     refresh();
 }
@@ -46,8 +46,15 @@ void Controller::onFeedback(const std::string& message, const bool success) {
     view_.notify(message, success);
 }
 
+void Controller::onStopped() {
+    view_.enable(false);
+    view_.pause();
+    view_.highlight(-1);
+    playing_ = false;
+}
+
 void Controller::onPlay(const int index) {
-    model_.play(index);
+    music_player_.play(index);
 }
 
 void Controller::onToggle() {
@@ -60,36 +67,36 @@ void Controller::onToggle() {
 }
 
 void Controller::onRepeat() {
-    model_.repeat();
+    music_player_.repeat();
 }
 
 void Controller::onAdvance() {
-    model_.advance();
+    music_player_.advance();
 }
 
 void Controller::onRetreat() {
-    model_.retreat();
+    music_player_.retreat();
 }
 
 void Controller::onAdd() {
     const std::string path = view_.browse();
     if (!path.empty()) {
-        model_.insert(path);
+        music_player_.insert(path);
     }
 }
 
 void Controller::onRemove(const int index) {
     if (view_.confirm("Are you sure you wanna delete this song?")) {
-        model_.remove(index);
+        music_player_.remove(index);
     }
 }
 
 void Controller::onShuffle() {
-    model_.shuffle();
+    music_player_.shuffle();
 }
 
 void Controller::onSkip() {
-    model_.skip();
+    music_player_.skip();
 }
 
 void Controller::onSort() {
@@ -101,13 +108,13 @@ void Controller::onSearch(const std::string& query) {
 }
 
 void Controller::onPick(const std::string& name) {
-    model_.pick(name);
+    music_player_.pick(name);
     view_.dismiss();
 }
 
 void Controller::onDrop(const std::vector<std::string>& paths) {
     for (const auto& path : paths) {
-        model_.insert(path);
+        music_player_.insert(path);
     }
 }
 
@@ -116,11 +123,11 @@ void Controller::onAdjust(const int volume) {
 }
 
 void Controller::onEnd() {
-    model_.end();
+    music_player_.end();
 }
 
 void Controller::refresh() const {
     PlaylistRenderer renderer(view_);
-    model_.accept(renderer);
+    music_player_.accept(renderer);
     renderer.render();
 }

@@ -45,3 +45,7 @@ void PlaybackNotifier::onRepeatChanged(const int mode) {
 void PlaybackNotifier::onFeedback(const std::string& message, const bool success) {
     notify([&](IPlaybackListener* listener) { listener->onFeedback(message, success); });
 }
+
+void PlaybackNotifier::onStopped() {
+    notify([](IPlaybackListener* listener) { listener->onStopped(); });
+}

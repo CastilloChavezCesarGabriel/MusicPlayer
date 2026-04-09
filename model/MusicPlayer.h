@@ -7,6 +7,7 @@
 #include "PlaybackNotifier.h"
 #include "RepeatMode.h"
 #include "IPlaylistVisitor.h"
+#include "IDice.h"
 
 class MusicPlayer {
 private:
@@ -20,7 +21,7 @@ private:
     void refresh();
 
 public:
-    explicit MusicPlayer(const std::string& basePath);
+    MusicPlayer(const std::string& basePath, IDice& dice);
 
     void subscribe(IPlaybackListener& listener);
     void play(int index);

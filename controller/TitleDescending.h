@@ -6,7 +6,7 @@
 class TitleDescending final : public SortMode {
 public:
     TitleDescending();
-    void apply(Model& model) override;
+    void apply(MusicPlayer& musicPlayer) override;
 };
 
 #endif //TITLE_DESCENDING_H

@@ -1,7 +1,7 @@
 #ifndef CONTROLLER_H
 #define CONTROLLER_H
 
-#include "../model/Model.h"
+#include "../model/MusicPlayer.h"
 #include "../view/IPlayerView.h"
 #include "../view/IPlayerListener.h"
 #include "SortController.h"
@@ -9,7 +9,7 @@
 
 class Controller final : public IPlaybackListener, public IPlayerListener {
 private:
-    Model& model_;
+    MusicPlayer& music_player_;
     IPlayerView& view_;
     SortController sort_;
     SearchController search_;
@@ -18,7 +18,7 @@ private:
     void refresh() const;
 
 public:
-    Controller(Model& model, IPlayerView& view);
+    Controller(MusicPlayer& musicPlayer, IPlayerView& view);
 
     void onStart(const std::string& path) override;
     void onChanged() override;
@@ -29,6 +29,7 @@ public:
     void onCancel() override;
     void onRepeatChanged(int mode) override;
     void onFeedback(const std::string& message, bool success) override;
+    void onStopped() override;
     void onPlay(int index) override;
     void onToggle() override;
     void onRepeat() override;

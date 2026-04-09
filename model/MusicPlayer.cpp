@@ -1,10 +1,10 @@
 #include "MusicPlayer.h"
 #include "Channel.h"
 
-MusicPlayer::MusicPlayer(const std::string& basePath)
+MusicPlayer::MusicPlayer(const std::string& basePath, IDice& dice)
     : music_library_(basePath + "/music"),
       playlist_(music_library_),
-      advertisement_(basePath + "/announcements"),
+      advertisement_(basePath + "/announcements", dice),
       repeat_mode_(playlist_, notifier_) {
 
     for (const Song& song : music_library_.load()) {
@@ -51,8 +51,12 @@ void MusicPlayer::end() {
         broadcast();
         return;
     }
-    repeat_mode_.apply();
-    broadcast();
+
+    if (repeat_mode_.apply()) {
+        broadcast();
+    } else {
+        notifier_.onStopped();
+    }
 }
 
 void MusicPlayer::skip() {
@@ -75,13 +79,11 @@ void MusicPlayer::repeat() {
 }
 
 void MusicPlayer::insert(const std::string& filePath) {
-    const std::string reason = music_library_.validate(filePath);
+    const std::string reason = music_library_.insert(filePath, playlist_);
     if (!reason.empty()) {
         notifier_.onFeedback(reason, false);
         return;
     }
-
-    playlist_.add(music_library_.import(filePath));
     refresh();
     notifier_.onFeedback("Song added successfully!", true);
 }

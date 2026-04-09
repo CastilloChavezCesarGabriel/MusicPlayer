@@ -5,6 +5,7 @@
 #include "IPlaylistVisitor.h"
 #include <string>
 #include <vector>
+#include "Playlist.h"
 
 class MusicLibrary final : public IPlaylistVisitor {
 private:
@@ -15,7 +16,9 @@ public:
 
     std::vector<Song> load() const;
     std::string validate(const std::string& filePath) const;
+    std::string insert(const std::string& filePath, Playlist& playlist) const;
     Song import(const std::string& sourcePath) const;
+    static void erase(const std::string& path);
     void visit(const std::string& name, const std::string& path) override;
     bool contains(const std::string& filename) const;
     static std::vector<std::string> scan(const std::string& directory);

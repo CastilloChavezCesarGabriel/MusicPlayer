@@ -17,7 +17,7 @@ private:
 public:
     RepeatMode(Playlist& playlist, PlaybackNotifier& notifier);
     void advance();
-    void apply() const;
+    bool apply() const;
 };
 
 #endif //REPEAT_MODE_H

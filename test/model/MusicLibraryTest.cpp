@@ -106,12 +106,12 @@ TEST_F(MusicLibraryTest, LoadNonExistentDirectory) {
 
 TEST_F(MusicLibraryTest, ContainsExistingFile) {
     createFile("exists.mp3");
-    MusicLibrary lib(test_directory_);
+    const MusicLibrary lib(test_directory_);
     EXPECT_TRUE(lib.contains("exists.mp3"));
 }
 
 TEST_F(MusicLibraryTest, ContainsMissingFile) {
-    MusicLibrary lib(test_directory_);
+    const MusicLibrary lib(test_directory_);
     EXPECT_FALSE(lib.contains("missing.mp3"));
 }
 
@@ -120,7 +120,7 @@ TEST_F(MusicLibraryTest, ImportCopiesFile) {
     std::filesystem::create_directories(srcDir);
     std::ofstream(srcDir + "/new.mp3") << "data";
 
-    MusicLibrary lib(test_directory_);
+    const MusicLibrary lib(test_directory_);
     lib.import(srcDir + "/new.mp3");
     EXPECT_TRUE(lib.contains("new.mp3"));
 }
@@ -147,11 +147,11 @@ TEST_F(MusicLibraryTest, ImportDoesNotDuplicateExisting) {
     EXPECT_TRUE(lib.contains("existing.mp3"));
 }
 
-TEST_F(MusicLibraryTest, VisitErasesFile) {
+TEST_F(MusicLibraryTest, EraseRemovesFile) {
     createFile("to_delete.mp3");
     MusicLibrary lib(test_directory_);
     EXPECT_TRUE(lib.contains("to_delete.mp3"));
-    lib.visit("to_delete.mp3", test_directory_ + "/to_delete.mp3");
+    lib.erase(test_directory_ + "/to_delete.mp3");
     EXPECT_FALSE(lib.contains("to_delete.mp3"));
 }
 

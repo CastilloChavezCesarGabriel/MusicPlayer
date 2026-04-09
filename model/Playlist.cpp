@@ -3,7 +3,7 @@
 #include <algorithm>
 #include <ranges>
 
-Playlist::Playlist(MusicLibrary& musicLibrary) : music_library_(musicLibrary) {}
+Playlist::Playlist(IPlaylistVisitor& deleter) : deleter_(deleter) {}
 
 void Playlist::add(const Song& song) {
     songs_.push_back(song);
@@ -11,7 +11,7 @@ void Playlist::add(const Song& song) {
 
 void Playlist::remove(const int index) {
     if (index < 0 || index >= songs_.size()) return;
-    songs_[index].accept(music_library_);
+    songs_[index].accept(deleter_);
     songs_.erase(songs_.begin() + index);
 
     if (index == current_song_) {
@@ -22,24 +22,15 @@ void Playlist::remove(const int index) {
 }
 
 void Playlist::sort(SortingAlgorithm& criteria) {
-    preserve();
-    rearrange([&] { criteria.sort(songs_); });
+    rearrange([&] { arrangement_.sort(songs_, criteria); });
 }
 
 void Playlist::reverse() {
-    preserve();
-    rearrange([this] { std::ranges::reverse(songs_); });
+    rearrange([this] { arrangement_.reverse(songs_); });
 }
 
 void Playlist::restore() {
-    if (custom_order_.empty()) return;
-    rearrange([this] { songs_ = custom_order_; custom_order_.clear(); });
-}
-
-void Playlist::preserve() {
-    if (custom_order_.empty()) {
-        custom_order_ = songs_;
-    }
+    rearrange([this] { arrangement_.restore(songs_); });
 }
 
 void Playlist::rearrange(const std::function<void()>& operation) {

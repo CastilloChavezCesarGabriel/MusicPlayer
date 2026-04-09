@@ -10,41 +10,41 @@ std::string ModelTest::identify() const {
     return "model_test";
 }
 
-Model ModelTest::create() const {
-    return Model(base_directory_);
+MusicPlayer ModelTest::create() {
+    return MusicPlayer(base_directory_, dice_);
 }
 
 TEST_F(ModelTest, LoadsSongsFromDirectory) {
     createSong("(1) First.mp3");
     createSong("(2) Second.mp3");
-    Model model = create();
-    model.subscribe(listener_);
+    MusicPlayer musicPlayer = create();
+    musicPlayer.subscribe(listener_);
     TestPlaylistVisitor visitor;
-    model.accept(visitor);
+    musicPlayer.accept(visitor);
     EXPECT_TRUE(visitor.hasSongs(2));
 }
 
 TEST_F(ModelTest, LoadsEmptyDirectory) {
-    Model model = create();
-    model.subscribe(listener_);
+    MusicPlayer musicPlayer = create();
+    musicPlayer.subscribe(listener_);
     TestPlaylistVisitor visitor;
-    model.accept(visitor);
+    musicPlayer.accept(visitor);
     EXPECT_TRUE(visitor.isEmpty());
 }
 
 TEST_F(ModelTest, PlaySelectsAndStartsSong) {
     createSong("song.mp3");
-    Model model = create();
-    model.subscribe(listener_);
-    model.play(0);
+    MusicPlayer musicPlayer = create();
+    musicPlayer.subscribe(listener_);
+    musicPlayer.play(0);
     EXPECT_TRUE(listener_.wasSelected());
 }
 
 TEST_F(ModelTest, PlayNotifiesSelection) {
     createSong("song.mp3");
-    Model model = create();
-    model.subscribe(listener_);
-    model.play(0);
+    MusicPlayer musicPlayer = create();
+    musicPlayer.subscribe(listener_);
+    musicPlayer.play(0);
     EXPECT_TRUE(listener_.wasSelectedWith(0));
 }
 
@@ -52,10 +52,10 @@ TEST_F(ModelTest, AdvanceMovesToNextSong) {
     createSong("a.mp3");
     createSong("b.mp3");
     createSong("c.mp3");
-    Model model = create();
-    model.subscribe(listener_);
-    model.play(0);
-    model.advance();
+    MusicPlayer musicPlayer = create();
+    musicPlayer.subscribe(listener_);
+    musicPlayer.play(0);
+    musicPlayer.advance();
     EXPECT_TRUE(listener_.wasSelectedWith(1));
 }
 
@@ -63,32 +63,32 @@ TEST_F(ModelTest, RetreatMovesToPreviousSong) {
     createSong("a.mp3");
     createSong("b.mp3");
     createSong("c.mp3");
-    Model model = create();
-    model.subscribe(listener_);
-    model.play(2);
-    model.retreat();
+    MusicPlayer musicPlayer = create();
+    musicPlayer.subscribe(listener_);
+    musicPlayer.play(2);
+    musicPlayer.retreat();
     EXPECT_TRUE(listener_.wasSelectedWith(1));
 }
 
 TEST_F(ModelTest, RepeatOneReplays) {
     createSong("a.mp3");
     createSong("b.mp3");
-    Model model = create();
-    model.subscribe(listener_);
-    model.repeat();
-    model.play(0);
-    model.end();
+    MusicPlayer musicPlayer = create();
+    musicPlayer.subscribe(listener_);
+    musicPlayer.repeat();
+    musicPlayer.play(0);
+    musicPlayer.end();
     EXPECT_TRUE(listener_.wasStarted());
 }
 
 TEST_F(ModelTest, RepeatAllLoops) {
     createSong("a.mp3");
-    Model model = create();
-    model.subscribe(listener_);
-    model.repeat();
-    model.repeat();
-    model.play(0);
-    model.end();
+    MusicPlayer musicPlayer = create();
+    musicPlayer.subscribe(listener_);
+    musicPlayer.repeat();
+    musicPlayer.repeat();
+    musicPlayer.play(0);
+    musicPlayer.end();
     EXPECT_TRUE(listener_.wasSelectedWith(0));
 }
 
@@ -97,9 +97,9 @@ TEST_F(ModelTest, InsertValidFile) {
     std::filesystem::create_directories(srcDir);
     std::ofstream(srcDir + "/new.mp3") << "audio";
 
-    Model model = create();
-    model.subscribe(listener_);
-    model.insert(srcDir + "/new.mp3");
+    MusicPlayer musicPlayer = create();
+    musicPlayer.subscribe(listener_);
+    musicPlayer.insert(srcDir + "/new.mp3");
     EXPECT_TRUE(listener_.wasChanged());
     EXPECT_TRUE(listener_.wasFeedback("Song added successfully!"));
 }
@@ -109,16 +109,16 @@ TEST_F(ModelTest, InsertUnsupportedFile) {
     std::filesystem::create_directories(srcDir);
     std::ofstream(srcDir + "/doc.txt") << "text";
 
-    Model model = create();
-    model.subscribe(listener_);
-    model.insert(srcDir + "/doc.txt");
+    MusicPlayer musicPlayer = create();
+    musicPlayer.subscribe(listener_);
+    musicPlayer.insert(srcDir + "/doc.txt");
     EXPECT_TRUE(listener_.wasFeedback("Unsupported file type."));
 }
 
 TEST_F(ModelTest, InsertEmptyPath) {
-    Model model = create();
-    model.subscribe(listener_);
-    model.insert("");
+    MusicPlayer musicPlayer = create();
+    musicPlayer.subscribe(listener_);
+    musicPlayer.insert("");
     EXPECT_TRUE(listener_.wasFeedback("Unsupported file type."));
 }
 
@@ -128,48 +128,48 @@ TEST_F(ModelTest, InsertDuplicateFile) {
     std::filesystem::create_directories(srcDir);
     std::ofstream(srcDir + "/existing.mp3") << "audio";
 
-    Model model = create();
-    model.subscribe(listener_);
-    model.insert(srcDir + "/existing.mp3");
+    MusicPlayer musicPlayer = create();
+    musicPlayer.subscribe(listener_);
+    musicPlayer.insert(srcDir + "/existing.mp3");
     EXPECT_TRUE(listener_.wasFeedback("This song already exists."));
 }
 
 TEST_F(ModelTest, RemoveNotifiesChanged) {
     createSong("song.mp3");
-    Model model = create();
-    model.subscribe(listener_);
-    model.remove(0);
+    MusicPlayer musicPlayer = create();
+    musicPlayer.subscribe(listener_);
+    musicPlayer.remove(0);
     EXPECT_TRUE(listener_.wasChanged());
 }
 
 TEST_F(ModelTest, RemoveReducesPlaylist) {
     createSong("a.mp3");
     createSong("b.mp3");
-    Model model = create();
-    model.subscribe(listener_);
-    model.remove(0);
+    MusicPlayer musicPlayer = create();
+    musicPlayer.subscribe(listener_);
+    musicPlayer.remove(0);
     TestPlaylistVisitor visitor;
-    model.accept(visitor);
+    musicPlayer.accept(visitor);
     EXPECT_TRUE(visitor.hasSongs(1));
 }
 
 TEST_F(ModelTest, SortByNameNotifiesChanged) {
     createSong("b.mp3");
     createSong("a.mp3");
-    Model model = create();
-    model.subscribe(listener_);
+    MusicPlayer musicPlayer = create();
+    musicPlayer.subscribe(listener_);
     QuickSort byTitle;
-    model.sort(byTitle);
+    musicPlayer.sort(byTitle);
     EXPECT_TRUE(listener_.wasChanged());
 }
 
 TEST_F(ModelTest, SortByNumberNotifiesChanged) {
     createSong("(2) B.mp3");
     createSong("(1) A.mp3");
-    Model model = create();
-    model.subscribe(listener_);
+    MusicPlayer musicPlayer = create();
+    musicPlayer.subscribe(listener_);
     DurationSort byDuration;
-    model.sort(byDuration);
+    musicPlayer.sort(byDuration);
     EXPECT_TRUE(listener_.wasChanged());
 }
 
@@ -177,19 +177,19 @@ TEST_F(ModelTest, SearchFiltersSongs) {
     createSong("Hello.mp3");
     createSong("Goodbye.mp3");
     createSong("Hello World.mp3");
-    Model model = create();
-    model.subscribe(listener_);
+    MusicPlayer musicPlayer = create();
+    musicPlayer.subscribe(listener_);
     TestPlaylistVisitor visitor;
-    model.search("Hello", visitor);
+    musicPlayer.search("Hello", visitor);
     EXPECT_TRUE(visitor.hasSongs(2));
 }
 
 TEST_F(ModelTest, SearchNoResults) {
     createSong("Hello.mp3");
-    Model model = create();
-    model.subscribe(listener_);
+    MusicPlayer musicPlayer = create();
+    musicPlayer.subscribe(listener_);
     TestPlaylistVisitor visitor;
-    model.search("ZZZZ", visitor);
+    musicPlayer.search("ZZZZ", visitor);
     EXPECT_TRUE(visitor.isEmpty());
 }
 
@@ -197,28 +197,28 @@ TEST_F(ModelTest, AcceptShowsAllSongs) {
     createSong("a.mp3");
     createSong("b.mp3");
     createSong("c.mp3");
-    Model model = create();
-    model.subscribe(listener_);
+    MusicPlayer musicPlayer = create();
+    musicPlayer.subscribe(listener_);
     TestPlaylistVisitor visitor;
-    model.accept(visitor);
+    musicPlayer.accept(visitor);
     EXPECT_TRUE(visitor.hasSongs(3));
 }
 
 TEST_F(ModelTest, EndWithoutAdAdvances) {
     createSong("a.mp3");
     createSong("b.mp3");
-    Model model = create();
-    model.subscribe(listener_);
-    model.play(0);
-    model.end();
+    MusicPlayer musicPlayer = create();
+    musicPlayer.subscribe(listener_);
+    musicPlayer.play(0);
+    musicPlayer.end();
     EXPECT_TRUE(listener_.wasSelectedWith(1));
 }
 
 TEST_F(ModelTest, SkipWithoutAdDoesNothing) {
     createSong("song.mp3");
-    Model model = create();
-    model.subscribe(listener_);
-    model.skip();
+    MusicPlayer musicPlayer = create();
+    musicPlayer.subscribe(listener_);
+    musicPlayer.skip();
     EXPECT_FALSE(listener_.wasRevealed());
 }
 
@@ -227,11 +227,11 @@ TEST_F(ModelTest, InsertIncreasesPlaylistSize) {
     std::filesystem::create_directories(srcDir);
     std::ofstream(srcDir + "/new.mp3") << "audio";
 
-    Model model = create();
-    model.subscribe(listener_);
-    model.insert(srcDir + "/new.mp3");
+    MusicPlayer musicPlayer = create();
+    musicPlayer.subscribe(listener_);
+    musicPlayer.insert(srcDir + "/new.mp3");
     TestPlaylistVisitor visitor;
-    model.accept(visitor);
+    musicPlayer.accept(visitor);
     EXPECT_TRUE(visitor.hasSongs(1));
 }
 
@@ -239,12 +239,12 @@ TEST_F(ModelTest, SortByNameOrders) {
     createSong("C.mp3");
     createSong("A.mp3");
     createSong("B.mp3");
-    Model model = create();
-    model.subscribe(listener_);
+    MusicPlayer musicPlayer = create();
+    musicPlayer.subscribe(listener_);
     QuickSort byTitle;
-    model.sort(byTitle);
+    musicPlayer.sort(byTitle);
     TestPlaylistVisitor visitor;
-    model.accept(visitor);
+    musicPlayer.accept(visitor);
     EXPECT_TRUE(visitor.hasNameAt(0, "A.mp3"));
 }
 
@@ -252,12 +252,12 @@ TEST_F(ModelTest, MultipleRemoves) {
     createSong("a.mp3");
     createSong("b.mp3");
     createSong("c.mp3");
-    Model model = create();
-    model.subscribe(listener_);
-    model.remove(0);
-    model.remove(0);
+    MusicPlayer musicPlayer = create();
+    musicPlayer.subscribe(listener_);
+    musicPlayer.remove(0);
+    musicPlayer.remove(0);
     TestPlaylistVisitor visitor;
-    model.accept(visitor);
+    musicPlayer.accept(visitor);
     EXPECT_TRUE(visitor.hasSongs(1));
 }
 
@@ -267,19 +267,19 @@ TEST_F(ModelTest, MultipleInserts) {
     std::ofstream(srcDir + "/a.mp3") << "audio";
     std::ofstream(srcDir + "/b.mp3") << "audio";
 
-    Model model = create();
-    model.subscribe(listener_);
-    model.insert(srcDir + "/a.mp3");
-    model.insert(srcDir + "/b.mp3");
+    MusicPlayer musicPlayer = create();
+    musicPlayer.subscribe(listener_);
+    musicPlayer.insert(srcDir + "/a.mp3");
+    musicPlayer.insert(srcDir + "/b.mp3");
     EXPECT_TRUE(listener_.wasChangedTimes(2));
 }
 
 TEST_F(ModelTest, ReverseNotifiesChanged) {
     createSong("a.mp3");
     createSong("b.mp3");
-    Model model = create();
-    model.subscribe(listener_);
-    model.reverse();
+    MusicPlayer musicPlayer = create();
+    musicPlayer.subscribe(listener_);
+    musicPlayer.reverse();
     EXPECT_TRUE(listener_.wasChanged());
 }
 
@@ -287,44 +287,44 @@ TEST_F(ModelTest, ReverseInvertsOrder) {
     createSong("a.mp3");
     createSong("b.mp3");
     createSong("c.mp3");
-    Model model = create();
-    model.subscribe(listener_);
+    MusicPlayer musicPlayer = create();
+    musicPlayer.subscribe(listener_);
     QuickSort byName;
-    model.sort(byName);
-    model.reverse();
+    musicPlayer.sort(byName);
+    musicPlayer.reverse();
     TestPlaylistVisitor visitor;
-    model.accept(visitor);
+    musicPlayer.accept(visitor);
     EXPECT_TRUE(visitor.hasNameAt(0, "c.mp3"));
     EXPECT_TRUE(visitor.hasNameAt(2, "a.mp3"));
 }
 
 TEST_F(ModelTest, RestoreNotifiesChanged) {
     createSong("a.mp3");
-    Model model = create();
-    model.subscribe(listener_);
+    MusicPlayer musicPlayer = create();
+    musicPlayer.subscribe(listener_);
     QuickSort byName;
-    model.sort(byName);
-    model.restore();
+    musicPlayer.sort(byName);
+    musicPlayer.restore();
     EXPECT_TRUE(listener_.wasChanged());
 }
 
 TEST_F(ModelTest, SortByDateNotifiesChanged) {
     createSong("a.mp3");
-    Model model = create();
-    model.subscribe(listener_);
+    MusicPlayer musicPlayer = create();
+    musicPlayer.subscribe(listener_);
     DateSort byDate;
-    model.sort(byDate);
+    musicPlayer.sort(byDate);
     EXPECT_TRUE(listener_.wasChanged());
 }
 
 TEST_F(ModelTest, SortByDateAcceptsSongs) {
     createSong("a.mp3");
     createSong("b.mp3");
-    Model model = create();
-    model.subscribe(listener_);
+    MusicPlayer musicPlayer = create();
+    musicPlayer.subscribe(listener_);
     DateSort byDate;
-    model.sort(byDate);
+    musicPlayer.sort(byDate);
     TestPlaylistVisitor visitor;
-    model.accept(visitor);
+    musicPlayer.accept(visitor);
     EXPECT_TRUE(visitor.hasSongs(2));
 }

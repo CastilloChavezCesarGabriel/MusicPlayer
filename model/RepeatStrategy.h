@@ -11,7 +11,7 @@ protected:
 public:
     explicit RepeatStrategy(int code);
     virtual ~RepeatStrategy() = default;
-    virtual void apply(Playlist& playlist, IPlaybackListener& listener) = 0;
+    virtual bool apply(Playlist& playlist, IPlaybackListener& listener) = 0;
     void announce(IPlaybackListener& listener) const;
 };
 

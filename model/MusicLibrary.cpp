@@ -1,4 +1,5 @@
 #include "MusicLibrary.h"
+#include "Song.h"
 #include <filesystem>
 
 MusicLibrary::MusicLibrary(const std::string& musicPath)
@@ -33,6 +34,13 @@ std::string MusicLibrary::validate(const std::string& filePath) const {
     return "";
 }
 
+std::string MusicLibrary::insert(const std::string& filePath, Playlist& playlist) const {
+    const std::string reason = validate(filePath);
+    if (!reason.empty()) return reason;
+    playlist.add(import(filePath));
+    return "";
+}
+
 Song MusicLibrary::import(const std::string& sourcePath) const {
     const std::filesystem::path source(sourcePath);
     const std::string filename = source.filename().string();
@@ -45,8 +53,12 @@ Song MusicLibrary::import(const std::string& sourcePath) const {
     return Song(filename, destination.string());
 }
 
-void MusicLibrary::visit(const std::string&, const std::string& path) {
+void MusicLibrary::erase(const std::string& path) {
     std::filesystem::remove(path);
+}
+
+void MusicLibrary::visit(const std::string&, const std::string& path) {
+    erase(path);
 }
 
 bool MusicLibrary::contains(const std::string& filename) const {
