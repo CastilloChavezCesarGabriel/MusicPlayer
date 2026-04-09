@@ -1,19 +1,19 @@
 #ifndef QT_VOLUME_PANEL_H
 #define QT_VOLUME_PANEL_H
 
-#include "../../view/IPlayerListener.h"
+#include "../../view/IDisplayControl.h"
 #include <QSlider>
 #include <QLabel>
 
 class QtVolumePanel final : public QWidget {
     Q_OBJECT
 private:
-    IPlayerListener& listener_;
+    IDisplayControl& display_listener_;
     QSlider* slider_;
     QLabel* label_;
 
 public:
-    explicit QtVolumePanel(IPlayerListener& listener, QWidget* parent = nullptr);
+    explicit QtVolumePanel(IDisplayControl& listener, QWidget* parent = nullptr);
     void adjust(int volume) const;
 };
 

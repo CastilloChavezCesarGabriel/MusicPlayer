@@ -16,7 +16,9 @@
 class QtView final : public QWidget, public IPlayerView {
     Q_OBJECT
 private:
-    IPlayerListener* listener_ = nullptr;
+    IPlaybackControl* playback_listener_ = nullptr;
+    ILibraryControl* library_listener_ = nullptr;
+    IDisplayControl* display_listener_ = nullptr;
     QtPlaybackPanel* playback_ = nullptr;
     QtToolbar* toolbar_ = nullptr;
     QtAudioEngine* audio_;
@@ -27,13 +29,15 @@ private:
     QtDialog* dialog_;
 
     void setup();
-    void wire(QLineEdit* search);
-    void bind();
+    void route(QLineEdit* search);
 
 public:
     explicit QtView(QWidget* parent = nullptr);
 
-    void add(IPlayerListener* listener) override;
+    void attach(IPlaybackControl& listener) override;
+    void bind(ILibraryControl& listener) override;
+    void wire(IDisplayControl& listener) override;
+
     void refresh(const std::vector<std::string>& names) override;
     void highlight(int index) override;
     void suggest(const std::vector<std::string>& names) override;

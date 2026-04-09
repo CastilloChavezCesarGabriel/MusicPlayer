@@ -66,7 +66,9 @@ add_executable(NewMusicPlayer main.cpp
         view/IPlaybackControl.h
         view/ILibraryControl.h
         view/IDisplayControl.h
-        view/IPlayerListener.h
+        view/IPlaybackBoard.h
+        view/ILibraryBoard.h
+        view/IDisplayBoard.h
         view/IAudioPlayer.h
         controller/PlaylistRenderer.cpp
         controller/PlaylistRenderer.h
@@ -80,8 +82,14 @@ add_executable(NewMusicPlayer main.cpp
         controller/SortController.h
         controller/SearchController.cpp
         controller/SearchController.h
-        controller/Controller.cpp
-        controller/Controller.h
+        controller/PlaybackDispatcher.cpp
+        controller/PlaybackDispatcher.h
+        controller/LibraryDispatcher.cpp
+        controller/LibraryDispatcher.h
+        controller/DisplayDispatcher.cpp
+        controller/DisplayDispatcher.h
+        controller/PlaybackBridge.cpp
+        controller/PlaybackBridge.h
         adapters/qt/QtLayoutUtil.cpp
         adapters/qt/QtLayoutUtil.h
         adapters/qt/QtPlaybackPanel.cpp

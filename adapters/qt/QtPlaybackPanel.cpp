@@ -10,8 +10,8 @@ static std::string resolve(const std::string& path) {
     return std::filesystem::current_path().string() + path;
 }
 
-QtPlaybackPanel::QtPlaybackPanel(IPlayerListener& listener, QWidget* parent)
-    : QWidget(parent), player_listener_(listener) {
+QtPlaybackPanel::QtPlaybackPanel(IPlaybackControl& listener, QWidget* parent)
+    : QWidget(parent), playback_listener_(listener) {
     setup();
     wire();
 }
@@ -43,11 +43,11 @@ void QtPlaybackPanel::setup() {
 }
 
 void QtPlaybackPanel::wire() {
-    connect(toggle_button_, &QPushButton::clicked, this, [this]() { player_listener_.onToggle(); });
-    connect(repeat_button_, &QPushButton::clicked, this, [this]() { player_listener_.onRepeat(); });
-    connect(shuffle_button_, &QPushButton::clicked, this, [this]() { player_listener_.onShuffle(); });
-    connect(next_button_, &QPushButton::clicked, this, [this]() { player_listener_.onAdvance(); });
-    connect(previous_button_, &QPushButton::clicked, this, [this]() { player_listener_.onRetreat(); });
+    connect(toggle_button_, &QPushButton::clicked, this, [this]() { playback_listener_.onToggle(); });
+    connect(repeat_button_, &QPushButton::clicked, this, [this]() { playback_listener_.onRepeat(); });
+    connect(shuffle_button_, &QPushButton::clicked, this, [this]() { playback_listener_.onShuffle(); });
+    connect(next_button_, &QPushButton::clicked, this, [this]() { playback_listener_.onAdvance(); });
+    connect(previous_button_, &QPushButton::clicked, this, [this]() { playback_listener_.onRetreat(); });
 }
 
 void QtPlaybackPanel::enable(const bool state) const {

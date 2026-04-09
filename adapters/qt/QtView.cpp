@@ -11,7 +11,7 @@ QtView::QtView(QWidget* parent) : QWidget(parent) {
     audio_ = new QtAudioEngine(this);
 
     connect(audio_, &QtAudioEngine::endRequested, this, [this]() {
-        listener_->onEnd();
+        playback_listener_->onEnd();
     });
 
     connect(audio_, &QtAudioEngine::revealRequested, this, [this]() {
@@ -44,53 +44,60 @@ void QtView::setup() {
     main->addWidget(audio_);
 
     connect(sort_header_, &QtSortHeader::clickRequested, this, [this]() {
-        listener_->onSort();
+        display_listener_->onSort();
     });
 
-    wire(search);
+    route(search);
 }
 
-void QtView::wire(QLineEdit* search) {
+void QtView::route(QLineEdit* search) {
     connect(display_, &QtPlaylistDisplay::selectRequested, this, [this](const int index) {
-        listener_->onPlay(index);
+        playback_listener_->onPlay(index);
     });
 
     connect(search, &QLineEdit::textChanged, this, [this](const QString& text) {
-        listener_->onSearch(text.toStdString());
+        display_listener_->onSearch(text.toStdString());
     });
 
     connect(search_overlay_, &QtSearchOverlay::selectRequested, this, [this, search](const std::string& name) {
-        listener_->onPick(name);
+        display_listener_->onPick(name);
         search->clear();
     });
 }
 
-void QtView::add(IPlayerListener* listener) {
-    listener_ = listener;
+void QtView::attach(IPlaybackControl& listener) {
+    playback_listener_ = &listener;
 
     auto* main = layout();
-    playback_ = QtViewFactory::createPlayback(*listener, this);
-    auto* volume = QtViewFactory::createVolume(*listener, this);
-    toolbar_ = QtViewFactory::createToolbar(this);
-
+    playback_ = QtViewFactory::createPlayback(listener, this);
     main->addWidget(playback_);
-    main->addWidget(volume);
-    main->addWidget(toolbar_);
-
-    bind();
 }
 
-void QtView::bind() {
+void QtView::bind(ILibraryControl& listener) {
+    library_listener_ = &listener;
+
+    auto* main = layout();
+    toolbar_ = QtViewFactory::createToolbar(this);
+    main->addWidget(toolbar_);
+
     connect(toolbar_, &QtToolbar::addClicked, this, [this]() {
-        listener_->onAdd();
+        library_listener_->onAdd();
     });
     connect(toolbar_, &QtToolbar::removeClicked, display_, &QtPlaylistDisplay::remove);
     connect(display_, &QtPlaylistDisplay::removeRequested, this, [this](const int index) {
-        listener_->onRemove(index);
+        library_listener_->onRemove(index);
     });
     connect(toolbar_, &QtToolbar::skipClicked, this, [this]() {
-        listener_->onSkip();
+        playback_listener_->onSkip();
     });
+}
+
+void QtView::wire(IDisplayControl& listener) {
+    display_listener_ = &listener;
+
+    auto* main = layout();
+    auto* volume = QtViewFactory::createVolume(listener, this);
+    main->addWidget(volume);
 }
 
 void QtView::refresh(const std::vector<std::string>& names) {
@@ -173,5 +180,5 @@ void QtView::dragEnterEvent(QDragEnterEvent* event) {
 
 void QtView::dropEvent(QDropEvent* event) {
     const std::vector<std::string> paths = QtDragDrop::extract(event);
-    if (!paths.empty()) listener_->onDrop(paths);
+    if (!paths.empty()) library_listener_->onDrop(paths);
 }
