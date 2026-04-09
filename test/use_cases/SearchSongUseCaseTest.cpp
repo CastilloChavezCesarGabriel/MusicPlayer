@@ -1,6 +1,6 @@
 #include "SearchSongUseCaseTest.h"
 #include "../TestPlaylistVisitor.h"
-#include "../../model/QuickSort.h"
+#include "model/arrangement/QuickSort.h"
 #include <filesystem>
 #include <fstream>
 
@@ -10,7 +10,7 @@ std::string SearchSongUseCaseTest::identify() const {
 
 TEST_F(SearchSongUseCaseTest, SearchFindsExactMatch) {
     createSong("hello.mp3");
-    MusicPlayer musicPlayer(base_directory_, dice_);
+    MusicPlayer musicPlayer(base_directory_, ad_policy_);
     musicPlayer.subscribe(listener_);
     TestPlaylistVisitor visitor;
     musicPlayer.search("hello", visitor);
@@ -19,7 +19,7 @@ TEST_F(SearchSongUseCaseTest, SearchFindsExactMatch) {
 
 TEST_F(SearchSongUseCaseTest, SearchNoMatchReturnsEmpty) {
     createSong("hello.mp3");
-    MusicPlayer musicPlayer(base_directory_, dice_);
+    MusicPlayer musicPlayer(base_directory_, ad_policy_);
     musicPlayer.subscribe(listener_);
     TestPlaylistVisitor visitor;
     musicPlayer.search("goodbye", visitor);
@@ -29,7 +29,7 @@ TEST_F(SearchSongUseCaseTest, SearchNoMatchReturnsEmpty) {
 TEST_F(SearchSongUseCaseTest, SearchEmptyQueryReturnsAll) {
     createSong("a.mp3");
     createSong("b.mp3");
-    MusicPlayer musicPlayer(base_directory_, dice_);
+    MusicPlayer musicPlayer(base_directory_, ad_policy_);
     musicPlayer.subscribe(listener_);
     TestPlaylistVisitor visitor;
     musicPlayer.search("", visitor);
@@ -38,7 +38,7 @@ TEST_F(SearchSongUseCaseTest, SearchEmptyQueryReturnsAll) {
 
 TEST_F(SearchSongUseCaseTest, SearchPartialName) {
     createSong("summer_breeze.mp3");
-    MusicPlayer musicPlayer(base_directory_, dice_);
+    MusicPlayer musicPlayer(base_directory_, ad_policy_);
     musicPlayer.subscribe(listener_);
     TestPlaylistVisitor visitor;
     musicPlayer.search("summer", visitor);
@@ -49,7 +49,7 @@ TEST_F(SearchSongUseCaseTest, SearchMultipleResults) {
     createSong("rock_anthem.mp3");
     createSong("rock_ballad.mp3");
     createSong("jazz_tune.mp3");
-    MusicPlayer musicPlayer(base_directory_, dice_);
+    MusicPlayer musicPlayer(base_directory_, ad_policy_);
     musicPlayer.subscribe(listener_);
     TestPlaylistVisitor visitor;
     musicPlayer.search("rock", visitor);
@@ -59,7 +59,7 @@ TEST_F(SearchSongUseCaseTest, SearchMultipleResults) {
 TEST_F(SearchSongUseCaseTest, SearchSingleResult) {
     createSong("rock_anthem.mp3");
     createSong("jazz_tune.mp3");
-    MusicPlayer musicPlayer(base_directory_, dice_);
+    MusicPlayer musicPlayer(base_directory_, ad_policy_);
     musicPlayer.subscribe(listener_);
     TestPlaylistVisitor visitor;
     musicPlayer.search("jazz", visitor);
@@ -67,7 +67,7 @@ TEST_F(SearchSongUseCaseTest, SearchSingleResult) {
 }
 
 TEST_F(SearchSongUseCaseTest, SearchOnEmptyPlaylist) {
-    MusicPlayer musicPlayer(base_directory_, dice_);
+    MusicPlayer musicPlayer(base_directory_, ad_policy_);
     musicPlayer.subscribe(listener_);
     TestPlaylistVisitor visitor;
     musicPlayer.search("anything", visitor);
@@ -75,7 +75,7 @@ TEST_F(SearchSongUseCaseTest, SearchOnEmptyPlaylist) {
 }
 
 TEST_F(SearchSongUseCaseTest, SearchEmptyQueryOnEmptyPlaylist) {
-    MusicPlayer musicPlayer(base_directory_, dice_);
+    MusicPlayer musicPlayer(base_directory_, ad_policy_);
     musicPlayer.subscribe(listener_);
     TestPlaylistVisitor visitor;
     musicPlayer.search("", visitor);
@@ -86,7 +86,7 @@ TEST_F(SearchSongUseCaseTest, SearchAfterSort) {
     createSong("cherry.mp3");
     createSong("apple.mp3");
     createSong("banana.mp3");
-    MusicPlayer musicPlayer(base_directory_, dice_);
+    MusicPlayer musicPlayer(base_directory_, ad_policy_);
     musicPlayer.subscribe(listener_);
     QuickSort byTitle;
     musicPlayer.sort(byTitle);
@@ -100,7 +100,7 @@ TEST_F(SearchSongUseCaseTest, SearchAfterInsert) {
     std::string srcDir = base_directory_ + "/src";
     std::filesystem::create_directories(srcDir);
     std::ofstream(srcDir + "/b.mp3") << "audio";
-    MusicPlayer musicPlayer(base_directory_, dice_);
+    MusicPlayer musicPlayer(base_directory_, ad_policy_);
     musicPlayer.subscribe(listener_);
     musicPlayer.insert(srcDir + "/b.mp3");
     TestPlaylistVisitor visitor;
@@ -110,7 +110,7 @@ TEST_F(SearchSongUseCaseTest, SearchAfterInsert) {
 
 TEST_F(SearchSongUseCaseTest, SearchAfterRemove) {
     createSong("unique_song.mp3");
-    MusicPlayer musicPlayer(base_directory_, dice_);
+    MusicPlayer musicPlayer(base_directory_, ad_policy_);
     musicPlayer.subscribe(listener_);
     musicPlayer.remove(0);
     TestPlaylistVisitor visitor;
@@ -120,7 +120,7 @@ TEST_F(SearchSongUseCaseTest, SearchAfterRemove) {
 
 TEST_F(SearchSongUseCaseTest, SearchDoesNotStartPlayback) {
     createSong("song.mp3");
-    MusicPlayer musicPlayer(base_directory_, dice_);
+    MusicPlayer musicPlayer(base_directory_, ad_policy_);
     musicPlayer.subscribe(listener_);
     TestPlaylistVisitor visitor;
     musicPlayer.search("song", visitor);
@@ -129,7 +129,7 @@ TEST_F(SearchSongUseCaseTest, SearchDoesNotStartPlayback) {
 
 TEST_F(SearchSongUseCaseTest, SearchDoesNotSelect) {
     createSong("song.mp3");
-    MusicPlayer musicPlayer(base_directory_, dice_);
+    MusicPlayer musicPlayer(base_directory_, ad_policy_);
     musicPlayer.subscribe(listener_);
     TestPlaylistVisitor visitor;
     musicPlayer.search("song", visitor);
@@ -138,7 +138,7 @@ TEST_F(SearchSongUseCaseTest, SearchDoesNotSelect) {
 
 TEST_F(SearchSongUseCaseTest, SearchDoesNotNotifyChanged) {
     createSong("song.mp3");
-    MusicPlayer musicPlayer(base_directory_, dice_);
+    MusicPlayer musicPlayer(base_directory_, ad_policy_);
     musicPlayer.subscribe(listener_);
     TestPlaylistVisitor visitor;
     musicPlayer.search("song", visitor);
@@ -147,7 +147,7 @@ TEST_F(SearchSongUseCaseTest, SearchDoesNotNotifyChanged) {
 
 TEST_F(SearchSongUseCaseTest, SearchWithExtension) {
     createSong("song.mp3");
-    MusicPlayer musicPlayer(base_directory_, dice_);
+    MusicPlayer musicPlayer(base_directory_, ad_policy_);
     musicPlayer.subscribe(listener_);
     TestPlaylistVisitor visitor;
     musicPlayer.search(".mp3", visitor);
@@ -156,7 +156,7 @@ TEST_F(SearchSongUseCaseTest, SearchWithExtension) {
 
 TEST_F(SearchSongUseCaseTest, SearchWavFile) {
     createSong("track.wav");
-    MusicPlayer musicPlayer(base_directory_, dice_);
+    MusicPlayer musicPlayer(base_directory_, ad_policy_);
     musicPlayer.subscribe(listener_);
     TestPlaylistVisitor visitor;
     musicPlayer.search("track", visitor);
@@ -165,7 +165,7 @@ TEST_F(SearchSongUseCaseTest, SearchWavFile) {
 
 TEST_F(SearchSongUseCaseTest, SearchWithUnderscore) {
     createSong("my_song.mp3");
-    MusicPlayer musicPlayer(base_directory_, dice_);
+    MusicPlayer musicPlayer(base_directory_, ad_policy_);
     musicPlayer.subscribe(listener_);
     TestPlaylistVisitor visitor;
     musicPlayer.search("my_song", visitor);
@@ -174,7 +174,7 @@ TEST_F(SearchSongUseCaseTest, SearchWithUnderscore) {
 
 TEST_F(SearchSongUseCaseTest, SearchWithDash) {
     createSong("my-song.mp3");
-    MusicPlayer musicPlayer(base_directory_, dice_);
+    MusicPlayer musicPlayer(base_directory_, ad_policy_);
     musicPlayer.subscribe(listener_);
     TestPlaylistVisitor visitor;
     musicPlayer.search("my-song", visitor);
@@ -184,7 +184,7 @@ TEST_F(SearchSongUseCaseTest, SearchWithDash) {
 TEST_F(SearchSongUseCaseTest, SearchWithNumbers) {
     createSong("track01.mp3");
     createSong("track02.mp3");
-    MusicPlayer musicPlayer(base_directory_, dice_);
+    MusicPlayer musicPlayer(base_directory_, ad_policy_);
     musicPlayer.subscribe(listener_);
     TestPlaylistVisitor visitor;
     musicPlayer.search("track0", visitor);
@@ -194,7 +194,7 @@ TEST_F(SearchSongUseCaseTest, SearchWithNumbers) {
 TEST_F(SearchSongUseCaseTest, SearchSingleCharacter) {
     createSong("a.mp3");
     createSong("b.mp3");
-    MusicPlayer musicPlayer(base_directory_, dice_);
+    MusicPlayer musicPlayer(base_directory_, ad_policy_);
     musicPlayer.subscribe(listener_);
     TestPlaylistVisitor visitor;
     musicPlayer.search("a", visitor);
@@ -204,7 +204,7 @@ TEST_F(SearchSongUseCaseTest, SearchSingleCharacter) {
 TEST_F(SearchSongUseCaseTest, SearchTwiceWithDifferentQueries) {
     createSong("rock.mp3");
     createSong("jazz.mp3");
-    MusicPlayer musicPlayer(base_directory_, dice_);
+    MusicPlayer musicPlayer(base_directory_, ad_policy_);
     musicPlayer.subscribe(listener_);
     TestPlaylistVisitor v1;
     musicPlayer.search("rock", v1);
@@ -217,7 +217,7 @@ TEST_F(SearchSongUseCaseTest, SearchTwiceWithDifferentQueries) {
 TEST_F(SearchSongUseCaseTest, SearchDoesNotAffectPlaylist) {
     createSong("a.mp3");
     createSong("b.mp3");
-    MusicPlayer musicPlayer(base_directory_, dice_);
+    MusicPlayer musicPlayer(base_directory_, ad_policy_);
     musicPlayer.subscribe(listener_);
     TestPlaylistVisitor searchVisitor;
     musicPlayer.search("a", searchVisitor);
@@ -228,7 +228,7 @@ TEST_F(SearchSongUseCaseTest, SearchDoesNotAffectPlaylist) {
 
 TEST_F(SearchSongUseCaseTest, SearchResultHasCorrectName) {
     createSong("specific_name.mp3");
-    MusicPlayer musicPlayer(base_directory_, dice_);
+    MusicPlayer musicPlayer(base_directory_, ad_policy_);
     musicPlayer.subscribe(listener_);
     TestPlaylistVisitor visitor;
     musicPlayer.search("specific", visitor);
@@ -240,7 +240,7 @@ TEST_F(SearchSongUseCaseTest, SearchAllSongsMatch) {
     createSong("song_a.mp3");
     createSong("song_b.mp3");
     createSong("song_c.mp3");
-    MusicPlayer musicPlayer(base_directory_, dice_);
+    MusicPlayer musicPlayer(base_directory_, ad_policy_);
     musicPlayer.subscribe(listener_);
     TestPlaylistVisitor visitor;
     musicPlayer.search("song", visitor);
@@ -250,7 +250,7 @@ TEST_F(SearchSongUseCaseTest, SearchAllSongsMatch) {
 TEST_F(SearchSongUseCaseTest, SearchNoSongsMatch) {
     createSong("a.mp3");
     createSong("b.mp3");
-    MusicPlayer musicPlayer(base_directory_, dice_);
+    MusicPlayer musicPlayer(base_directory_, ad_policy_);
     musicPlayer.subscribe(listener_);
     TestPlaylistVisitor visitor;
     musicPlayer.search("zzz", visitor);
@@ -261,7 +261,7 @@ TEST_F(SearchSongUseCaseTest, SearchAfterSortFindsAll) {
     createSong("rock_a.mp3");
     createSong("rock_b.mp3");
     createSong("jazz.mp3");
-    MusicPlayer musicPlayer(base_directory_, dice_);
+    MusicPlayer musicPlayer(base_directory_, ad_policy_);
     musicPlayer.subscribe(listener_);
     QuickSort byTitle;
     musicPlayer.sort(byTitle);
@@ -272,7 +272,7 @@ TEST_F(SearchSongUseCaseTest, SearchAfterSortFindsAll) {
 
 TEST_F(SearchSongUseCaseTest, SearchLongQuery) {
     createSong("very_long_song_name_here.mp3");
-    MusicPlayer musicPlayer(base_directory_, dice_);
+    MusicPlayer musicPlayer(base_directory_, ad_policy_);
     musicPlayer.subscribe(listener_);
     TestPlaylistVisitor visitor;
     musicPlayer.search("very_long_song_name_here", visitor);
@@ -281,7 +281,7 @@ TEST_F(SearchSongUseCaseTest, SearchLongQuery) {
 
 TEST_F(SearchSongUseCaseTest, SearchSingleSongPlaylist) {
     createSong("only.mp3");
-    MusicPlayer musicPlayer(base_directory_, dice_);
+    MusicPlayer musicPlayer(base_directory_, ad_policy_);
     musicPlayer.subscribe(listener_);
     TestPlaylistVisitor visitor;
     musicPlayer.search("only", visitor);
@@ -289,7 +289,7 @@ TEST_F(SearchSongUseCaseTest, SearchSingleSongPlaylist) {
 }
 
 TEST_F(SearchSongUseCaseTest, SearchDoesNotCrashOnEmptyPlaylist) {
-    MusicPlayer musicPlayer(base_directory_, dice_);
+    MusicPlayer musicPlayer(base_directory_, ad_policy_);
     musicPlayer.subscribe(listener_);
     TestPlaylistVisitor visitor;
     EXPECT_NO_THROW(musicPlayer.search("test", visitor));
@@ -298,7 +298,7 @@ TEST_F(SearchSongUseCaseTest, SearchDoesNotCrashOnEmptyPlaylist) {
 TEST_F(SearchSongUseCaseTest, SearchVisitorIsIndependent) {
     createSong("a.mp3");
     createSong("b.mp3");
-    MusicPlayer musicPlayer(base_directory_, dice_);
+    MusicPlayer musicPlayer(base_directory_, ad_policy_);
     musicPlayer.subscribe(listener_);
     TestPlaylistVisitor v1;
     musicPlayer.search("a", v1);

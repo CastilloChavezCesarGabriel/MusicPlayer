@@ -43,11 +43,11 @@ void QtPlaybackPanel::setup() {
 }
 
 void QtPlaybackPanel::wire() {
-    connect(toggle_button_, &QPushButton::clicked, this, [this]() { playback_listener_.onToggle(); });
-    connect(repeat_button_, &QPushButton::clicked, this, [this]() { playback_listener_.onRepeat(); });
-    connect(shuffle_button_, &QPushButton::clicked, this, [this]() { playback_listener_.onShuffle(); });
-    connect(next_button_, &QPushButton::clicked, this, [this]() { playback_listener_.onAdvance(); });
-    connect(previous_button_, &QPushButton::clicked, this, [this]() { playback_listener_.onRetreat(); });
+    connect(toggle_button_, &QPushButton::clicked, this, [this]() { playback_listener_.toggle(); });
+    connect(repeat_button_, &QPushButton::clicked, this, [this]() { playback_listener_.repeat(); });
+    connect(shuffle_button_, &QPushButton::clicked, this, [this]() { playback_listener_.shuffle(); });
+    connect(next_button_, &QPushButton::clicked, this, [this]() { playback_listener_.advance(); });
+    connect(previous_button_, &QPushButton::clicked, this, [this]() { playback_listener_.retreat(); });
 }
 
 void QtPlaybackPanel::enable(const bool state) const {

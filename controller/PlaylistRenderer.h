@@ -1,18 +1,18 @@
 #ifndef PLAYLIST_RENDERER_H
 #define PLAYLIST_RENDERER_H
 
-#include "../model/IPlaylistVisitor.h"
-#include "../view/IPlayerView.h"
+#include "model/events/IPlaylistVisitor.h"
+#include "../view/IDisplayView.h"
 #include <vector>
 #include <string>
 
 class PlaylistRenderer final : public IPlaylistVisitor {
 private:
-    IPlayerView& view_;
+    IDisplayView& view_;
     std::vector<std::string> names_;
 
 public:
-    explicit PlaylistRenderer(IPlayerView& view);
+    explicit PlaylistRenderer(IDisplayView& view);
     void visit(const std::string& name, const std::string& path) override;
     void render() const;
     void suggest() const;

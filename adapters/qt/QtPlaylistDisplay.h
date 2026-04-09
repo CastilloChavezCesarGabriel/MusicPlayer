@@ -23,6 +23,11 @@ public:
 signals:
     void selectRequested(int index);
     void removeRequested(int index);
+    void dropRequested(const std::vector<std::string>& paths);
+
+protected:
+    void dragEnterEvent(QDragEnterEvent* event) override;
+    void dropEvent(QDropEvent* event) override;
 };
 
 #endif //QT_PLAYLIST_DISPLAY_H

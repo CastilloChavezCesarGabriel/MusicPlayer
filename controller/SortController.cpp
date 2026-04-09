@@ -1,11 +1,11 @@
 #include "SortController.h"
 #include "TitleDescending.h"
 #include "CustomMode.h"
-#include "../model/QuickSort.h"
-#include "../model/DurationSort.h"
-#include "../model/DateSort.h"
+#include "model/arrangement/QuickSort.h"
+#include "model/arrangement/DurationSort.h"
+#include "model/arrangement/DateSort.h"
 
-SortController::SortController(MusicPlayer& musicPlayer, IPlayerView& view)
+SortController::SortController(MusicPlayer& musicPlayer, IDisplayView& view)
     : music_player_(musicPlayer), view_(view) {
     modes_.push_back(std::make_unique<SortMode>("Title \xe2\x96\xb2", new QuickSort()));
     modes_.push_back(std::make_unique<TitleDescending>());

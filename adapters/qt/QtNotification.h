@@ -1,16 +1,16 @@
 #ifndef QT_NOTIFICATION_H
 #define QT_NOTIFICATION_H
 
-#include "../../view/INotification.h"
 #include <QWidget>
+#include <string>
 
-class QtNotification final : public INotification {
+class QtNotification final {
 private:
     QWidget* parent_;
 
 public:
     explicit QtNotification(QWidget* parent);
-    void notify(const std::string& message, bool success) override;
+    void notify(const std::string& message, bool success);
 };
 
 #endif //QT_NOTIFICATION_H

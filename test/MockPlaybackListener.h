@@ -1,7 +1,7 @@
 #ifndef MOCK_PLAYBACK_LISTENER_H
 #define MOCK_PLAYBACK_LISTENER_H
 
-#include "../model/IPlaybackListener.h"
+#include "model/events/IPlaybackListener.h"
 #include <string>
 #include <vector>
 

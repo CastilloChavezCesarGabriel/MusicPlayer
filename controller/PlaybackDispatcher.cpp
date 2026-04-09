@@ -1,13 +1,13 @@
 #include "PlaybackDispatcher.h"
 
-PlaybackDispatcher::PlaybackDispatcher(MusicPlayer& musicPlayer, IPlayerView& view)
+PlaybackDispatcher::PlaybackDispatcher(MusicPlayer& musicPlayer, IPlaybackView& view)
     : music_player_(musicPlayer), view_(view) {}
 
-void PlaybackDispatcher::onPlay(const int index) {
+void PlaybackDispatcher::play(const int index) {
     music_player_.play(index);
 }
 
-void PlaybackDispatcher::onToggle() {
+void PlaybackDispatcher::toggle() {
     if (playing_) {
         view_.pause();
     } else {
@@ -16,26 +16,30 @@ void PlaybackDispatcher::onToggle() {
     playing_ = !playing_;
 }
 
-void PlaybackDispatcher::onRepeat() {
+void PlaybackDispatcher::repeat() {
     music_player_.repeat();
 }
 
-void PlaybackDispatcher::onAdvance() {
+void PlaybackDispatcher::advance() {
     music_player_.advance();
 }
 
-void PlaybackDispatcher::onRetreat() {
+void PlaybackDispatcher::retreat() {
     music_player_.retreat();
 }
 
-void PlaybackDispatcher::onShuffle() {
+void PlaybackDispatcher::shuffle() {
     music_player_.shuffle();
 }
 
-void PlaybackDispatcher::onSkip() {
+void PlaybackDispatcher::skip() {
     music_player_.skip();
 }
 
-void PlaybackDispatcher::onEnd() {
+void PlaybackDispatcher::end() {
     music_player_.end();
+}
+
+void PlaybackDispatcher::adjust(const int volume) {
+    view_.adjust(volume);
 }

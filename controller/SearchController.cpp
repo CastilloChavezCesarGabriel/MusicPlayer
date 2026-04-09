@@ -1,7 +1,7 @@
 #include "SearchController.h"
 #include "PlaylistRenderer.h"
 
-SearchController::SearchController(MusicPlayer& musicPlayer, IPlayerView& view)
+SearchController::SearchController(MusicPlayer& musicPlayer, IDisplayView& view)
     : music_player_(musicPlayer), view_(view) {}
 
 void SearchController::search(const std::string& query) const {

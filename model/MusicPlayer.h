@@ -1,13 +1,13 @@
 #ifndef MUSIC_PLAYER_H
 #define MUSIC_PLAYER_H
 
-#include "Playlist.h"
-#include "Advertisement.h"
-#include "MusicLibrary.h"
-#include "PlaybackNotifier.h"
-#include "RepeatMode.h"
-#include "IPlaylistVisitor.h"
-#include "IDice.h"
+#include "model/core/Playlist.h"
+#include "model/ads/Advertisement.h"
+#include "model/library/MusicLibrary.h"
+#include "model/events/PlaybackNotifier.h"
+#include "model/repeat/RepeatMode.h"
+#include "model/events/IPlaylistVisitor.h"
+#include "model/ads/IAdPolicy.h"
 
 class MusicPlayer {
 private:
@@ -21,7 +21,7 @@ private:
     void refresh();
 
 public:
-    MusicPlayer(const std::string& basePath, IDice& dice);
+    MusicPlayer(const std::string& basePath, IAdPolicy& adPolicy);
 
     void subscribe(IPlaybackListener& listener);
     void play(int index);
@@ -34,7 +34,7 @@ public:
     void insert(const std::string& filePath);
     void remove(int index);
     void shuffle();
-    void sort(SortingAlgorithm& criteria);
+    void sort(ISortingAlgorithm& criteria);
     void reverse();
     void restore();
     void accept(IPlaylistVisitor& visitor) const;

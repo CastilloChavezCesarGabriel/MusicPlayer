@@ -1,7 +1,7 @@
 #ifndef TEST_PLAYLIST_VISITOR_H
 #define TEST_PLAYLIST_VISITOR_H
 
-#include "../model/IPlaylistVisitor.h"
+#include "model/events/IPlaylistVisitor.h"
 #include <string>
 #include <vector>
 

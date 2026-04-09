@@ -1,7 +1,7 @@
 #include "SortPlaylistUseCaseTest.h"
 #include "../TestPlaylistVisitor.h"
-#include "../../model/QuickSort.h"
-#include "../../model/DurationSort.h"
+#include "model/arrangement/QuickSort.h"
+#include "model/arrangement/DurationSort.h"
 #include <filesystem>
 #include <fstream>
 
@@ -12,7 +12,7 @@ std::string SortPlaylistUseCaseTest::identify() const {
 TEST_F(SortPlaylistUseCaseTest, SortByNameNotifiesChanged) {
     createSong("b.mp3");
     createSong("a.mp3");
-    MusicPlayer musicPlayer(base_directory_, dice_);
+    MusicPlayer musicPlayer(base_directory_, ad_policy_);
     musicPlayer.subscribe(listener_);
     QuickSort byTitle;
     musicPlayer.sort(byTitle);
@@ -22,7 +22,7 @@ TEST_F(SortPlaylistUseCaseTest, SortByNameNotifiesChanged) {
 TEST_F(SortPlaylistUseCaseTest, SortByNumberNotifiesChanged) {
     createSong("b.mp3");
     createSong("a.mp3");
-    MusicPlayer musicPlayer(base_directory_, dice_);
+    MusicPlayer musicPlayer(base_directory_, ad_policy_);
     musicPlayer.subscribe(listener_);
     DurationSort byDuration;
     musicPlayer.sort(byDuration);
@@ -33,7 +33,7 @@ TEST_F(SortPlaylistUseCaseTest, SortByNameOrdersAlphabetically) {
     createSong("cherry.mp3");
     createSong("apple.mp3");
     createSong("banana.mp3");
-    MusicPlayer musicPlayer(base_directory_, dice_);
+    MusicPlayer musicPlayer(base_directory_, ad_policy_);
     musicPlayer.subscribe(listener_);
     QuickSort byTitle;
     musicPlayer.sort(byTitle);
@@ -45,14 +45,14 @@ TEST_F(SortPlaylistUseCaseTest, SortByNameOrdersAlphabetically) {
 }
 
 TEST_F(SortPlaylistUseCaseTest, SortEmptyPlaylistDoesNotCrash) {
-    MusicPlayer musicPlayer(base_directory_, dice_);
+    MusicPlayer musicPlayer(base_directory_, ad_policy_);
     musicPlayer.subscribe(listener_);
     QuickSort byTitle;
     EXPECT_NO_THROW(musicPlayer.sort(byTitle));
 }
 
 TEST_F(SortPlaylistUseCaseTest, SortEmptyPlaylistNotifiesChanged) {
-    MusicPlayer musicPlayer(base_directory_, dice_);
+    MusicPlayer musicPlayer(base_directory_, ad_policy_);
     musicPlayer.subscribe(listener_);
     QuickSort byTitle;
     musicPlayer.sort(byTitle);
@@ -61,7 +61,7 @@ TEST_F(SortPlaylistUseCaseTest, SortEmptyPlaylistNotifiesChanged) {
 
 TEST_F(SortPlaylistUseCaseTest, SortSingleSongDoesNotCrash) {
     createSong("only.mp3");
-    MusicPlayer musicPlayer(base_directory_, dice_);
+    MusicPlayer musicPlayer(base_directory_, ad_policy_);
     musicPlayer.subscribe(listener_);
     QuickSort byTitle;
     EXPECT_NO_THROW(musicPlayer.sort(byTitle));
@@ -69,7 +69,7 @@ TEST_F(SortPlaylistUseCaseTest, SortSingleSongDoesNotCrash) {
 
 TEST_F(SortPlaylistUseCaseTest, SortSingleSongPreserves) {
     createSong("only.mp3");
-    MusicPlayer musicPlayer(base_directory_, dice_);
+    MusicPlayer musicPlayer(base_directory_, ad_policy_);
     musicPlayer.subscribe(listener_);
     QuickSort byTitle;
     musicPlayer.sort(byTitle);
@@ -83,7 +83,7 @@ TEST_F(SortPlaylistUseCaseTest, SortPreservesSongCount) {
     createSong("c.mp3");
     createSong("a.mp3");
     createSong("b.mp3");
-    MusicPlayer musicPlayer(base_directory_, dice_);
+    MusicPlayer musicPlayer(base_directory_, ad_policy_);
     musicPlayer.subscribe(listener_);
     QuickSort byTitle;
     musicPlayer.sort(byTitle);
@@ -96,7 +96,7 @@ TEST_F(SortPlaylistUseCaseTest, SortPreservesAllSongNames) {
     createSong("c.mp3");
     createSong("a.mp3");
     createSong("b.mp3");
-    MusicPlayer musicPlayer(base_directory_, dice_);
+    MusicPlayer musicPlayer(base_directory_, ad_policy_);
     musicPlayer.subscribe(listener_);
     QuickSort byTitle;
     musicPlayer.sort(byTitle);
@@ -111,7 +111,7 @@ TEST_F(SortPlaylistUseCaseTest, SortThenPlayFirstSong) {
     createSong("c.mp3");
     createSong("a.mp3");
     createSong("b.mp3");
-    MusicPlayer musicPlayer(base_directory_, dice_);
+    MusicPlayer musicPlayer(base_directory_, ad_policy_);
     musicPlayer.subscribe(listener_);
     QuickSort byTitle;
     musicPlayer.sort(byTitle);
@@ -122,7 +122,7 @@ TEST_F(SortPlaylistUseCaseTest, SortThenPlayFirstSong) {
 TEST_F(SortPlaylistUseCaseTest, SortThenPlaySelectsCorrectIndex) {
     createSong("c.mp3");
     createSong("a.mp3");
-    MusicPlayer musicPlayer(base_directory_, dice_);
+    MusicPlayer musicPlayer(base_directory_, ad_policy_);
     musicPlayer.subscribe(listener_);
     QuickSort byTitle;
     musicPlayer.sort(byTitle);
@@ -134,7 +134,7 @@ TEST_F(SortPlaylistUseCaseTest, SortThenAdvance) {
     createSong("c.mp3");
     createSong("a.mp3");
     createSong("b.mp3");
-    MusicPlayer musicPlayer(base_directory_, dice_);
+    MusicPlayer musicPlayer(base_directory_, ad_policy_);
     musicPlayer.subscribe(listener_);
     QuickSort byTitle;
     musicPlayer.sort(byTitle);
@@ -147,7 +147,7 @@ TEST_F(SortPlaylistUseCaseTest, SortThenRetreat) {
     createSong("c.mp3");
     createSong("a.mp3");
     createSong("b.mp3");
-    MusicPlayer musicPlayer(base_directory_, dice_);
+    MusicPlayer musicPlayer(base_directory_, ad_policy_);
     musicPlayer.subscribe(listener_);
     QuickSort byTitle;
     musicPlayer.sort(byTitle);
@@ -159,7 +159,7 @@ TEST_F(SortPlaylistUseCaseTest, SortThenRetreat) {
 TEST_F(SortPlaylistUseCaseTest, SortMultipleTimesDoesNotCrash) {
     createSong("b.mp3");
     createSong("a.mp3");
-    MusicPlayer musicPlayer(base_directory_, dice_);
+    MusicPlayer musicPlayer(base_directory_, ad_policy_);
     musicPlayer.subscribe(listener_);
     QuickSort byTitle;
     EXPECT_NO_THROW(musicPlayer.sort(byTitle));
@@ -171,7 +171,7 @@ TEST_F(SortPlaylistUseCaseTest, SortMultipleTimesDoesNotCrash) {
 TEST_F(SortPlaylistUseCaseTest, SortMultipleTimesNotifiesEachTime) {
     createSong("b.mp3");
     createSong("a.mp3");
-    MusicPlayer musicPlayer(base_directory_, dice_);
+    MusicPlayer musicPlayer(base_directory_, ad_policy_);
     musicPlayer.subscribe(listener_);
     QuickSort byTitle;
     DurationSort byDuration;
@@ -185,7 +185,7 @@ TEST_F(SortPlaylistUseCaseTest, SortAlreadySortedPreservesOrder) {
     createSong("a.mp3");
     createSong("b.mp3");
     createSong("c.mp3");
-    MusicPlayer musicPlayer(base_directory_, dice_);
+    MusicPlayer musicPlayer(base_directory_, ad_policy_);
     musicPlayer.subscribe(listener_);
     QuickSort byTitle;
     musicPlayer.sort(byTitle);
@@ -200,7 +200,7 @@ TEST_F(SortPlaylistUseCaseTest, SortByNumberDoesNotCrash) {
     createSong("c.mp3");
     createSong("a.mp3");
     createSong("b.mp3");
-    MusicPlayer musicPlayer(base_directory_, dice_);
+    MusicPlayer musicPlayer(base_directory_, ad_policy_);
     musicPlayer.subscribe(listener_);
     DurationSort byDuration;
     EXPECT_NO_THROW(musicPlayer.sort(byDuration));
@@ -210,7 +210,7 @@ TEST_F(SortPlaylistUseCaseTest, SortByNumberPreservesSongCount) {
     createSong("c.mp3");
     createSong("a.mp3");
     createSong("b.mp3");
-    MusicPlayer musicPlayer(base_directory_, dice_);
+    MusicPlayer musicPlayer(base_directory_, ad_policy_);
     musicPlayer.subscribe(listener_);
     DurationSort byDuration;
     musicPlayer.sort(byDuration);
@@ -225,7 +225,7 @@ TEST_F(SortPlaylistUseCaseTest, SortAfterInsert) {
     std::string srcDir = base_directory_ + "/src";
     std::filesystem::create_directories(srcDir);
     std::ofstream(srcDir + "/b.mp3") << "audio";
-    MusicPlayer musicPlayer(base_directory_, dice_);
+    MusicPlayer musicPlayer(base_directory_, ad_policy_);
     musicPlayer.subscribe(listener_);
     musicPlayer.insert(srcDir + "/b.mp3");
     QuickSort byTitle;
@@ -241,7 +241,7 @@ TEST_F(SortPlaylistUseCaseTest, SortAfterRemove) {
     createSong("c.mp3");
     createSong("a.mp3");
     createSong("b.mp3");
-    MusicPlayer musicPlayer(base_directory_, dice_);
+    MusicPlayer musicPlayer(base_directory_, ad_policy_);
     musicPlayer.subscribe(listener_);
     QuickSort byTitle;
     musicPlayer.sort(byTitle);
@@ -256,7 +256,7 @@ TEST_F(SortPlaylistUseCaseTest, SortAfterRemove) {
 TEST_F(SortPlaylistUseCaseTest, SortByNameThenByNumber) {
     createSong("b.mp3");
     createSong("a.mp3");
-    MusicPlayer musicPlayer(base_directory_, dice_);
+    MusicPlayer musicPlayer(base_directory_, ad_policy_);
     musicPlayer.subscribe(listener_);
     QuickSort byTitle;
     musicPlayer.sort(byTitle);
@@ -270,7 +270,7 @@ TEST_F(SortPlaylistUseCaseTest, SortByNameThenByNumber) {
 TEST_F(SortPlaylistUseCaseTest, SortByNameTwoSongs) {
     createSong("z.mp3");
     createSong("a.mp3");
-    MusicPlayer musicPlayer(base_directory_, dice_);
+    MusicPlayer musicPlayer(base_directory_, ad_policy_);
     musicPlayer.subscribe(listener_);
     QuickSort byTitle;
     musicPlayer.sort(byTitle);
@@ -286,7 +286,7 @@ TEST_F(SortPlaylistUseCaseTest, SortFiveSongsByName) {
     createSong("a.mp3");
     createSong("d.mp3");
     createSong("b.mp3");
-    MusicPlayer musicPlayer(base_directory_, dice_);
+    MusicPlayer musicPlayer(base_directory_, ad_policy_);
     musicPlayer.subscribe(listener_);
     QuickSort byTitle;
     musicPlayer.sort(byTitle);
@@ -303,7 +303,7 @@ TEST_F(SortPlaylistUseCaseTest, SortThenAcceptVisitsAll) {
     createSong("b.mp3");
     createSong("a.mp3");
     createSong("c.mp3");
-    MusicPlayer musicPlayer(base_directory_, dice_);
+    MusicPlayer musicPlayer(base_directory_, ad_policy_);
     musicPlayer.subscribe(listener_);
     QuickSort byTitle;
     musicPlayer.sort(byTitle);
@@ -316,7 +316,7 @@ TEST_F(SortPlaylistUseCaseTest, SortThenAcceptVisitsAll) {
 TEST_F(SortPlaylistUseCaseTest, SortDoesNotAffectPlayback) {
     createSong("b.mp3");
     createSong("a.mp3");
-    MusicPlayer musicPlayer(base_directory_, dice_);
+    MusicPlayer musicPlayer(base_directory_, ad_policy_);
     musicPlayer.subscribe(listener_);
     QuickSort byTitle;
     musicPlayer.sort(byTitle);
@@ -326,7 +326,7 @@ TEST_F(SortPlaylistUseCaseTest, SortDoesNotAffectPlayback) {
 TEST_F(SortPlaylistUseCaseTest, SortDoesNotSelect) {
     createSong("b.mp3");
     createSong("a.mp3");
-    MusicPlayer musicPlayer(base_directory_, dice_);
+    MusicPlayer musicPlayer(base_directory_, ad_policy_);
     musicPlayer.subscribe(listener_);
     QuickSort byTitle;
     musicPlayer.sort(byTitle);
@@ -337,7 +337,7 @@ TEST_F(SortPlaylistUseCaseTest, SortThenPlayThenAdvanceThroughAll) {
     createSong("c.mp3");
     createSong("a.mp3");
     createSong("b.mp3");
-    MusicPlayer musicPlayer(base_directory_, dice_);
+    MusicPlayer musicPlayer(base_directory_, ad_policy_);
     musicPlayer.subscribe(listener_);
     QuickSort byTitle;
     musicPlayer.sort(byTitle);
@@ -350,7 +350,7 @@ TEST_F(SortPlaylistUseCaseTest, SortThenPlayThenAdvanceThroughAll) {
 TEST_F(SortPlaylistUseCaseTest, SortWavFiles) {
     createSong("b.wav");
     createSong("a.wav");
-    MusicPlayer musicPlayer(base_directory_, dice_);
+    MusicPlayer musicPlayer(base_directory_, ad_policy_);
     musicPlayer.subscribe(listener_);
     QuickSort byTitle;
     musicPlayer.sort(byTitle);
@@ -363,7 +363,7 @@ TEST_F(SortPlaylistUseCaseTest, SortWavFiles) {
 TEST_F(SortPlaylistUseCaseTest, SortMixedExtensions) {
     createSong("b.wav");
     createSong("a.mp3");
-    MusicPlayer musicPlayer(base_directory_, dice_);
+    MusicPlayer musicPlayer(base_directory_, ad_policy_);
     musicPlayer.subscribe(listener_);
     QuickSort byTitle;
     musicPlayer.sort(byTitle);
@@ -374,7 +374,7 @@ TEST_F(SortPlaylistUseCaseTest, SortMixedExtensions) {
 
 TEST_F(SortPlaylistUseCaseTest, SortSingleSongNotifiesChanged) {
     createSong("only.mp3");
-    MusicPlayer musicPlayer(base_directory_, dice_);
+    MusicPlayer musicPlayer(base_directory_, ad_policy_);
     musicPlayer.subscribe(listener_);
     QuickSort byTitle;
     musicPlayer.sort(byTitle);
@@ -385,7 +385,7 @@ TEST_F(SortPlaylistUseCaseTest, SortThenSearchFindsCorrectly) {
     createSong("cherry.mp3");
     createSong("apple.mp3");
     createSong("banana.mp3");
-    MusicPlayer musicPlayer(base_directory_, dice_);
+    MusicPlayer musicPlayer(base_directory_, ad_policy_);
     musicPlayer.subscribe(listener_);
     QuickSort byTitle;
     musicPlayer.sort(byTitle);

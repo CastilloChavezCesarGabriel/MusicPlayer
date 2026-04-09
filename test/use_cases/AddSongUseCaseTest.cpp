@@ -1,6 +1,6 @@
 #include "AddSongUseCaseTest.h"
-#include "../../model/MusicPlayer.h"
-#include "../../model/QuickSort.h"
+#include "model/MusicPlayer.h"
+#include "model/arrangement/QuickSort.h"
 #include "../TestPlaylistVisitor.h"
 #include <filesystem>
 #include <fstream>
@@ -18,7 +18,7 @@ std::string AddSongUseCaseTest::prepare(const std::string& name) const {
 }
 
 TEST_F(AddSongUseCaseTest, AddValidMp3GivesSuccessFeedback) {
-    MusicPlayer musicPlayer(base_directory_, dice_);
+    MusicPlayer musicPlayer(base_directory_, ad_policy_);
     musicPlayer.subscribe(listener_);
     std::string path = prepare("song.mp3");
     musicPlayer.insert(path);
@@ -26,7 +26,7 @@ TEST_F(AddSongUseCaseTest, AddValidMp3GivesSuccessFeedback) {
 }
 
 TEST_F(AddSongUseCaseTest, AddValidWavGivesSuccessFeedback) {
-    MusicPlayer musicPlayer(base_directory_, dice_);
+    MusicPlayer musicPlayer(base_directory_, ad_policy_);
     musicPlayer.subscribe(listener_);
     std::string path = prepare("song.wav");
     musicPlayer.insert(path);
@@ -34,7 +34,7 @@ TEST_F(AddSongUseCaseTest, AddValidWavGivesSuccessFeedback) {
 }
 
 TEST_F(AddSongUseCaseTest, AddUnsupportedTypeGivesFeedback) {
-    MusicPlayer musicPlayer(base_directory_, dice_);
+    MusicPlayer musicPlayer(base_directory_, ad_policy_);
     musicPlayer.subscribe(listener_);
     std::string path = prepare("song.txt");
     musicPlayer.insert(path);
@@ -42,7 +42,7 @@ TEST_F(AddSongUseCaseTest, AddUnsupportedTypeGivesFeedback) {
 }
 
 TEST_F(AddSongUseCaseTest, AddEmptyPathGivesFeedback) {
-    MusicPlayer musicPlayer(base_directory_, dice_);
+    MusicPlayer musicPlayer(base_directory_, ad_policy_);
     musicPlayer.subscribe(listener_);
     musicPlayer.insert("");
     EXPECT_TRUE(listener_.wasFeedback("Unsupported file type."));
@@ -50,7 +50,7 @@ TEST_F(AddSongUseCaseTest, AddEmptyPathGivesFeedback) {
 
 TEST_F(AddSongUseCaseTest, AddDuplicateGivesFeedback) {
     createSong("song.mp3");
-    MusicPlayer musicPlayer(base_directory_, dice_);
+    MusicPlayer musicPlayer(base_directory_, ad_policy_);
     musicPlayer.subscribe(listener_);
     std::string path = prepare("song.mp3");
     musicPlayer.insert(path);
@@ -58,7 +58,7 @@ TEST_F(AddSongUseCaseTest, AddDuplicateGivesFeedback) {
 }
 
 TEST_F(AddSongUseCaseTest, AddIncreasesPlaylistSize) {
-    MusicPlayer musicPlayer(base_directory_, dice_);
+    MusicPlayer musicPlayer(base_directory_, ad_policy_);
     musicPlayer.subscribe(listener_);
     std::string path = prepare("song.mp3");
     musicPlayer.insert(path);
@@ -68,7 +68,7 @@ TEST_F(AddSongUseCaseTest, AddIncreasesPlaylistSize) {
 }
 
 TEST_F(AddSongUseCaseTest, AddNotifiesChanged) {
-    MusicPlayer musicPlayer(base_directory_, dice_);
+    MusicPlayer musicPlayer(base_directory_, ad_policy_);
     musicPlayer.subscribe(listener_);
     std::string path = prepare("song.mp3");
     musicPlayer.insert(path);
@@ -76,7 +76,7 @@ TEST_F(AddSongUseCaseTest, AddNotifiesChanged) {
 }
 
 TEST_F(AddSongUseCaseTest, AddSongAppearsInPlaylist) {
-    MusicPlayer musicPlayer(base_directory_, dice_);
+    MusicPlayer musicPlayer(base_directory_, ad_policy_);
     musicPlayer.subscribe(listener_);
     std::string path = prepare("my_track.mp3");
     musicPlayer.insert(path);
@@ -86,7 +86,7 @@ TEST_F(AddSongUseCaseTest, AddSongAppearsInPlaylist) {
 }
 
 TEST_F(AddSongUseCaseTest, AddMultipleSongs) {
-    MusicPlayer musicPlayer(base_directory_, dice_);
+    MusicPlayer musicPlayer(base_directory_, ad_policy_);
     musicPlayer.subscribe(listener_);
     std::string p1 = prepare("a.mp3");
     musicPlayer.insert(p1);
@@ -98,7 +98,7 @@ TEST_F(AddSongUseCaseTest, AddMultipleSongs) {
 }
 
 TEST_F(AddSongUseCaseTest, AddMultipleSongsNotifiesMultipleTimes) {
-    MusicPlayer musicPlayer(base_directory_, dice_);
+    MusicPlayer musicPlayer(base_directory_, ad_policy_);
     musicPlayer.subscribe(listener_);
     std::string p1 = prepare("a.mp3");
     musicPlayer.insert(p1);
@@ -109,7 +109,7 @@ TEST_F(AddSongUseCaseTest, AddMultipleSongsNotifiesMultipleTimes) {
 
 TEST_F(AddSongUseCaseTest, AddAfterRemove) {
     createSong("existing.mp3");
-    MusicPlayer musicPlayer(base_directory_, dice_);
+    MusicPlayer musicPlayer(base_directory_, ad_policy_);
     musicPlayer.subscribe(listener_);
     musicPlayer.remove(0);
     std::string path = prepare("new.mp3");
@@ -121,7 +121,7 @@ TEST_F(AddSongUseCaseTest, AddAfterRemove) {
 
 TEST_F(AddSongUseCaseTest, AddThenSort) {
     createSong("c.mp3");
-    MusicPlayer musicPlayer(base_directory_, dice_);
+    MusicPlayer musicPlayer(base_directory_, ad_policy_);
     musicPlayer.subscribe(listener_);
     std::string path = prepare("a.mp3");
     musicPlayer.insert(path);
@@ -133,7 +133,7 @@ TEST_F(AddSongUseCaseTest, AddThenSort) {
 }
 
 TEST_F(AddSongUseCaseTest, AddThenSearch) {
-    MusicPlayer musicPlayer(base_directory_, dice_);
+    MusicPlayer musicPlayer(base_directory_, ad_policy_);
     musicPlayer.subscribe(listener_);
     std::string path = prepare("unique.mp3");
     musicPlayer.insert(path);
@@ -143,7 +143,7 @@ TEST_F(AddSongUseCaseTest, AddThenSearch) {
 }
 
 TEST_F(AddSongUseCaseTest, AddThenPlayNewSong) {
-    MusicPlayer musicPlayer(base_directory_, dice_);
+    MusicPlayer musicPlayer(base_directory_, ad_policy_);
     musicPlayer.subscribe(listener_);
     std::string path = prepare("song.mp3");
     musicPlayer.insert(path);
@@ -152,7 +152,7 @@ TEST_F(AddSongUseCaseTest, AddThenPlayNewSong) {
 }
 
 TEST_F(AddSongUseCaseTest, AddDoesNotStartPlayback) {
-    MusicPlayer musicPlayer(base_directory_, dice_);
+    MusicPlayer musicPlayer(base_directory_, ad_policy_);
     musicPlayer.subscribe(listener_);
     std::string path = prepare("song.mp3");
     musicPlayer.insert(path);
@@ -160,7 +160,7 @@ TEST_F(AddSongUseCaseTest, AddDoesNotStartPlayback) {
 }
 
 TEST_F(AddSongUseCaseTest, AddDoesNotSelect) {
-    MusicPlayer musicPlayer(base_directory_, dice_);
+    MusicPlayer musicPlayer(base_directory_, ad_policy_);
     musicPlayer.subscribe(listener_);
     std::string path = prepare("song.mp3");
     musicPlayer.insert(path);
@@ -168,7 +168,7 @@ TEST_F(AddSongUseCaseTest, AddDoesNotSelect) {
 }
 
 TEST_F(AddSongUseCaseTest, AddOggGivesFeedback) {
-    MusicPlayer musicPlayer(base_directory_, dice_);
+    MusicPlayer musicPlayer(base_directory_, ad_policy_);
     musicPlayer.subscribe(listener_);
     std::string path = prepare("song.ogg");
     musicPlayer.insert(path);
@@ -176,7 +176,7 @@ TEST_F(AddSongUseCaseTest, AddOggGivesFeedback) {
 }
 
 TEST_F(AddSongUseCaseTest, AddFlacGivesFeedback) {
-    MusicPlayer musicPlayer(base_directory_, dice_);
+    MusicPlayer musicPlayer(base_directory_, ad_policy_);
     musicPlayer.subscribe(listener_);
     std::string path = prepare("song.flac");
     musicPlayer.insert(path);
@@ -184,7 +184,7 @@ TEST_F(AddSongUseCaseTest, AddFlacGivesFeedback) {
 }
 
 TEST_F(AddSongUseCaseTest, AddUnsupportedDoesNotIncreasePlaylist) {
-    MusicPlayer musicPlayer(base_directory_, dice_);
+    MusicPlayer musicPlayer(base_directory_, ad_policy_);
     musicPlayer.subscribe(listener_);
     std::string path = prepare("song.txt");
     musicPlayer.insert(path);
@@ -194,7 +194,7 @@ TEST_F(AddSongUseCaseTest, AddUnsupportedDoesNotIncreasePlaylist) {
 }
 
 TEST_F(AddSongUseCaseTest, AddUnsupportedDoesNotNotifyChanged) {
-    MusicPlayer musicPlayer(base_directory_, dice_);
+    MusicPlayer musicPlayer(base_directory_, ad_policy_);
     musicPlayer.subscribe(listener_);
     std::string path = prepare("song.txt");
     musicPlayer.insert(path);
@@ -203,7 +203,7 @@ TEST_F(AddSongUseCaseTest, AddUnsupportedDoesNotNotifyChanged) {
 
 TEST_F(AddSongUseCaseTest, AddDuplicateDoesNotIncreasePlaylist) {
     createSong("song.mp3");
-    MusicPlayer musicPlayer(base_directory_, dice_);
+    MusicPlayer musicPlayer(base_directory_, ad_policy_);
     musicPlayer.subscribe(listener_);
     std::string path = prepare("song.mp3");
     musicPlayer.insert(path);
@@ -214,7 +214,7 @@ TEST_F(AddSongUseCaseTest, AddDuplicateDoesNotIncreasePlaylist) {
 
 TEST_F(AddSongUseCaseTest, AddDuplicateDoesNotNotifyChanged) {
     createSong("song.mp3");
-    MusicPlayer musicPlayer(base_directory_, dice_);
+    MusicPlayer musicPlayer(base_directory_, ad_policy_);
     musicPlayer.subscribe(listener_);
     std::string path = prepare("song.mp3");
     musicPlayer.insert(path);
@@ -223,7 +223,7 @@ TEST_F(AddSongUseCaseTest, AddDuplicateDoesNotNotifyChanged) {
 
 TEST_F(AddSongUseCaseTest, AddToExistingPlaylist) {
     createSong("existing.mp3");
-    MusicPlayer musicPlayer(base_directory_, dice_);
+    MusicPlayer musicPlayer(base_directory_, ad_policy_);
     musicPlayer.subscribe(listener_);
     std::string path = prepare("new.mp3");
     musicPlayer.insert(path);
@@ -234,7 +234,7 @@ TEST_F(AddSongUseCaseTest, AddToExistingPlaylist) {
 
 TEST_F(AddSongUseCaseTest, AddPreservesExistingSongs) {
     createSong("existing.mp3");
-    MusicPlayer musicPlayer(base_directory_, dice_);
+    MusicPlayer musicPlayer(base_directory_, ad_policy_);
     musicPlayer.subscribe(listener_);
     std::string path = prepare("new.mp3");
     musicPlayer.insert(path);
@@ -245,7 +245,7 @@ TEST_F(AddSongUseCaseTest, AddPreservesExistingSongs) {
 }
 
 TEST_F(AddSongUseCaseTest, AddEmptyPathDoesNotIncreasePlaylist) {
-    MusicPlayer musicPlayer(base_directory_, dice_);
+    MusicPlayer musicPlayer(base_directory_, ad_policy_);
     musicPlayer.subscribe(listener_);
     musicPlayer.insert("");
     TestPlaylistVisitor visitor;
@@ -254,7 +254,7 @@ TEST_F(AddSongUseCaseTest, AddEmptyPathDoesNotIncreasePlaylist) {
 }
 
 TEST_F(AddSongUseCaseTest, AddThreeSongsSequentially) {
-    MusicPlayer musicPlayer(base_directory_, dice_);
+    MusicPlayer musicPlayer(base_directory_, ad_policy_);
     musicPlayer.subscribe(listener_);
     musicPlayer.insert(prepare("a.mp3"));
     musicPlayer.insert(prepare("b.mp3"));
@@ -265,7 +265,7 @@ TEST_F(AddSongUseCaseTest, AddThreeSongsSequentially) {
 }
 
 TEST_F(AddSongUseCaseTest, AddThenRemoveThenAdd) {
-    MusicPlayer musicPlayer(base_directory_, dice_);
+    MusicPlayer musicPlayer(base_directory_, ad_policy_);
     musicPlayer.subscribe(listener_);
     musicPlayer.insert(prepare("a.mp3"));
     musicPlayer.remove(0);
@@ -277,7 +277,7 @@ TEST_F(AddSongUseCaseTest, AddThenRemoveThenAdd) {
 }
 
 TEST_F(AddSongUseCaseTest, AddWavIncreasesPlaylist) {
-    MusicPlayer musicPlayer(base_directory_, dice_);
+    MusicPlayer musicPlayer(base_directory_, ad_policy_);
     musicPlayer.subscribe(listener_);
     musicPlayer.insert(prepare("track.wav"));
     TestPlaylistVisitor visitor;
@@ -286,7 +286,7 @@ TEST_F(AddSongUseCaseTest, AddWavIncreasesPlaylist) {
 }
 
 TEST_F(AddSongUseCaseTest, AddThenSortThenSearch) {
-    MusicPlayer musicPlayer(base_directory_, dice_);
+    MusicPlayer musicPlayer(base_directory_, ad_policy_);
     musicPlayer.subscribe(listener_);
     musicPlayer.insert(prepare("zebra.mp3"));
     musicPlayer.insert(prepare("alpha.mp3"));
@@ -298,7 +298,7 @@ TEST_F(AddSongUseCaseTest, AddThenSortThenSearch) {
 }
 
 TEST_F(AddSongUseCaseTest, AddDoesNotCrashOnEmptyPlaylist) {
-    MusicPlayer musicPlayer(base_directory_, dice_);
+    MusicPlayer musicPlayer(base_directory_, ad_policy_);
     musicPlayer.subscribe(listener_);
     std::string path = prepare("song.mp3");
     EXPECT_NO_THROW(musicPlayer.insert(path));

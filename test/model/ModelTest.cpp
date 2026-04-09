@@ -1,8 +1,8 @@
 #include "ModelTest.h"
 #include "../TestPlaylistVisitor.h"
-#include "../../model/QuickSort.h"
-#include "../../model/DurationSort.h"
-#include "../../model/DateSort.h"
+#include "model/arrangement/QuickSort.h"
+#include "model/arrangement/DurationSort.h"
+#include "model/arrangement/DateSort.h"
 #include <filesystem>
 #include <fstream>
 
@@ -11,7 +11,7 @@ std::string ModelTest::identify() const {
 }
 
 MusicPlayer ModelTest::create() {
-    return MusicPlayer(base_directory_, dice_);
+    return MusicPlayer(base_directory_, ad_policy_);
 }
 
 TEST_F(ModelTest, LoadsSongsFromDirectory) {

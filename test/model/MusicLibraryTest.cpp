@@ -1,5 +1,5 @@
 #include "MusicLibraryTest.h"
-#include "../../model/MusicLibrary.h"
+#include "model/library/MusicLibrary.h"
 #include "../TestPlaylistVisitor.h"
 #include <fstream>
 

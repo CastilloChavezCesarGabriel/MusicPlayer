@@ -4,7 +4,7 @@ QtPlaybackPanel* QtViewFactory::createPlayback(IPlaybackControl& listener, QWidg
     return new QtPlaybackPanel(listener, parent);
 }
 
-QtVolumePanel* QtViewFactory::createVolume(IDisplayControl& listener, QWidget* parent) {
+QtVolumePanel* QtViewFactory::createVolume(IPlaybackControl& listener, QWidget* parent) {
     return new QtVolumePanel(listener, parent);
 }
 

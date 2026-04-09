@@ -1,6 +1,6 @@
 #include "PlaylistRenderer.h"
 
-PlaylistRenderer::PlaylistRenderer(IPlayerView& view)
+PlaylistRenderer::PlaylistRenderer(IDisplayView& view)
     : view_(view) {
 }
 

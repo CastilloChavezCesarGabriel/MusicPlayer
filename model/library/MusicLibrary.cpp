@@ -1,0 +1,73 @@
+#include "model/library/MusicLibrary.h"
+#include "model/core/Song.h"
+#include <filesystem>
+
+MusicLibrary::MusicLibrary(const std::string& musicPath)
+    : music_path_(musicPath) {
+}
+
+std::vector<std::string> MusicLibrary::scan(const std::string& directory) {
+    std::vector<std::string> result;
+    if (!std::filesystem::exists(directory)) return result;
+
+    for (const auto& entry : std::filesystem::directory_iterator(directory)) {
+        if (entry.is_regular_file() && isSupported(entry.path().string())) {
+            result.push_back(entry.path().string());
+        }
+    }
+    return result;
+}
+
+std::vector<Song> MusicLibrary::load() const {
+    std::vector<Song> songs;
+    for (const auto& path : scan(music_path_)) {
+        const std::string filename = std::filesystem::path(path).filename().string();
+        songs.emplace_back(filename, path);
+    }
+    return songs;
+}
+
+std::string MusicLibrary::validate(const std::string& filePath) const {
+    if (filePath.empty() || !isSupported(filePath)) return "Unsupported file type.";
+    const std::string filename = std::filesystem::path(filePath).filename().string();
+    if (contains(filename)) return "This song already exists.";
+    return "";
+}
+
+std::string MusicLibrary::insert(const std::string& filePath, Playlist& playlist) const {
+    const std::string reason = validate(filePath);
+    if (!reason.empty()) return reason;
+    playlist.add(import(filePath));
+    return "";
+}
+
+Song MusicLibrary::import(const std::string& sourcePath) const {
+    const std::filesystem::path source(sourcePath);
+    const std::string filename = source.filename().string();
+    const std::filesystem::path destination = std::filesystem::path(music_path_) / filename;
+
+    if (!std::filesystem::exists(destination)) {
+        std::filesystem::copy_file(source, destination);
+    }
+
+    return Song(filename, destination.string());
+}
+
+void MusicLibrary::erase(const std::string& path) {
+    std::filesystem::remove(path);
+}
+
+void MusicLibrary::visit(const std::string&, const std::string& path) {
+    erase(path);
+}
+
+bool MusicLibrary::contains(const std::string& filename) const {
+    const std::filesystem::path destination = std::filesystem::path(music_path_) / filename;
+    return std::filesystem::exists(destination);
+}
+
+bool MusicLibrary::isSupported(const std::string& fileName) {
+    const std::filesystem::path path(fileName);
+    const std::string extension = path.extension().string();
+    return extension == ".mp3" || extension == ".wav";
+}

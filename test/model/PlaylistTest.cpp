@@ -1,7 +1,7 @@
 #include "PlaylistTest.h"
-#include "../../model/DurationSort.h"
-#include "../../model/QuickSort.h"
-#include "../../model/IPlaybackListener.h"
+#include "model/arrangement/DurationSort.h"
+#include "model/arrangement/QuickSort.h"
+#include "model/events/IPlaybackListener.h"
 #include <filesystem>
 #include <fstream>
 

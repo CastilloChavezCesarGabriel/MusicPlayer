@@ -1,27 +1,28 @@
 #ifndef PLAYBACK_DISPATCHER_H
 #define PLAYBACK_DISPATCHER_H
 
-#include "../model/MusicPlayer.h"
-#include "../view/IPlayerView.h"
+#include "model/MusicPlayer.h"
+#include "../view/IPlaybackView.h"
 #include "../view/IPlaybackControl.h"
 
 class PlaybackDispatcher final : public IPlaybackControl {
 private:
     MusicPlayer& music_player_;
-    IPlayerView& view_;
+    IPlaybackView& view_;
     bool playing_ = false;
 
 public:
-    PlaybackDispatcher(MusicPlayer& musicPlayer, IPlayerView& view);
+    PlaybackDispatcher(MusicPlayer& musicPlayer, IPlaybackView& view);
 
-    void onPlay(int index) override;
-    void onToggle() override;
-    void onRepeat() override;
-    void onAdvance() override;
-    void onRetreat() override;
-    void onShuffle() override;
-    void onSkip() override;
-    void onEnd() override;
+    void play(int index) override;
+    void toggle() override;
+    void repeat() override;
+    void advance() override;
+    void retreat() override;
+    void shuffle() override;
+    void skip() override;
+    void end() override;
+    void adjust(int volume) override;
 };
 
 #endif //PLAYBACK_DISPATCHER_H

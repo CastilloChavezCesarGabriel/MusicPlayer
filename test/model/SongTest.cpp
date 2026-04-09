@@ -1,5 +1,5 @@
 #include "SongTest.h"
-#include "../../model/Song.h"
+#include "model/core/Song.h"
 #include <filesystem>
 #include <fstream>
 

@@ -1,5 +1,5 @@
 #include "TitleDescending.h"
-#include "../model/QuickSort.h"
+#include "model/arrangement/QuickSort.h"
 
 TitleDescending::TitleDescending() : SortMode("Title \xe2\x96\xbc", new QuickSort()) {}
 

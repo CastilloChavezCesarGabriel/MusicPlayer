@@ -1,0 +1,28 @@
+#ifndef MUSIC_LIBRARY_H
+#define MUSIC_LIBRARY_H
+
+#include "model/core/Song.h"
+#include "model/events/IPlaylistVisitor.h"
+#include <string>
+#include <vector>
+#include "model/core/Playlist.h"
+
+class MusicLibrary final : public IPlaylistVisitor {
+private:
+    std::string music_path_;
+
+public:
+    explicit MusicLibrary(const std::string& musicPath);
+
+    std::vector<Song> load() const;
+    std::string validate(const std::string& filePath) const;
+    std::string insert(const std::string& filePath, Playlist& playlist) const;
+    Song import(const std::string& sourcePath) const;
+    static void erase(const std::string& path);
+    void visit(const std::string& name, const std::string& path) override;
+    bool contains(const std::string& filename) const;
+    static std::vector<std::string> scan(const std::string& directory);
+    static bool isSupported(const std::string& fileName);
+};
+
+#endif //MUSIC_LIBRARY_H

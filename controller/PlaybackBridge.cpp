@@ -1,31 +1,9 @@
 #include "PlaybackBridge.h"
-#include "PlaylistRenderer.h"
 
-PlaybackBridge::PlaybackBridge(MusicPlayer& musicPlayer, IPlayerView& view)
-    : music_player_(musicPlayer), view_(view) {
-    music_player_.subscribe(*this);
-    refresh();
-}
+PlaybackBridge::PlaybackBridge(IPlaybackView& view) : view_(view) {}
 
 void PlaybackBridge::onStart(const std::string& path) {
     view_.play(path);
-}
-
-void PlaybackBridge::onChanged() {
-    refresh();
-}
-
-void PlaybackBridge::onSelected(const int index) {
-    view_.highlight(index);
-    view_.enable(true);
-}
-
-void PlaybackBridge::onEnabled(const bool state) {
-    view_.enable(state);
-}
-
-void PlaybackBridge::onReveal(const bool visible) {
-    view_.reveal(visible);
 }
 
 void PlaybackBridge::onSchedule(const int delay) {
@@ -48,8 +26,10 @@ void PlaybackBridge::onStopped() {
     view_.stop();
 }
 
-void PlaybackBridge::refresh() const {
-    PlaylistRenderer renderer(view_);
-    music_player_.accept(renderer);
-    renderer.render();
+void PlaybackBridge::onEnabled(const bool state) {
+    view_.enable(state);
+}
+
+void PlaybackBridge::onSelected(int) {
+    view_.enable(true);
 }

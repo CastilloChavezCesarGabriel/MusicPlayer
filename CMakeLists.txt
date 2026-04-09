@@ -15,61 +15,66 @@ find_package(Qt6 COMPONENTS
         REQUIRED)
 
 add_executable(NewMusicPlayer main.cpp
-        model/Song.cpp
-        model/Song.h
-        model/IPlaylistVisitor.h
-        model/SortingAlgorithm.h
-        model/ShellSort.cpp
-        model/ShellSort.h
-        model/DurationSort.cpp
-        model/DurationSort.h
-        model/DateSort.cpp
-        model/DateSort.h
-        model/QuickSort.cpp
-        model/QuickSort.h
-        model/Playlist.cpp
-        model/Playlist.h
-        model/Arrangement.cpp
-        model/Arrangement.h
-        model/IPlaybackListener.h
-        model/Advertisement.cpp
-        model/Advertisement.h
-        model/MusicLibrary.cpp
-        model/MusicLibrary.h
-        model/Channel.cpp
-        model/Channel.h
-        model/PlaybackNotifier.cpp
-        model/PlaybackNotifier.h
-        model/RepeatStrategy.cpp
-        model/RepeatStrategy.h
-        model/NoRepeatMode.cpp
-        model/NoRepeatMode.h
-        model/RepeatOneMode.cpp
-        model/RepeatOneMode.h
-        model/RepeatAllMode.cpp
-        model/RepeatAllMode.h
-        model/RepeatMode.cpp
-        model/RepeatMode.h
+        model/core/Song.cpp
+        model/core/Song.h
+        model/core/Playlist.cpp
+        model/core/Playlist.h
+        model/core/FileMetadata.cpp
+        model/core/FileMetadata.h
+        model/library/MusicLibrary.cpp
+        model/library/MusicLibrary.h
+        model/playback/Channel.cpp
+        model/playback/Channel.h
+        model/ads/Advertisement.cpp
+        model/ads/Advertisement.h
+        model/ads/IAdPolicy.h
+        model/ads/RandomAdPolicy.cpp
+        model/ads/RandomAdPolicy.h
+        model/ads/IDice.h
+        model/ads/Dice.cpp
+        model/ads/Dice.h
+        model/repeat/RepeatMode.cpp
+        model/repeat/RepeatMode.h
+        model/repeat/RepeatStrategy.cpp
+        model/repeat/RepeatStrategy.h
+        model/repeat/NoRepeatMode.cpp
+        model/repeat/NoRepeatMode.h
+        model/repeat/RepeatOneMode.cpp
+        model/repeat/RepeatOneMode.h
+        model/repeat/RepeatAllMode.cpp
+        model/repeat/RepeatAllMode.h
+        model/arrangement/Arrangement.cpp
+        model/arrangement/Arrangement.h
+        model/arrangement/ISortingAlgorithm.h
+        model/arrangement/QuickSort.cpp
+        model/arrangement/QuickSort.h
+        model/arrangement/ShellSort.cpp
+        model/arrangement/ShellSort.h
+        model/arrangement/DateSort.cpp
+        model/arrangement/DateSort.h
+        model/arrangement/DurationSort.cpp
+        model/arrangement/DurationSort.h
+        model/events/IPlaylistVisitor.h
+        model/events/IPlaybackListener.h
+        model/events/IPlaybackEvent.h
+        model/events/IDisplayEvent.h
+        model/events/ILibraryEvent.h
+        model/events/PlaybackNotifier.cpp
+        model/events/PlaybackNotifier.h
+        model/events/PlaybackEventNotifier.cpp
+        model/events/PlaybackEventNotifier.h
+        model/events/DisplayEventNotifier.cpp
+        model/events/DisplayEventNotifier.h
+        model/events/LibraryEventNotifier.cpp
+        model/events/LibraryEventNotifier.h
         model/MusicPlayer.cpp
         model/MusicPlayer.h
-        model/IDice.h
-        model/Dice.cpp
-        model/Dice.h
-        model/FileMetadata.cpp
-        model/FileMetadata.h
-        view/IPlaylistPanel.h
-        view/ISearchPanel.h
-        view/IControlPanel.h
-        view/INotification.h
-        view/IDialog.h
-        view/IPlayerView.h
         view/IPlaybackControl.h
         view/ILibraryControl.h
         view/IDisplayControl.h
-        view/IPlaybackBoard.h
-        view/ILibraryBoard.h
-        view/IDisplayBoard.h
-        view/IAudioPlayer.h
+        view/IPlaybackView.h
+        view/ILibraryView.h
+        view/IDisplayView.h
         controller/PlaylistRenderer.cpp
         controller/PlaylistRenderer.h
         controller/SortMode.cpp
@@ -90,6 +95,10 @@ add_executable(NewMusicPlayer main.cpp
         controller/DisplayDispatcher.h
         controller/PlaybackBridge.cpp
         controller/PlaybackBridge.h
+        controller/DisplayBridge.cpp
+        controller/DisplayBridge.h
+        controller/LibraryBridge.cpp
+        controller/LibraryBridge.h
         adapters/qt/QtLayoutUtil.cpp
         adapters/qt/QtLayoutUtil.h
         adapters/qt/QtPlaybackPanel.cpp
@@ -118,9 +127,15 @@ add_executable(NewMusicPlayer main.cpp
         adapters/qt/QtViewFactory.h
         adapters/qt/QtStyler.cpp
         adapters/qt/QtStyler.h
-        adapters/qt/QtView.cpp
-        adapters/qt/QtView.h
+        adapters/qt/QtPlaybackWidget.cpp
+        adapters/qt/QtPlaybackWidget.h
+        adapters/qt/QtLibraryWidget.cpp
+        adapters/qt/QtLibraryWidget.h
+        adapters/qt/QtDisplayWidget.cpp
+        adapters/qt/QtDisplayWidget.h
 )
+
+target_include_directories(NewMusicPlayer PRIVATE ${CMAKE_SOURCE_DIR})
 
 add_custom_target(CopyResources ALL
         COMMAND ${CMAKE_COMMAND} -E copy_directory
@@ -169,49 +184,63 @@ add_executable(NewMusicPlayerTests
         test/use_cases/RemoveSongUseCaseTest.h
         test/use_cases/NavigatePlaylistUseCaseTest.cpp
         test/use_cases/NavigatePlaylistUseCaseTest.h
-        model/Song.cpp
-        model/Song.h
-        model/IPlaylistVisitor.h
-        model/IPlaybackListener.h
-        model/SortingAlgorithm.h
-        model/ShellSort.cpp
-        model/ShellSort.h
-        model/DurationSort.cpp
-        model/DurationSort.h
-        model/DateSort.cpp
-        model/DateSort.h
-        model/QuickSort.cpp
-        model/QuickSort.h
-        model/Playlist.cpp
-        model/Playlist.h
-        model/Arrangement.cpp
-        model/Arrangement.h
-        model/Advertisement.cpp
-        model/Advertisement.h
-        model/MusicLibrary.cpp
-        model/MusicLibrary.h
-        model/Channel.cpp
-        model/Channel.h
-        model/PlaybackNotifier.cpp
-        model/PlaybackNotifier.h
-        model/RepeatStrategy.cpp
-        model/RepeatStrategy.h
-        model/NoRepeatMode.cpp
-        model/NoRepeatMode.h
-        model/RepeatOneMode.cpp
-        model/RepeatOneMode.h
-        model/RepeatAllMode.cpp
-        model/RepeatAllMode.h
-        model/RepeatMode.cpp
-        model/RepeatMode.h
+        model/core/Song.cpp
+        model/core/Song.h
+        model/core/Playlist.cpp
+        model/core/Playlist.h
+        model/core/FileMetadata.cpp
+        model/core/FileMetadata.h
+        model/library/MusicLibrary.cpp
+        model/library/MusicLibrary.h
+        model/playback/Channel.cpp
+        model/playback/Channel.h
+        model/ads/Advertisement.cpp
+        model/ads/Advertisement.h
+        model/ads/IAdPolicy.h
+        model/ads/RandomAdPolicy.cpp
+        model/ads/RandomAdPolicy.h
+        model/ads/IDice.h
+        model/ads/Dice.cpp
+        model/ads/Dice.h
+        model/repeat/RepeatMode.cpp
+        model/repeat/RepeatMode.h
+        model/repeat/RepeatStrategy.cpp
+        model/repeat/RepeatStrategy.h
+        model/repeat/NoRepeatMode.cpp
+        model/repeat/NoRepeatMode.h
+        model/repeat/RepeatOneMode.cpp
+        model/repeat/RepeatOneMode.h
+        model/repeat/RepeatAllMode.cpp
+        model/repeat/RepeatAllMode.h
+        model/arrangement/Arrangement.cpp
+        model/arrangement/Arrangement.h
+        model/arrangement/ISortingAlgorithm.h
+        model/arrangement/QuickSort.cpp
+        model/arrangement/QuickSort.h
+        model/arrangement/ShellSort.cpp
+        model/arrangement/ShellSort.h
+        model/arrangement/DateSort.cpp
+        model/arrangement/DateSort.h
+        model/arrangement/DurationSort.cpp
+        model/arrangement/DurationSort.h
+        model/events/IPlaylistVisitor.h
+        model/events/IPlaybackListener.h
+        model/events/IPlaybackEvent.h
+        model/events/IDisplayEvent.h
+        model/events/ILibraryEvent.h
+        model/events/PlaybackNotifier.cpp
+        model/events/PlaybackNotifier.h
+        model/events/PlaybackEventNotifier.cpp
+        model/events/PlaybackEventNotifier.h
+        model/events/DisplayEventNotifier.cpp
+        model/events/DisplayEventNotifier.h
+        model/events/LibraryEventNotifier.cpp
+        model/events/LibraryEventNotifier.h
         model/MusicPlayer.cpp
         model/MusicPlayer.h
-        model/IDice.h
-        model/Dice.cpp
-        model/Dice.h
-        model/FileMetadata.cpp
-        model/FileMetadata.h
 )
+
+target_include_directories(NewMusicPlayerTests PRIVATE ${CMAKE_SOURCE_DIR})
 
 target_link_libraries(NewMusicPlayerTests GTest::gtest_main)
 include(GoogleTest)

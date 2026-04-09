@@ -1,9 +1,11 @@
 #include "QtPlaylistDisplay.h"
 #include "QtLayoutUtil.h"
+#include "QtDragDrop.h"
 #include <QVBoxLayout>
 
 QtPlaylistDisplay::QtPlaylistDisplay(QWidget* parent) : QWidget(parent) {
     setup();
+    setAcceptDrops(true);
 }
 
 void QtPlaylistDisplay::setup() {
@@ -40,4 +42,13 @@ void QtPlaylistDisplay::remove() {
     if (index.isValid()) {
         emit removeRequested(index.row());
     }
+}
+
+void QtPlaylistDisplay::dragEnterEvent(QDragEnterEvent* event) {
+    QtDragDrop::accept(event);
+}
+
+void QtPlaylistDisplay::dropEvent(QDropEvent* event) {
+    const std::vector<std::string> paths = QtDragDrop::extract(event);
+    if (!paths.empty()) emit dropRequested(paths);
 }

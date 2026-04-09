@@ -1,11 +1,11 @@
 #include "RegressionTest.h"
-#include "../model/Song.h"
-#include "../model/Playlist.h"
-#include "../model/MusicLibrary.h"
-#include "../model/MusicPlayer.h"
-#include "../model/Dice.h"
-#include "../model/DurationSort.h"
-#include "../model/QuickSort.h"
+#include "model/core/Song.h"
+#include "model/core/Playlist.h"
+#include "model/library/MusicLibrary.h"
+#include "model/MusicPlayer.h"
+#include "model/ads/Dice.h"
+#include "model/arrangement/DurationSort.h"
+#include "model/arrangement/QuickSort.h"
 #include "TestPlaylistVisitor.h"
 #include <filesystem>
 #include <fstream>
@@ -39,7 +39,7 @@ TEST_F(RegressionTest, ShellSortEmptyDoesNotCrash) {
 TEST_F(RegressionTest, ModelRefreshDoesNotRecurse) {
     createSong("a.mp3");
     createSong("b.mp3");
-    MusicPlayer musicPlayer(base_directory_, dice_);
+    MusicPlayer musicPlayer(base_directory_, ad_policy_);
     MockPlaybackListener listener_;
     musicPlayer.subscribe(listener_);
     QuickSort byTitle;
@@ -51,7 +51,7 @@ TEST_F(RegressionTest, ModelSortByNameDoesNotCrash) {
     createSong("c.mp3");
     createSong("a.mp3");
     createSong("b.mp3");
-    MusicPlayer musicPlayer(base_directory_, dice_);
+    MusicPlayer musicPlayer(base_directory_, ad_policy_);
     MockPlaybackListener listener_;
     musicPlayer.subscribe(listener_);
     QuickSort byTitle;
@@ -62,7 +62,7 @@ TEST_F(RegressionTest, ModelSortByNumberDoesNotCrash) {
     createSong("(3) C.mp3");
     createSong("(1) A.mp3");
     createSong("(2) B.mp3");
-    MusicPlayer musicPlayer(base_directory_, dice_);
+    MusicPlayer musicPlayer(base_directory_, ad_policy_);
     MockPlaybackListener listener_;
     musicPlayer.subscribe(listener_);
     DurationSort byDuration;
@@ -73,7 +73,7 @@ TEST_F(RegressionTest, AdvanceUpdatesSelection) {
     createSong("a.mp3");
     createSong("b.mp3");
     createSong("c.mp3");
-    MusicPlayer musicPlayer(base_directory_, dice_);
+    MusicPlayer musicPlayer(base_directory_, ad_policy_);
     MockPlaybackListener listener_;
     musicPlayer.subscribe(listener_);
     musicPlayer.play(0);
@@ -85,7 +85,7 @@ TEST_F(RegressionTest, RetreatUpdatesSelection) {
     createSong("a.mp3");
     createSong("b.mp3");
     createSong("c.mp3");
-    MusicPlayer musicPlayer(base_directory_, dice_);
+    MusicPlayer musicPlayer(base_directory_, ad_policy_);
     MockPlaybackListener listener_;
     musicPlayer.subscribe(listener_);
     musicPlayer.play(2);
@@ -115,7 +115,7 @@ TEST_F(RegressionTest, QuickSortPartitionDoesNotUnderflow) {
 }
 
 TEST_F(RegressionTest, InsertUnsupportedFileGivesFeedback) {
-    MusicPlayer musicPlayer(base_directory_, dice_);
+    MusicPlayer musicPlayer(base_directory_, ad_policy_);
     MockPlaybackListener listener_;
     musicPlayer.subscribe(listener_);
     musicPlayer.insert("");
@@ -128,7 +128,7 @@ TEST_F(RegressionTest, InsertDuplicateGivesFeedback) {
     std::filesystem::create_directories(srcDir);
     std::ofstream(srcDir + "/dup.mp3") << "data";
 
-    MusicPlayer musicPlayer(base_directory_, dice_);
+    MusicPlayer musicPlayer(base_directory_, ad_policy_);
     MockPlaybackListener listener_;
     musicPlayer.subscribe(listener_);
     musicPlayer.insert(srcDir + "/dup.mp3");
@@ -139,7 +139,7 @@ TEST_F(RegressionTest, SortPreservesAllSongs) {
     createSong("c.mp3");
     createSong("a.mp3");
     createSong("b.mp3");
-    MusicPlayer musicPlayer(base_directory_, dice_);
+    MusicPlayer musicPlayer(base_directory_, ad_policy_);
     MockPlaybackListener listener_;
     musicPlayer.subscribe(listener_);
     QuickSort byTitle;
@@ -162,7 +162,7 @@ TEST_F(RegressionTest, ShufflePreservesAllSongs) {
 }
 
 TEST_F(RegressionTest, RepeatCycles) {
-    MusicPlayer musicPlayer(base_directory_, dice_);
+    MusicPlayer musicPlayer(base_directory_, ad_policy_);
     MockPlaybackListener listener_;
     musicPlayer.subscribe(listener_);
     musicPlayer.repeat();
@@ -200,8 +200,7 @@ TEST_F(RegressionTest, PlayWithNoSelectionDoesNotCrash) {
 }
 
 TEST_F(RegressionTest, ConcludeWithoutInterruptReturnsFalse) {
-    Dice dice;
-    Advertisement ad(ads_directory_, dice);
+    Advertisement ad(ads_directory_, ad_policy_);
     EXPECT_FALSE(ad.conclude(listener_));
 }
 
@@ -209,7 +208,7 @@ TEST_F(RegressionTest, MultipleSortsDoNotCrash) {
     createSong("c.mp3");
     createSong("a.mp3");
     createSong("b.mp3");
-    MusicPlayer musicPlayer(base_directory_, dice_);
+    MusicPlayer musicPlayer(base_directory_, ad_policy_);
     MockPlaybackListener listener_;
     musicPlayer.subscribe(listener_);
     for (int i = 0; i < 10; i++) {
@@ -227,7 +226,7 @@ TEST_F(RegressionTest, SortThenAdvanceWorks) {
     createSong("c.mp3");
     createSong("a.mp3");
     createSong("b.mp3");
-    MusicPlayer musicPlayer(base_directory_, dice_);
+    MusicPlayer musicPlayer(base_directory_, ad_policy_);
     MockPlaybackListener listener_;
     musicPlayer.subscribe(listener_);
     QuickSort byTitle;

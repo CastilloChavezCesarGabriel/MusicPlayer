@@ -2,9 +2,9 @@
 #define SORTINGTEST_H
 
 #include <gtest/gtest.h>
-#include "../../model/DurationSort.h"
-#include "../../model/QuickSort.h"
-#include "../../model/Song.h"
+#include "model/arrangement/DurationSort.h"
+#include "model/arrangement/QuickSort.h"
+#include "model/core/Song.h"
 #include "../TestPlaylistVisitor.h"
 #include <vector>
 #include <string>

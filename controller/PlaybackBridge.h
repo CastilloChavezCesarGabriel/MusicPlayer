@@ -1,30 +1,24 @@
 #ifndef PLAYBACK_BRIDGE_H
 #define PLAYBACK_BRIDGE_H
 
-#include "../model/IPlaybackListener.h"
-#include "../model/MusicPlayer.h"
-#include "../view/IPlayerView.h"
+#include "model/events/IPlaybackEvent.h"
+#include "../view/IPlaybackView.h"
 
-class PlaybackBridge final : public IPlaybackListener {
+class PlaybackBridge final : public IPlaybackEvent {
 private:
-    MusicPlayer& music_player_;
-    IPlayerView& view_;
-
-    void refresh() const;
+    IPlaybackView& view_;
 
 public:
-    PlaybackBridge(MusicPlayer& musicPlayer, IPlayerView& view);
+    explicit PlaybackBridge(IPlaybackView& view);
 
     void onStart(const std::string& path) override;
-    void onChanged() override;
-    void onSelected(int index) override;
-    void onEnabled(bool state) override;
-    void onReveal(bool visible) override;
     void onSchedule(int delay) override;
     void onCancel() override;
     void onRepeatChanged(int mode) override;
     void onFeedback(const std::string& message, bool success) override;
     void onStopped() override;
+    void onEnabled(bool state) override;
+    void onSelected(int index) override;
 };
 
 #endif //PLAYBACK_BRIDGE_H

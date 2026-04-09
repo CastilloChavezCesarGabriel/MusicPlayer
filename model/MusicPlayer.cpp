@@ -1,11 +1,16 @@
-#include "MusicPlayer.h"
-#include "Channel.h"
+#include "model/MusicPlayer.h"
+#include "model/playback/Channel.h"
+#include "model/repeat/NoRepeatMode.h"
+#include "model/repeat/RepeatOneMode.h"
+#include "model/repeat/RepeatAllMode.h"
 
-MusicPlayer::MusicPlayer(const std::string& basePath, IDice& dice)
-    : music_library_(basePath + "/music"),
-      playlist_(music_library_),
-      advertisement_(basePath + "/announcements", dice),
+MusicPlayer::MusicPlayer(const std::string& basePath, IAdPolicy& adPolicy) : music_library_(basePath + "/music"),
+      playlist_(music_library_), advertisement_(basePath + "/announcements", adPolicy),
       repeat_mode_(playlist_, notifier_) {
+
+    repeat_mode_.add(std::make_unique<NoRepeatMode>());
+    repeat_mode_.add(std::make_unique<RepeatOneMode>());
+    repeat_mode_.add(std::make_unique<RepeatAllMode>());
 
     for (const Song& song : music_library_.load()) {
         playlist_.add(song);
@@ -98,7 +103,7 @@ void MusicPlayer::shuffle() {
     refresh();
 }
 
-void MusicPlayer::sort(SortingAlgorithm& criteria) {
+void MusicPlayer::sort(ISortingAlgorithm& criteria) {
     playlist_.sort(criteria);
     refresh();
 }

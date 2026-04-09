@@ -2,8 +2,9 @@
 #define MODEL_TEST_FIXTURE_H
 
 #include <gtest/gtest.h>
-#include "../model/MusicPlayer.h"
-#include "../model/Dice.h"
+#include "model/MusicPlayer.h"
+#include "model/ads/Dice.h"
+#include "model/ads/RandomAdPolicy.h"
 #include "MockPlaybackListener.h"
 #include "TestPlaylistVisitor.h"
 #include <string>
@@ -15,6 +16,7 @@ protected:
     std::string ads_directory_;
     MockPlaybackListener listener_;
     Dice dice_;
+    RandomAdPolicy ad_policy_{dice_};
 
     void SetUp() override;
     void TearDown() override;

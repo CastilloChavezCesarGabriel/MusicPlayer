@@ -2,8 +2,8 @@
 #define PLAYLISTTEST_H
 
 #include <gtest/gtest.h>
-#include "../../model/Playlist.h"
-#include "../../model/MusicLibrary.h"
+#include "model/core/Playlist.h"
+#include "model/library/MusicLibrary.h"
 #include "../TestPlaylistVisitor.h"
 #include "../MockPlaybackListener.h"
 #include <string>
